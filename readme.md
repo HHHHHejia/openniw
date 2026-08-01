@@ -28,6 +28,28 @@ Plus an **RFE module**: paste an RFE letter and get a structured response plan
 (which prongs are challenged, officer errors to rebut, an evidence plan, and a
 supplemental-statement outline).
 
+### v0.2 automation
+
+- **Citation pipeline** — the most labor-intensive part of a NIW case,
+  automated: every citing paper is harvested from OpenAlex, screened for
+  independence (same-surname collisions escalated for review), verified to
+  actually cite the work in its full text, LLM-scored by depth of use
+  (implemented / compared-favorably / utilized / verified, HOW > WHO),
+  negative citations quarantined, a portfolio selected across cited works,
+  and delivered as highlighted PDFs + a Citation Examples control document +
+  independent-recommender candidates drawn from citing authors.
+- **Evidence auto-intake** — any uploaded file is classified (diploma,
+  review email, award page…), matched to the checklist, key facts extracted
+  into a canonical fact table, and date-classed against the filing date.
+- **Endeavor composer** — the one frozen sentence, built from three bounded
+  inputs (method / topic / impact), AI-polished into candidates and scored
+  against the six executability elements; freezing locks the wording for
+  every drafted document.
+- **Streaming evaluation** — the free evaluation streams live (SSE) with
+  stage progress and prong-score bars.
+- **Forms wizard** — structured repeating-group editors and per-field "AI"
+  marks after pre-fill, cleared as you review.
+
 ## What makes the drafting good
 
 The templates and heuristics are distilled from the structure of real,

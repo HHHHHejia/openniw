@@ -10,7 +10,9 @@ from .routers import (
     auth as auth_router,
     cases,
     chat,
+    citations,
     documents,
+    endeavor,
     eval as eval_router,
     evidence,
     forms,
@@ -48,7 +50,7 @@ app.add_middleware(
 for router in (
     auth_router.router, eval_router.router, cases.router, evidence.router,
     documents.router, recommenders.router, chat.router, ingest.router,
-    forms.router, jobs.router,
+    forms.router, jobs.router, citations.router, endeavor.router,
 ):
     app.include_router(router)
 

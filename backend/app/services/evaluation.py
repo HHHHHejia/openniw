@@ -71,20 +71,29 @@ async def consolidate_profile(sources: dict, basics: dict) -> dict:
     )
 
 
-async def evaluate(profile: dict, basics: dict) -> dict:
-    """LLM pass: structured profile -> evaluation report + tier."""
-    user_prompt = (
+def eval_prompt(profile: dict, basics: dict) -> str:
+    return (
         "Evaluate this applicant for an EB-2 NIW self-petition.\n\n"
         "Applicant basics:\n" + json.dumps(basics, ensure_ascii=False) + "\n\n"
         "Consolidated profile:\n" + json.dumps(profile, ensure_ascii=False)[:100000]
     )
-    report_md = await llm.complete(user_prompt, system=prompts.load("evaluation"))
-    scored = await llm.complete(
+
+
+async def extract_tier(report_md: str) -> dict:
+    return await llm.complete(
         "Based on this NIW evaluation, output the tier and 1-5 prong scores.\n\n"
         + report_md,
         schema=TIER_SCHEMA,
         effort="low",
     )
+
+
+async def evaluate(profile: dict, basics: dict) -> dict:
+    """LLM pass: structured profile -> evaluation report + tier."""
+    report_md = await llm.complete(
+        eval_prompt(profile, basics), system=prompts.load("evaluation")
+    )
+    scored = await extract_tier(report_md)
     return {
         "report_md": report_md,
         "tier": scored.get("tier", "borderline"),

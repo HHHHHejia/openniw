@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { api } from "@/lib/api";
+import { api, waitForJob } from "@/lib/api";
 
 const STATUS_STYLE: Record<string, string> = {
   provided: "text-[--docket] border-[--docket]",
@@ -29,11 +29,21 @@ export default function EvidencePage() {
     load();
   }
 
+  const [intaking, setIntaking] = useState<string | null>(null);
+
   async function upload(itemId: string, file: File) {
     const form = new FormData();
     form.append("file", file);
-    await api(`/api/cases/${id}/evidence/${itemId}/file`, { method: "POST", form });
+    const res = await api(`/api/cases/${id}/evidence/${itemId}/file`, { method: "POST", form });
     load();
+    if (res.intake_job_id) {
+      setIntaking(itemId);
+      try {
+        await waitForJob(res.intake_job_id, { intervalMs: 2000 });
+      } catch {}
+      setIntaking(null);
+      load();
+    }
   }
 
   const groups: Record<string, any[]> = {};
@@ -71,8 +81,19 @@ export default function EvidencePage() {
                     >
                       {it.title}
                     </button>
-                    <span className={`docket-line border px-2 py-0.5 ${STATUS_STYLE[it.status] || ""}`}>
-                      {it.status}{it.has_file ? " · file ✓" : ""}
+                    <span className="flex gap-1.5 items-center">
+                      {intaking === it.id && (
+                        <span className="docket-line drafting-caret text-[--docket]">reading</span>
+                      )}
+                      {it.doc_kind && (
+                        <span className="docket-line text-[#6b7570]">{it.doc_kind}</span>
+                      )}
+                      {it.date_class === "post_filing" && (
+                        <span className="docket-line text-[--stamp] border border-[--stamp] px-1.5">post-filing</span>
+                      )}
+                      <span className={`docket-line border px-2 py-0.5 ${STATUS_STYLE[it.status] || ""}`}>
+                        {it.status}{it.has_file ? " · file ✓" : ""}
+                      </span>
                     </span>
                   </div>
                   {open === it.id && (

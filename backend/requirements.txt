@@ -14,3 +14,4 @@ pypdf>=5.1
 python-docx>=1.1
 email-validator>=2.0
 cryptography>=42
+pymupdf>=1.24

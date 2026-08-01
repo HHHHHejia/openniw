@@ -25,8 +25,18 @@ def _bundle(case: dict, profile: dict, evaluation: dict | None,
         }
         for d in documents
     ]
+    endeavor = case.get("endeavor") or {}
     payload = {
-        "case": {"title": case.get("title"), "field": case.get("field")},
+        "case": {
+            "title": case.get("title"),
+            "field": case.get("field"),
+            # The frozen canonical endeavor — reuse VERBATIM in every document.
+            "endeavor": {
+                "sentence": endeavor.get("sentence") or endeavor.get("composed"),
+                "pillars": endeavor.get("pillars"),
+                "frozen": endeavor.get("frozen", False),
+            },
+        },
         "profile": profile,
         "evaluation_report": (evaluation or {}).get("report_md", ""),
         "evidence_items": [

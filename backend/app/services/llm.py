@@ -73,6 +73,25 @@ async def complete(
     return _parse_json(text)
 
 
+async def stream(prompt: str, system: str = "", effort: str | None = None):
+    """Yield text deltas as the model produces them (Responses API stream)."""
+    settings = get_settings()
+    effort = effort or settings.openai_reasoning_effort
+    messages: list[dict] = []
+    if system:
+        messages.append({"role": "system", "content": system})
+    messages.append({"role": "user", "content": prompt})
+    response = await client().responses.create(
+        model=settings.openai_model,
+        input=messages,
+        reasoning={"effort": effort},
+        stream=True,
+    )
+    async for event in response:
+        if getattr(event, "type", "") == "response.output_text.delta":
+            yield event.delta
+
+
 def _parse_json(text: str) -> Any:
     try:
         return json.loads(text)

@@ -38,9 +38,10 @@ export default function Landing() {
     try {
       const form = new FormData();
       Object.entries(fields).forEach(([k, v]) => form.append(k, v));
+      form.append("defer", "true");
       if (cvFile) form.append("cv", cvFile);
       const res = await api("/api/eval/free", { method: "POST", form });
-      router.push(`/eval/${res.evaluation_id}?job=${res.job_id}`);
+      router.push(`/eval/${res.evaluation_id}?stream=1`);
     } catch (err: any) {
       setError(err.message);
       setBusy(false);

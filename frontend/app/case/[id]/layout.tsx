@@ -3,8 +3,10 @@ import { useParams, usePathname } from "next/navigation";
 
 const TABS = [
   ["", "I", "Overview"],
-  ["/evidence", "II", "Evidence"],
-  ["/interview", "II·b", "Interview"],
+  ["/endeavor", "II·a", "Endeavor"],
+  ["/evidence", "II·b", "Evidence"],
+  ["/citations", "II·c", "Citations"],
+  ["/interview", "II·d", "Interview"],
   ["/documents", "III", "Documents"],
   ["/forms", "IV–V", "Forms & Package"],
 ] as const;
