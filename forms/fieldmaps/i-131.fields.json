@@ -1,0 +1,2756 @@
+[
+ {
+  "name": "form1[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[0].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[1]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[1].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[2]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[2].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[3]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[3].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[4]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[4].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[5]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[5].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[6]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[6].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[7]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[7].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[8]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[8].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[9]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[9].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[10]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[10].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[11]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[11].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[12]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[12].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[13]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[13].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].P1[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].P1[0].G28_Attached[0]",
+  "type": "/Btn",
+  "label": "To Be Completed by an Attorney/Representative, if any. Check Fill in box if G-28 is attached to represent the applicant.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P1[0].CB_AppType[0]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select the application type below. Reentry Permit.  Check box 1.  I am a lawful permanent resident or conditional permanent resident of the United States, and I am applying ",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P1[0].CB_AppType[1]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select the application type below. Refugee Travel Document.  Select check box 2.  I now hold refugee or asylee status in the United States, and I am applying for a Refugee T",
+  "states": [
+   "/2",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P1[0].CB_AppType[2]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select the application type below. Refugee Travel Document.  Select check box 3.  I am a lawful permanent resident as a direct result of refugee or asylee status, and I am a",
+  "states": [
+   "/3",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P1[0].CB_AppType[3]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select the application type below. Travel Authorization Document (for Temporary Protected Status (TPS) beneficiaries who are inside the United States) Select Check box 4.  I",
+  "states": [
+   "/4",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P1[0].CB_AppType[4]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": [
+   "/5",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P1[0].P1_Line4[0]",
+  "type": "/Tx",
+  "label": "Part 1. Application Type.  Select the application type below. Travel Authorization Document (for Temporary Protected Status (TPS) beneficiaries who are inside the United States).  I am a TPS beneficia",
+  "states": []
+ },
+ {
+  "name": "form1[0].P1[0].P1_Line5A[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": []
+ },
+ {
+  "name": "form1[0].P2[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].P2[0].CB_AppType[0]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": [
+   "/12",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P2[0].CB_AppType[1]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": [
+   "/11",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P2[0].CB_AppType[2]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": [
+   "/13",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P2[0].CB_AppType[3]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": [
+   "/14",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P2[0].CB_AppType[4]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": [
+   "/15",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P2[0].CB_AppType[5]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": [
+   "/17",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P2[0].CB_AppType[6]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Select 6.A.  I am applying for a parole document under ",
+  "states": [
+   "/18",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P2[0].CB_AppType[7]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": [
+   "/8",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P2[0].CB_AppType[8]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": [
+   "/9",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P2[0].CB_AppType[9]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": [
+   "/10",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P2[0].CB_AppType[10]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": [
+   "/7",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P2[0].P1_Line5C[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": []
+ },
+ {
+  "name": "form1[0].P2[0].P1_Line5E[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": []
+ },
+ {
+  "name": "form1[0].P2[0].P1_Line5F[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": []
+ },
+ {
+  "name": "form1[0].P2[0].P1_Line5G[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": []
+ },
+ {
+  "name": "form1[0].P2[0].P1_Line5H[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": []
+ },
+ {
+  "name": "form1[0].P2[0].P1_Line5I[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": []
+ },
+ {
+  "name": "form1[0].P2[0].CB_AppType[11]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": [
+   "/16",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P2[0].P1_Line5M[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": []
+ },
+ {
+  "name": "form1[0].P2[0].P1_Line5J[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": []
+ },
+ {
+  "name": "form1[0].P2[0].P1_Line5K[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": []
+ },
+ {
+  "name": "form1[0].P2[0].P1_Line5L[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": []
+ },
+ {
+  "name": "form1[0].P2[0].P1_Line6A[0]",
+  "type": "/Tx",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Enter I-130 receipt number:",
+  "states": []
+ },
+ {
+  "name": "form1[0].P2[0].CB_AppType[12]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": [
+   "/6",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P2[0].P1_Line5B[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Advance Parole Document (for aliens who are inside the United States) and Advance Permission to Travel for Commonwealth of Northern Mariana Island C N M I Long Term Residen",
+  "states": []
+ },
+ {
+  "name": "form1[0].P3[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].P3[0].CB_AppType[0]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Select D. Family Reunification Task Force (F R T F) Pro",
+  "states": [
+   "/21",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P3[0].P1_Line6D[0]",
+  "type": "/Tx",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Select D. Family Reunification Task Force (F R T F) Pro",
+  "states": []
+ },
+ {
+  "name": "form1[0].P3[0].CB_AppType[1]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Select E.  Other.",
+  "states": [
+   "/22",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P3[0].P1_Line6E[0]",
+  "type": "/Tx",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Select E.  Other.  List specific parole program or proc",
+  "states": []
+ },
+ {
+  "name": "form1[0].P3[0].P1_Line8A_1[0]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  Initial Request for Arrival/Departure Record for Parole In Place (for aliens who are inside the United States) 8. I am applying for an i",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P3[0].CB_AppType[2]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  Initial Request for Arrival/Departure Record for Parole In Place (for aliens who are inside the United States) 8. I am applying for an i",
+  "states": [
+   "/24",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P3[0].P1_Line8A_2[0]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  Initial Request for Arrival/Departure Record for Parole In Place (for aliens who are inside the United States) 8. I am applying for an i",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P3[0].CB_AppType[3]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  Initial Request for Arrival/Departure Record for Parole In Place (for aliens who are inside the United States) 8. I am applying for an i",
+  "states": [
+   "/26",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P3[0].CB_AppType[4]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  Initial Request for Arrival/Departure Record for Parole In Place (for aliens who are inside the United States) 8. I am applying for an i",
+  "states": [
+   "/25",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P3[0].CB_AppType[5]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Select 7.  I am applying for a parole document under IN",
+  "states": [
+   "/23",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P3[0].P1_Line8C[0]",
+  "type": "/Tx",
+  "label": "Part 1. Application Type.  Select  the application type below.  Initial Request for Arrival/Departure Record for Parole In Place (for aliens who are inside the United States) 8. I am applying for an i",
+  "states": []
+ },
+ {
+  "name": "form1[0].P3[0].P1_Line8B[0]",
+  "type": "/Tx",
+  "label": "Part 1. Application Type.  Select  the application type below.  Initial Request for Arrival/Departure Record for Parole In Place (for aliens who are inside the United States) 8. I am applying for an i",
+  "states": []
+ },
+ {
+  "name": "form1[0].P3[0].CB_AppType[6]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  Initial Request for Arrival/Departure Record for Parole In Place (for aliens who are inside the United States).  9.  I am applying for a",
+  "states": [
+   "/27",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P3[0].P1_Line6C2[0]",
+  "type": "/Tx",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Select C. Intergovernmental Parole Referral.  Enter U S",
+  "states": []
+ },
+ {
+  "name": "form1[0].P3[0].CB_AppType[7]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Select C. Intergovernmental Parole Referral  ",
+  "states": [
+   "/20",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P3[0].P1_Line6C1[0]",
+  "type": "/Tx",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Select C. Intergovernmental Parole Referral.  Enter U S",
+  "states": []
+ },
+ {
+  "name": "form1[0].P3[0].CB_AppType[8]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Select B.  Immigrant Military Members and Veterans I M ",
+  "states": [
+   "/19",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P3[0].P1_Line6B_3[0]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Select B.  Immigrant Military Members and Veterans I M ",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P3[0].P1_Line6B_2[0]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Select B.  Immigrant Military Members and Veterans I M ",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P3[0].P1_Line6B_1[0]",
+  "type": "/Btn",
+  "label": "Part 1. Application Type.  Select  the application type below.  initial Parole Document (for aliens who are currently outside the United States. Select B.  Immigrant Military Members and Veterans I M ",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].P4[0].CB_AppType[0]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/37",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].P1_Line12_DateOfAdmission[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States)   If you selected one of the boxes in Item Numb",
+  "states": []
+ },
+ {
+  "name": "form1[0].P4[0].CB_AppType[1]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/34",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].CB_AppType[2]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/35",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].P1_Line10E_1[0]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].P1_Line10E_3[0]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].P1_Line10E_2[0]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].P1_Line10H_2[0]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].P1_Line10H_1[0]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].CB_AppType[3]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/36",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].P1_Line10I[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": []
+ },
+ {
+  "name": "form1[0].P4[0].CB_AppType[4]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/29",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].CB_AppType[5]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/28",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].CB_AppType[6]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/30",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].CB_AppType[7]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/31",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].CB_AppType[8]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/32",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].CB_AppType[9]",
+  "type": "/Btn",
+  "label": "Part 1.  Application Type.  Arrival/Departure Records for Re-parole for aliens Who Are Requesting a New Period of Parole (from inside the United States) 10.  I was initially paroled into the United St",
+  "states": [
+   "/33",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].Part2_Line1_MiddleName[0]",
+  "type": "/Tx",
+  "label": "Part 2.  Information About You.   1. Your Full Name. Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P4[0].Part2_Line1_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 2.  Information About You.   1.  Your Full Name.  Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P4[0].Part2_Line1_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 2.  Information About You.   1.  Your Full Name. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P4[0].P1_Line13_YesNo[0]",
+  "type": "/Btn",
+  "label": "Type 1.  Application Type.  Refugee Status.  13.  Do you hold status as a refugee, were you paroled as a refugee, or are you a lawful permanent resident as a direct result of being a refugee?  Select ",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P4[0].P1_Line13_YesNo[1]",
+  "type": "/Btn",
+  "label": "Type 1.  Application Type.  Refugee Status.  13.  Do you hold status as a refugee, were you paroled as a refugee, or are you a lawful permanent resident as a direct result of being a refugee?  Select ",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P5[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line3_CityTown[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 3. Current Mailing Address or Safe Address if applicable.  Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line3_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 3. Current Mailing Address or Safe Address if applicable. Enter ZIP Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line3_State[0]",
+  "type": "/Ch",
+  "label": "Part 2. Information About You. 3. Current Mailing Address or Safe Address if applicable. Select State from a List of States.",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line3_InCareofName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 3. Current Mailing Address or Safe Address if applicable.  3.. Enter In Care of Name if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line3_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 3. Current Mailing Address or Safe Address if applicable.  Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line3_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 2. Information About You. 3. Current Mailing Address or Safe Address if applicable.  Check Suite.  ",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line3_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 2. Information About You. 3. Current Mailing Address or Safe Address if applicable. Check Apartment. ",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line3_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 2. Information About You. 3. Current Mailing Address or Safe Address if applicable.  Check Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line3_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 3. Current Mailing Address or Safe Address if applicable.  If Apartment, Suite or Floor is Checked, Enter Apartment, Suite or Floor Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line3_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 3. Current Mailing Address or Safe Address if applicable.  Enter Postal Code, if applicable.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line3_Province[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 3. Current Mailing Address or Safe Address if applicable.  Enter Province, if applicable.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line3_Country[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 3. Current Mailing Address or Safe Address if applicable.  Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line4_CityTown[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You 4. Current Physical Address if different from the above address.  Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line4_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You 4. Current Physical Address if different from the above address.  Enter ZIP Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line4_State[0]",
+  "type": "/Ch",
+  "label": "Part 2. Information About You 4. Current Physical Address if different from the above address.  Select State from a List of States.",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line4_InCareofName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You 4. Current Physical Address if different from the above address. Enter In Care of Name if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line4_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You 4. Current Physical Address if different from the above address. Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line4_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 2. Information About You 4. Current Physical Address if different from the above address.  Check Suite.  ",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line4_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 2. Information About You 4. Current Physical Address if different from the above address.  Check Apartment. ",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line4_Unit[2]",
+  "type": "/Btn",
+  "label": "Part Part 2. Information About You 4. Current Physical Address if different from the above address. 1. Petitioner Information. 3. Mailing Address of Individual, Company or Organization. Check Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line4_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "PaPart 2. Information About You 4. Current Physical Address if different from the above address. rt 1. Petitioner Information. 3. Mailing Address of Individual, Company or Organization. If Apartment, ",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line4_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You 4. Current Physical Address if different from the above address. Enter Postal Code, ",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line4_Province[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You 4. Current Physical Address if different from the above address. Enter Province, ",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line4_Country[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You 4. Current Physical Address if different from the above address. Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line11_USCISOnlineAcctNumber[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. 11. Enter a U S C I S Online Account Number (if any).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].#area[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].#area[0].Part2_Line5_AlienNumber[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. 5. Enter Alien Registration Number (A-Number) (if any).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].#area[1]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].#area[1].Part2_Line10_SSN[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. 10. Enter U. S. Social Security Number, if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line8_Gender[0]",
+  "type": "/Btn",
+  "label": "Part 2. Information About You. Other Information. 8. Sex. Check Female. ",
+  "states": [
+   "/F",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line8_Gender[1]",
+  "type": "/Btn",
+  "label": "Part 2. Information About You. Other Information. 8. Sex. Check Male. ",
+  "states": [
+   "/M",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line9_DateOfBirth[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. 9. Enter Date of Birth as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line6_CountryOfBirth[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. 6. Enter Country of Birth. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line7_CountryOfCitizenshiporNationality[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. 7. Enter Country of Citizenship. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line12_ClassofAdmission[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About You. Other Information. 12. Enter Class of Admission if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line13_I94RecordNo[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. 13. Enter Most recent Form I-94 Arrival Departure Record Number if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line2_MiddleName2[0]",
+  "type": "/Tx",
+  "label": "Part 2.  Information About You.   2.  Other Names Used if applicable.  Row 2.  Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line2_MiddleName1[0]",
+  "type": "/Tx",
+  "label": "Part 2.  Information About You.   2.  Other Names Used if applicable.  Row 1.  Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line2_GivenName1[0]",
+  "type": "/Tx",
+  "label": "Part 2.  Information About You.   2.  Other Names Used if applicable.  Row 1. Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line2_FamilyName1[0]",
+  "type": "/Tx",
+  "label": "Part 2.  Information About You.   2.  Other Names Used if applicable.  Row 1. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line2_GivenName2[0]",
+  "type": "/Tx",
+  "label": "Part 2.  Information About You.   2.  Other Names Used if applicable.  Row 2. Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line2_FamilyName2[0]",
+  "type": "/Tx",
+  "label": "Part 2.  Information About You.   2.  Other Names Used if applicable.  Row 2. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line2_MiddleName3[0]",
+  "type": "/Tx",
+  "label": "Part 2.  Information About You.   2.  Other Names Used if applicable.  Row 3.  Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line2_GivenName3[0]",
+  "type": "/Tx",
+  "label": "Part 2.  Information About You.   2.  Other Names Used if applicable.  Row 3. Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P5[0].Part2_Line2_FamilyName3[0]",
+  "type": "/Tx",
+  "label": "Part 2.  Information About You.   2.  Other Names Used if applicable.  Row 3. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line16_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You.   If you are requesting parole on behalf of someone other than yourself, provide the following information about that person in Item Numbers 16. - 27.  Do not complete t",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line16_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 16. Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line16_MiddleName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 16. Enter Middle Name (if applicable).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].Part2_Line17_FamilyName1[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 17. Their other Names Used (if applicable). Row 1. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].Part2_Line17_GivenName1[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 17. Row 1. Enter Given Name (Firstst Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].Part2_Line17_MiddleName1[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 17. Row 1. Enter Middle Name (if applicable).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].Part2_Line17_FamilyName2[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 17. Their other Names Used (if applicable). .  Row 2. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].Part2_Line17_GivenName2[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 17. Row 2. Enter Given Name (Firstst Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].Part2_Line17_MiddleName2[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 17. Row 2. Enter Middle Name (if applicable).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].Part2_Line17_FamilyName3[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 17. Their other Names Used (if applicable). .  Row 3. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].Part2_Line17_GivenName3[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 17. Row 3. Enter Given Name (Firstst Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].Part2_Line17_MiddleName3[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 17. Row 3. Enter Middle Name (if applicable).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line18_DateOfBirth[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. 18. Enter your Date of Birth. Enter the Date as a 2-digit month, 2-digit day, and 4-digit year. Ex. 01/01/2023.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line19_CountryOfBirth[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. 19. Country of Birth. Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line20_CountryOfCitizenship[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. 20. Enter Country of Citizenship or Nationality.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line21_DaytimeTelephoneNumber[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. Provide your daytime telephone number (if any)",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line22_Email[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information.  22. Enter Email Address (if any).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].ANumber[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].ANumber[0].P2_Line23_AlienNumber[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. 23. Enter Alien Registration Number (A-Number).",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line24_CityTown[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 24. Their Current Mailing Address.  Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line24_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 24. Their Current Mailing Address.  Enter ZIP Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line24_State[0]",
+  "type": "/Ch",
+  "label": "Part 2. Information About You. 24. Their Current Mailing Address. Select State from a List of States.",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line24_InCareofName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 24. Their Current Mailing Address. Enter In Care of Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line24_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 24. Their Current Mailing Address.  Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line24_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 2. Information About You. 24. Their Current Mailing Address.  Check Suite.  ",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line24_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 1. Petitioner Information. 3. Mailing Part 2. Information About You. 24. Their Current Mailing Address. Check Apartment. ",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line24_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 2. Information About You. 24. Their Current Mailing Address. Check Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line24_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 24. Their Current Mailing Address. If Apartment, Suite or Floor is Checked, Enter Apartment, Suite or Floor Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line24_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 24. Their Current Mailing Address.  Enter Postal Code, ",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line24_Province[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 24. Their Current Mailing Address. Enter Province,",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line24_Country[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 24. Their Current Mailing Address.  Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line25_CityTown[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 25. Their Current Physical Address.  Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line25_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 25. Their Current Physical Address. Enter ZIP Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line25_State[0]",
+  "type": "/Ch",
+  "label": "Part 2. Information About You. 25. Their Current Physical Address. . Select State from a List of States.",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line25_InCareofName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 25. Their Current Physical Address. Enter In Care of Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line25_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 25. Their Current Physical Address. Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line25_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 2. Information About You. 25. Their Current Physical Address. Check Suite.  ",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line25_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 2. Information About You. 25. Their Current Physical Address. Check Apartment. ",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line25_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 2. Information About You. 25. Their Current Physical Address. Check Floor.  ",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line25_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 25. Their Current Physical Address.  If Apartment, Suite or Floor is Checked, Enter Apartment, Suite or Floor Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line25_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 24. Their Current Physical Address.  Enter Postal Code, if applicable.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line25_Province[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 25. Their Current Physical Address.  Enter Province, if applicable.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].P2_Line25_Country[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 25. Their Current Physical Address.  Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].Par2_Line15_eMedicalParoleeID[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. 15. eMedical U S Parolee I D U S P I D if any",
+  "states": []
+ },
+ {
+  "name": "form1[0].P6[0].Part2_Line14_I94ExpDate[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. Other Information. 14. Expiration Date of Authorized Stay Shown on Form I-94 if any. Enter as 2 digit month, 2 digit day and 4 digit year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P7[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].P7[0].P2_Line26_ClassofAdmission[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You. 26. Class of Admission C O A if any. Enter Class of Admission.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P7[0].P2_Line27_I94RecordNo[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About You.  27.   Enter Most Recent Form I-94 Arrival Departure Record Number if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line2_Race_Black[0]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 2. Race (Select all applicable boxes). Select Black or African American",
+  "states": [
+   "/B",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line2_Race_Hawaiian[0]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 2. Race (Select all applicable boxes). Select Native Hawaiian or Other ",
+  "states": [
+   "/H",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line2_Race_American[0]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 2. Race (Select all applicable boxes). Select American Indian or Alaska",
+  "states": [
+   "/I",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line3_HeightFeet[0]",
+  "type": "/Ch",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 3. Height. Feet. Select the number of feet.",
+  "states": [
+   "[' ', ' ']",
+   "['2', '2']",
+   "['3', '3']",
+   "['4', '4']",
+   "['5', '5']",
+   "['6', '6']",
+   "['7', '7']",
+   "['8', '8']"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line3_HeightInches[0]",
+  "type": "/Ch",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 3. Height. Inches. Select the number of Inches.",
+  "states": [
+   "[' ', ' ']",
+   "['0', '0']",
+   "['1', '1']",
+   "['2', '2']",
+   "['3', '3']",
+   "['4', '4']",
+   "['5', '5']",
+   "['6', '6']",
+   "['7', '7']",
+   "['8', '8']",
+   "['9', '9']",
+   "['10', '10']"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line4_Pound1[0]",
+  "type": "/Tx",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 3. Enter Weight in Pounds. Enter the first digit of a three digit numbe",
+  "states": []
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line4_Pound2[0]",
+  "type": "/Tx",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 3. Enter Weight in Pounds. Enter the second digit of a three digit numb",
+  "states": []
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line4_Pound3[0]",
+  "type": "/Tx",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 3. Enter Weight in Pounds. Enter the third digit of a three digit numbe",
+  "states": []
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line5_EyeColor[0]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 5. Eye Color (Select only one box). Select Brown.",
+  "states": [
+   "/BRN",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line5_EyeColor[1]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 5. Eye Color (Select only one box). Select Gray.",
+  "states": [
+   "/GRY",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line5_EyeColor[2]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 5. Eye Color (Select only one box). Select Maroon.",
+  "states": [
+   "/MRN",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line5_EyeColor[3]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 5. Eye Color (Select only one box). Select Unknown or Other.",
+  "states": [
+   "/OTH",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line5_EyeColor[4]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 5. Eye Color (Select only one box). Select Pink.",
+  "states": [
+   "/PNK",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line5_EyeColor[5]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 5. Eye Color (Select only one box). Select Hazel.",
+  "states": [
+   "/HZL",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line5_EyeColor[6]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 5. Eye Color (Select only one box). Select Green.",
+  "states": [
+   "/GRN",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line5_EyeColor[7]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 5. Eye Color (Select only one box). Select Blue.",
+  "states": [
+   "/BLU",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line6_HairColor[0]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 6. Hair Color (Select only one box). Select Bald. (No Hair).",
+  "states": [
+   "/BLD",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line6_HairColor[1]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 6. Hair Color (Select only one box). Select Blond.",
+  "states": [
+   "/BND",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line6_HairColor[2]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 6. Hair Color (Select only one box). Select Gray.",
+  "states": [
+   "/GRY",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line6_HairColor[3]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 6. Hair Color (Select only one box). Select Sandy.",
+  "states": [
+   "/SDY",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line6_HairColor[4]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 6. Hair Color (Select only one box). Select Unknown or Other.",
+  "states": [
+   "/OTH",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line6_HairColor[5]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 6. Hair Color (Select only one box). Select White.",
+  "states": [
+   "/WHT",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line6_HairColor[6]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 6. Hair Color (Select only one box). Select Red.",
+  "states": [
+   "/RED",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line6_HairColor[7]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 6. Hair Color (Select only one box). Select Brown.",
+  "states": [
+   "/BRN",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line6_HairColor[8]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 6. Hair Color (Select only one box). Select Black.",
+  "states": [
+   "/BLK",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line2_Race_Asian[0]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 2. Race (Select all applicable boxes). Select Asian.",
+  "states": [
+   "/A",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line2_Race_White[0]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 2. Race (Select all applicable boxes). Select White.",
+  "states": [
+   "/W",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line1_Ethnicity[0]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 1. Ethnicity (Select only one box). Select Not Hispanic or Latino. ",
+  "states": [
+   "/NH",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line1_Ethnicity[1]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 1. Ethnicity (Select only one box). Select Hispanic or Latino. ",
+  "states": [
+   "/H",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P3_Line5_EyeColor[8]",
+  "type": "/Btn",
+  "label": "Part 3. Biographic Information of the Person Who Will Receive the Travel Document, Parole Document, or Arrival/Departure Record. 5. Eye Color (Select only one box). Select Black.",
+  "states": [
+   "/BLK",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P4_Line2c_Disposition[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 2 C. If 2. A. Yes, is Checked, Enter Disposition (attached, lost, stolen, damage/ destroyed, still in my possession, etcetera). ",
+  "states": []
+ },
+ {
+  "name": "form1[0].P7[0].P4_Line2a_YesNo[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 2. A. Have you EVER before been issued a Reentry Permit or Refugee Travel Document? (If you answered “Yes,” provide the information in Item Numbers 2.b. - 2.c. for the ",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P4_Line2a_YesNo[1]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 2. A. Have you EVER before been issued a Reentry Permit or Refugee Travel Document? (If you answered “Yes,” provide the information in Item Numbers 2.b. - 2.c. for the ",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P4_Line2b_DateIssued[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 2. B. If 2. A. Yes, is Checked, Enter Date Issued as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P7[0].P4_Line1_YesNo[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 1.  Has the person who will receive the travel document, parole document, or Arrival/Departure Record, if approved, been in any exclusion, deportation, removal, or resc",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P4_Line1_YesNo[1]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 1.  Has the person who will receive the travel document, parole document, or Arrival/Departure Record, if approved, been in any exclusion, deportation, removal, or resc",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P4_Line3a_YesNo[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 3. A.   Have you EVER been issued an Advance Parole Document? (If you answered “Yes,” please provide the information in Item Numbers 3.b. - 3.c. for the last document i",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P4_Line3a_YesNo[1]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 3. A.   Have you EVER been issued an Advance Parole Document? (If you answered “Yes,” please provide the information in Item Numbers 3.b. - 3.c. for the last document i",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P4_Line3b_DateIssued[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 3. B. If 3. A. Yes, is Checked, Enter Date Issued as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].P7[0].P4_Line3c_Disposition[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 3 C. If 3. A. Yes, is Checked, Enter Disposition (attached, lost, stolen, damage/ destroyed, still in my possession, etcetera). ",
+  "states": []
+ },
+ {
+  "name": "form1[0].P7[0].P4_Line4_YesNo[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 4. Are you requesting a replacement Reentry Permit, Refugee Travel Document, Advance Parole Document, or T P S Travel Authorization Document? Check Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].P7[0].P4_Line4_YesNo[1]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 4. Are you requesting a replacement Reentry Permit, Refugee Travel Document, Advance Parole Document, or T P S Travel Authorization Document? Check No",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line5[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 5. If you answered “Yes,” select one of the following boxes and complete Item Numbers 6.a. - 6.b. If you answered “No,” you can skip to Item Number 7.a. My document was",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line5[1]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 5. If you answered “Yes,” select one of the following boxes and complete Item Numbers 6.a. - 6.b. If you answered “No,” you can skip to Item Number 7.a. I received my d",
+  "states": [
+   "/2",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line5[2]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 5. If you answered “Yes,” select one of the following boxes and complete Item Numbers 6.a. - 6.b. If you answered “No,” you can skip to Item Number 7.a. I received my d",
+  "states": [
+   "/3",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line5[3]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 5. If you answered “Yes,” select one of the following boxes and complete Item Numbers 6.a. - 6.b. If you answered “No,” you can skip to Item Number 7.a. I received my d",
+  "states": [
+   "/4",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line6a_Name[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 6.a. If you are replacing your Reentry Permit, Refugee Travel Document, Advance Parole Document, or T P S Travel Authorization Document because it has incorrect informa",
+  "states": [
+   "/A",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line6a_ANumber[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 6.a. If you are replacing your Reentry Permit, Refugee Travel Document, Advance Parole Document, or T P S Travel Authorization Document because it has incorrect informa",
+  "states": [
+   "/B",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line6a_CountryofBirthCitizenship[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 6.a. If you are replacing your Reentry Permit, Refugee Travel Document, Advance Parole Document, or T P S Travel Authorization Document because it has incorrect informa",
+  "states": [
+   "/C",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line6a_Terms[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 6.a. If you are replacing your Reentry Permit, Refugee Travel Document, Advance Parole Document, or T P S Travel Authorization Document because it has incorrect informa",
+  "states": [
+   "/D",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line6a_DOB[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 6.a. If you are replacing your Reentry Permit, Refugee Travel Document, Advance Parole Document, or T P S Travel Authorization Document because it has incorrect informa",
+  "states": [
+   "/E",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line6a_Gender[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 6.a. If you are replacing your Reentry Permit, Refugee Travel Document, Advance Parole Document, or T P S Travel Authorization Document because it has incorrect informa",
+  "states": [
+   "/C",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line6a_Validity[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 6.a. If you are replacing your Reentry Permit, Refugee Travel Document, Advance Parole Document, or T P S Travel Authorization Document because it has incorrect informa",
+  "states": [
+   "/D",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line6a_Photo[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 6.a. If you are replacing your Reentry Permit, Refugee Travel Document, Advance Parole Document, or T P S Travel Authorization Document because it has incorrect informa",
+  "states": [
+   "/E",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line6a_Explanation[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 6.a. Provide an explanation of what is incorrect on your current document to support your request for a correction and attach copies of any documents supporting your re",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line6b_ReceiptNumber[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 6.b. Provide the receipt number for the Form I-131 related to the Reentry Permit, Refugee Travel Document, Advance Parole Document, or T P S Travel Authorization Docume",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line7a[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 7.b. To a U.S. Embassy, U.S. Consulate, USCIS international field office, or Department of Homeland Security (DHS) office overseas at:",
+  "states": [
+   "/B",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line7a[1]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you are applying for an Advance Parole Document, SKIP to Part 7. You must complete the rest of Part 4. if you are requesting a Reentry Permit or Refugee Travel Docum",
+  "states": [
+   "/A",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line7b_CityOrTown[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 7.b. To a U.S. Embassy, U.S. Consulate, USCIS international field office, or Department of Homeland Security (DHS) office overseas at: Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].P4_Line7b_Country[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 7.b. To a U.S. Embassy, U.S. Consulate, USCIS international field office, or Department of Homeland Security (DHS) office overseas at: Enter Country. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[8]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[8].P5_Line1_Lessthan6[0]",
+  "type": "/Btn",
+  "label": "Part 5. Complete Only If Applying for a Reentry Permit (Part 1., Item Number 1.) 1. Since becoming a permanent resident of the United States (or during the past 5 years, whichever is less), how much t",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P5_Line1_6months[0]",
+  "type": "/Btn",
+  "label": "Part 5. Complete Only If Applying for a Reentry Permit (Part 1., Item Number 1.) 1. Since becoming a permanent resident of the United States (or during the past 5 years, whichever is less), how much t",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P5_Line1_1to2[0]",
+  "type": "/Btn",
+  "label": "Part 5. Complete Only If Applying for a Reentry Permit (Part 1., Item Number 1.) 1. Since becoming a permanent resident of the United States (or during the past 5 years, whichever is less), how much t",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P5_Line1_2to3[0]",
+  "type": "/Btn",
+  "label": "Part 5. Complete Only If Applying for a Reentry Permit (Part 1., Item Number 1.) 1. Since becoming a permanent resident of the United States (or during the past 5 years, whichever is less), how much t",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P5_Line1_3to4[0]",
+  "type": "/Btn",
+  "label": "Part 5. Complete Only If Applying for a Reentry Permit (Part 1., Item Number 1.) 1. Since becoming a permanent resident of the United States (or during the past 5 years, whichever is less), how much t",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P5_Line1_morethan[0]",
+  "type": "/Btn",
+  "label": "Part 5. Complete Only If Applying for a Reentry Permit (Part 1., Item Number 1.) 1. Since becoming a permanent resident of the United States (or during the past 5 years, whichever is less), how much t",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line8_CB[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you are requesting that the Reentry Permit or Refugee Travel Document be sent to a U.S. Embassy, U.S. Consulate, or USCIS international field office, where should th",
+  "states": [
+   "/A",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line8_CB[1]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you are requesting that the Reentry Permit or Refugee Travel Document be sent to a U.S. Embassy, U.S. Consulate, or USCIS international field office, where should th",
+  "states": [
+   "/B",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9a_InCareofName[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 9. A. Enter In Care of Name (if any).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9a_CityTown[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 9.a. Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9a_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 9.a. Enter ZIP Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9a_State[0]",
+  "type": "/Ch",
+  "label": "Part 4. Processing Information. 9.a. Select State from a List of States.",
+  "states": [
+   "['', '']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9a_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 9.a. Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9a_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 9.a. Check Suite.  ",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9a_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 9.a. Check Apartment. ",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9a_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. 9.a. Check Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9a_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 9.a. If Apartment, Suite or Floor is Checked, Enter Apartment, Suite or Floor Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9a_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 9.a. Enter Postal Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9a_Province[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 9.a. Enter Province.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9a_Country[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 9.a. Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9c_Email[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 9.c. Enter Email Address.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[8].P4_Line9b_Email[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. 9.b. Enter Daytime Phone Number",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[8].P6_Line2_YesNo[0]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 2. Do you plan to travel to the country named above in Item Number 1.? No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P6_Line2_YesNo[1]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) If you answer “Yes” to Item Numbers 2. - 6.c. below, use the space provided in Part 13. Additional Infor",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P6_Line1_CountryRefugee[0]",
+  "type": "/Tx",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 1. Country from which you are a refugee or asylee:",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[8].P6_Line3b_YesNo[0]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 3.b. Applied for and/or obtained a national passport, passport renewal, or entry permit from the country",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P6_Line3c_YesNo[0]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 3.c. Applied for and/or received any benefit from the country named in Item Number 1. (for example, heal",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P6_Line3c_YesNo[1]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 3.c. Applied for and/or received any benefit from the country named in Item Number 1. (for example, heal",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P6_Line3b_YesNo[1]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 3.b. Applied for and/or obtained a national passport, passport renewal, or entry permit from the country",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P6_Line3a_YesNo[0]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) Since you were admitted to the United States as a refugee or granted asylee status, have you EVER:  3.a.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[8].P6_Line3a_YesNo[1]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 3.a. Returned to the country named above in Item Number 1.? No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[9]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[9].P6_Line4a_YesNo[0]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 4.a. Reacquired the nationality of the country named above in Item Number 1.? No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[9].P6_Line4b_YesNo[0]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 4.b. Acquired a new nationality? Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[9].P6_Line5_YesNo[0]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 5. Are you filing for a Refugee Travel Document before departing the United States? No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[9].P6_Line5_YesNo[1]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 5. Are you filing for a Refugee Travel Document before departing the United States? Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[9].P6_Line4b_YesNo[1]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 4.b. Acquired a new nationality? No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[9].P6_Line4a_YesNo[1]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) Since you were admitted to the United States as a refugee or granted asylee status in the United States,",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[9].P6_Line6a_YesNo[0]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 6.a.  Are you currently outside the United States? No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[9].P6_Line6a_YesNo[1]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) If you answered “Yes” to Item Number 5., because you are filing for a Refugee Travel Document before dep",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[9].P6_Line6b_CityOrTown[0]",
+  "type": "/Tx",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 6.b. If you answered “Yes,” what is your current location (City or Town and Country)?",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[9].P6_Line6c_Country[0]",
+  "type": "/Tx",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 6.c. If you answered “Yes,” what other countries have you traveled to since leaving the United States?",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[9].P7_Line4_CB[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About Your Proposed Travel (Complete only if you are applying for an Advance Parole Document (Part 1., Item Number 5.).) 4. How many trips do you intend to use this document? One T",
+  "states": [
+   "/O",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[9].P7_Line4_CB[1]",
+  "type": "/Btn",
+  "label": "Part 7. Information About Your Proposed Travel (Complete only if you are applying for an Advance Parole Document (Part 1., Item Number 5.).) 4. How many trips do you intend to use this document? More ",
+  "states": [
+   "/M",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[9].P7_Line5_ExpectedLengthTrip[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About Your Proposed Travel (Complete only if you are applying for an Advance Parole Document (Part 1., Item Number 5.).) 5. Expected Length of Trip (in days)",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[9].P7_Line2_Purpose[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About Your Proposed Travel (Complete only if you are applying for an Advance Parole Document (Part 1., Item Number 5.).) 2. Purpose of trip. (If you need extra space to complete th",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[9].P7_Line1_DateOfDeparture[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About Your Proposed Travel (Complete only if you are applying for an Advance Parole Document (Part 1., Item Number 5.).) 1. Date of Intended Departure. Enter 2-digit Month, 2-digit",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[9].P7_Line3_ListCountries[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About Your Proposed Travel (Complete only if you are applying for an Advance Parole Document (Part 1., Item Number 5.).) 3. List the countries you intend to visit. (If you need ext",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[9].Line4c_No[0]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 4.c. Been granted refugee or asylee status in any other country? No.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[9].Line4c_Yes[0]",
+  "type": "/Btn",
+  "label": "Part 6. Complete Only If Applying for a Refugee Travel Document (Part 1., Item Number 2. or 3.) 4.c. Been granted refugee or asylee status in any other country? Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[10]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[10].P9_Line1_EAD[0]",
+  "type": "/Btn",
+  "label": "Part 9. Employment Authorization For New Period of Parole (Re-parole) (Part 1., Item Number 10. or 11.) 1. I am requesting an Employment Authorization Document (EAD) upon approval of my new period of ",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[10].P8_Line3a_DateOfIntendedArrival[0]",
+  "type": "/Tx",
+  "label": "Part 8. Complete Only If Applying for an Initial Parole Document, Parole In Place, or Re-parole (Part 1., Item Numbers 6. - 11.) If the person intended to receive the parole document is outside the Un",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[10].P8_Line3b_CityOrTown[0]",
+  "type": "/Tx",
+  "label": "Part 8. Complete Only If Applying for an Initial Parole Document, Parole In Place, or Re-parole (Part 1., Item Numbers 6. - 11.) 3.b. Location (City or Town and Country) of the U.S. Embassy, U.S. Cons",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[10].P8_Line3b_Country[0]",
+  "type": "/Tx",
+  "label": "Part 8. Complete Only If Applying for an Initial Parole Document, Parole In Place, or Re-parole (Part 1., Item Numbers 6. - 11.) 3.b. Location (City or Town and Country) of the U.S. Embassy, U.S. Cons",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[10].P8_Line2_ExpectedLengthTripinUS[0]",
+  "type": "/Tx",
+  "label": "Part 8. Complete Only If Applying for an Initial Parole Document, Parole In Place, or Re-parole (Part 1., Item Numbers 6. - 11.) 2. Expected Length of Stay in the United States.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[10].Part10_Line4_DateofSignature[0]",
+  "type": "/Tx",
+  "label": "Part 10. Applicant's Contact Information, Certification, and Signature (Read the information on penalties and travel warnings in the form Instructions before completing this Part 10.) 4. Date of Signa",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[10].Part10_Line4_ApplicantSignature[0]",
+  "type": "/Tx",
+  "label": "Part 10. Applicant's Contact Information, Certification, and Signature (Read the information on penalties and travel warnings in the form Instructions before completing this Part 10.) I certify, under",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[10].Part10_Line1_DayPhone[0]",
+  "type": "/Tx",
+  "label": "Part 10. Applicant's Contact Information, Certification, and Signature (Read the information on penalties and travel warnings in the form Instructions before completing this Part 10.) Applicant's Cont",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[10].Part10_Line2_MobilePhone[0]",
+  "type": "/Tx",
+  "label": "Part 10. Applicant's Contact Information, Certification, and Signature (Read the information on penalties and travel warnings in the form Instructions before completing this Part 10.) 2. Applicant Mob",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[10].Part10_Line3_Email[0]",
+  "type": "/Tx",
+  "label": "Part 10. Applicant's Contact Information, Certification, and Signature (Read the information on penalties and travel warnings in the form Instructions before completing this Part 10.) 3. Applicant's E",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[10].P8_Line1_Explain[0]",
+  "type": "/Tx",
+  "label": "Part 8. Complete Only If Applying for an Initial Parole Document, Parole In Place, or Re-parole (Part 1., Item Numbers 6. - 11.) 1. Explain how you qualify for parole, parole in place, or re-parole.  ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[11]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[11].Part11_Line3_DayPhone[0]",
+  "type": "/Tx",
+  "label": "Part 11. Interpreter's Contact Information, Certification, and Signature (if applicable) (If no interpreter was used, skip to Part 12.) Interpreter's Contact Information. 3. Interpreter's Daytime Tele",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[11].Part11_Line4_MobilePhone[0]",
+  "type": "/Tx",
+  "label": "Part 11. Interpreter's Contact Information, Certification, and Signature (if applicable) (If no interpreter was used, skip to Part 12.) 4. Interpreter's Mobile Telephone Number (if any)",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[11].Part11_Line5_Email[0]",
+  "type": "/Tx",
+  "label": "Part 11. Interpreter's Contact Information, Certification, and Signature (if applicable) (If no interpreter was used, skip to Part 12.) 5. Interpreter's Email Address (if any)",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[11].Part11_Line6_InterpreterSig[0]",
+  "type": "/Tx",
+  "label": "Part 11. Interpreter's Contact Information, Certification, and Signature (if applicable) (If no interpreter was used, skip to Part 12.)  6. Interpreter's Signature.  This signature field can not be si",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[11].Part11_Line6_DateofSignature[0]",
+  "type": "/Tx",
+  "label": "Part 11. Interpreter's Contact Information, Certification, and Signature (if applicable) (If no interpreter was used, skip to Part 12.) 6. Date of Signature. Enter as 2 digit month, 2 digit day and 4 ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[11].P11_Language[0]",
+  "type": "/Tx",
+  "label": "Part 11. Interpreter's Contact Information, Certification, and Signature (if applicable) (If no interpreter was used, skip to Part 12.)  Interpreter's Certification and Signature. I certify, under pen",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[11].Part11_Line1_InterpreterFamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 11. Interpreter's Contact Information, Certification, and Signature (if applicable) (If no interpreter was used, skip to Part 12.) Interpreter's Full Name. 1. Interpreter's Family Name (Last Name",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[11].Part11_Line1_InterpreterGivenName[0]",
+  "type": "/Tx",
+  "label": "Part 11. Interpreter's Contact Information, Certification, and Signature (if applicable) (If no interpreter was used, skip to Part 12.) 1. Interpreter's Given Name (First Name)",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[11].Part11_Line2_NameofBusinessorOrgName[0]",
+  "type": "/Tx",
+  "label": "Part 11. Interpreter's Contact Information, Certification, and Signature (if applicable) (If no interpreter was used, skip to Part 12.) 2. Interpreter's Business or Organization Name (if any)",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[12]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[12].Part12_Line6_PreparerSig[0]",
+  "type": "/Tx",
+  "label": "Part 12. Contact Information, Certification, and Signature of the Person Preparing this Application, if Other Than the Applicant. Preparer's Certification and Signature. 6. Preparer's Signature. This ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[12].Part12_Line6_DateofSignature[0]",
+  "type": "/Tx",
+  "label": "Part 12. Contact Information, Certification, and Signature of the Person Preparing this Application, if Other Than the Applicant. Preparer's Certification and Signature. 6. Date of Signature. Enter as",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[12].Part12_Line1_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 12. Contact Information, Certification, and Signature of the Person Preparing this Application, if Other Than the Applicant. Preparer's Full Name. 1. Enter Preparer's Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[12].Part12_Line1_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 12. Contact Information, Certification, and Signature of the Person Preparing this Application, if Other Than the Applicant. Preparer's Full Name. 1. Enter Preparer's Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[12].Part12_Line2_NameofBusinessorOrgName[0]",
+  "type": "/Tx",
+  "label": "Part 12. Contact Information, Certification, and Signature of the Person Preparing this Application, if Other Than the Applicant. Preparer's Full Name. 2. Enter Preparer's Business or Organization Nam",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[12].Part12_Line5_Email[0]",
+  "type": "/Tx",
+  "label": "Part 12. Contact Information, Certification, and Signature of the Person Preparing this Application, if Other Than the Applicant. Preparer's Contact Information. 5. Enter Preparer's Email Address, if ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[12].Part12_Line3_DayPhone[0]",
+  "type": "/Tx",
+  "label": "Part 12. Contact Information, Certification, and Signature of the Person Preparing this Application, if Other Than the Applicant. Preparer's Contact Information. 3. Enter Preparer's Daytime Telephone ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[12].Part12_Line4_MobilePhone[0]",
+  "type": "/Tx",
+  "label": "Part 12. Contact Information, Certification, and Signature of the Person Preparing this Application, if Other Than the Applicant. Preparer's Contact Information. 4. Enter Preparer's Mobile Telephone N",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part2_Line1_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information.  If you need extra space to provide any additional information within this application, use the space below. If you need more space than what is provided, make copies ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part2_Line1_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 1. Enter Given Name (First Name). This is a read only field. This field pre-populates from page 1.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part2_Line1_MiddleName[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 1. Enter Middle Name. This is a read only field. This field pre-populates from page 1.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Global_ANumber[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Global_ANumber[0].Part2_Line5_AlienNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 2. Enter Alien Registration Number (A. Number), if any. This is a read only field. This field pre-populates from page 1.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line3_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 3. Enter Page Number. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line3_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 3. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line3_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 3. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line3_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 3. Enter Additional Information.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line4_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 4. Enter Page Number. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line4_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 4. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line4_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 4. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line4_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 4. Enter Additional Information.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line5_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 5. Enter Page Number. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line5_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 5. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line5_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 5. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line5_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 5. Enter Additional Information.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line6_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 6. Enter Page Number. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line6_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 6. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line6_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 6. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line6_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 6. Enter Additional Information.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line7_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 7. Enter Page Number. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line7_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 7. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line7_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 7. Enter Item Number. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[13].Part13_Line7_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 13. Additional Information. 7. Enter Additional Information.",
+  "states": []
+ }
+]

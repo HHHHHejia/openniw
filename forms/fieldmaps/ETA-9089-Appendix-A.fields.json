@@ -1,0 +1,794 @@
+[
+ {
+  "name": "1  Foreign Workers Last family Name",
+  "type": "/Tx",
+  "label": "1.  Foreign Worker’s Last (family) Name *",
+  "states": []
+ },
+ {
+  "name": "2  Foreign Workers First given Name",
+  "type": "/Tx",
+  "label": "2.  Foreign Worker’s First (given) Name *",
+  "states": []
+ },
+ {
+  "name": "3  Foreign Workers Middle Names",
+  "type": "/Tx",
+  "label": "3.  Foreign Worker’s Middle Name(s) *",
+  "states": []
+ },
+ {
+  "name": "4  Address 1 current",
+  "type": "/Tx",
+  "label": "4.  Address 1 (current) *",
+  "states": []
+ },
+ {
+  "name": "5  Address 2 apartmentsuitefloor and number",
+  "type": "/Tx",
+  "label": "5.  Address 2 (apartment/suite/floor and number) §",
+  "states": []
+ },
+ {
+  "name": "6  City",
+  "type": "/Tx",
+  "label": "6.  City *",
+  "states": []
+ },
+ {
+  "name": "7  State",
+  "type": "/Tx",
+  "label": "7.  State *",
+  "states": []
+ },
+ {
+  "name": "8  Postal Code",
+  "type": "/Tx",
+  "label": "8.  Postal Code *",
+  "states": []
+ },
+ {
+  "name": "9  Country",
+  "type": "/Tx",
+  "label": "9.  Country *",
+  "states": []
+ },
+ {
+  "name": "10  Province",
+  "type": "/Tx",
+  "label": "10.  Province §",
+  "states": []
+ },
+ {
+  "name": "11  Date of Birth mmddyyyy",
+  "type": "/Tx",
+  "label": "11.  Date of Birth (mm/dd/yyyy) *",
+  "states": []
+ },
+ {
+  "name": "12  Class of admission",
+  "type": "/Tx",
+  "label": "12.  Class of admission *",
+  "states": []
+ },
+ {
+  "name": "13  Alien registration number A if applicable",
+  "type": "/Tx",
+  "label": "13.  Alien registration number (A#) (if applicable) *",
+  "states": []
+ },
+ {
+  "name": "14  Country of birth",
+  "type": "/Tx",
+  "label": "14.  Country of birth *",
+  "states": []
+ },
+ {
+  "name": "15  Country of citizenship or nationality",
+  "type": "/Tx",
+  "label": "15.  Country of citizenship or nationality *",
+  "states": []
+ },
+ {
+  "name": "None",
+  "type": "/Btn",
+  "label": "None",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "High SchoolGED",
+  "type": "/Btn",
+  "label": "High School/GED",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Associate",
+  "type": "/Btn",
+  "label": "Associate",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Bachelors",
+  "type": "/Btn",
+  "label": "Bachelor’s",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Masters",
+  "type": "/Btn",
+  "label": "Master's",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Doctorate PhD",
+  "type": "/Btn",
+  "label": "Doctorate (PhD",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Other degree JD MD etc",
+  "type": "/Btn",
+  "label": "Other degree (JD, MD, etc",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "1a If Other degree in question 1 specify the diplomadegree attained",
+  "type": "/Tx",
+  "label": "1a. If “Other degree” in question 1, specify the diploma/degree attained",
+  "states": []
+ },
+ {
+  "name": "1b  Specify majors andor fields of study may list more than one related major and more than one field",
+  "type": "/Tx",
+  "label": "1b.  Specify major(s) and/or field(s) of study (may list more than one related major and more than one field)",
+  "states": []
+ },
+ {
+  "name": "1c  Name of institution that issued the degreediploma",
+  "type": "/Tx",
+  "label": "1c.  Name of institution that issued the degree/diploma",
+  "states": []
+ },
+ {
+  "name": "1d  Name of country of institution identified in question 1c",
+  "type": "/Tx",
+  "label": "1d.  Name of country of institution identified in question 1c",
+  "states": []
+ },
+ {
+  "name": "1e  Monthyear attained mmyyyy",
+  "type": "/Tx",
+  "label": "1e.  Month/year attained (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "None_2",
+  "type": "/Btn",
+  "label": "None",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "High SchoolGED_2",
+  "type": "/Btn",
+  "label": "High School/GED",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Associate_2",
+  "type": "/Btn",
+  "label": "Associate",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Bachelors_2",
+  "type": "/Btn",
+  "label": "Bachelor’s",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Masters_2",
+  "type": "/Btn",
+  "label": "Master's",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Doctorate PhD_2",
+  "type": "/Btn",
+  "label": "Doctorate (PhD",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Other degree JD MD etc_2",
+  "type": "/Btn",
+  "label": "Other degree (JD, MD, etc",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "1a If Other degree in question 1 specify the diplomadegree attained_2",
+  "type": "/Tx",
+  "label": "1a. If “Other degree” in question 1, specify the diploma/degree attained",
+  "states": []
+ },
+ {
+  "name": "1b  Specify majors andor fields of study may list more than one related major and more than one field_2",
+  "type": "/Tx",
+  "label": "1b.  Specify major(s) and/or field(s) of study (may list more than one related major and more than one field)",
+  "states": []
+ },
+ {
+  "name": "1c  Name of institution that issued the degreediploma_2",
+  "type": "/Tx",
+  "label": "1c.  Name of institution that issued the degree/diploma",
+  "states": []
+ },
+ {
+  "name": "1d  Name of country of institution identified in question 1c_2",
+  "type": "/Tx",
+  "label": "1d.  Name of country of institution identified in question 1c",
+  "states": []
+ },
+ {
+  "name": "1e  Monthyear attained mmyyyy_2",
+  "type": "/Tx",
+  "label": "1e.  Month/year attained (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "None_3",
+  "type": "/Btn",
+  "label": "None",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "High SchoolGED_3",
+  "type": "/Btn",
+  "label": "High School/GED",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Associate_3",
+  "type": "/Btn",
+  "label": "Associate",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Bachelors_3",
+  "type": "/Btn",
+  "label": "Bachelor’s",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Masters_3",
+  "type": "/Btn",
+  "label": "Master's",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Doctorate PhD_3",
+  "type": "/Btn",
+  "label": "Doctorate (PhD",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Other degree JD MD etc_3",
+  "type": "/Btn",
+  "label": "Other degree (JD, MD, etc",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "1a If Other degree in question 1 specify the diplomadegree attained_3",
+  "type": "/Tx",
+  "label": "1a. If “Other degree” in question 1, specify the diploma/degree attained",
+  "states": []
+ },
+ {
+  "name": "1b  Specify majors andor fields of study may list more than one related major and more than one field_3",
+  "type": "/Tx",
+  "label": "1b.  Specify major(s) and/or field(s) of study (may list more than one related major and more than one field)",
+  "states": []
+ },
+ {
+  "name": "1c  Name of institution that issued the degreediploma_3",
+  "type": "/Tx",
+  "label": "1c.  Name of institution that issued the degree/diploma",
+  "states": []
+ },
+ {
+  "name": "1d  Name of country of institution identified in question 1c_3",
+  "type": "/Tx",
+  "label": "1d.  Name of country of institution identified in question 1c",
+  "states": []
+ },
+ {
+  "name": "1e  Monthyear attained mmyyyy_3",
+  "type": "/Tx",
+  "label": "1e.  Month/year attained (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "None_4",
+  "type": "/Btn",
+  "label": "None",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "High SchoolGED_4",
+  "type": "/Btn",
+  "label": "High School/GED",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Associates",
+  "type": "/Btn",
+  "label": "Associate’s",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Bachelors_4",
+  "type": "/Btn",
+  "label": "Bachelor’s",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Master",
+  "type": "/Btn",
+  "label": "Master",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Doctorate PhD_4",
+  "type": "/Btn",
+  "label": "Doctorate (PhD",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Other degree JD MD etc_4",
+  "type": "/Btn",
+  "label": "Other degree (JD, MD, etc",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "1a If Other degree in question 1 specify the diplomadegree attained_4",
+  "type": "/Tx",
+  "label": "1a. If “Other degree” in question 1, specify the diploma/degree attained",
+  "states": []
+ },
+ {
+  "name": "1b  Specify majors andor fields of study may list more than one related major and more than one field_4",
+  "type": "/Tx",
+  "label": "1b.  Specify major(s) and/or field(s) of study (may list more than one related major and more than one field)",
+  "states": []
+ },
+ {
+  "name": "1c  Name of institution that issued the degreediploma_4",
+  "type": "/Tx",
+  "label": "1c.  Name of institution that issued the degree/diploma",
+  "states": []
+ },
+ {
+  "name": "1d  Name of country of institution identified in question 1c_4",
+  "type": "/Tx",
+  "label": "1d.  Name of country of institution identified in question 1c",
+  "states": []
+ },
+ {
+  "name": "1e  Monthyear attained mmyyyy_4",
+  "type": "/Tx",
+  "label": "1e.  Month/year attained (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "None_5",
+  "type": "/Btn",
+  "label": "None",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "High SchoolGED_5",
+  "type": "/Btn",
+  "label": "High School/GED",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Associates_2",
+  "type": "/Btn",
+  "label": "Associate’s",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Bachelors_5",
+  "type": "/Btn",
+  "label": "Bachelor’s",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Master_2",
+  "type": "/Btn",
+  "label": "Master",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Doctorate PhD_5",
+  "type": "/Btn",
+  "label": "Doctorate (PhD",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Other degree JD MD etc_5",
+  "type": "/Btn",
+  "label": "Other degree (JD, MD, etc",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "1a If Other degree in question 1 specify the diplomadegree attained_5",
+  "type": "/Tx",
+  "label": "1a. If “Other degree” in question 1, specify the diploma/degree attained",
+  "states": []
+ },
+ {
+  "name": "1b  Specify majors andor fields of study may list more than one related major and more than one field_5",
+  "type": "/Tx",
+  "label": "1b.  Specify major(s) and/or field(s) of study (may list more than one related major and more than one field)",
+  "states": []
+ },
+ {
+  "name": "1c  Name of institution that issued the degreediploma_5",
+  "type": "/Tx",
+  "label": "1c.  Name of institution that issued the degree/diploma",
+  "states": []
+ },
+ {
+  "name": "1d  Name of country of institution identified in question 1c_5",
+  "type": "/Tx",
+  "label": "1d.  Name of country of institution identified in question 1c",
+  "states": []
+ },
+ {
+  "name": "1e  Monthyear attained mmyyyy_5",
+  "type": "/Tx",
+  "label": "1e.  Month/year attained (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "1 Name of institutionschooltraining provider",
+  "type": "/Tx",
+  "label": "1. Name of institution/school/training provider",
+  "states": []
+ },
+ {
+  "name": "1a Name of training coursework experience received",
+  "type": "/Tx",
+  "label": "1a. Name of training, coursework, experience received",
+  "states": []
+ },
+ {
+  "name": "1b  Trainingcertificationslicenses attained if applicable",
+  "type": "/Tx",
+  "label": "1b.  Training/certifications/licenses attained (if applicable)",
+  "states": []
+ },
+ {
+  "name": "1c  Start date of training mmyyyy",
+  "type": "/Tx",
+  "label": "1c.  Start date of training (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "1d  End date of training mmyyyy",
+  "type": "/Tx",
+  "label": "1d.  End date of training (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "1e  Monthyear awarded mmyyyy",
+  "type": "/Tx",
+  "label": "1e.  Month/year awarded (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "1 Name of institutionschooltraining provider_2",
+  "type": "/Tx",
+  "label": "1. Name of institution/school/training provider",
+  "states": []
+ },
+ {
+  "name": "1a Name of training coursework experience received_2",
+  "type": "/Tx",
+  "label": "1a. Name of training, coursework, experience received",
+  "states": []
+ },
+ {
+  "name": "1b  Trainingcertificationslicenses attained if applicable_2",
+  "type": "/Tx",
+  "label": "1b.  Training/certifications/licenses attained (if applicable)",
+  "states": []
+ },
+ {
+  "name": "1c  Start date of training mmyyyy_2",
+  "type": "/Tx",
+  "label": "1c.  Start date of training (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "1d  End date of training mmyyyy_2",
+  "type": "/Tx",
+  "label": "1d.  End date of training (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "1e  Monthyear awarded mmyyyy_2",
+  "type": "/Tx",
+  "label": "1e.  Month/year awarded (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "1 Name of institutionschooltraining provider_3",
+  "type": "/Tx",
+  "label": "1. Name of institution/school/training provider",
+  "states": []
+ },
+ {
+  "name": "1a Name of training coursework experience received_3",
+  "type": "/Tx",
+  "label": "1a. Name of training, coursework, experience received",
+  "states": []
+ },
+ {
+  "name": "1b  Trainingcertificationslicenses attained if applicable_3",
+  "type": "/Tx",
+  "label": "1b.  Training/certifications/licenses attained (if applicable)",
+  "states": []
+ },
+ {
+  "name": "1c  Start date of training mmyyyy_3",
+  "type": "/Tx",
+  "label": "1c.  Start date of training (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "1d  End date of training mmyyyy_3",
+  "type": "/Tx",
+  "label": "1d.  End date of training (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "1e  Monthyear awarded mmyyyy_3",
+  "type": "/Tx",
+  "label": "1e.  Month/year awarded (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "1 Name of employerinstitutionschooltraining provider",
+  "type": "/Tx",
+  "label": "1. Name of employer/institution/school/training provider",
+  "states": []
+ },
+ {
+  "name": "1a Country",
+  "type": "/Tx",
+  "label": "1a. Country",
+  "states": []
+ },
+ {
+  "name": "1b  State territory or province",
+  "type": "/Tx",
+  "label": "1b.  State, territory, or province",
+  "states": []
+ },
+ {
+  "name": "1c Description of specific skills abilities andor proficiencies the foreign worker possesses or attained which help establish whether the foreign worker meets the requirements identified for the job opportunity up to 1500 characters",
+  "type": "/Tx",
+  "label": "1c. Description of specific skills, abilities, and/or proficiencies the foreign worker possesses or attained, which help establish whether the foreign worker meets the requirements identified for the ",
+  "states": []
+ },
+ {
+  "name": "1 Name of employerinstitutionschooltraining provider_2",
+  "type": "/Tx",
+  "label": "1. Name of employer/institution/school/training provider",
+  "states": []
+ },
+ {
+  "name": "1a  Country",
+  "type": "/Tx",
+  "label": "1a.  Country",
+  "states": []
+ },
+ {
+  "name": "1b  State territory or province_2",
+  "type": "/Tx",
+  "label": "1b.  State, territory, or province",
+  "states": []
+ },
+ {
+  "name": "1c Description of specific skills abilities andor proficiencies the foreign worker possesses or attained which help establish whether the foreign worker meets the requirements identified for the job opportunity up to 1500 characters_2",
+  "type": "/Tx",
+  "label": "1c. Description of specific skills, abilities, and/or proficiencies the foreign worker possesses or attained, which help establish whether the foreign worker meets the requirements identified for the ",
+  "states": []
+ },
+ {
+  "name": "1 Employer name",
+  "type": "/Tx",
+  "label": "1. Employer name",
+  "states": []
+ },
+ {
+  "name": "1a  Address 1",
+  "type": "/Tx",
+  "label": "1a.  Address 1",
+  "states": []
+ },
+ {
+  "name": "1b  Address 2",
+  "type": "/Tx",
+  "label": "1b.  Address 2",
+  "states": []
+ },
+ {
+  "name": "1c  City or town",
+  "type": "/Tx",
+  "label": "1c.  City or town",
+  "states": []
+ },
+ {
+  "name": "1d  Postal code",
+  "type": "/Tx",
+  "label": "1d.  Postal code",
+  "states": []
+ },
+ {
+  "name": "1e  Country",
+  "type": "/Tx",
+  "label": "1e.  Country",
+  "states": []
+ },
+ {
+  "name": "1f  State territory or province",
+  "type": "/Tx",
+  "label": "1f.  State, territory, or province",
+  "states": []
+ },
+ {
+  "name": "1g  Job title",
+  "type": "/Tx",
+  "label": "1g.  Job title",
+  "states": []
+ },
+ {
+  "name": "1h  Start date mmyyyy",
+  "type": "/Tx",
+  "label": "1h.  Start date (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "1i  End date mmyyyy",
+  "type": "/Tx",
+  "label": "1i.  End date (mm/yyyy)",
+  "states": []
+ },
+ {
+  "name": "1j  Present",
+  "type": "/Btn",
+  "label": "1j.  Present",
+  "states": [
+   "/Yes",
+   "/No"
+  ]
+ },
+ {
+  "name": "1k  Hours worked per week",
+  "type": "/Tx",
+  "label": "1k.  Hours worked per week",
+  "states": []
+ },
+ {
+  "name": "1l Job duties Specify details of job work tasks performed use of toolsequipment supervision etc up to 3500 characters",
+  "type": "/Tx",
+  "label": "1l. Job duties: Specify details of job (work tasks performed, use of tools/equipment, supervision, etc.) (up to 3,500 characters)",
+  "states": []
+ }
+]

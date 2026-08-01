@@ -1,0 +1,234 @@
+[
+ {
+  "name": "form1[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[0].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].FamilyName[0]",
+  "type": "/Tx",
+  "label": "Applicant's / Petitioner's / Requester's Information (Full Legal Name).  Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].GivenName[0]",
+  "type": "/Tx",
+  "label": "Applicant's / Petitioner's / Requester's Information (Full Legal Name).  Enter Given Name (First Name). ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].MiddleName[0]",
+  "type": "/Tx",
+  "label": "Applicant's / Petitioner's / Requester's Information (Full Legal Name).  Enter Middle Name (if any).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CCHolderMiddleName[0]",
+  "type": "/Tx",
+  "label": "Credit Card Billing Information.  Enter the Middle Name (if any) as it appears on the Credit Card.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CCHolderGivenName[0]",
+  "type": "/Tx",
+  "label": "Credit Card Billing Information.  Enter Given Name (First Name) as it appears on the Credit Card.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CCHolderFamilyName[0]",
+  "type": "/Tx",
+  "label": "Credit Card Billing Information.  Enter the Family Name (Last Name) as it appears on the Credit Card.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt1Line2b_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Credit Card Billing Information. Credit Card Holder's Billing Address.  Enter the Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CCHolderAptSteFlr_Unit[0]",
+  "type": "/Btn",
+  "label": "Credit Card Billing Information.  Credit Card Holder's Billing Address.  Select this box for a suite (S t e).  ",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].CCHolderAptSteFlr_Unit[1]",
+  "type": "/Btn",
+  "label": "Credit Card Billing Information.  Credit Card Holder's Billing Address.  Select this box for apartment (APT).",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].CCHolderAptSteFlr_Unit[2]",
+  "type": "/Btn",
+  "label": "Credit Card Billing Information.  Credit Card Holder's Billing Address.  Select this box for a designated floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].CCHolderAptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Credit Card Billing Information.  Credit Card Holder's Billing Address.  Enter the apartment, suite or floor number here.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CityOrTown[0]",
+  "type": "/Tx",
+  "label": "Credit Card Billing Information. Credit Card Holder's Billing Address.  Enter the City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].State[0]",
+  "type": "/Ch",
+  "label": "Credit Card Billing Information. Credit Card Holder's Billing Address.  Select the State.  You will be making a selection from the drop down list containing the 2 letter abbreviations of state names.",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].ZipCode[0]",
+  "type": "/Tx",
+  "label": "Credit Card Billing Information.  Credit Card Holder's Billing Address.  Enter the ZIP Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].DaytimeTelephoneNumber[0]",
+  "type": "/Tx",
+  "label": "Credit Card Billing Information.  Credit Card Holder's Signature and Contact Information.  Enter Credit Card Holder's Daytime Telephone Number including area code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Email[0]",
+  "type": "/Tx",
+  "label": "Credit Card Billing Information.  Credit Card Holder's Signature and Contact Information.  Enter Credit Card Holder's Email Address.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CreditCardTypeChBx[0]",
+  "type": "/Btn",
+  "label": "Credit Card Information. Credit Card Type. Select this box for Visa.",
+  "states": [
+   "/V",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].CreditCardNumber_1[0]",
+  "type": "/Tx",
+  "label": "Credit Card Information. Enter the first 4 digits of your credit card number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CreditCardNumber_2[0]",
+  "type": "/Tx",
+  "label": "Credit Card Information. Enter the second 4 digits of your credit card number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CreditCardNumber_3[0]",
+  "type": "/Tx",
+  "label": "Credit Card Information. Enter the third 4 digits of your credit card number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CreditCardNumber_4[0]",
+  "type": "/Tx",
+  "label": "Credit Card Information. Enter the last 4 digits of your credit card number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CreditCardNumber_4[1]",
+  "type": "/Tx",
+  "label": "Credit Card Information. Enter the three or four digit card verification value (C V V) code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].ExpirationDate[0]",
+  "type": "/Tx",
+  "label": "Credit Card Information.  Credit Card Expiration Date.  Enter the date as 2 digit for Month and 4 digits for Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CreditCardTypeChBx[1]",
+  "type": "/Btn",
+  "label": "Credit Card Information. Credit Card Type.  Select this box for Master Card.",
+  "states": [
+   "/MC",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].CreditCardTypeChBx[2]",
+  "type": "/Btn",
+  "label": "Credit Card Information. Credit Card Type. Select this box for American Express.",
+  "states": [
+   "/A",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].CreditCardTypeChBx[3]",
+  "type": "/Btn",
+  "label": "Credit Card Information. Credit Card Type. Select this box for Discover.",
+  "states": [
+   "/D",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].SignatureOfApplicant[0]",
+  "type": "/Tx",
+  "label": "Credit Card Billing Information.  Credit Card Holder's Signature and Contact Information.  Credit Card Holder's Signature.  Please sign the form.  This form can not be signed electronically.  The name",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].AuthorizedPaymentAmt[0]",
+  "type": "/Tx",
+  "label": "Credit Card Information.  Enter the authorized payment amount in dollars no cents (for example, 1234 or 1,234)",
+  "states": []
+ }
+]

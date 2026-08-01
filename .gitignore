@@ -1,0 +1,28 @@
+# secrets — never commit
+.env
+.env.*
+!.env.example
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# node
+node_modules/
+.next/
+out/
+dist/
+
+# data & uploads (user PII lives here)
+data/
+uploads/
+*.log
+
+# os / editor
+.DS_Store
+.idea/
+.vscode/

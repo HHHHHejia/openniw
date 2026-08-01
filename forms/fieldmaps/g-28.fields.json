@@ -1,0 +1,775 @@
+[
+ {
+  "name": "form1[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[0].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[1]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[1].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[2]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[2].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[3]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[3].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line4_DaytimeTelephoneNumber[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Contact Information of Attorney or Accredited Representative. 4. Enter Daytime Telephone Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt1Line2c_MiddleName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Name of Attorney or Accredited Representative. 2. C. Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt1Line2b_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Name of Attorney or Accredited Representative. 2. B. Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt1Line2a_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Name of Attorney or Accredited Representative. 2. A. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].#area[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].#area[0].Pt1Line1_USCISOnlineAcctNumber[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. 1. Enter U S C I S Online Account Number, if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line3a_StreetNumber[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Address of Attorney or Accredited Representative. 3. A. Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line3b_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Address of Attorney or Accredited Representative. 3. B. Select Suite.",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Line3b_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Address of Attorney or Accredited Representative. 3. B. Select Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Line3b_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Address of Attorney or Accredited Representative. 3. B. Enter Apartment, Suite or Floor Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line3b_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Address of Attorney or Accredited Representative. 3. B. Select Apartment.",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Line3c_CityOrTown[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Address of Attorney or Accredited Representative. 3.C. Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line3d_State[0]",
+  "type": "/Ch",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Address of Attorney or Accredited Representative. 3. D. Select State from List of States.",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Line3e_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Address of Attorney or Accredited Representative. 3. E. Enter Zip Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line3f_Province[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Address of Attorney or Accredited Representative. 3. F. Enter Province.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line3h_Country[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Address of Attorney or Accredited Representative. 3. H. Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line3g_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Address of Attorney or Accredited Representative. 3. G. Enter Postal Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt1ItemNumber7_FaxNumber[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Contact Information of Attorney or Accredited Representative. 7. Enter Fax Number, if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line6_EMail[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Contact Information of Attorney or Accredited Representative. 5. Enter Mobile Telephone Number, if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line7_MobileTelephoneNumber[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About Attorney or Accredited Representative. Contact Information of Attorney or Accredited Representative. 6. Enter Email Address, if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line2b_NameofOrganization[0]",
+  "type": "/Tx",
+  "label": "Part 2. Eligibility Information for Attorney or Accredited Representative. Select all applicable items. 2. B. Enter Name of Recognized Organization.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line2c_DateExpires[0]",
+  "type": "/Tx",
+  "label": "Part 2. Eligibility Information for Attorney or Accredited Representative. Select all applicable items. 2. C. Enter Date of Accreditation. Enter as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CheckBox2[0]",
+  "type": "/Btn",
+  "label": "Part 2. Eligibility Information for Attorney or Accredited Representative. Select all applicable items. 2. A. Select I am an accredited representative of the following qualified nonprofit religious, c",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Checkbox1dAmNot[0]",
+  "type": "/Btn",
+  "label": "Part 2. Eligibility Information for Attorney or Accredited Representative. Select all applicable items. 1. C. I (select only one box). Select am not subject to any order suspending, enjoining, restrai",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Checkbox1dAm[0]",
+  "type": "/Btn",
+  "label": "Part 2. Eligibility Information for Attorney or Accredited Representative. Select all applicable items. 1. C. I (select only one box). Select am subject to any order suspending, enjoining, restraining",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Pt2Line1b_BarNumber[0]",
+  "type": "/Tx",
+  "label": "Part 2. Eligibility Information for Attorney or Accredited Representative. Select all applicable items. 1. B. Enter Bar Number, if applicable.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CheckBox1[0]",
+  "type": "/Btn",
+  "label": "Part 2. Eligibility Information for Attorney or Accredited Representative. Select all applicable items. 1. A. Select I am an attorney eligible to practice law in, and a member in good standing of, the",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Line3_NameofAttorneyOrRep[0]",
+  "type": "/Tx",
+  "label": "Part 2. Eligibility Information for Attorney or Accredited Representative. Select all applicable items. 3. Enter Name of Attorney or Representative.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].CheckBox3[0]",
+  "type": "/Btn",
+  "label": "Part 2. Eligibility Information for Attorney or Accredited Representative. Select all applicable items. 3. Select I am associated with Name of Attorney or Representative, the attorney or accredited re",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].CheckBox4[0]",
+  "type": "/Btn",
+  "label": "Part 2. Eligibility Information for Attorney or Accredited Representative. Select all applicable items. 4. A. Select I am a law student or law graduate working under the direct supervision of the atto",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Line4b_LawStudent[0]",
+  "type": "/Tx",
+  "label": "Part 2. Eligibility Information for Attorney or Accredited Representative. Select all applicable items. 4. B. Enter Name of Law Student or Law Graduate.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt2Line1a_LicensingAuthority[0]",
+  "type": "/Tx",
+  "label": "Part 2. Eligibility Information for Attorney or Accredited Representative. Select all applicable items. 1. A. Enter Licensing Authority.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt2Line1d_NameofFirmOrOrganization[0]",
+  "type": "/Tx",
+  "label": "Part 2. Eligibility Information for Attorney or Accredited Representative. Select all applicable items. 1. D. Enter Name of Law Firm or Organization, if applicable.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line4_Checkbox[0]",
+  "type": "/Btn",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. 5. I enter my appearance as an attorney or accredited representative at the request of the, (select only one box). Select Request",
+  "states": [
+   "/R",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line4_Checkbox[1]",
+  "type": "/Btn",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. 5. I enter my appearance as an attorney or accredited representative at the request of the, (select only one box). Select Applica",
+  "states": [
+   "/A",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line4_Checkbox[2]",
+  "type": "/Btn",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. 5. I enter my appearance as an attorney or accredited representative at the request of the, (select only one box). Select Respond",
+  "states": [
+   "/B",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line4_Checkbox[3]",
+  "type": "/Btn",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. 5. I enter my appearance as an attorney or accredited representative at the request of the, (select only one box). Select Petitio",
+  "states": [
+   "/P",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line2a_ICE[0]",
+  "type": "/Btn",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. This appearance relates to immigration matters before (select only one box). 2. A. Select U.S. Immigration and Customs Enforcemen",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line2b_ListMatter[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. This appearance relates to immigration matters before (select only one box). 2. B. List the specific matter in which appearance i",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line3a_CBP[0]",
+  "type": "/Btn",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. This appearance relates to immigration matters before (select only one box). Select 3. A. U.S. Customs and Border Protection (C B",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line3b_ListSpecificMatter[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. This appearance relates to immigration matters before (select only one box). 3. B. List the specific matter in which appearance i",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line1a_USCIS[0]",
+  "type": "/Btn",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. If you need extra space to complete this section, use the space provided in Part 6. Additional Information. This appearance relat",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line1b_ListFormNumber[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. This appearance relates to immigration matters before (select only one box). 1. B. List the form numbers  or specific matter in w",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line4_Checkbox[4]",
+  "type": "/Btn",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. 5. I enter my appearance as an attorney or accredited representative at the request of the, (select only one box). Select Benefic",
+  "states": [
+   "/BD",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Pt3Line5c_MiddleName[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Information About Client (Applicant, Petitioner, Requestor, Beneficiary or Derivative, Respondent, or Authorized Signatory for an",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Pt3Line5b_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Information About Client (Applicant, Petitioner, Requestor, Beneficiary or Derivative, Respondent, or Authorized Signatory for an",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Pt3Line5a_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Information About Client (Applicant, Petitioner, Requestor, Beneficiary or Derivative, Respondent, or Authorized Signatory for an",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Pt3Line7a_NameOfEntity[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Information About Client (Applicant, Petitioner, Requestor, Beneficiary or Derivative, Respondent, or Authorized Signatory for an",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line10_MobileTelephoneNumber[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Client's Contact Information. 11. Enter Mobile Telephone Number, if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].#area[1]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].#area[1].Pt3Line8_USCISOnlineAcctNumber[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Information About Client (Applicant, Petitioner, Requestor, Beneficiary or Derivative, Respondent, or Authorized Signatory for an",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line12g_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Mailing Address of Client. 13. G. Enter Postal Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line12f_Province[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Mailing Address of Client. 13. F. Enter Province.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line12h_Country[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Mailing Address of Client. 13. H. Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line12a_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Mailing Address of Client. NOTE:  Provide the client's mailing address.  Do not provide the business mailing address of the attor",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line12c_CityOrTown[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Mailing Address of Client. 13. C. Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line12e_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Mailing Address of Client. 13. E. Enter Zip Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line12b_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Mailing Address of Client. 13. B. Select Suite.",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line12b_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Mailing Address of Client. 13. B. Select Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line12b_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Mailing Address of Client. 13. B. Enter Apartment, Suite or Floor Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line12b_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Mailing Address of Client. 13. B. Select Apartment.",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line12d_State[0]",
+  "type": "/Ch",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Mailing Address of Client. 13. D. Select State from List of States.",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line11_EMail[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Client's Contact Information. 12. Enter Email Address, if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Pt3Line9_ANumber[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Information About Client (Applicant, Petitioner, Requestor, Beneficiary or Derivative, Respondent, or Authorized Signatory for an",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line9_DaytimeTelephoneNumber[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Client's Contact Information. 10. Enter Daytime Telephone Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Pt3Line7b_TitleofEntity[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. Information About Client (Applicant, Petitioner, Requestor, Beneficiary or Derivative, Respondent, or Authorized Signatory for an",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Pt3Line4_ReceiptNumber[0]",
+  "type": "/Tx",
+  "label": "Part 3. Notice of Appearance as Attorney or Accredited Representative. This appearance relates to immigration matters before (select only one box). 4. Enter Receipt Number, if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line1_Signature[0]",
+  "type": "/Tx",
+  "label": "Part 5. Signature of Attorney or Accredited Representative. I have read and understand the regulations and conditions contained in 8 C F R 1 0 3.2 and 2 92 governing appearances and representation bef",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2_SignatureStudent[0]",
+  "type": "/Tx",
+  "label": "Part 5. Signature of Attorney or Accredited Representative. 2. A. Signature of Law Student or Law Graduate. This signature field can not be signed with a digital signature and the signee's name can no",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Pt5Line2b_DateofSignature[0]",
+  "type": "/Tx",
+  "label": "Part 5. Signature of Attorney or Accredited Representative. 2. B. Enter Date of Signature. Enter as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Pt4Line2a_CheckBox2a[0]",
+  "type": "/Btn",
+  "label": "Part 4. Client's Consent to Representation and Signature. Options Regarding Receipt of U S C I S Notices and Documents. U S C I S will send notices to both a represented party (the client) and his, he",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line3_Date[0]",
+  "type": "/Tx",
+  "label": "Part 5. Signature of Attorney or Accredited Representative. 1. B. Enter Date of Signature. Enter as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Pt4Line2b_CheckBox2b[0]",
+  "type": "/Btn",
+  "label": "Part 4.  Client's Consent to Representation and Signature. Options Regarding Receipt of U S C I S Notices and Documents. U S C I S will send notices to both a represented party (the client) and his, h",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Pt4Line2c_CheckBox2c[0]",
+  "type": "/Btn",
+  "label": "Part 4.  Client's Consent to Representation and Signature. Options Regarding Receipt of U S C I S Notices and Documents. U S C I S will send notices to both a represented party (the client) and his, h",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Pt4Line2b_DateofSignature[0]",
+  "type": "/Tx",
+  "label": "Part 4. Client's Consent to Representation and Signature. Signature of Client or Authorized Signatory for an Entity. 2. B. Enter Date of Signature. Enter as 2-digit Month, 2-digit Day, and 4-digit Yea",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].P5_Line6a_SignatureofApplicant[0]",
+  "type": "/Tx",
+  "label": "Part 4. Client's Consent to Representation and Signature. Signature of Client or Authorized Signatory for an Entity. 2. A. Signature of Client or Authorized Signatory for an Entity. This signature fie",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line3d_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 2. D. Enter Additional Information. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt3Line5a_FamilyName[1]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information.  If you need extra space to provide any additional information within this form, use the space below.  If you need more space than what is provided, you may make copies",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt3Line5b_GivenName[1]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 1. B. Given Name (First Name). This field is pre-populated from Part 3.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt3Line5c_MiddleName[1]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 1. C. Middle Name. This field is pre-populated from Part 3.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line3a_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 2. A. Enter Page Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line3b_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 2. B. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line3c_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 2. C. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line4d_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 3. D. Enter Additional Information. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line4a_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 3. A. Enter Page Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line4b_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 3. B. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line4c_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 3. C. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line5d_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 4. D. Enter Additional Information. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line5a_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 4. A. Enter Page Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line5b_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 4. B. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line5c_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 4. C. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line6d_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 5. D. Enter Additional Information. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line6c_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 6. C. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line6b_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 6. B. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line6a_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 6. A. Enter Page Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line6d_AdditionalInfo[1]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 6. D. Enter Additional Information. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line6a_PageNumber[1]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 5. A. Enter Page Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line6b_PartNumber[1]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 5. B. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt9Line6c_ItemNumber[1]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 5. C. Enter Item Number.",
+  "states": []
+ }
+]

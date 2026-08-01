@@ -1,0 +1,1186 @@
+[
+ {
+  "name": "1 Legal Business Name",
+  "type": "/Tx",
+  "label": "1. Legal Business Name *",
+  "states": []
+ },
+ {
+  "name": "2 Trade NameDoing Business As DBA if applicable",
+  "type": "/Tx",
+  "label": "2. Trade Name/Doing Business As (DBA), if applicable §",
+  "states": []
+ },
+ {
+  "name": "3 Address 1",
+  "type": "/Tx",
+  "label": "3. Address 1 *",
+  "states": []
+ },
+ {
+  "name": "4 Address 2 apartmentsuitefloor and number",
+  "type": "/Tx",
+  "label": "4. Address 2 (apartment/suite/floor and number) §",
+  "states": []
+ },
+ {
+  "name": "5 City",
+  "type": "/Tx",
+  "label": "5. City *",
+  "states": []
+ },
+ {
+  "name": "6 State",
+  "type": "/Tx",
+  "label": "6. State *",
+  "states": []
+ },
+ {
+  "name": "7 Postal Code",
+  "type": "/Tx",
+  "label": "7. Postal Code *",
+  "states": []
+ },
+ {
+  "name": "8 Country",
+  "type": "/Tx",
+  "label": "8. Country *",
+  "states": []
+ },
+ {
+  "name": "9 Province",
+  "type": "/Tx",
+  "label": "9. Province §",
+  "states": []
+ },
+ {
+  "name": "10 Telephone Number",
+  "type": "/Tx",
+  "label": "10. Telephone Number *",
+  "states": []
+ },
+ {
+  "name": "11 Extension",
+  "type": "/Tx",
+  "label": "11. Extension §",
+  "states": []
+ },
+ {
+  "name": "12 Federal Employer Identification Number FEIN from IRS",
+  "type": "/Tx",
+  "label": "12. Federal Employer Identification Number (FEIN from IRS) *",
+  "states": []
+ },
+ {
+  "name": "13 NAICS Code",
+  "type": "/Tx",
+  "label": "13. NAICS Code *",
+  "states": []
+ },
+ {
+  "name": "14 Number of current employees on payroll in the area of intended employment",
+  "type": "/Tx",
+  "label": "14. Number of current employees on payroll in the area of intended employment *",
+  "states": []
+ },
+ {
+  "name": "15 Year Commenced Business  if household year issued FEIN",
+  "type": "/Tx",
+  "label": "15. Year Commenced Business * (if household, year issued FEIN)",
+  "states": []
+ },
+ {
+  "name": "undefined",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes",
+   "/No"
+  ]
+ },
+ {
+  "name": "undefined_2",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_2",
+   "/No_2"
+  ]
+ },
+ {
+  "name": "3 Middle Names",
+  "type": "/Tx",
+  "label": "3. Middle Name(s) §",
+  "states": []
+ },
+ {
+  "name": "6 Address 2 apartmentsuitefloor and number",
+  "type": "/Tx",
+  "label": "6. Address 2 (apartment/suite/floor and number) §",
+  "states": []
+ },
+ {
+  "name": "11 Province",
+  "type": "/Tx",
+  "label": "11. Province §",
+  "states": []
+ },
+ {
+  "name": "12 Telephone Number",
+  "type": "/Tx",
+  "label": "12. Telephone Number *",
+  "states": []
+ },
+ {
+  "name": "13 Extension",
+  "type": "/Tx",
+  "label": "13. Extension §",
+  "states": []
+ },
+ {
+  "name": "14 Business Email Address",
+  "type": "/Tx",
+  "label": "14. Business Email Address *",
+  "states": []
+ },
+ {
+  "name": "Attorney",
+  "type": "/Btn",
+  "label": "Attorney",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Agent",
+  "type": "/Btn",
+  "label": "Agent",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "None",
+  "type": "/Btn",
+  "label": "None",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "2 Attorney or Agents Last family Name",
+  "type": "/Tx",
+  "label": "2. Attorney or Agent’s Last (family) Name §",
+  "states": []
+ },
+ {
+  "name": "3 First given Name",
+  "type": "/Tx",
+  "label": "3. First (given) Name §",
+  "states": []
+ },
+ {
+  "name": "4 Middle Names",
+  "type": "/Tx",
+  "label": "4. Middle Name(s) §",
+  "states": []
+ },
+ {
+  "name": "5 Address 1_2",
+  "type": "/Tx",
+  "label": "5. Address 1 §",
+  "states": []
+ },
+ {
+  "name": "6 Address 2 apartmentsuitefloor and number_2",
+  "type": "/Tx",
+  "label": "6. Address 2 (apartment/suite/floor and number) §",
+  "states": []
+ },
+ {
+  "name": "7 City_2",
+  "type": "/Tx",
+  "label": "7. City §",
+  "states": []
+ },
+ {
+  "name": "8 State_2",
+  "type": "/Tx",
+  "label": "8. State §",
+  "states": []
+ },
+ {
+  "name": "9 Postal Code_2",
+  "type": "/Tx",
+  "label": "9. Postal Code §",
+  "states": []
+ },
+ {
+  "name": "10 Country_2",
+  "type": "/Tx",
+  "label": "10. Country §",
+  "states": []
+ },
+ {
+  "name": "11 Province_2",
+  "type": "/Tx",
+  "label": "11. Province §",
+  "states": []
+ },
+ {
+  "name": "12 Telephone Number_2",
+  "type": "/Tx",
+  "label": "12. Telephone Number §",
+  "states": []
+ },
+ {
+  "name": "13 Extension_2",
+  "type": "/Tx",
+  "label": "13. Extension §",
+  "states": []
+ },
+ {
+  "name": "14 Law FirmBusiness Email Address",
+  "type": "/Tx",
+  "label": "14. Law Firm/Business Email Address §",
+  "states": []
+ },
+ {
+  "name": "15 Law FirmBusiness Name",
+  "type": "/Tx",
+  "label": "15. Law Firm/Business Name §",
+  "states": []
+ },
+ {
+  "name": "16 Law FirmBusiness FEIN",
+  "type": "/Tx",
+  "label": "16. Law Firm/Business FEIN §",
+  "states": []
+ },
+ {
+  "name": "17 State Bar Numbers",
+  "type": "/Tx",
+  "label": "17. State Bar Number(s) §",
+  "states": []
+ },
+ {
+  "name": "18 State of highest court where attorney is in good standing",
+  "type": "/Tx",
+  "label": "18. State of highest court where attorney is in good standing §",
+  "states": []
+ },
+ {
+  "name": "19 Name of the highest state court where attorney is in good standing",
+  "type": "/Tx",
+  "label": "19. Name of the highest state court where attorney is in good standing §",
+  "states": []
+ },
+ {
+  "name": "undefined_3",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_3",
+   "/No_3"
+  ]
+ },
+ {
+  "name": "undefined_4",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_4",
+   "/No_4"
+  ]
+ },
+ {
+  "name": "1 Enter the valid Prevailing Wage Determination PWD case number issued by the Department of Labor to identify the job opportunity and prevailing wages covered by this application",
+  "type": "/Tx",
+  "label": "1. Enter the valid Prevailing Wage Determination (PWD) case number issued by the Department of Labor to identify the job opportunity and prevailing wage(s) covered by this application. *",
+  "states": []
+ },
+ {
+  "name": "undefined_6",
+  "type": "/Tx",
+  "label": "undefined",
+  "states": []
+ },
+ {
+  "name": "undefined_7",
+  "type": "/Tx",
+  "label": "undefined",
+  "states": []
+ },
+ {
+  "name": "undefined_8",
+  "type": "/Tx",
+  "label": "undefined",
+  "states": []
+ },
+ {
+  "name": "undefined_9",
+  "type": "/Tx",
+  "label": "undefined",
+  "states": []
+ },
+ {
+  "name": "Hour",
+  "type": "/Btn",
+  "label": "Hour",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Week",
+  "type": "/Btn",
+  "label": "Week",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "BiWeekly",
+  "type": "/Btn",
+  "label": "Bi-Weekly",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Month",
+  "type": "/Btn",
+  "label": "Month",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Year",
+  "type": "/Btn",
+  "label": "Year",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "5 Additional conditions about the offered wage Enter up to 500 characters If no additional information enter NONE below",
+  "type": "/Tx",
+  "label": "5. Additional conditions about the offered wage. (Enter up to 500 characters. If no additional information, enter “NONE” below.) *",
+  "states": []
+ },
+ {
+  "name": "Business premises",
+  "type": "/Btn",
+  "label": "Business premises",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Employers private household includes livein and domestic household worker",
+  "type": "/Btn",
+  "label": "Employer's private household (includes live-in and domestic household worker",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Employees private residence when work is performed directly out of the residence",
+  "type": "/Btn",
+  "label": "Employee's private residence (when work is performed directly out of the residence",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "No one specific worksite address or physical location",
+  "type": "/Btn",
+  "label": "No one specific worksite address or physical location",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "3 Worksite Address  apartmentsuitefloor and number",
+  "type": "/Tx",
+  "label": "3. Worksite Address § (apartment/suite/floor and number)",
+  "states": []
+ },
+ {
+  "name": "undefined_10",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_11",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_12",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_6",
+   "/No_6",
+   "/NA_2"
+  ]
+ },
+ {
+  "name": "1 Identify the geographic areas where work will be performed  For example this can include a listing of cities or townshipsstates countiesstates or states located within a geographic region up to 1500 characters",
+  "type": "/Tx",
+  "label": "1. Identify the geographic area(s) where work will be performed.  For example, this can include a listing of cities or townships/states, counties/states, or states located within a geographic region (",
+  "states": []
+ },
+ {
+  "name": "undefined_17",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_7",
+   "/No_7",
+   "/NA_3"
+  ]
+ },
+ {
+  "name": "undefined_18",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_8",
+   "/No_8",
+   "/NA_4"
+  ]
+ },
+ {
+  "name": "undefined_19",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_9",
+   "/No_9",
+   "/NA_5"
+  ]
+ },
+ {
+  "name": "undefined_20",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_10",
+   "/No_10",
+   "/NA_6"
+  ]
+ },
+ {
+  "name": "undefined_21",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_22",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_23",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_11",
+   "/No_11",
+   "/NA_7"
+  ]
+ },
+ {
+  "name": "I ACCEPT",
+  "type": "/Btn",
+  "label": "I ACCEPT",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "I DO NOT ACCEPT",
+  "type": "/Btn",
+  "label": "I DO NOT ACCEPT",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_24",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_25",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_26",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_12",
+   "/No_12",
+   "/NA_8"
+  ]
+ },
+ {
+  "name": "undefined_27",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_13",
+   "/No_13",
+   "/NA_9"
+  ]
+ },
+ {
+  "name": "undefined_28",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_29",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_30",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_31",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_32",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_33",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_34",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_14",
+   "/No_14",
+   "/NA_10"
+  ]
+ },
+ {
+  "name": "undefined_35",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_15",
+   "/No_15",
+   "/NA_11"
+  ]
+ },
+ {
+  "name": "undefined_36",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_37",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_38",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_39",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "undefined_41",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "1a  Start date of SWA job order",
+  "type": "/Tx",
+  "label": "1a.  Start date of SWA job order §",
+  "states": []
+ },
+ {
+  "name": "1b  End date of SWA job order",
+  "type": "/Tx",
+  "label": "1b.  End date of SWA job order §",
+  "states": []
+ },
+ {
+  "name": "undefined_42",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_16",
+   "/No_16",
+   "/NA_12"
+  ]
+ },
+ {
+  "name": "2a  Name of newspaper of general circulation in which an advertisement was placed",
+  "type": "/Tx",
+  "label": "2a.  Name of newspaper of general circulation in which an advertisement was placed. §",
+  "states": []
+ },
+ {
+  "name": "2b  Advertisement date",
+  "type": "/Tx",
+  "label": "2b.  Advertisement date §",
+  "states": []
+ },
+ {
+  "name": "Newspaper of general circulation",
+  "type": "/Btn",
+  "label": "Newspaper of general circulation",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "Professional journal",
+  "type": "/Btn",
+  "label": "Professional journal",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "NA_13",
+  "type": "/Btn",
+  "label": "N/A",
+  "states": [
+   "/Off",
+   "/On"
+  ]
+ },
+ {
+  "name": "3a  Name of newspaper or professional journal in which an advertisement was placed",
+  "type": "/Tx",
+  "label": "3a.  Name of newspaper or professional journal in which an advertisement was placed. §",
+  "states": []
+ },
+ {
+  "name": "3b  Advertisement Date",
+  "type": "/Tx",
+  "label": "3b.  Advertisement Date §",
+  "states": []
+ },
+ {
+  "name": "1a From",
+  "type": "/Tx",
+  "label": "1a. From:",
+  "states": []
+ },
+ {
+  "name": "1b To",
+  "type": "/Tx",
+  "label": "1b. To:",
+  "states": []
+ },
+ {
+  "name": "2a From",
+  "type": "/Tx",
+  "label": "2a From:",
+  "states": []
+ },
+ {
+  "name": "2b To",
+  "type": "/Tx",
+  "label": "2b. To:",
+  "states": []
+ },
+ {
+  "name": "3a From",
+  "type": "/Tx",
+  "label": "3a From:",
+  "states": []
+ },
+ {
+  "name": "3b To",
+  "type": "/Tx",
+  "label": "3b. To:",
+  "states": []
+ },
+ {
+  "name": "4a From",
+  "type": "/Tx",
+  "label": "4a. From:",
+  "states": []
+ },
+ {
+  "name": "4b To",
+  "type": "/Tx",
+  "label": "4b. To:",
+  "states": []
+ },
+ {
+  "name": "5a From",
+  "type": "/Tx",
+  "label": "5a. From:",
+  "states": []
+ },
+ {
+  "name": "5b To",
+  "type": "/Tx",
+  "label": "5b. To:",
+  "states": []
+ },
+ {
+  "name": "6a From",
+  "type": "/Tx",
+  "label": "6a. From:",
+  "states": []
+ },
+ {
+  "name": "6b To",
+  "type": "/Tx",
+  "label": "6b. To:",
+  "states": []
+ },
+ {
+  "name": "7a From",
+  "type": "/Tx",
+  "label": "7a. From:",
+  "states": []
+ },
+ {
+  "name": "7b To",
+  "type": "/Tx",
+  "label": "7b. To:",
+  "states": []
+ },
+ {
+  "name": "8a From",
+  "type": "/Tx",
+  "label": "8a. From:",
+  "states": []
+ },
+ {
+  "name": "8b To",
+  "type": "/Tx",
+  "label": "8b. To:",
+  "states": []
+ },
+ {
+  "name": "9a From",
+  "type": "/Tx",
+  "label": "9a. From:",
+  "states": []
+ },
+ {
+  "name": "9b To",
+  "type": "/Tx",
+  "label": "9b. To:",
+  "states": []
+ },
+ {
+  "name": "10a From",
+  "type": "/Tx",
+  "label": "10a. From:",
+  "states": []
+ },
+ {
+  "name": "10b To",
+  "type": "/Tx",
+  "label": "10b. To:",
+  "states": []
+ },
+ {
+  "name": "undefined_43",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/Yes_17",
+   "/No_17"
+  ]
+ },
+ {
+  "name": "1 Last family Name",
+  "type": "/Tx",
+  "label": "1. Last (family) Name §",
+  "states": []
+ },
+ {
+  "name": "2 First given Name_2",
+  "type": "/Tx",
+  "label": "2. First (given) Name §",
+  "states": []
+ },
+ {
+  "name": "3 Middle Names_2",
+  "type": "/Tx",
+  "label": "3. Middle Name(s) §",
+  "states": []
+ },
+ {
+  "name": "4 Law FirmBusiness FEIN",
+  "type": "/Tx",
+  "label": "4. Law Firm/Business FEIN §",
+  "states": []
+ },
+ {
+  "name": "5 Law FirmBusiness Name",
+  "type": "/Tx",
+  "label": "5. Law Firm/Business Name §",
+  "states": []
+ },
+ {
+  "name": "6 Law FirmBusiness Email Address",
+  "type": "/Tx",
+  "label": "6. Law Firm/Business Email Address §",
+  "states": []
+ },
+ {
+  "name": "Yes",
+  "type": "/Btn",
+  "label": "Yes",
+  "states": [
+   "/On",
+   "/Off"
+  ]
+ },
+ {
+  "name": "undefined_40",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": [
+   "/On",
+   "/Off"
+  ]
+ },
+ {
+  "name": "undefined_15",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": []
+ },
+ {
+  "name": "undefined_16",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": []
+ },
+ {
+  "name": "undefined_14",
+  "type": "/Btn",
+  "label": "undefined",
+  "states": []
+ },
+ {
+  "name": "Mark ALL that apply in the appropriate boxes belowRow1",
+  "type": "/Tx",
+  "label": "Mark ALL that apply in the appropriate box(es) below:_Row_1",
+  "states": []
+ },
+ {
+  "name": "1 Contacts Last family Name",
+  "type": "/Tx",
+  "label": "1. Contact’s Last (family) Name *",
+  "states": []
+ },
+ {
+  "name": "2 First given Name",
+  "type": "/Tx",
+  "label": "2. First (given) Name *",
+  "states": []
+ },
+ {
+  "name": "4 Contacts Job Title",
+  "type": "/Tx",
+  "label": "4. Contact’s Job Title *",
+  "states": []
+ },
+ {
+  "name": "5 Address 1",
+  "type": "/Tx",
+  "label": "5. Address 1 *",
+  "states": []
+ },
+ {
+  "name": "7 City",
+  "type": "/Tx",
+  "label": "7. City *",
+  "states": []
+ },
+ {
+  "name": "8 State",
+  "type": "/Tx",
+  "label": "8. State *",
+  "states": []
+ },
+ {
+  "name": "9 Postal Code",
+  "type": "/Tx",
+  "label": "9. Postal Code *",
+  "states": []
+ },
+ {
+  "name": "10 Country",
+  "type": "/Tx",
+  "label": "10. Country *",
+  "states": []
+ },
+ {
+  "name": "2 Worksite Address",
+  "type": "/Tx",
+  "label": "2. Worksite Address *",
+  "states": []
+ },
+ {
+  "name": "4 City",
+  "type": "/Tx",
+  "label": "4. City *",
+  "states": []
+ },
+ {
+  "name": "5 County",
+  "type": "/Tx",
+  "label": "5. County *",
+  "states": []
+ },
+ {
+  "name": "6 StateDistrictTerritory",
+  "type": "/Tx",
+  "label": "6. State/District/Territory *",
+  "states": []
+ },
+ {
+  "name": "7 Postal Code_2",
+  "type": "/Tx",
+  "label": "7. Postal Code *",
+  "states": []
+ },
+ {
+  "name": "8 MSAOES Area Code",
+  "type": "/Tx",
+  "label": "8. MSA/OES Area Code *",
+  "states": []
+ },
+ {
+  "name": "8a MSA NameOES Area Title",
+  "type": "/Tx",
+  "label": "8.a MSA Name/OES Area Title *",
+  "states": []
+ },
+ {
+  "name": "Yes PWD",
+  "type": "/Btn",
+  "label": "Yes PWD Attached",
+  "states": [
+   "/Yes_5",
+   "/Off"
+  ]
+ },
+ {
+  "name": "No PWD",
+  "type": "/Btn",
+  "label": "No PWD Attached",
+  "states": [
+   "/No_5",
+   "/Off"
+  ]
+ },
+ {
+  "name": "Not Applicable PWD",
+  "type": "/Btn",
+  "label": "PWD Attachment Not Applicable",
+  "states": [
+   "/NA",
+   "/Off"
+  ]
+ },
+ {
+  "name": "Job Fair Check Box",
+  "type": "/Btn",
+  "label": "Job Fair Check Box",
+  "states": [
+   "/Yes",
+   "/Off"
+  ]
+ },
+ {
+  "name": "Employer Website Checkbox",
+  "type": "/Btn",
+  "label": "Employer Website Checkbox",
+  "states": [
+   "/Yes",
+   "/Off"
+  ]
+ },
+ {
+  "name": "Job search website checkbox",
+  "type": "/Btn",
+  "label": "Job search website checkbox",
+  "states": [
+   "/Yes",
+   "/Off"
+  ]
+ },
+ {
+  "name": "On-campus recruiting checkbox",
+  "type": "/Btn",
+  "label": "On-campus recruiting checkbox",
+  "states": [
+   "/Yes",
+   "/Off"
+  ]
+ },
+ {
+  "name": "Trade or professional org checkbox",
+  "type": "/Btn",
+  "label": "Trade or professional org checkbox",
+  "states": [
+   "/Yes",
+   "/Off"
+  ]
+ },
+ {
+  "name": "Private employment firm checkbox",
+  "type": "/Btn",
+  "label": "Private employment firm checkbox",
+  "states": [
+   "/Yes",
+   "/Off"
+  ]
+ },
+ {
+  "name": "Employee referral program checkbox",
+  "type": "/Btn",
+  "label": "Employee referral program checkbox",
+  "states": [
+   "/Yes",
+   "/Off"
+  ]
+ },
+ {
+  "name": "Campus placement office checkbox",
+  "type": "/Btn",
+  "label": "Campus placement office checkbox",
+  "states": [
+   "/Yes",
+   "/Off"
+  ]
+ },
+ {
+  "name": "Local or ethnic newspapers",
+  "type": "/Btn",
+  "label": "Local or ethnic newspapers",
+  "states": [
+   "/Yes",
+   "/Off"
+  ]
+ },
+ {
+  "name": "Radio and/or TV ads",
+  "type": "/Btn",
+  "label": "Radio and/or TV ads",
+  "states": [
+   "/Yes",
+   "/Off"
+  ]
+ }
+]

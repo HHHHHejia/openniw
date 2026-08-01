@@ -1,0 +1,1108 @@
+[
+ {
+  "name": "form1[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[0].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[1]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[1].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[2]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[2].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[3]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[3].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[4]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[4].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[5]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[5].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[6]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[6].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt1Line3_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  3.  Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt1Line3_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  3. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt1Line3_MiddleName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  3. Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].#area[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].#area[0].Pt1Line1_AlienRegistrationNumber[0]",
+  "type": "/Tx",
+  "label": "START HERE - Type or print in black ink. Part 1. Information About the Person Filing This Request.  1. Enter Alien Registration Number A-Number (if any). A.  9 digits.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Part1_Line5_MailingAddress_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  5. Mailing Address.  Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Part1_Line5_MailingAddress_CityTown[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  5.  Mailing Address.  Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Part1_Line5_MailingAddress_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 1. Information About The Person Filing This Request.  5. Mailing Address.  Select Suite.",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Part1_Line5_MailingAddress_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 1. Information About The Person Filing This Request.  5. Mailing Address.  Selct Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Part1_Line5_MailingAddress_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  5. Mailing Address.  Enter Apartment, Suite, or Floor Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Part1_Line5_MailingAddress_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 1. Information About The Person Filing This Request.  5. Mailing Address.  Select Apartment.",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Part1_Line5_MailingAddress_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request. 5. Mailing Address.  Enter Zip Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Part1_Line5_MailingAddress_State[0]",
+  "type": "/Ch",
+  "label": "Part 1. Information About The Person Filing This Request.  5. Mailing Address.  Select State from a list of states.",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Part1_Line5_MailingAddress_InCareofName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  5. Mailing Address.  Enter In Care Of Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Part1_Line5_MailingAddress_Province[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  5. Mailing Address. Enter Province.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Part1_Line5_MailingAddress_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  5. Mailing Address, Enter Postal Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Part1_Line5_MailingAddress_Country[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  5. Mailing Address. Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Part1_Line4_CompanyorOrganizationName[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Information About The Person Filing This Request.  4.  Enter Company or Organization Named in the Related Case ( If filed on behalf of a company or organization).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Part1Line6_Checkbox[0]",
+  "type": "/Btn",
+  "label": "Part 1. Information About The Person Filing This Request. 6. Is your current mailing address the same as your physical address? Select Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Part1Line6_Checkbox[1]",
+  "type": "/Btn",
+  "label": "Part 1. Information About The Person Filing This Request. 6. Is your current mailing address the same as your physical address? Select No.  If you answered \"No\" to Item Number 6., provide your physica",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].#area[1]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].#area[1].Pt1Line2_USCISOnlineActNumber[0]",
+  "type": "/Tx",
+  "label": "Part 1.  Information About the Person Filing This Request. 2. Enter U S C I S Online Account Number, if any. 12 characters.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].AttyStateBarNumber[0]",
+  "type": "/Tx",
+  "label": "To be completed by an attorney or accredited representative (if any). Enter Attorney State Bar Number, if applicable.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].USCISOnlineAcctNumber[0]",
+  "type": "/Tx",
+  "label": "To be completed by an attorney or accredited representative (if any).  Enter Attorney or Accredited Representative U S C I S Online Account Number (if any). 12 characters.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].FormG28Attach[0]",
+  "type": "/Btn",
+  "label": "To be completed by an attorney or accredited representative, if any.  Select this box if Form G - 28 or Form G - 2 81 is attached.",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line8_CheckBox[0]",
+  "type": "/Btn",
+  "label": "Part 1.  Information About The Person Filing This Request.  8. Request for Premium Processing Service (select only one box). Select I am the applicant who is filing or has filed an application eligibl",
+  "states": [
+   "/C",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line8_CheckBox[1]",
+  "type": "/Btn",
+  "label": "Part 1.  Information About The Person Filing This Request.  8. Request for Premium Processing Service (select only one box). Select I am the attorney or accredited representative for the applicant who",
+  "states": [
+   "/D",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line8_CheckBox[2]",
+  "type": "/Btn",
+  "label": "Part 1.  Information About The Person Filing This Request.  8. Request for Premium Processing Service (select only one box).  Select I am the petitioner who is filing or has filed a petition eligible ",
+  "states": [
+   "/A",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line8_CheckBox[3]",
+  "type": "/Btn",
+  "label": "Part 1.  Information About The Person Filing This Request.  8. Request for Premium Processing Service (select only one box). I am the attorney or accredited representative for the petitioner who is fi",
+  "states": [
+   "/B",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].P2_Line2_ReceiptNumberof[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request.  2.  Enter Receipt Number of Related Petition or Application.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].P2_Line1_FormNumberof[0]",
+  "type": "/Tx",
+  "label": "Part 2.  Information About the Request. 1.  Enter Form Number of Related Petition or Application.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].P2_Line2_ClassorEligRequested[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request.  3.  Enter Classification or Eligibility Requested.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part2_Line4_PetitionerApplicantGivenName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request. 4.  Petitioner or Applicant in the Relating Case.  Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part2_Line4_PetitionerApplicantFamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request. 4.  Petitioner or Applicant in the Relating Case.  Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part2_Line4_PetitionerApplicantMiddleName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request. 4.  Petitioner or Applicant in the Relating Case.  Enter  Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request.  5. Beneficiary in the Related Case.  Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request. 5. Beneficiary in the Related Case.  Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line_MiddleName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request. 5.  Beneficiary in the Related Case.  Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line8_NameOfCompanyPOC_TitleofPOC[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request.  6. Name of Point of Contact for the Company or Organization.  Enter Position Title.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line8_NameOfCompanyPOC_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request.  6. Name of Point of Contact for the Company or Organization.  Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line8_NameOfCompanyPOC_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request.  6. Name of Point of Contact for the Company or Organization.  Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line8_NameOfCompanyPOC_MiddleName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request.  6. Name of Point of Contact for the Company or Organization. Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line9_CompanyIRSTaxNumber[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request.  7.  Company or Organization I R S Employer Identification Number (E I N) (if any).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line7_PhysicalAddress_State[0]",
+  "type": "/Ch",
+  "label": "Part 1. Information About The Person Filing This Request.  7. Physical Address. Select State from list of states.",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line7_PhysicalAddress_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  7. Physical Address. Enter Zip Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line7_PhysicalAddress_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 1. Information About The Person Filing This Request.  7. Physical Address. Select Apartment.",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line7_PhysicalAddress_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  6. Physical Address. Enter Apartment, Suite, or Floor Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line7_PhysicalAddress_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 1. Information About The Person Filing This Request.  7. Physical Address. Select  Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line7_PhysicalAddress_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 1. Information About The Person Filing This Request.  7. Physical Address. Select Suite.",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line7_PhysicalAddress_CityTown[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  7. Physical Address. Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line7_PhysicalAddress_Province[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  7. Physical Address. Enter Province.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line7_PhysicalAddress_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  7. Physical Address. Enter Postal Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line7_PhysicalAddress_Country[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  7. Physical Address. Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Part1_Line7_PhysicalAddress_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About The Person Filing This Request.  7. Physical Address. Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].P3_Line1_Checkbox[0]",
+  "type": "/Btn",
+  "label": "Part 3.  Requestor's Statement, Contact Information, Declaration, Certification and Signature. Requestor's Statement.  1. Requestor's Statement Regarding the Interpreter.  1. B. Select The interpreter",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].P3_Line1_Checkbox[1]",
+  "type": "/Btn",
+  "label": "Part 3.  Requestor's Statement, Contact Information, Declaration, Certification, and Signature. NOTE:  Read the Penalties section of the Form I - 9 0 7 Instructions before completing this section. I u",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].P3_Line1_B_Language[0]",
+  "type": "/Tx",
+  "label": "Part 3.  Requestor's Statement, Contact Information, Declaration, Certification, and Signature. Requestor's Statement.   1. B.  Enter language in which I am fluent, and I understood everything.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].P3_Line2_Checkbox[0]",
+  "type": "/Btn",
+  "label": "Part 3.  Requestor's Statement, Contact Information, Declaration, Certification, and Signature.  Requestor's Statement.   2. Requestor's Statement Regarding the Preparer. Select at my request, the pre",
+  "states": [
+   "/A",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].P3_Line2_NameofRepresentative[0]",
+  "type": "/Tx",
+  "label": "Part 3.  Requestor's Statement, Contact Information, Declaration, Certification, and Signature. Requestor's Statement. 2. Requestor's Statement Regarding the Preparer. Enter the preparer named in Part",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Part1_Line7_OtherInformationAboutCompanyOrg_State[0]",
+  "type": "/Ch",
+  "label": "Part 2. Information About the Request. 8.  Address of Petitioner, Applicant, Company or Organization Named in Related Case. Select State from list of states.",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Part1_Line7_OtherInformationAboutCompanyOrg_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request. 8.  Address of Petitioner, Applicant, Company or Organization Named in Related Case. Enter the Zip Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Part1_Line7_OtherInformationAboutCompanyOrg_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 2. Information About the Request. 8.  Address of Petitioner, Applicant, Company or Organization Named in Related Case. Select Apartment.",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Part1_Line7_OtherInformationAboutCompanyOrg_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request. 8.  Address of Petitioner, Applicant, Company or Organization Named in Related Case. Enter Apartment, Suite, or Floor Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Part1_Line7_OtherInformationAboutCompanyOrg_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 2. Information About the Request. 8.  Address of Petitioner, Applicant, Company or Organization Named in Related Case. Select Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Part1_Line7_OtherInformationAboutCompanyOrg_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 2. Information About the Request. 8.  Address of Petitioner, Applicant, Company or Organization Named in Related Case. Select Suite.",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Part1_Line7_OtherInformationAboutCompanyOrg_CityTown[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request. 8.  Address of Petitioner, Applicant, Company or Organization Named in Related Case. Enter the City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Part1_Line7_OtherInformationAboutCompanyOrg_Province[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request. 8.  Address of Petitioner, Applicant, Company or Organization Named in Related Case. Enter Province.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Part1_Line7_OtherInformationAboutCompanyOrg_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request. 8.  Address of Petitioner, Applicant, Company or Organization Named in Related Case. Enter Postal Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Part1_Line7_OtherInformationAboutCompanyOrg_Country[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request. 8.  Address of Petitioner, Applicant, Company or Organization Named in Related Case. Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Part1_Line7_OtherInformationAboutCompanyOrg_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 2. Information About the Request.  8. Address of Petitioner, Applicant, Company or Organization Named in Related Case. Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].P3_Line4_DaytimeTelePhoneNumber[0]",
+  "type": "/Tx",
+  "label": "Part 3.  Requestor's Statement, Contact Information, Declaration, Certification, and Signature.  Requestor's Contact Information.  3. Enter Requestor's Daytime Telephone Number. Enter 10 digit number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].P3_Line5_MobileTelePhoneNumber[0]",
+  "type": "/Tx",
+  "label": "Part 3.  Requestor's Statement, Contact Information, Declaration, Certification, and Signature. Requestor's Contact Information.  4. Enter Requestor's Mobile Telephone Number (if any).  Enter 10 digit",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].P3_Line6_Email[0]",
+  "type": "/Tx",
+  "label": "Part 3.  Requestor's Statement, Contact Information, Declaration, Certification, and Signature. Requestor's Contact Information. 5. Enter Requestor's Email address, if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].P3_Line5_MobileTelePhoneNumber[1]",
+  "type": "/Tx",
+  "label": "Part 3.  Requestor's Statement, Contact Information, Declaration, Certification, and Signature. Requestor's Contact Information.  4. Enter Requestor's Mobile Telephone Number (if any).  Enter 10 digit",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line3_CityTown[0]",
+  "type": "/Tx",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Mailing Address. 3. Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line3_Province[0]",
+  "type": "/Tx",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Mailing Address. 3. Enter Province.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line3_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Mailing Address. 3. Enter Postal Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line3_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Mailing Address. 3. Enter Zip Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line3_State[0]",
+  "type": "/Ch",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Mailing Address. 3. Select State form list of states.",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line3_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 4. Interpreter's Contact Information, Certification, and Signature.  Interpreter's Mailing Address. 3. Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line3_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Mailing Address. 3. Select Suite.",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line3_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Mailing Address. 3. Select Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line3_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Mailing Address. 3. Enter Apartment, Suite, or Floor Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line3_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Mailing Address. 3. Select Apartment.",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line3_Country[0]",
+  "type": "/Tx",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Mailing Address. 3. Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line5_Email[0]",
+  "type": "/Tx",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Contact Information. 6. Enter Interpreter's Email Address, (if any).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line4_DaytimeTelePhoneNumber[0]",
+  "type": "/Tx",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Contact Information. 4. Enter Interpreter's Daytime Telephone Number. Enter 10 digit number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line1_InterpreterGivenName[0]",
+  "type": "/Tx",
+  "label": "Part 4. Interpreter's Contact Information, Certification, and Signature. Interpreter's Full Name. 1. Enter the Interpreter's Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line1_InterpreterFamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 4. Interpreter's Contact Information, Certification, and Signature. Provide the following information about the interpreter: Interpreter's Full Name. 1. Enter the Interpreter's Family Name (Last ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line2_NameofBusinessorOrgName[0]",
+  "type": "/Tx",
+  "label": "Part 4. Interpreter's Contact Information, Certification, and Signature. Interpreter's Full Name.  2. Enter Interpreter's Business or Organization Name (if any).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt5Line3_SignatureOfPetitioner[0]",
+  "type": "/Tx",
+  "label": "Part 3.  Part 3.  Requestor's Statement, Contact Information, Declaration, Certification, and Signature. Requestor's Signature. 6. Requestor's Signature. This form can not be signed electronically.  T",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P3_DateofSignature[0]",
+  "type": "/Tx",
+  "label": "Part 3.  Requestor's Statement, Contact Information, Declaration, Certification, and Signature. Requestor's Signature. 6. Requestor's Signature. Date of Signature. Enter the 2-digit Month, 2- digit Da",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line6_Language[0]",
+  "type": "/Tx",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Certification.  I certify under penalty of perjury, that  I am fluent in English and (enter language) , which is",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].P4_Line4_DaytimeTelePhoneNumber[1]",
+  "type": "/Tx",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Contact Information. 5. Enter Interpreter's Mobile Telephone Number (if any). Enter 10 digit number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line6_EmailAddress[0]",
+  "type": "/Tx",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Cont",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line4_DaytimeTelePhoneNumber[0]",
+  "type": "/Tx",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Cont",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line5_FaxNumber[0]",
+  "type": "/Tx",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Cont",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line3_CityTown[0]",
+  "type": "/Tx",
+  "label": "Part 5.  Contact Information, Declaration, and Signature of the Person Preparing this Request, If Other than the Requestor.  3.  Preparer's Mailing Address.  Enter City or Town",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line3_Province[0]",
+  "type": "/Tx",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Mail",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line3_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Mail",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line3_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Mail",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line3_State[0]",
+  "type": "/Ch",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Mail",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line3_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Mail",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line3_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Mail",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line3_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Mail",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt10Line3b_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Mail",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line3_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Mail",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line3_Country[0]",
+  "type": "/Tx",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Mail",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line1_PreparerGivenName[0]",
+  "type": "/Tx",
+  "label": "Part 5. Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor.  Preparer's Full Name. 1. Enter Preparer's Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line1_PreparerFamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 5. Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer. Preparer's Full ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line2_NameofBusinessorOrgName[0]",
+  "type": "/Tx",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Full",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P4_Line6_Signature[0]",
+  "type": "/Tx",
+  "label": "Part 4. Interpreter's Contact Information, Certification, and Signature. Interpreter's Signature. 7.  Interpreter's Signature. This form can not be signed electronically.  The name of the interpreter ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P4_Line6_DateofSignature[0]",
+  "type": "/Tx",
+  "label": "Part 4.  Interpreter's Contact Information, Certification, and Signature. Interpreter's Signature.  7.  Date of Signature. Enter the 2-digit Month, 2-digit Day and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line7a_Checkbox[0]",
+  "type": "/Btn",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer: Preparer's Stat",
+  "states": [
+   "/A",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line7b_Checkbox[0]",
+  "type": "/Btn",
+  "label": "Part 5. Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. 7. B.  Select I am an attorney or accredited representative and my rep",
+  "states": [
+   "/B",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line7b_extends[0]",
+  "type": "/Btn",
+  "label": "Part 5. Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Preparer's Statement.  7. B. Select I am an attorney or accredited rep",
+  "states": [
+   "/1",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].P5_Line7b_notextends[0]",
+  "type": "/Btn",
+  "label": "Part 5. Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor.  Preparer's Statement.  7. B. Select  I am an attorney or accredited r",
+  "states": [
+   "/2",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[5]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].P5_Line8_Signature[0]",
+  "type": "/Tx",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer. Preparer's Sign",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].P5_Line8_DateofSignature[0]",
+  "type": "/Tx",
+  "label": "Part 5.  Name, Contact Information, Declaration, and Signature of the Person Preparing this Request, \rIf Other Than the Requestor. Provide the following information about the preparer:  Preparer's Sig",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt9Line3d_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 3. D. Enter Additional Information. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt9Line3a_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 3. A. Enter Page Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt9Line3b_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 3. B. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt9Line3c_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 3. C. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Line3_ANumber[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Line3_ANumber[0].Pt1Line1_AlienRegistrationNumber[1]",
+  "type": "/Tx",
+  "label": "Part 6.  Additional Information. 2. A. Number (if any). This field is pre-populated from Page 1.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt9Line4d_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 4. D. Enter Additional Information. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt9Line4a_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 4. A. Enter Page Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt9Line4b_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 4. B. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt9Line4c_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 4. C. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt1Line3_GivenName[1]",
+  "type": "/Tx",
+  "label": "Part 6.  Additional Information.  1. Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt1Line3_FamilyName[1]",
+  "type": "/Tx",
+  "label": "Part 6.  Additional Information. If you need extra space to provide any additional information within this petition, use the space below.  If you need more space than what is provided, you may make co",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt1Line3_MiddleName[1]",
+  "type": "/Tx",
+  "label": "Part 6.  Additional Information. 1. Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt9Line4d_AdditionalInfo[1]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 4. D. Enter Additional Information. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt9Line4a_PageNumber[1]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 4. A. Enter Page Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt9Line4b_PartNumber[1]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 4. B. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Pt9Line4c_ItemNumber[1]",
+  "type": "/Tx",
+  "label": "Part 6. Additional Information. 4. C. Enter Item Number.",
+  "states": []
+ }
+]

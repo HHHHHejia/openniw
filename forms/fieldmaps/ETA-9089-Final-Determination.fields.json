@@ -1,0 +1,170 @@
+[
+ {
+  "name": "1  DOL Case Number",
+  "type": "/Tx",
+  "label": "1.  DOL Case Number",
+  "states": []
+ },
+ {
+  "name": "2 Case Status",
+  "type": "/Tx",
+  "label": "2. Case Status",
+  "states": []
+ },
+ {
+  "name": "3  Employer Legal Business Name",
+  "type": "/Tx",
+  "label": "3.  Employer Legal Business Name",
+  "states": []
+ },
+ {
+  "name": "4  Employer FEIN",
+  "type": "/Tx",
+  "label": "4.  Employer FEIN",
+  "states": []
+ },
+ {
+  "name": "5  Foreign Workers Last family Name",
+  "type": "/Tx",
+  "label": "5.  Foreign Worker’s Last (family) Name",
+  "states": []
+ },
+ {
+  "name": "6  Foreign Workers First given Name",
+  "type": "/Tx",
+  "label": "6.  Foreign Worker’s First (given) Name",
+  "states": []
+ },
+ {
+  "name": "7  Foreign Workers Middle Names",
+  "type": "/Tx",
+  "label": "7.  Foreign Worker’s Middle Name(s)",
+  "states": []
+ },
+ {
+  "name": "8  Job Title",
+  "type": "/Tx",
+  "label": "8.  Job Title",
+  "states": []
+ },
+ {
+  "name": "9  SOC Code",
+  "type": "/Tx",
+  "label": "9.  SOC Code",
+  "states": []
+ },
+ {
+  "name": "10 SOC Occupational Title",
+  "type": "/Tx",
+  "label": "10. SOC Occupational Title",
+  "states": []
+ },
+ {
+  "name": "11  Filing Date",
+  "type": "/Tx",
+  "label": "11.  Filing Date",
+  "states": []
+ },
+ {
+  "name": "12  Determination Date",
+  "type": "/Tx",
+  "label": "12.  Determination Date",
+  "states": []
+ },
+ {
+  "name": "13  Expiration Date",
+  "type": "/Tx",
+  "label": "13.  Expiration Date",
+  "states": []
+ },
+ {
+  "name": "2 Date Signed",
+  "type": "/Tx",
+  "label": "2. Date Signed *",
+  "states": []
+ },
+ {
+  "name": "1 Attorney or Agents Last family Name",
+  "type": "/Tx",
+  "label": "1. Attorney or Agent’s Last (family) Name *",
+  "states": []
+ },
+ {
+  "name": "2 First given Name",
+  "type": "/Tx",
+  "label": "2. First (given) Name *",
+  "states": []
+ },
+ {
+  "name": "3 Middle Initial",
+  "type": "/Tx",
+  "label": "3. Middle Initial §",
+  "states": []
+ },
+ {
+  "name": "4  FirmBusiness Name",
+  "type": "/Tx",
+  "label": "4.  Firm/Business Name §",
+  "states": []
+ },
+ {
+  "name": "6 Date Signed",
+  "type": "/Tx",
+  "label": "6. Date Signed *",
+  "states": []
+ },
+ {
+  "name": "1 Last family Name",
+  "type": "/Tx",
+  "label": "1. Last (family) Name *",
+  "states": []
+ },
+ {
+  "name": "2 First given Name_2",
+  "type": "/Tx",
+  "label": "2. First (given) Name *",
+  "states": []
+ },
+ {
+  "name": "3 Middle Initial_2",
+  "type": "/Tx",
+  "label": "3. Middle Initial §",
+  "states": []
+ },
+ {
+  "name": "4 Title",
+  "type": "/Tx",
+  "label": "4. Title *",
+  "states": []
+ },
+ {
+  "name": "6 Date Signed_2",
+  "type": "/Tx",
+  "label": "6. Date Signed *",
+  "states": []
+ },
+ {
+  "name": "5  Signature_2_es_:signature",
+  "type": "/Tx",
+  "label": "5.  Signature *",
+  "states": []
+ },
+ {
+  "name": "5  Signature_es_:signature",
+  "type": "/Tx",
+  "label": "5.  Signature *",
+  "states": []
+ },
+ {
+  "name": "1  Signature_es_:signature",
+  "type": "/Tx",
+  "label": "1.  Signature *",
+  "states": []
+ },
+ {
+  "name": "14  Department of Labor Office of Foreign Labor Certification electronic signature_es_:signature",
+  "type": "/Tx",
+  "label": "14.  Department of Labor Office of Foreign Labor Certification (electronic signature)",
+  "states": []
+ }
+]
