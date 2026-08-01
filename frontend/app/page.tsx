@@ -54,7 +54,7 @@ export default function Landing() {
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
           <span className="docket-line text-[--docket]">OpenNIW — Open Source NIW Preparation</span>
           <nav className="flex gap-4 items-center text-sm">
-            <a className="hover:text-[--docket]" href="https://github.com/openniw" aria-label="Source code">Source</a>
+            <a className="hover:text-[--docket]" href="https://github.com/HHHHHejia/openniw" aria-label="Source code">Source</a>
             <a className="hover:text-[--docket]" href="/login">Sign in</a>
           </nav>
         </div>

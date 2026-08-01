@@ -120,6 +120,11 @@ NEXT_PUBLIC_API_URL=http://localhost:8400 npm run dev
 
 Open http://localhost:3000.
 
+## Live deployment
+
+- App: https://frontend-production-3c7f.up.railway.app
+- API: https://backend-production-9b6c.up.railway.app (health: `/health`, docs: `/docs`)
+
 ## Deploy on Railway
 
 Two services from one repo:
