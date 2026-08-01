@@ -56,7 +56,7 @@ export default function InterviewPage() {
         )}
         {messages.map((m, i) => (
           <div key={i} className={m.role === "user" ? "justify-self-end max-w-[85%]" : "max-w-[92%]"}>
-            <div className="docket-line text-[#6b7570] mb-1">{m.role === "user" ? "You" : "OpenNIW"}</div>
+            <div className="docket-line text-[#4f5a55] mb-1">{m.role === "user" ? "You" : "OpenNIW"}</div>
             <div className={`px-4 py-3 text-sm ${m.role === "user" ? "bg-[--field] border border-[--rule]" : "border-l-2 border-[--docket]"}`}>
               {m.role === "user" ? m.content : <Md>{m.content}</Md>}
             </div>

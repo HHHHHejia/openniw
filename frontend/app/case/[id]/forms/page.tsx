@@ -35,7 +35,7 @@ function RowList({ value, onChange, cols, levelKey }: {
         <div key={i} className="border border-[--rule] bg-[--field] p-3 grid sm:grid-cols-3 gap-2 relative">
           {cols.map(([k, label]) => (
             <label key={k} className="text-xs">
-              <span className="docket-line block mb-0.5 !text-[0.62rem]">{label}</span>
+              <span className="docket-line block mb-0.5 !text-[0.75rem]">{label}</span>
               {k === levelKey ? (
                 <select value={row[k] || ""} onChange={(e) => set(i, k, e.target.value)}>
                   <option value="">—</option>
@@ -67,12 +67,12 @@ function EmployerForm({ value, onChange }: { value: any; onChange: (v: any) => v
     <div className="border border-[--rule] bg-[--field] p-3 grid sm:grid-cols-3 gap-2">
       {EMPLOYER_COLS.map(([k, label]) => (
         <label key={k} className="text-xs">
-          <span className="docket-line block mb-0.5 !text-[0.62rem]">{label}</span>
+          <span className="docket-line block mb-0.5 !text-[0.75rem]">{label}</span>
           <input value={v[k] || ""} onChange={(e) => onChange({ ...v, [k]: e.target.value })} />
         </label>
       ))}
       <label className="text-xs sm:col-span-3">
-        <span className="docket-line block mb-0.5 !text-[0.62rem]">
+        <span className="docket-line block mb-0.5 !text-[0.75rem]">
           Job duties — 3–5 sentences, action verbs; no employer/advisor/grant names inside
         </span>
         <textarea rows={3} value={v.duties || ""}
@@ -227,7 +227,7 @@ export default function FormsPage() {
                     )}
                   </span>
                   {field(f)}
-                  {f.help && <span className="block mt-1 text-xs text-[#6b7570]">{f.help}</span>}
+                  {f.help && <span className="block mt-1 text-xs text-[#4f5a55]">{f.help}</span>}
                 </label>
               </div>
             ))}
@@ -260,7 +260,7 @@ export default function FormsPage() {
               })}
             </div>
             {Object.entries(reports).map(([code, r]: any) => (
-              <p key={code} className="docket-line text-[#6b7570] mt-2">
+              <p key={code} className="docket-line text-[#4f5a55] mt-2">
                 {code}: {r.filled} fields filled{r.unmatched_fields?.length ? `, ${r.unmatched_fields.length} unmatched` : ""}
               </p>
             ))}
@@ -276,13 +276,13 @@ export default function FormsPage() {
                     onClick={() => downloadWithAuth(`/api/cases/${id}/forms/package`, "openniw-package.zip")}>
               Download package
             </button>
-            <p className="docket-line text-[#6b7570] mt-3">
+            <p className="docket-line text-[#4f5a55] mt-3">
               Fees: I-140 ${spec.fees["i-140"]} + Asylum Program Fee ${spec.fees["asylum_program_fee_self"]}
               {" "}(self) · Premium optional ${spec.fees["i-907_premium"]}
             </p>
           </section>
 
-          <p className="text-xs text-[#6b7570] leading-relaxed">{spec.lockbox_note}</p>
+          <p className="text-xs text-[#4f5a55] leading-relaxed">{spec.lockbox_note}</p>
         </aside>
       </div>
     </div>

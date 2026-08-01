@@ -11,17 +11,24 @@
   --field: #f0eee6;
 }
 
+/* Readability: slightly larger rem base scales every text-* size up */
+html {
+  font-size: 17px;
+}
+
 body {
   background: var(--paper);
   color: var(--ink);
+  line-height: 1.6;
 }
 
-/* Docket entries — the signature texture of the app */
+/* Docket entries — the signature texture of the app.
+   Mixed case + modest tracking: distinctive but readable. */
 .docket-line {
   font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .rule-b {
@@ -47,10 +54,11 @@ body {
   margin: 1.4em 0 0.5em;
   line-height: 1.25;
 }
+.prose-doc { font-size: 1rem; }
 .prose-doc h1 { font-size: 1.5rem; }
-.prose-doc h2 { font-size: 1.2rem; }
-.prose-doc h3 { font-size: 1.05rem; }
-.prose-doc p { margin: 0.6em 0; line-height: 1.65; }
+.prose-doc h2 { font-size: 1.25rem; }
+.prose-doc h3 { font-size: 1.1rem; }
+.prose-doc p { margin: 0.65em 0; line-height: 1.75; }
 .prose-doc ul, .prose-doc ol { margin: 0.6em 0 0.6em 1.4em; }
 .prose-doc ul { list-style: disc; }
 .prose-doc ol { list-style: decimal; }
@@ -66,8 +74,9 @@ body {
 .prose-doc th, .prose-doc td { border: 1px solid var(--rule); padding: 0.35em 0.6em; }
 
 input, textarea, select {
-  @apply bg-white border border-[--rule] rounded-none px-3 py-2 text-sm w-full
+  @apply bg-white border border-[--rule] rounded-none px-3 py-2 w-full
     focus:outline-none focus:border-[--docket] focus:ring-1 focus:ring-[--docket];
+  font-size: 0.95rem;
 }
 label { @apply block; }
 

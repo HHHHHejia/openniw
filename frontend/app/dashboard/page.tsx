@@ -61,7 +61,7 @@ function DashboardInner() {
         <div className="border border-[--rule] bg-white px-6 py-10 text-center">
           <p className="mb-4">No cases yet. Start with a free evaluation — it seeds your whole case.</p>
           <a className="btn" href="/#process">Get a free evaluation</a>
-          <p className="docket-line mt-4 text-[#6b7570]">or</p>
+          <p className="docket-line mt-4 text-[#4f5a55]">or</p>
           <button className="btn-quiet mt-2" onClick={createCase} disabled={busy}>Create an empty case</button>
         </div>
       )}
@@ -72,7 +72,7 @@ function DashboardInner() {
              className="border border-[--rule] bg-white px-6 py-4 flex justify-between items-center hover:border-[--docket] transition-colors">
             <div>
               <div style={{ fontFamily: "var(--font-serif), serif" }} className="text-lg">{c.title}</div>
-              <div className="docket-line text-[#6b7570] mt-1">{c.field || "field not set"}</div>
+              <div className="docket-line text-[#4f5a55] mt-1">{c.field || "field not set"}</div>
             </div>
             <span className="docket-line text-[--docket]">Stage: {c.stage}</span>
           </a>

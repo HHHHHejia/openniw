@@ -6,7 +6,7 @@ import { api, waitForJob } from "@/lib/api";
 const STATUS_STYLE: Record<string, string> = {
   provided: "text-[--docket] border-[--docket]",
   needed: "text-[--stamp] border-[--stamp]",
-  suggested: "text-[#6b7570] border-[--rule]",
+  suggested: "text-[#4f5a55] border-[--rule]",
   na: "text-[#a8a89e] border-[--rule] line-through",
 };
 
@@ -86,7 +86,7 @@ export default function EvidencePage() {
                         <span className="docket-line drafting-caret text-[--docket]">reading</span>
                       )}
                       {it.doc_kind && (
-                        <span className="docket-line text-[#6b7570]">{it.doc_kind}</span>
+                        <span className="docket-line text-[#4f5a55]">{it.doc_kind}</span>
                       )}
                       {it.date_class === "post_filing" && (
                         <span className="docket-line text-[--stamp] border border-[--stamp] px-1.5">post-filing</span>

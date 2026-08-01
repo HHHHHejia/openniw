@@ -94,8 +94,8 @@ export default function EndeavorPage() {
                 onChange={(ev) => setE({ ...e, [key]: ev.target.value })}
                 onBlur={() => save({ [key]: e[key] })}
               />
-              <span className="block mt-1 text-xs text-[#6b7570]"><strong>What:</strong> {what}</span>
-              <span className="block text-xs text-[#6b7570]"><strong>Why we ask:</strong> {why}</span>
+              <span className="block mt-1 text-xs text-[#4f5a55]"><strong>What:</strong> {what}</span>
+              <span className="block text-xs text-[#4f5a55]"><strong>Why we ask:</strong> {why}</span>
             </label>
           ))}
           <div className="flex gap-2">
@@ -119,9 +119,9 @@ export default function EndeavorPage() {
                 onClick={() => save({ sentence: c.sentence, pillars: c.pillars })}>
                 <p className="text-sm leading-relaxed" style={{ fontFamily: "var(--font-serif), serif" }}>“{c.sentence}”</p>
                 {c.pillars && (
-                  <p className="docket-line text-[#6b7570] mt-2">Pillars: {c.pillars.join(" · ")}</p>
+                  <p className="docket-line text-[#4f5a55] mt-2">Pillars: {c.pillars.join(" · ")}</p>
                 )}
-                {c.rationale && <p className="text-xs text-[#6b7570] mt-1">{c.rationale}</p>}
+                {c.rationale && <p className="text-xs text-[#4f5a55] mt-1">{c.rationale}</p>}
               </button>
             ))}
           </div>
@@ -175,7 +175,7 @@ export default function EndeavorPage() {
             Unfreeze (before filing only)
           </button>
         )}
-        <span className="docket-line text-[#6b7570]">
+        <span className="docket-line text-[#4f5a55]">
           Freezing locks the wording; all drafting cites it verbatim.
         </span>
       </div>

@@ -43,14 +43,14 @@ export default function CaseOverview() {
         <section className="border border-[--rule] bg-white">
           <div className="rule-b px-5 py-3 docket-line">Case record</div>
           <div className="px-5 py-4 grid sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
-            <div><span className="docket-line text-[#6b7570]">Title</span><br />{data.title}</div>
-            <div><span className="docket-line text-[#6b7570]">Field</span><br />{data.field || p.field || "—"}</div>
-            <div><span className="docket-line text-[#6b7570]">Applicant</span><br />{p.name || "—"}</div>
-            <div><span className="docket-line text-[#6b7570]">Citations / h-index</span><br />
+            <div><span className="docket-line text-[#4f5a55]">Title</span><br />{data.title}</div>
+            <div><span className="docket-line text-[#4f5a55]">Field</span><br />{data.field || p.field || "—"}</div>
+            <div><span className="docket-line text-[#4f5a55]">Applicant</span><br />{p.name || "—"}</div>
+            <div><span className="docket-line text-[#4f5a55]">Citations / h-index</span><br />
               {p.metrics?.citations ?? "—"} / {p.metrics?.h_index ?? "—"}</div>
-            <div><span className="docket-line text-[#6b7570]">Publications on record</span><br />
+            <div><span className="docket-line text-[#4f5a55]">Publications on record</span><br />
               {p.publications?.length ?? 0}</div>
-            <div><span className="docket-line text-[#6b7570]">Evidence provided</span><br />
+            <div><span className="docket-line text-[#4f5a55]">Evidence provided</span><br />
               {c.evidence_provided ?? 0} of {c.evidence_total ?? 0}</div>
           </div>
         </section>

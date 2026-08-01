@@ -10,7 +10,7 @@ const USE_COLOR: Record<string, string> = {
   verified: "var(--docket)",
   extensive: "#4a6b2a",
   moderate: "#8a7a2a",
-  background: "#6b7570",
+  background: "#4f5a55",
   passing: "#a8a89e",
 };
 
@@ -128,7 +128,7 @@ export default function CitationsPage() {
               <div key={c.name} className="flex items-center justify-between gap-2 text-sm bg-white border border-[--rule] px-4 py-2">
                 <div>
                   <span className="font-medium">{c.name}</span>{" "}
-                  <span className="docket-line text-[#6b7570]">
+                  <span className="docket-line text-[#4f5a55]">
                     {c.n_citations_discussable} citation{c.n_citations_discussable > 1 ? "s" : ""} · {c.institutions?.[0] || "institution unknown"}{c.us_based ? " · US" : ""}
                   </span>
                 </div>
@@ -136,7 +136,7 @@ export default function CitationsPage() {
               </div>
             ))}
           </div>
-          <p className="docket-line text-[#6b7570] mt-2">
+          <p className="docket-line text-[#4f5a55] mt-2">
             Strongest: can discuss ≥2 notable citations; U.S.-based preferred; no students.
           </p>
         </section>
@@ -154,7 +154,7 @@ export default function CitationsPage() {
       </div>
       <div className="border border-[--rule] bg-white divide-y divide-[--rule]">
         {rows.length === 0 && (
-          <p className="px-5 py-8 text-sm text-[#6b7570] text-center">
+          <p className="px-5 py-8 text-sm text-[#4f5a55] text-center">
             Nothing here yet — run the pipeline steps above. Harvest needs your
             publications in the profile (Overview → Analyze sources).
           </p>
@@ -165,7 +165,7 @@ export default function CitationsPage() {
               <button className="text-left text-sm max-w-[70%] hover:text-[--docket]"
                       onClick={() => setOpen(open === r.id ? null : r.id)}>
                 <span className="font-medium">{r.citing_title}</span>
-                <span className="block docket-line text-[#6b7570] mt-0.5">
+                <span className="block docket-line text-[#4f5a55] mt-0.5">
                   {r.citing_venue || "venue?"} · {r.citing_year || "?"} · cites “{r.cited_title.slice(0, 60)}…”
                 </span>
               </button>
@@ -177,7 +177,7 @@ export default function CitationsPage() {
                     {r.use_type} {r.score ? `· ${r.score}/9` : ""}
                   </span>
                 )}
-                <span className={r.status === "selected" ? "text-[--docket]" : "text-[#6b7570]"}>{r.status}</span>
+                <span className={r.status === "selected" ? "text-[--docket]" : "text-[#4f5a55]"}>{r.status}</span>
               </div>
             </div>
             {open === r.id && (
@@ -205,7 +205,7 @@ export default function CitationsPage() {
           </div>
         ))}
       </div>
-      <p className="docket-line text-[#6b7570] mt-3">
+      <p className="docket-line text-[#4f5a55] mt-3">
         Deliverables land in Documents (Citation Examples) and in the filing package (highlighted PDFs).
       </p>
     </div>

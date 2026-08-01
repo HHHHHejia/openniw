@@ -37,7 +37,7 @@ function ProngBars({ scores }: { scores: any }) {
                       style={{ background: i <= v ? (v >= 3 ? "var(--docket)" : "var(--stamp)") : "transparent" }} />
               ))}
             </div>
-            <span className="docket-line text-[#6b7570]">{v}/5</span>
+            <span className="docket-line text-[#4f5a55]">{v}/5</span>
           </div>
         );
       })}
@@ -137,7 +137,7 @@ function EvalInner() {
               <p className="drafting-caret text-lg" style={{ fontFamily: "var(--font-serif), serif" }}>
                 {STAGE_COPY[stage] || "Reading your record"}
               </p>
-              <p className="docket-line mt-3 text-[#6b7570]">
+              <p className="docket-line mt-3 text-[#4f5a55]">
                 fetch sources · consolidate profile · apply the Dhanasar framework
               </p>
             </div>

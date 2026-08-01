@@ -143,7 +143,7 @@ export default function DocumentsPage() {
                       <div key={r.id} className="flex items-center justify-between flex-wrap gap-2 border border-[--rule] px-4 py-2.5">
                         <div>
                           <span className="font-medium">{r.name}</span>{" "}
-                          <span className="docket-line text-[#6b7570]">{r.relationship} · {r.org || "org?"} · {r.angle || "no angle set"}</span>
+                          <span className="docket-line text-[#4f5a55]">{r.relationship} · {r.org || "org?"} · {r.angle || "no angle set"}</span>
                         </div>
                         <div className="flex gap-2 items-center">
                           {d && (
@@ -171,7 +171,7 @@ export default function DocumentsPage() {
                     <input placeholder="Angle (e.g. national importance)" value={newRec.angle} onChange={(e) => setNewRec({ ...newRec, angle: e.target.value })} />
                     <button className="btn-quiet !py-2" onClick={addRec}>Add</button>
                   </div>
-                  <p className="docket-line text-[#6b7570]">
+                  <p className="docket-line text-[#4f5a55]">
                     Max 4 letters. Dependent letters carry more weight now; independents should have cited your work.
                   </p>
                 </div>

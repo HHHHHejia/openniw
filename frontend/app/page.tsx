@@ -85,7 +85,7 @@ export default function Landing() {
           </button>
           <a className="btn-quiet" href="#process">See the five stages</a>
         </div>
-        <p className="docket-line mt-6 text-[#6b7570]">
+        <p className="docket-line mt-6 text-[#4f5a55]">
           Free · Open source (MIT) · Your data stays in your own deployment · Not legal advice
         </p>
       </section>
@@ -158,14 +158,14 @@ export default function Landing() {
               {busy ? <span className="drafting-caret">Analyzing your record</span> : "Evaluate my case"}
             </button>
           </div>
-          <p className="docket-line text-[#6b7570]">
+          <p className="docket-line text-[#4f5a55]">
             OpenNIW is a document preparation tool, not a law firm. The evaluation is informational, not legal advice.
           </p>
         </form>
       </section>
 
       <footer className="border-t border-[--rule]">
-        <div className="max-w-5xl mx-auto px-6 py-8 flex flex-wrap gap-4 justify-between docket-line text-[#6b7570]">
+        <div className="max-w-5xl mx-auto px-6 py-8 flex flex-wrap gap-4 justify-between docket-line text-[#4f5a55]">
           <span>OpenNIW · MIT License · 利益众生</span>
           <span>Built from the structure of real approved filings</span>
         </div>

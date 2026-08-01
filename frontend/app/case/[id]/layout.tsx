@@ -21,7 +21,7 @@ export default function CaseLayout({ children }: { children: React.ReactNode }) 
       <header className="rule-b bg-white sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
           <a href="/dashboard" className="docket-line text-[--docket]">← Case files</a>
-          <span className="docket-line text-[#6b7570]">OpenNIW</span>
+          <span className="docket-line text-[#4f5a55]">OpenNIW</span>
         </div>
         <nav className="max-w-6xl mx-auto px-6 flex gap-1 overflow-x-auto">
           {TABS.map(([suffix, numeral, label]) => {
