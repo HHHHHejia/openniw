@@ -2,18 +2,24 @@
 
 ## Workflow
 
-1. Run the skill's `scripts/fetch_forms.py forms/blank` — downloads official
-   PDFs (I-140, ETA-9089 Appendix A + Final Determination, G-1145, I-907,
-   G-1450, G-1650). The DOL (ETA-9089) downloads often 403 for scripts: if
-   they fail, fetch those two PDFs with your own web tool or have the user
-   download them from dol.gov/agencies/eta/foreign-labor/forms into
-   forms/blank/.
-2. Build `forms/answers.json` from case.json + an interview for what's
-   missing (see key reference below). Confirm every value with the user —
-   identity numbers, dates, and addresses must never be guessed.
-3. `pip install pypdf cryptography` (one-time), then run the skill's
-   `scripts/fill_form.py forms/answers.json all forms/blank forms`
-4. Review each filled PDF with the user; the script reports unmatched
+1. `openniw fetch-forms` (fallback: `scripts/fetch_forms.py forms/blank`) —
+   downloads official PDFs (I-140, ETA-9089 Appendix A + Final
+   Determination, G-1145, I-907, G-1450, G-1650). The DOL (ETA-9089)
+   downloads often 403 for scripts: if they fail, fetch those two PDFs with
+   your own web tool or have the user download them from
+   dol.gov/agencies/eta/foreign-labor/forms into forms/blank/.
+2. Pre-fill `forms/answers.json` from case.json (key reference below) and
+   list every derived key in `forms/answers.meta.json` `ai_keys`. Identity
+   numbers, dates, and addresses must never be guessed — interview for
+   them or leave the keys absent for the user to add in the wizard.
+3. **Preferred**: launch the browser wizard — `openniw ui forms` (see
+   SKILL.md Browser sessions). The user reviews amber AI fields, completes
+   the rest, clicks Fill per form (live PDF preview), then Done. After
+   Done: `openniw fill all` as the final deterministic pass.
+   **Fallback** (no browser/companion): confirm every value in chat, then
+   `pip install pypdf cryptography` + 
+   `scripts/fill_form.py forms/answers.json all forms/blank forms`.
+4. Review each filled PDF with the user; the report lists unmatched
    fields — anything unmatched gets filled by hand in a PDF viewer. I-907,
    G-1450 and G-1650 are downloaded but NOT script-fillable — complete them
    by hand. Always PRINT the filled forms and verify every page on paper
@@ -32,14 +38,17 @@
   passport_number, passport_country, passport_exp, travel_doc_number,
   current_status
 - `processing.*`: adjustment (bool), country_of_residence, consulate_city,
-  consulate_country, prior_petition (bool), in_proceedings (bool)
+  consulate_country, prior_petition (bool), in_proceedings (bool),
+  premium (bool — I-907; drives the lockbox address and package contents,
+  never written into a PDF)
 - `foreign_address.*`: street, city, province, postal_code, country
 - `employment.*`: job_title, soc_code (e.g. "15-2051"), soc_title,
   job_description, full_time, permanent, new_position, wages, wages_per, hours
 - `petitioner.*`: occupation, annual_income, nonprofit (bool),
   small_employer (bool, default true — sets the Asylum Program Fee answer)
 - `degrees`: list of {level: doctorate|master|bachelor|associate|other,
-  field, institution, country, month_year (MM/YYYY, conferral date)}
+  other_label (names the degree when level=other), field, institution,
+  country, month_year (MM/YYYY, conferral date)}
 - `current_employer`: {name, address1, address2, city, state, postal_code,
   country, job_title, start (MM/YYYY), end, hours_per_week, duties}
 - `family`: list of {family_name, given_name, middle_name, dob,

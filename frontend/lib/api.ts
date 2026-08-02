@@ -1,76 +1,50 @@
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8400";
+// Same-origin client for the openniw local companion. The per-session token
+// arrives in the launch URL (?token=...) and is kept in sessionStorage so
+// tab navigation keeps working.
 
-export function getToken(): string | null {
-  if (typeof window === "undefined") return null;
-  return localStorage.getItem("openniw_token");
+export function getToken(): string {
+  if (typeof window === "undefined") return "";
+  const fromUrl = new URLSearchParams(window.location.search).get("token");
+  if (fromUrl) {
+    sessionStorage.setItem("openniw_token", fromUrl);
+    return fromUrl;
+  }
+  return sessionStorage.getItem("openniw_token") || "";
 }
 
-export function setToken(token: string | null) {
-  if (token) localStorage.setItem("openniw_token", token);
-  else localStorage.removeItem("openniw_token");
+export function withToken(path: string): string {
+  const t = getToken();
+  return t ? `${path}${path.includes("?") ? "&" : "?"}token=${t}` : path;
 }
 
-export async function api(
-  path: string,
-  opts: RequestInit & { form?: FormData } = {}
-): Promise<any> {
-  const headers: Record<string, string> = { ...(opts.headers as any) };
-  const token = getToken();
-  if (token) headers["Authorization"] = `Bearer ${token}`;
-  let body = opts.body;
-  if (opts.form) {
-    body = opts.form;
-  } else if (body && typeof body !== "string") {
-    headers["Content-Type"] = "application/json";
-    body = JSON.stringify(body);
-  } else if (body) {
-    headers["Content-Type"] = "application/json";
-  }
-  const res = await fetch(`${API}${path}`, { ...opts, headers, body });
-  if (res.status === 401 && typeof window !== "undefined") {
-    setToken(null);
-    if (!path.startsWith("/api/eval")) window.location.href = "/login";
-  }
+export async function api(path: string, opts: { method?: string; body?: any } = {}) {
+  const res = await fetch(path, {
+    method: opts.method || "GET",
+    headers: {
+      "X-OpenNIW-Token": getToken(),
+      ...(opts.body !== undefined ? { "Content-Type": "application/json" } : {}),
+    },
+    body: opts.body !== undefined ? JSON.stringify(opts.body) : undefined,
+  });
   if (!res.ok) {
-    let detail = res.statusText;
+    let detail = `${res.status}`;
     try {
       detail = (await res.json()).detail || detail;
     } catch {}
-    throw new Error(detail);
+    const err: any = new Error(detail);
+    err.status = res.status;
+    throw err;
   }
-  const type = res.headers.get("content-type") || "";
-  if (type.includes("application/json")) return res.json();
-  return res.blob();
+  const ct = res.headers.get("content-type") || "";
+  return ct.includes("application/json") ? res.json() : res.blob();
 }
 
-export function downloadUrl(path: string): string {
-  return `${API}${path}`;
-}
-
-export async function downloadWithAuth(path: string, filename: string) {
-  const blob = await api(path);
-  const url = URL.createObjectURL(blob as Blob);
+export async function download(path: string, filename: string) {
+  const blob = (await api(path)) as Blob;
+  const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
   a.download = filename;
   a.click();
   URL.revokeObjectURL(url);
-}
-
-/** Poll a job until it settles. */
-export async function waitForJob(
-  jobId: string,
-  opts: { public?: boolean; intervalMs?: number; timeoutMs?: number } = {}
-): Promise<any> {
-  const base = opts.public ? "/api/jobs/public/" : "/api/jobs/";
-  const started = Date.now();
-  const interval = opts.intervalMs ?? 2500;
-  const timeout = opts.timeoutMs ?? 15 * 60 * 1000;
-  for (;;) {
-    const job = await api(base + jobId);
-    if (job.status === "done") return job.result;
-    if (job.status === "error") throw new Error(job.error || "Job failed");
-    if (Date.now() - started > timeout) throw new Error("Timed out");
-    await new Promise((r) => setTimeout(r, interval));
-  }
 }

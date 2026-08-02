@@ -19,9 +19,11 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OpenNIW — open-source NIW petition preparation",
+  title: "OpenNIW — local companion",
   description:
-    "AI-assisted EB-2 National Interest Waiver self-petitions: from a free evaluation of your public record to a complete filing package. Open source; not legal advice.",
+    "Skill-driven local companion for EB-2 NIW self-petitions: browser form "
+    + "wizard and citation review over your local case folder. No accounts, "
+    + "no database, no API keys. Not legal advice.",
 };
 
 export default function RootLayout({

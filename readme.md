@@ -1,54 +1,95 @@
 # OpenNIW
 
 **Open-source, AI-assisted EB-2 National Interest Waiver (NIW) self-petitions —
-from a free evaluation of your public record to a complete filing package.**
+your coding agent is the paralegal, a local folder is the case file, and a
+browser wizard appears exactly when a GUI beats chat.**
 
-OpenNIW replicates the workflow of a full-service NIW law firm, then automates
-away the paperwork. The core principle: **you give links, not paperwork.**
-From a Google Scholar profile, a homepage URL, and/or a CV, the system
-collects, analyzes, and organizes nearly everything itself, asking you only
-for what it cannot derive.
+OpenNIW is an [Agent Skill](https://agentskills.io). Install it into
+Claude Code, Codex, Cursor, or any Agent-Skills tool, and your existing AI
+subscription runs the entire law-firm workflow — evaluation, evidence,
+drafting, official forms, filing package — with **zero configuration**:
+
+- **No account.** Nothing to sign up for.
+- **No database.** Your case lives in a `niw-case/` folder you own.
+- **No API key.** Your agent's subscription is the AI.
+- **No server.** A localhost companion opens only when you reach a
+  form-heavy step, and only talks to your case folder.
 
 > **OpenNIW is a document-preparation and self-help tool, not a law firm, and
 > does not provide legal advice.** Immigration outcomes depend on individual
 > facts and adjudicator discretion. Review everything before filing; consider
 > consulting a licensed attorney.
 
+## Install
+
+```bash
+# cross-agent installer (Claude Code, Codex, Cursor, 70+ agents):
+npx skills add HHHHHejia/openniw
+
+# or manually — Claude Code:
+git clone https://github.com/HHHHHejia/openniw
+mkdir -p ~/.claude/skills && cp -r openniw/.agents/skills/niw-petition ~/.claude/skills/
+
+# or manually — Codex and other Agent-Skills tools:
+mkdir -p ~/.agents/skills && cp -r openniw/.agents/skills/niw-petition ~/.agents/skills/
+```
+
+Then say **"帮我准备 NIW 申请"** or **"evaluate my NIW case"** in your agent.
+
+## How it works
+
+```
+        ┌──────────────────────────────────────┐
+        │   Your agent + the niw-petition      │   the BRAIN — conversation,
+        │   skill (Claude Code / Codex / …)    │   judgment, drafting, prefill
+        └──────┬─────────────────────┬─────────┘
+   reads/writes│                     │ launches at interaction-heavy steps
+               ▼                     ▼
+        ┌────────────┐   ┌───────────────────────────┐
+        │ niw-case/  │◄──┤ openniw (pip companion)   │  the ORGAN — browser
+        │ STATE.md   │   │ localhost form wizard +   │  wizard & deterministic
+        │ case.json  │   │ citation review + PDF     │  compute; zero LLM,
+        │ forms/ …   │   │ fill / package / harvest  │  zero keys, zero DB
+        └────────────┘   └───────────────────────────┘
+```
+
+- The **skill** drives all five stages and survives weeks of short sessions:
+  `STATE.md` in the case folder is read at every session start and updated
+  after every step, so any session resumes exactly where the last one ended.
+- The **companion** (`pip install openniw`, installed by your agent when
+  first needed) serves a localhost-only, token-protected browser UI over
+  your case folder for the steps where a GUI beats chat — reviewing 60+
+  form fields, or picking your best ~10 citations from scored quote cards —
+  plus headless deterministic commands the agent uses directly:
+
+  ```
+  openniw ui forms|citations   # browser session over the case folder
+  openniw fill all             # fill I-140 / ETA-9089 App. A / Final Det. / G-1145
+  openniw package              # filing-package ZIP in lockbox order
+  openniw harvest "Title" …    # OpenAlex citing-paper harvest + screening
+  openniw fetch-forms          # download official blank PDFs
+  openniw docx / highlight     # DOCX export · exhibit highlighting
+  ```
+
+  The browser session outlives your terminal: close everything, come back
+  tomorrow, and the agent reconciles what you did from the session file.
+  If the companion can't be installed (offline/sandboxed), the skill falls
+  back to pure-stdlib scripts bundled with it — the GUI is an accelerator,
+  never a requirement.
+
 ## The five stages
 
 | Stage | What happens |
 |---|---|
-| **I — Evaluate** | Paste your Scholar link / homepage / CV → instant structured evaluation: tier, prong-by-prong strengths and gaps, suggested endeavor angles. Free, no account needed. |
-| **II — Collect** | The evaluation becomes a case. A personalized evidence checklist is generated; the system pre-fills what it derived (publications, citations, metrics). A chat-style AI interview asks only for what's missing. |
-| **III — Draft** | Proposed Endeavor Statement → support letters → Petition Letter (Dhanasar three-prong brief, cited to exhibits) → Index of Exhibits → cover letter. Markdown editing, versioning, DOCX export. |
-| **IV — Forms** | One wizard fills the official PDFs programmatically: I-140, ETA-9089 Appendix A + Final Determination, G-1145. AI pre-fills the wizard from your record. |
-| **V — File** | A ZIP in lockbox order with the fee table, filing address guidance, and an assembly checklist. Print, sign, mail. |
+| **I — Evaluate** | Paste your Scholar link / homepage / CV → tiered, prong-by-prong evaluation with strengthening plan. |
+| **II·a — Endeavor** | Compose and FREEZE the one canonical endeavor sentence (method + topic + impact) — every document quotes it verbatim. |
+| **II·b — Evidence** | Personalized checklist; citation pipeline (harvest → independence screen → the agent verifies full text and scores depth of use → browser review to pick the portfolio). |
+| **III — Draft** | Proposed Endeavor Statement → support letters → Petition Letter (Dhanasar three-prong brief, cited to exhibits) → Index of Exhibits. |
+| **IV — Forms** | The agent pre-fills `forms/answers.json` (never guessing identity numbers), then opens the browser wizard: review amber AI fields, fill the official PDFs, inspect them live. |
+| **V — Package** | Twelve-rule RFE red-team pass, then the ZIP in lockbox order with fees and the correct USCIS lockbox address picked by state + premium status. |
 
-Plus an **RFE module**: paste an RFE letter and get a structured response plan
-(which prongs are challenged, officer errors to rebut, an evidence plan, and a
-supplemental-statement outline).
-
-### v0.2 automation
-
-- **Citation pipeline** — the most labor-intensive part of a NIW case,
-  automated: every citing paper is harvested from OpenAlex, screened for
-  independence (same-surname collisions escalated for review), verified to
-  actually cite the work in its full text, LLM-scored by depth of use
-  (implemented / compared-favorably / utilized / verified, HOW > WHO),
-  negative citations quarantined, a portfolio selected across cited works,
-  and delivered as highlighted PDFs + a Citation Examples control document +
-  independent-recommender candidates drawn from citing authors.
-- **Evidence auto-intake** — any uploaded file is classified (diploma,
-  review email, award page…), matched to the checklist, key facts extracted
-  into a canonical fact table, and date-classed against the filing date.
-- **Endeavor composer** — the one frozen sentence, built from three bounded
-  inputs (method / topic / impact), AI-polished into candidates and scored
-  against the six executability elements; freezing locks the wording for
-  every drafted document.
-- **Streaming evaluation** — the free evaluation streams live (SSE) with
-  stage progress and prong-score bars.
-- **Forms wizard** — structured repeating-group editors and per-field "AI"
-  marks after pre-fill, cleared as you review.
+Plus an **RFE module**: paste an RFE letter and get a structured response
+plan and supplemental-statement outline.
 
 ## What makes the drafting good
 
@@ -56,157 +97,73 @@ The templates and heuristics are distilled from the structure of real,
 professionally-prepared NIW filings and a real RFE cycle (fully de-identified —
 see [docs/analysis/](docs/analysis/)):
 
-- The petition letter follows the exact section architecture and module stacks
-  strong filings use (advanced degree → Prong 1 policy-anchored modules →
-  Prong 2 quantitative modules → Prong 3 balancing factors → 3-group exhibit
-  index).
-- The **endeavor sentence is treated as frozen**: composed once
-  (method + topic + impact), then repeated verbatim — USCIS treats rewording
-  as a potential material change.
+- The petition letter follows the exact section architecture strong filings
+  use (advanced degree → Prong 1 policy-anchored modules → Prong 2
+  quantitative modules → Prong 3 balancing factors → 3-group exhibit index).
+- The **endeavor sentence is treated as frozen** — USCIS treats rewording as
+  a potential material change.
 - RFE-prevention rules are built in: no uncorroborated third-party claims,
-  no denominators that diminish you, foreign affiliations trigger
-  documentation requirements, Prong 3 is built from facts, and legal
-  authorities go in footnotes.
-- The AI never invents facts — anything missing becomes an explicit `[TODO]`.
-
-## Architecture
-
-```
-openniw/
-├── frontend/   Next.js 14 + Tailwind (Node.js)      — localhost:3000
-├── backend/    FastAPI (Python 3.12) + asyncpg      — localhost:8400
-│   └── app/
-│       ├── routers/     auth, eval, cases, evidence, documents,
-│       │                recommenders, chat, ingest, forms, jobs
-│       ├── services/    llm, scraping, evaluation, checklist, drafting,
-│       │                formfill, docx_export, storage, jobs, forms_spec
-│       ├── prompts/     versioned drafting/eval prompt templates
-│       └── migrations/  plain SQL, applied automatically at startup
-├── forms/      vendored official USCIS/DOL PDFs + field inventories (JSON)
-├── .agents/skills/niw-petition/   the Agent Skill (run mode 3); .claude/skills symlinks here
-└── docs/       design doc + de-identified structural analyses
-```
-
-- **Database**: Postgres (Supabase works out of the box via `DATABASE_URL`).
-  All tables live in a dedicated `openniw` schema; every query runs with
-  `SET LOCAL search_path`, so pooled/pgbouncer connections are safe and a
-  shared database is never polluted.
-- **Auth**: email+password, pbkdf2, JWT.
-- **AI**: OpenAI Responses API. Model and reasoning effort are env-configured
-  (`OPENAI_MODEL`, default `gpt-5.6-luna`; `OPENAI_REASONING_EFFORT`, default
-  `xhigh`). One chokepoint module (`services/llm.py`).
-- **Form filling**: the vendored official PDFs are AcroForm-fillable; field
-  inventories are exported to `forms/fieldmaps/*.json` and mapped from one
-  flat semantic answer model (`services/formfill.py`). Unmapped fields are
-  reported, never silently dropped.
-- **Long jobs** (evaluation, drafting): a `jobs` table + background tasks;
-  the frontend polls.
-
-## Two ways to run OpenNIW
-
-There is no hosted service and no maintainer server — by design. Your case
-data never leaves your machine except for calls to your own OpenAI account
-and the public OpenAlex API.
-
-### 1 · Local website (your keys, your database, your machine)
-
-```bash
-git clone https://github.com/HHHHHejia/openniw && cd openniw
-cp .env.example .env
-# in .env, set:
-#   OPENAI_API_KEY=sk-...
-#   SECRET_KEY=$(python3 -c "import secrets; print(secrets.token_hex(32))")
-docker compose up --build
-open http://localhost:3000
-```
-
-A local Postgres is bundled — you don't need Supabase. To use your own
-Postgres/Supabase instead, uncomment `DATABASE_URL` in `.env` (all tables go
-into a dedicated `openniw` schema, so a shared database stays clean).
-
-Without Docker (Python 3.12+, Node 20+):
-
-```bash
-cd backend && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-cp ../.env.example .env   # here DATABASE_URL is required (no bundled db), plus SECRET_KEY, OPENAI_API_KEY
-.venv/bin/uvicorn app.main:app --port 8400    # migrations run automatically
-# new terminal:
-cd frontend && npm install && NEXT_PUBLIC_API_URL=http://localhost:8400 npm run dev
-```
-
-### 2 · Agent Skill (no server, no database, no API key)
-
-The whole workflow also ships as an [Agent Skill](https://agentskills.io) at
-[.agents/skills/niw-petition/](.agents/skills/niw-petition/): your coding
-agent (Claude Code, Codex, Cursor, …) becomes the NIW paralegal, a local
-folder is the case file, and your existing AI subscription does the drafting
-— bundled scripts handle the deterministic parts (official-form download and
-filling, OpenAlex citation harvesting).
-
-```bash
-# easiest — cross-agent installer (Claude Code, Codex, Cursor, 70+ agents):
-npx skills add HHHHHejia/openniw
-
-# or manually — Claude Code:
-git clone https://github.com/HHHHHejia/openniw
-mkdir -p ~/.claude/skills && cp -r openniw/.agents/skills/niw-petition ~/.claude/skills/
-
-# or manually — Codex (and other Agent-Skills tools; Cursor also reads ~/.cursor/skills):
-mkdir -p ~/.agents/skills && cp -r openniw/.agents/skills/niw-petition ~/.agents/skills/
-```
-
-(On Windows, prefer `npx skills add` or the manual copy — the repo's
-`.claude/skills` symlink needs symlink support to work from a checkout.)
-
-Then just say "帮我准备 NIW 申请" / "evaluate my NIW case" in your agent. It
-follows the same five stages — evaluate → endeavor → evidence (the agent
-itself scores citations; no OpenAI key needed) → draft → forms & package —
-writing everything into a `niw-case/` folder you own. Progressive disclosure
-keeps it light: per-stage reference files load only when that stage begins.
-
-Built for a weeks-long process in short sessions: the skill keeps a
-`STATE.md` working-state file in the case folder — it reads it first at
-every session start and updates it after every completed step — so you can
-stop anytime, switch machines or agents, and the next session resumes
-exactly where you left off (including decisions already made, so nothing is
-re-asked).
+  no diminishing denominators, citation depth over citer prestige, legal
+  authorities in footnotes, and a pre-filing mock-officer pass.
+- The AI never invents facts — anything missing becomes an explicit `[TODO]`
+  or a question to you.
 
 ## Filing facts (2026, verify before filing)
 
 - NIW package: I-140 + ETA-9089 Appendix A + signed Final Determination +
   petition letter + evidence. Fees: I-140 **$715** + Asylum Program Fee
-  **$300** (self-petitioner) = **$1,015**; optional premium processing (I-907)
-  **$2,965**, 45 business days.
-- The package README and forms wizard pick the correct USCIS lockbox
+  **$300** (self-petitioner) = **$1,015**; optional premium processing
+  (I-907) **$2,965**, 45 business days.
+- The package README and the wizard pick the correct USCIS lockbox
   automatically (standard: Dallas/Chicago; premium: Phoenix/Elgin — premium
-  filings use a *different* lockbox), and follow the USCIS-recommended
+  filings use a *different* lockbox) and follow the USCIS-recommended
   assembly order (payment form on top, then G-1145, then the forms).
 - Primary sources baked into the templates: USCIS [EB-2 page & NIW filing
   tips](https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2),
   [I-140 initial-evidence checklist](https://www.uscis.gov/forms/filing-guidance/checklist-of-required-initial-evidence-for-form-i-140-for-informational-purposes-only),
   [tips for filing by mail](https://www.uscis.gov/forms/filing-guidance/tips-for-filing-forms-by-mail),
   and [I-140 direct filing addresses](https://www.uscis.gov/forms/all-forms/direct-filing-addresses-for-form-i-140-immigrant-petition-for-alien-worker).
-- Jan 15, 2025 USCIS Policy Manual update raised scrutiny: degree–endeavor
-  alignment must be explicit; broad economy-benefit claims are insufficient;
-  entrepreneur claims need concrete support. OpenNIW's evaluation and
-  drafting encode this.
 
 ## Privacy
 
-- Local website mode: your data lives in **your** database and **your**
-  OpenAI account. The only third-party calls are your OpenAI API and the
-  public OpenAlex API (citation metadata); there is no maintainer server at
-  all. The skill mode needs no API key — your coding agent does the work.
-- The repo contains no personal data. Analyses in `docs/analysis/` are
-  structural only, with all identifiers replaced by placeholders.
-- Never commit `.env`; see `.env.example`.
+- Everything runs on your machine. The case folder is the entire system of
+  record — zip it, move it, or open it in any editor.
+- The companion binds 127.0.0.1 only, requires a per-session random token,
+  and does no AI: the only network calls in the whole system are your
+  agent's own, plus the public OpenAlex API (citation metadata) and
+  uscis.gov/dol.gov (blank form downloads).
+- The repo contains no personal data; analyses in `docs/analysis/` are
+  structural, with all identifiers replaced by placeholders.
+
+## For maintainers
+
+```
+openniw/
+├── .agents/skills/niw-petition/  # the skill (the product's entry point)
+├── src/openniw/                  # the pip companion: FastAPI folder-mode
+│   │                             #   server + CLI + committed UI bundle
+│   └── ui/                       # built Next.js static export (make ui)
+├── frontend/                     # UI source (Node needed by maintainers only)
+├── forms/                        # vendored official PDFs + field inventories
+├── tests/                        # pytest: contract, formfill, API, sentinel
+└── docs/                         # design docs + de-identified analyses
+```
+
+- `make test` — full suite. `make ui` — rebuild the UI bundle from
+  `frontend/` and vendor it into the package. `make check` — tests + skill
+  script sync + UI-bundle freshness. `make release` — checked wheel build.
+- The 61-key `answers.json` contract is enforced three ways by
+  `tests/test_contract.py`: `formfill.py` (what PDFs consume) ≡ the wizard
+  spec (what the UI edits) ≡ `references/forms.md` (what the agent writes).
+- Skill fallback scripts mirror package services between
+  `# --- BEGIN/END SYNC ---` markers; `scripts/sync_skill.py` regenerates
+  them and `make check` fails on drift.
 
 ## Contributing
 
-Issues and PRs welcome. High-value directions: citation-pipeline automation
-(harvest → verify → independence → depth-scoring), ESI-style percentile data
-sources, more form mappings (I-907, I-485 family), consular-processing
-variants, translations of the UI.
+Issues and PRs welcome. High-value directions: more form mappings (I-907,
+I-485 family), more browser pages (evidence ledger, document review),
+percentile data sources, consular-processing variants, UI translations.
 
 ## License
 

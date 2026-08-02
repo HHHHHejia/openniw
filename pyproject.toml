@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "openniw"
+version = "0.3.0"
+description = "Local companion for the OpenNIW NIW-petition Agent Skill: browser form wizard, deterministic USCIS PDF filling (XFA strip), filing-package ZIP, DOCX export, OpenAlex citation harvest, PDF highlighting - all over a local case folder. No accounts, no database, no API keys."
+readme = "readme.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "OpenNIW contributors" }]
+keywords = ["niw", "eb2", "immigration", "uscis", "i-140", "agent-skill"]
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn>=0.30",
+  "python-multipart>=0.0.9",
+  "pypdf>=5.1",
+  "cryptography>=42",
+  "python-docx>=1.1",
+  "httpx>=0.27",
+  "pymupdf>=1.24",
+]
+
+[project.urls]
+Homepage = "https://github.com/HHHHHejia/openniw"
+
+[project.scripts]
+openniw = "openniw.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/openniw"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/openniw", "readme.md", "LICENSE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

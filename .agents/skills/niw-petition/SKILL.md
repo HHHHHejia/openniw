@@ -49,9 +49,11 @@ Treat every session as if it could be interrupted at any moment:
 1. **On EVERY session start**: read `STATE.md` and `case.json` before doing
    anything else — even when the user's message dives straight into a task.
    If no case folder exists yet, create it and initialize STATE.md from the
-   template below. Then announce the resume point in one sentence ("Stage
-   II·b: 12/19 checklist items provided; next: citation portfolio
-   selection") and continue from `Next actions`.
+   template below. If `.openniw/ui-session.json` exists, run
+   `openniw status` and follow the Browser sessions rules below. Then
+   announce the resume point in one sentence ("Stage II·b: 12/19 checklist
+   items provided; next: citation portfolio selection") and continue from
+   `Next actions`.
 2. **After EVERY completed step** — a stage milestone, a generated or
    edited document, a script run, a user decision — update STATE.md
    immediately. Never batch updates for the end of the session: an
@@ -88,6 +90,61 @@ Stage: II·b Evidence
   documents/pes.md (draft v2, unreviewed §4-6)
 ```
 
+## Browser sessions (interaction-heavy steps)
+
+Some steps beat chat in a local browser page — Stage IV forms review is
+mandatory-canonical (61+ structured fields); Stage II·b citation-portfolio
+selection is optional. The `openniw` pip companion serves the page over the
+case folder ONLY: 127.0.0.1, random token in the URL, no account, no
+database, no AI — you remain the brain.
+
+**Ensure the companion once**: `openniw --version`. If missing, try in
+order: `uv tool install openniw` → `pipx install openniw` →
+`python3 -m pip install --user openniw`. All fail (offline/sandbox)? Use
+the chat flow + the bundled `scripts/*.py` fallbacks — the GUI is an
+accelerator, never a requirement.
+
+**Open** (case folder as CWD): `openniw ui forms` (or `ui citations`).
+This starts a DETACHED server (survives terminal close, spans days), prints
+an `OPENNIW_URL=` line, opens the browser, and writes the sentinel
+`.openniw/ui-session.json` `{step, status: running|done|abandoned, url,
+port, pid, token, heartbeat_at, files_owned, summary}`. The server
+heartbeats it every 15s; the page's "Done — return to the agent" button
+finalizes it with a summary and exits the server.
+
+**Before opening `ui forms`, finish YOUR half**: build `forms/answers.json`
+from case.json + a short interview (never guess identity numbers, dates, or
+addresses — leave those keys absent), and write
+`forms/answers.meta.json` `{"ai_keys": [...]}` listing every key you
+derived rather than the user stating. The UI flags those amber; edits clear
+the flag. Never let the UI show a guess unmarked. For `ui citations`, first
+write `citations/scored.json` — a list of
+`{key, cited_title, citing_title, venue, year, authors, score, use_type,
+quote}` cards from your scoring pass; the user's picks land in
+`citations/selection.json`.
+
+**While a session is running**:
+- NEVER write any file matched by the sentinel's `files_owned` — the
+  server is the sole writer there. Everything else (STATE.md, case.json,
+  documents/) stays yours.
+- Update STATE.md right after launch: Next actions gets "WAITING on
+  browser: <step> at <url> — on done read <report files> and continue at
+  <reference>", plus a Decision log line.
+- Tell the user the URL, what to do there, and that chat stays open — keep
+  answering anything as usual. Check `openniw status` whenever you get
+  control; if your agent runs background commands, also run
+  `openniw wait` in the background (exit 0 live-timeout, 2 done, 4 stale).
+
+**Reconciling (status done, abandoned, or stale)**: disk beats memory —
+re-read every owned file. Read the sentinel `summary` +
+`forms/fill-report.json`; any keys still in `ai_keys` were never reviewed —
+walk them one by one in chat. If answers.json now disagrees with case.json,
+ask once which is right, then sync case.json and re-check affected
+documents (standing rule 2). Stale (server died without Done) loses nothing:
+the files hold the user's last saves — log "recovered from interrupted
+browser session"; re-open only if the user wants to keep editing. Log the
+outcome in STATE.md, then DELETE the sentinel.
+
 ## Workflow — five stages (mirror this checklist in STATE.md)
 
 ```
@@ -114,19 +171,24 @@ freeze it. Do not draft anything before freezing: every document quotes this
 sentence verbatim and post-filing rewording risks a material-change denial.
 
 **II·b. Evidence** — read `references/evidence.md`. Personalize the
-checklist; run `scripts/harvest_citations.py` for the citation pipeline
-(you do the judgment: independence review, full-text verification, depth
-scoring, negative-citation quarantine, portfolio selection); collect
-exhibits with the per-type specs.
+checklist; run `openniw harvest` (fallback: `scripts/harvest_citations.py`)
+for the citation pipeline (you do the judgment: independence review,
+full-text verification, depth scoring, negative-citation quarantine); for
+portfolio selection, write `citations/scored.json` and offer
+`openniw ui citations` — quote cards beat a chat list; collect exhibits
+with the per-type specs.
 
 **III. Draft** — read `references/drafting.md` and, for letters,
 `references/support-letters.md`. Order: PES first, then letters, then the
 Petition Letter, then the exhibit index. After each draft, run the lint
 checks listed in drafting.md, then review with the user section by section.
 
-**IV. Forms** — read `references/forms.md`. Run `scripts/fetch_forms.py`,
-build forms/answers.json (confirm every value with the user), run
-`scripts/fill_form.py`. Hand-fill anything the script reports unmatched.
+**IV. Forms** — read `references/forms.md`. Run `openniw fetch-forms`
+(fallback: `scripts/fetch_forms.py`), pre-fill forms/answers.json +
+answers.meta.json yourself, then launch the browser wizard per the Browser
+sessions rules (`openniw ui forms`). After Done: run `openniw fill all` as
+the final deterministic pass, walk unmatched fields with the user for
+hand-filling. No browser available? Interview + `scripts/fill_form.py`.
 
 **V. Package** — before assembly, run the twelve RFE-prevention rules in
 `references/rfe.md` against the whole case as a red-team pass (adopt the
@@ -138,18 +200,27 @@ what to print, sign, and mail.
 section) — read the RFE letter, build the response plan and timeline, then
 reuse stages II·b–IV for the supplemental evidence and statement.
 
-## Scripts (run, don't read)
+## Tools (run, don't read)
 
-Run every script with the CASE FOLDER as the working directory (outputs use
-relative paths). All stdlib-only except fill_form.py
-(`pip install pypdf cryptography`):
-- `scripts/fetch_forms.py [dest]` — download official USCIS/DOL PDFs
-- `scripts/harvest_citations.py "Title" ... [--out f] [--max-per-work N]` —
-  OpenAlex citing-paper harvest + independence/published screening
-- `scripts/fill_form.py answers.json all [blank_dir] [out_dir]` — fill
-  I-140 / ETA-9089 Appendix A / Final Determination / G-1145
-- `scripts/fieldmaps/*.fields.json` — full field inventories of each form,
-  for verifying or hand-extending fill_form.py's mappings (read on demand)
+Prefer the `openniw` companion CLI (pip; `openniw>=0.3`) — it prints the
+same JSON reports its browser UI uses. Always run from the CASE FOLDER:
+- `openniw ui forms|citations` · `status` · `wait` · `stop` — browser
+  sessions (see Browser sessions above)
+- `openniw fill <code|all>` — fill I-140 / ETA-9089 Appendix A / Final
+  Determination / G-1145 (XFA-stripped, print-safe)
+- `openniw package` — filing ZIP with USCIS assembly order + the correct
+  lockbox address (state + premium aware)
+- `openniw harvest "Title" ...` — OpenAlex citing-paper harvest +
+  independence/published screening
+- `openniw fetch-forms` · `docx <md>` · `highlight <pdf> --needle X`
+
+Stdlib fallbacks bundled with the skill for offline/sandboxed sessions
+(fill_form.py needs `pip install pypdf cryptography`):
+- `scripts/fetch_forms.py [dest]`
+- `scripts/harvest_citations.py "Title" ... [--out f] [--max-per-work N]`
+- `scripts/fill_form.py answers.json all [blank_dir] [out_dir]`
+- `scripts/fieldmaps/*.fields.json` — full field inventories, for verifying
+  or hand-extending the fill mappings (read on demand)
 
 ## Interaction style
 

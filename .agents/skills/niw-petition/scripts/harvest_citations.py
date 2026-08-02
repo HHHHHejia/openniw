@@ -43,6 +43,7 @@ def _get(path: str, **params) -> dict:
     raise last_exc
 
 
+# --- BEGIN SYNC: citation screening (source of truth: src/openniw/services/citations_pure.py) ---
 def _norm(name: str) -> str:
     return unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
 
@@ -51,13 +52,20 @@ def _fam_init(name: str) -> tuple[str, str]:
     n = _norm(name)
     if "," in n:  # "Last, First" style
         family, _, given = n.partition(",")
-        family, given = family.strip().split()[-1] if family.strip() else "", given.strip()
+        family = family.strip().split()[-1] if family.strip() else ""
+        given = given.strip()
         return (family, given[:1] if given else "")
     parts = n.split()
     return (parts[-1], parts[0][:1]) if parts else ("", "")
 
 
 def independence(cited: list[str], citing: list[str]) -> tuple[bool, bool]:
+    """(independent, same_surname_flag).
+
+    Exact full-name match => dependent. Family+initial collision =>
+    conservatively dependent AND flagged. Family-only match => independent
+    but flagged for manual review.
+    """
     cited_full = {_norm(a) for a in cited}
     cited_fi = {_fam_init(a) for a in cited}
     cited_fams = {f for f, _ in cited_fi}
@@ -74,9 +82,12 @@ def independence(cited: list[str], citing: list[str]) -> tuple[bool, bool]:
     return (True, flag)
 
 
-def _title_sim(a: str, b: str) -> float:
+def title_sim(a: str, b: str) -> float:
     aw, bw = set(_norm(a).split()), set(_norm(b).split())
     return len(aw & bw) / max(len(aw), len(bw)) if aw and bw else 0.0
+
+# --- END SYNC: citation screening ---
+_title_sim = title_sim  # back-compat alias for main()
 
 
 def _authors(work: dict) -> list[str]:

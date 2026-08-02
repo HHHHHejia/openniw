@@ -1,39 +1,22 @@
-#!/usr/bin/env python3
-"""Fill official NIW form PDFs from a case answers file. Standalone.
+"""Programmatic filling of the official NIW filing forms.
 
-Usage:
-    pip install pypdf cryptography          # one-time
-    python3 fill_form.py <answers.json> <form> [blank_dir] [out_dir]
+Approach: each vendored PDF keeps its original AcroForm field names (XFA-hybrid
+USCIS forms use names like `form1[0].#subform[1].Pt3Line1a_FamilyName[0]`).
+We map a flat dict of semantic answers (collected by the forms wizard) onto
+field-name *suffixes*, resolve suffixes to fully-qualified names at runtime,
+and let pypdf write values. NeedAppearances is set so viewers render them.
 
-<form>: i-140 | eta-9089-appendix-a | eta-9089-final-determination | g-1145 | all
-<answers.json>: flat semantic keys — see the "forms" reference for the full
-key list. Example:
-    {
-      "beneficiary.family_name": "DOE", "beneficiary.given_name": "JANE",
-      "mailing.street": "1 Main St", "mailing.city": "...", "mailing.state": "CA",
-      "employment.job_title": "Research Scientist", "employment.soc_code": "15-2051",
-      "degrees": [{"level": "master", "field": "...", "institution": "...",
-                    "country": "...", "month_year": "06/2023"}],
-      "current_employer": {"name": "...", "duties": "..."},
-      "family": [{"family_name": "...", "given_name": "...", "dob": "...",
-                   "country_of_birth": "...", "relationship": "Spouse"}]
-    }
-
-Unfilled/unmatched fields are reported — nothing is silently dropped.
+Forms covered in v1: I-140 (self-petition NIW), ETA-9089 Appendix A,
+ETA-9089 Final Determination (identity fields; signatures stay manual),
+G-1145. Others ship as blank PDFs with instructions.
 """
 import io
-import json
 import pathlib
-import sys
-from typing import Any
+from typing import Any, Callable
 
-try:
-    from pypdf import PdfReader, PdfWriter
-except ImportError:
-    print("Missing dependency. Run:  pip install pypdf cryptography")
-    raise SystemExit(2)
+from pypdf import PdfReader, PdfWriter
 
-A = dict[str, Any]
+A = dict[str, Any]  # answers
 
 
 # --- BEGIN SYNC: fill maps (source of truth: src/openniw/services/formfill.py) ---
@@ -292,34 +275,53 @@ def _g1145(a: A) -> dict[str, Any]:
 
 # --- END SYNC: fill maps ---
 
-FORMS = {
-    "i-140": ("i-140.pdf", _i140),
-    "eta-9089-appendix-a": ("ETA-9089-Appendix-A.pdf", _appendix_a),
-    "eta-9089-final-determination": ("ETA-9089-Final-Determination.pdf", _final_determination),
-    "g-1145": ("g-1145.pdf", _g1145),
+FORM_SOURCES: dict[str, tuple[str, Callable[[A], dict[str, Any]]]] = {
+    "i-140": ("uscis/i-140.pdf", _i140),
+    "eta-9089-appendix-a": ("dol/ETA-9089-Appendix-A.pdf", _appendix_a),
+    "eta-9089-final-determination": (
+        "dol/ETA-9089-Final-Determination.pdf", _final_determination,
+    ),
+    "g-1145": ("uscis/g-1145.pdf", _g1145),
 }
 
 
-def fill(form_code: str, answers: A, blank_dir: pathlib.Path,
-         out_dir: pathlib.Path) -> dict:
-    src, builder = FORMS[form_code]
-    src_path = blank_dir / src
-    if not src_path.exists():
-        return {"error": f"{src_path} not found — run fetch_forms.py first"}
-    reader = PdfReader(str(src_path))
+def blank_pdf_path(form_code: str, blank_dir: pathlib.Path) -> pathlib.Path:
+    """Locate the blank official PDF for a form under blank_dir.
+
+    Accepts both layouts: flat (`i-140.pdf`, what `fetch_forms` downloads)
+    and the repo's vendored subdirectories (`uscis/i-140.pdf`).
+    """
+    src, _ = FORM_SOURCES[form_code]
+    for candidate in (blank_dir / pathlib.PurePosixPath(src).name,
+                      blank_dir / src):
+        if candidate.exists():
+            return candidate
+    raise FileNotFoundError(
+        f"Blank PDF for {form_code} not found in {blank_dir} — "
+        "run `openniw fetch-forms` first."
+    )
+
+
+def fill(form_code: str, answers: A,
+         blank_dir: pathlib.Path) -> tuple[bytes, dict]:
+    """Fill one form; returns (pdf bytes, report of filled/unmatched fields)."""
+    _, builder = FORM_SOURCES[form_code]
+    reader = PdfReader(str(blank_pdf_path(form_code, blank_dir)))
     writer = PdfWriter()
     writer.append(reader)
 
     fields = reader.get_fields() or {}
+    # suffix -> (fully qualified name, field object)
     by_suffix: dict[str, tuple[str, Any]] = {}
     for full_name, f in fields.items():
         by_suffix[full_name.split(".")[-1]] = (full_name, f)
         by_suffix.setdefault(full_name, (full_name, f))
 
     wanted = {k: v for k, v in builder(answers).items() if v not in (None, "")}
-    updates: dict[str, str] = {}
+    text_updates: dict[str, str] = {}
+    checkbox_updates: dict[str, str] = {}
     unmatched: list[str] = []
-    warnings: list[str] = []
+
     for suffix, value in wanted.items():
         hit = by_suffix.get(suffix)
         if hit is None:
@@ -329,12 +331,13 @@ def fill(form_code: str, answers: A, blank_dir: pathlib.Path,
         if f.get("/FT") == "/Btn":
             states = [s for s in (f.get("/_States_") or []) if s != "/Off"]
             if value is True and states:
-                updates[full_name] = states[0]
+                checkbox_updates[full_name] = states[0]
         else:
-            updates[full_name] = str(value)
+            text_updates[full_name] = str(value)
 
+    updates = {**text_updates, **checkbox_updates}
+    warnings: list[str] = []
     if form_code == "i-140":
-        # Persons Two..Six are matched by field label (scrambled widget indices).
         fam_updates, overflow = _family_by_label(answers, fields)
         updates.update(fam_updates)
         if overflow:
@@ -342,16 +345,17 @@ def fill(form_code: str, answers: A, blank_dir: pathlib.Path,
                 f"{overflow} family member(s) beyond six do not fit Part 7 — "
                 "list them in Part 11 (Additional Information) by hand."
             )
-
     for page in writer.pages:
-        writer.update_page_form_field_values(page, updates, auto_regenerate=False)
+        writer.update_page_form_field_values(
+            page, updates, auto_regenerate=False
+        )
     try:
         writer.set_need_appearances_writer(True)
     except Exception:
         pass
-    # USCIS PDFs are XFA hybrids: Adobe renders from the XFA layer, which we
-    # cannot write, so a filled AcroForm can display as BLANK in Acrobat.
-    # Dropping the XFA key forces every viewer to render the filled AcroForm.
+    # USCIS PDFs are XFA hybrids: Adobe renders from the XFA layer, so a
+    # filled AcroForm can display as BLANK in Acrobat. Dropping the XFA key
+    # forces every viewer to render the filled AcroForm values.
     try:
         acro = writer._root_object.get("/AcroForm")
         if acro is not None:
@@ -361,42 +365,12 @@ def fill(form_code: str, answers: A, blank_dir: pathlib.Path,
     except Exception:
         pass
 
-    out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / f"{form_code}-filled.pdf"
     buf = io.BytesIO()
     writer.write(buf)
-    out_path.write_bytes(buf.getvalue())
-    return {"output": str(out_path), "filled": len(updates),
-            "unmatched": unmatched, "warnings": warnings}
-
-
-def main() -> int:
-    if len(sys.argv) < 3:
-        print(__doc__)
-        return 2
-    answers = json.loads(pathlib.Path(sys.argv[1]).read_text())
-    form = sys.argv[2]
-    blank_dir = pathlib.Path(sys.argv[3] if len(sys.argv) > 3 else "forms/blank")
-    out_dir = pathlib.Path(sys.argv[4] if len(sys.argv) > 4 else "forms")
-    codes = list(FORMS) if form == "all" else [form]
-    ok = True
-    for code in codes:
-        if code not in FORMS:
-            print(f"unknown form: {code} (choose from {list(FORMS)})")
-            return 2
-        report = fill(code, answers, blank_dir, out_dir)
-        if "error" in report:
-            ok = False
-            print(f"{code}: ERROR {report['error']}")
-        else:
-            note = f", unmatched: {report['unmatched']}" if report["unmatched"] else ""
-            print(f"{code}: {report['filled']} fields -> {report['output']}{note}")
-            for w in report.get("warnings", []):
-                print(f"  WARNING: {w}")
-    print("\nAlways PRINT the filled PDFs and visually verify every page "
-          "before signing — do not trust one on-screen viewer.")
-    return 0 if ok else 1
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+    report = {
+        "filled": len(updates),
+        "unmatched_fields": unmatched,
+        "warnings": warnings,
+        "total_form_fields": len(fields),
+    }
+    return buf.getvalue(), report
