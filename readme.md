@@ -83,6 +83,7 @@ openniw/
 │       ├── prompts/     versioned drafting/eval prompt templates
 │       └── migrations/  plain SQL, applied automatically at startup
 ├── forms/      vendored official USCIS/DOL PDFs + field inventories (JSON)
+├── .agents/skills/niw-petition/   the Agent Skill (run mode 3); .claude/skills symlinks here
 └── docs/       design doc + de-identified structural analyses
 ```
 
@@ -101,40 +102,79 @@ openniw/
 - **Long jobs** (evaluation, drafting): a `jobs` table + background tasks;
   the frontend polls.
 
-## Run it locally
+## Three ways to run OpenNIW
 
-Prereqs: Python 3.12+, Node 20+, a Postgres URL (free Supabase project works).
+### 1 · Hosted (zero setup)
 
-```bash
-# 1. Backend
-cd backend
-python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-cp ../.env.example .env        # fill in DATABASE_URL, SECRET_KEY, OPENAI_API_KEY
-.venv/bin/uvicorn app.main:app --port 8400   # migrations run automatically
-
-# 2. Frontend (new terminal)
-cd frontend
-npm install
-NEXT_PUBLIC_API_URL=http://localhost:8400 npm run dev
-```
-
-Open http://localhost:3000.
-
-## Live deployment
+Use the maintained deployment — nothing to install:
 
 - App: https://frontend-production-3c7f.up.railway.app
 - API: https://backend-production-9b6c.up.railway.app (health: `/health`, docs: `/docs`)
 
-## Deploy on Railway
+### 2 · Self-hosted (your keys, your database, your machine)
 
-Two services from one repo:
+The only outbound traffic is to your own OpenAI account and the public
+OpenAlex API — never to any maintainer server:
 
-1. **backend** — root directory `/`, config `backend/railway.json`
-   (Dockerfile build). Set env vars: `DATABASE_URL`, `SECRET_KEY`,
-   `OPENAI_API_KEY`, `CORS_ORIGINS=https://<your-frontend-domain>`,
-   `DATA_DIR=/data` + attach a volume at `/data`.
-2. **frontend** — config `frontend/railway.json`. Set build arg / env
-   `NEXT_PUBLIC_API_URL=https://<your-backend-domain>`.
+```bash
+git clone https://github.com/HHHHHejia/openniw && cd openniw
+cp .env.example .env
+# in .env, set:
+#   OPENAI_API_KEY=sk-...
+#   SECRET_KEY=$(python3 -c "import secrets; print(secrets.token_hex(32))")
+docker compose up --build
+open http://localhost:3000
+```
+
+A local Postgres is bundled — you don't need Supabase. To use your own
+Postgres/Supabase instead, uncomment `DATABASE_URL` in `.env` (all tables go
+into a dedicated `openniw` schema, so a shared database stays clean).
+
+Without Docker (Python 3.12+, Node 20+):
+
+```bash
+cd backend && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+cp ../.env.example .env   # here DATABASE_URL is required (no bundled db), plus SECRET_KEY, OPENAI_API_KEY
+.venv/bin/uvicorn app.main:app --port 8400    # migrations run automatically
+# new terminal:
+cd frontend && npm install && NEXT_PUBLIC_API_URL=http://localhost:8400 npm run dev
+```
+
+Deploy your own cloud copy on Railway: two services from this repo —
+**backend** (config `backend/railway.json`; vars `DATABASE_URL`, `SECRET_KEY`,
+`OPENAI_API_KEY`, `CORS_ORIGINS=https://<frontend-domain>`, `DATA_DIR=/data`
++ a volume at `/data`) and **frontend** (config `frontend/railway.json`;
+`NEXT_PUBLIC_API_URL=https://<backend-domain>`).
+
+### 3 · Agent Skill (no server, no database, no API key)
+
+The whole workflow also ships as an [Agent Skill](https://agentskills.io) at
+[.agents/skills/niw-petition/](.agents/skills/niw-petition/): your coding
+agent (Claude Code, Codex, Cursor, …) becomes the NIW paralegal, a local
+folder is the case file, and your existing AI subscription does the drafting
+— bundled scripts handle the deterministic parts (official-form download and
+filling, OpenAlex citation harvesting).
+
+```bash
+# easiest — cross-agent installer (Claude Code, Codex, Cursor, 70+ agents):
+npx skills add HHHHHejia/openniw
+
+# or manually — Claude Code:
+git clone https://github.com/HHHHHejia/openniw
+mkdir -p ~/.claude/skills && cp -r openniw/.agents/skills/niw-petition ~/.claude/skills/
+
+# or manually — Codex (and other Agent-Skills tools; Cursor also reads ~/.cursor/skills):
+mkdir -p ~/.agents/skills && cp -r openniw/.agents/skills/niw-petition ~/.agents/skills/
+```
+
+(On Windows, prefer `npx skills add` or the manual copy — the repo's
+`.claude/skills` symlink needs symlink support to work from a checkout.)
+
+Then just say "帮我准备 NIW 申请" / "evaluate my NIW case" in your agent. It
+follows the same five stages — evaluate → endeavor → evidence (the agent
+itself scores citations; no OpenAI key needed) → draft → forms & package —
+writing everything into a `niw-case/` folder you own. Progressive disclosure
+keeps it light: per-stage reference files load only when that stage begins.
 
 ## Filing facts (2026, verify before filing)
 
@@ -150,7 +190,9 @@ Two services from one repo:
 ## Privacy
 
 - Self-hosted: your data lives in **your** database and **your** OpenAI
-  account. Nothing is sent anywhere else.
+  account. The only third-party calls are your OpenAI API and the public
+  OpenAlex API (citation metadata); nothing goes to any maintainer server.
+  The skill mode needs no API key at all — your coding agent does the work.
 - The repo contains no personal data. Analyses in `docs/analysis/` are
   structural only, with all identifiers replaced by placeholders.
 - Never commit `.env`; see `.env.example`.

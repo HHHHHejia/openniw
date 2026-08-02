@@ -1,0 +1,71 @@
+# OpenNIW — fully self-hosted stack.
+# The only outbound traffic is to YOUR OpenAI account (drafting/evaluation)
+# and the public OpenAlex API (citation harvesting). No maintainer servers.
+#
+#   cp .env.example .env       # fill in OPENAI_API_KEY and a SECRET_KEY
+#   docker compose up --build
+#   open http://localhost:3000
+#
+# By default this runs a bundled Postgres, so you do NOT need Supabase.
+# To use your own Supabase/Postgres instead, set DATABASE_URL in .env —
+# the bundled db container will simply sit unused (or remove it).
+#
+# Ports bind to 127.0.0.1 only. To serve on your LAN, change the port
+# mappings AND set SECRET_KEY to a strong value first.
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: openniw
+      POSTGRES_PASSWORD: openniw
+      POSTGRES_DB: openniw
+    volumes:
+      - openniw-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U openniw"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql://openniw:openniw@db:5432/openniw}
+      SECRET_KEY: ${SECRET_KEY:-selfhost-dev-secret-change-me}
+      TOKEN_TTL_HOURS: ${TOKEN_TTL_HOURS:-72}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:?set OPENAI_API_KEY in .env}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-5.6-luna}
+      OPENAI_REASONING_EFFORT: ${OPENAI_REASONING_EFFORT:-xhigh}
+      DATA_DIR: /data   # container path — the volume below persists it
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+    volumes:
+      - openniw-data:/data
+    ports:
+      - "127.0.0.1:8400:8000"
+    healthcheck:
+      test: ["CMD-SHELL", "python3 -c \"import urllib.request;urllib.request.urlopen('http://localhost:8000/health', timeout=3)\""]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8400}
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:3000:3000"
+
+volumes:
+  openniw-db:
+  openniw-data:

@@ -1,0 +1,14 @@
+# never send secrets or local state to the docker daemon
+.env
+.env.*
+!.env.example
+**/.venv
+**/node_modules
+**/.next
+**/__pycache__
+backend/data
+data
+.git
+docs
+.agents
+.claude

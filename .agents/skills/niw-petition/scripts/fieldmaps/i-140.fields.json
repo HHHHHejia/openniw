@@ -1,0 +1,2003 @@
+[
+ {
+  "name": "form1[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[0].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[1]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[1].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[2]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[2].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[3]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[3].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[4]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[4].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[5]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[5].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[6]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[6].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[7]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[7].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt1Line1a_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. If an individual is filing this petition, answer Item Numbers 1. A. through 1. C.  If a company or organization is filing thi",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt1Line1b_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. If an individual is filing this petition, answer Item Numbers 1. A. through 1. C.  If a company or organization is filing thi",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt1Line1c_MiddleName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. If an individual is filing this petition, answer Item Numbers 1. A. through 1. C.  If a company or organization is filing thi",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line2_CompanyName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. If an individual is filing this petition, answer Item Numbers 1. A. through 1. C.  If a company or organization is filing thi",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].G28CheckBox[0]",
+  "type": "/Btn",
+  "label": "To be completed by an Attorney or Accredited Representative, if any. Select this box if Form G-28 or Form G-28 I is attached.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].attyStateBarNumber[0]",
+  "type": "/Tx",
+  "label": "To be completed by an Attorney or Accredited Representative, if any. Enter Attorney State Bar Number, if applicable.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].attyUSCISOnlineNum[0]",
+  "type": "/Tx",
+  "label": "To be completed by an Attorney or Accredited Representative, if any. Enter Attorney or Accredited Representative U S C I S Online Account Number, if any. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].#area[1]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].#area[1].Pt1Line8_USCISOnlineActNumber[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Other Information. 6. Enter U S C I S Online Account Number, if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Pt1Line3_TaxNumber[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Other Information. 4. Enter Internal Revenue Service (I R S) Employer Identification Number (E I N). Must be 9 digits; no das",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line7_SSN[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Other Information. 5. Enter U. S. Social Security Number (S S N), if any. Must be 9 digits; no dashes.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line6a_InCareofName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Mailing Address. 3. A. Enter In Care Of Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line6b_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Mailing Address. 3. B. Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line6c_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Mailing Address. 3. C. Enter Apartment, Suite or Floor Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line6d_CityOrTown[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Mailing Address. 3. D. Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line6g_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Mailing Address. 3. H. Enter Postal Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line6i_Country[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Mailing Address. 3. I. Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line6e_State[0]",
+  "type": "/Ch",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Mailing Address. 3. E. Select State from List of States.",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Line6f_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Mailing Address. 3. F. Enter Zip Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Line6c_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Mailing Address. 3. C. Check this box for Suite.",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Line6c_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Mailing Address. 3. C. Check this box for Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Line6c_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Mailing Address. 3. C. Check this box for Apartment.",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Line6h_Province[0]",
+  "type": "/Tx",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition. Mailing Address. 3. G. Enter Province.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].prt2PetitionType[0]",
+  "type": "/Btn",
+  "label": "Part 2. Petition Type. This petition is being filed for (select only one box). 1. E. Check this box for A professional (at a minimum, possessing a bachelor's degree or a foreign degree equivalent to a",
+  "states": [
+   "/e",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].prt2PetitionType[1]",
+  "type": "/Btn",
+  "label": "Part 2. Petition Type. This petition is being filed for (select only one box). 1. A. Check this box for An alien of extraordinary ability.",
+  "states": [
+   "/a",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].prt2PetitionType[2]",
+  "type": "/Btn",
+  "label": "Part 2. Petition Type. This petition is being filed for (select only one box). 1. B. Check this box for An outstanding professor or researcher.",
+  "states": [
+   "/b",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].prt2PetitionType[3]",
+  "type": "/Btn",
+  "label": "Part 2. Petition Type. This petition is being filed for (select only one box). 1. C. Check this box for A multinational executive or manager.",
+  "states": [
+   "/c",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].prt2PetitionType[4]",
+  "type": "/Btn",
+  "label": "Part 2. Petition Type. This petition is being filed for (select only one box). 1. D. Check this box for A member of the professions holding an advanced degree or an alien of exceptional ability (who i",
+  "states": [
+   "/d",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].P1_Line5_Checkbox[0]",
+  "type": "/Btn",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition.  Other Information.  Item Number 5.  Are   you a 501(c)(3) or government research nonprofit organization? Select No. ",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].P1_Line5_Checkbox[1]",
+  "type": "/Btn",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition.  Other Information.  Item Number 5.  Are   you a 501(c)(3) or government research nonprofit organization? Select Yes. ",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].P1_Line6_Checkbox[0]",
+  "type": "/Btn",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition.  Other Information.  Item Number 6.  Do you currently employ a total of 25 or fewer full-time equivalent employees in the Uni",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].P1_Line6_Checkbox[1]",
+  "type": "/Btn",
+  "label": "Part 1. Information About the Person or Organization Filing This Petition.  Other Information.  Item Number 6.  Do you currently employ a total of 25 or fewer full-time equivalent employees in the Uni",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[0].Button1[0]",
+  "type": "/Btn",
+  "label": "Click this button to open: https://tools.usps.com/go/ZipLookupAction_input. This is the U S Postal Service ZIP Code Lookup site.",
+  "states": [
+   "/BBox",
+   "/Filter",
+   "/FormType",
+   "/Matrix",
+   "/Resources",
+   "/Subtype",
+   "/Type",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line2_Petition[0]",
+  "type": "/Btn",
+  "label": "Part 2. Petition Type. This petition is being filed (select only one box). 2. A. Check this box for To amend a previously filed petition.",
+  "states": [
+   "/A",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line2_Petition[1]",
+  "type": "/Btn",
+  "label": "Part 2. Petition Type. This petition is being filed (select only one box). 2. B. Check this box for For the Schedule A., Group 1 or 2 designation.",
+  "states": [
+   "/S",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line2aReceipt[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line2aReceipt[0].Line2a_ReceiptNumber[0]",
+  "type": "/Tx",
+  "label": "Part 2. Petition Type. This petition is being filed (select only one box). 2. A. To amend a previously filed petition. Enter Previous Petition Receipt Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Pt3Line1a_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. 1. A. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Pt3Line1b_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. 1. B. Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Pt3Line1c_MiddleName[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. 1. C. Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line2b_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Mailing Address. 2. B. Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line2c_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Mailing Address. 2. C. Enter Apartment, Suite or Floor Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line2d_CityOrTown[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Mailing Address. 2. D. Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line2h_Province[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Mailing Address. 2. G. Enter Province.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line2i_Country[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Mailing Address. 2. I. Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line2e_State[0]",
+  "type": "/Ch",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Mailing Address. 2. E. Select State from List of States.",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line2f_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Mailing Address. 2. F. Enter Zip Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line2a_InCareofName[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Mailing Address. 2. A. Enter In Care Of Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line2c_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Mailing Address. 2. C. Check this box for Suite.",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line2c_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Mailing Address. 2. C. Check this box for Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line2c_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Mailing Address. 2. C. Check this box for Apartment.",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line2g_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Mailing Address. 2. H. Enter Postal Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line5_DateOfBirth[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Other Information. 3. Enter Date of Birth. Enter as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line6_CityTownOfBirth[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Other Information. 4. Enter City, Town, or Village of Birth.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line8_Country[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Other Information. 6. Enter Country of Birth.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line9_Country[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Other Information. 7. Enter Country of Citizenship or Nationality.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line11_Alien[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line11_Alien[0].Pt3Line8_AlienNumber[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Other Information. 8. Enter Alien Registration Number (A. Number), if any. Must be 9 digits; no dashes.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line12_SSN[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Other Information. 9. Enter U. S. Social Security Number (S S N), if any. Must be 9 digits; no dashes.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line13_DateOArrival[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Information About His or Her Last Arrival in the United States. If the person for whom you are filing is in the United States, provide the",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line14_I94Number[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line14_I94Number[0].Line14a_ArrivalDeparture[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Information About His or Her Last Arrival in the United States. If the person for whom you are filing is in the United States, provide the",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line14b_Passport[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Information About His or Her Last Arrival in the United States. If the person for whom you are filing is in the United States, provide the",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line14c_TravelDoc[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Information About His or Her Last Arrival in the United States. If the person for whom you are filing is in the United States, provide the",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line14d_CountryOfIssuance[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Information About His or Her Last Arrival in the United States. If the person for whom you are filing is in the United States, provide the",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line14e_ExpDate[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Information About His or Her Last Arrival in the United States. If the person for whom you are filing is in the United States, provide the",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line14e_ExpDate[1]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Information About His or Her Last Arrival in the United States. If the person for whom you are filing is in the United States, provide the",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line15_CurrentNon[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Information About His or Her Last Arrival in the United States. If the person for whom you are filing is in the United States, provide the",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line1a_Visa[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. Provide the following information for the person named in Part 3. (select only one box). 1. A. Check this box for Alien will apply for a visa abroad at a U. S. Embassy ",
+  "states": [
+   "/1a",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].Line1a_CityorTown[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. Provide the following information for the person named in Part 3. 1. B. If 1. A. is checked Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line1a_Country[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. Provide the following information for the person named in Part 3. 1. B. If 1. A. is checked Enter the Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line7_StateProvinceOfBirth[0]",
+  "type": "/Tx",
+  "label": "Part 3. Information About the Person for Whom You Are Filing. Other Information. 5. Enter State or Province of Birth.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[1].Line1b_Status[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. Provide the following information for the person named in Part 3. (select only one box). 2. A. Check this box for Alien is in the United States and will apply for adjus",
+  "states": [
+   "/1b",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].prt2PetitionType[5]",
+  "type": "/Btn",
+  "label": "Part 2. Petition Type. This petition is being filed for (select only one box). 1. G. Check this box for Any other worker (requiring less than two years of training or experience).",
+  "states": [
+   "/g",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].prt2PetitionType[6]",
+  "type": "/Btn",
+  "label": "Part 2. Petition Type. This petition is being filed for (select only one box). 1. H. Check this box for An alien applying for a National Interest Waiver (N I W) (who IS a member of the professions hol",
+  "states": [
+   "/h",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[1].prt2PetitionType[7]",
+  "type": "/Btn",
+  "label": "Part 2. Petition Type. This petition is being filed for (select only one box). 1. F. Check this box for A skilled worker (requiring at least two years of specialized training or experience).",
+  "states": [
+   "/f",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line1b_Country[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. Provide the following information for the person named in Part 3. 2. B. If 2. A. is checked, Enter Alien's current country of residence or, if now in the United States,",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2a_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. If you provided a United States address in Part 3., provide the person's foreign address in Item Numbers 3. A. through 3. F. 3. A. Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2b_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. If you provided a United States address in Part 3., provide the person's foreign address in Item Numbers 3. A. through 3. F. 3. B. Enter Apartment, Suite or Floor Numbe",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2c_CityOrTown[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. If you provided a United States address in Part 3., provide the person's foreign address in Item Numbers 3. A. through 3. F. 3. C. Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2e_Province[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. If you provided a United States address in Part 3., provide the person's foreign address in Item Numbers 3. A. through 3. F. 3. D. Enter Province.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2f_Country[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. If you provided a United States address in Part 3., provide the person's foreign address in Item Numbers 3. A. through 3. F. 3. F. Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2d_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. If you provided a United States address in Part 3., provide the person's foreign address in Item Numbers 3. A. through 3. F. 3. E. Enter Postal Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2b_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you provided a United States address in Part 3., provide the person's foreign address in Item Numbers 3. A. through 3. F. 3. B. Check this box for Suite.",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line2b_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you provided a United States address in Part 3., provide the person's foreign address in Item Numbers 3. A. through 3. F. 3. B. Check this box for Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line2b_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you provided a United States address in Part 3., provide the person's foreign address in Item Numbers 3. A. through 3. F. 3. B. Check this box for Apartment.",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line3c_MiddleName2[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. If the person's native alphabet is other than Roman letters, type or print the person's foreign name and address in the native alphabet in Item Numbers 4. A. through 5.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line3b_GivenName2[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. If the person's native alphabet is other than Roman letters, type or print the person's foreign name and address in the native alphabet in Item Numbers 4. A. through 5.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line3a_FamilyName2[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. If the person's native alphabet is other than Roman letters, type or print the person's foreign name and address in the native alphabet in Item Numbers 4. A. through 5.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line3d_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. Mailing Address. 5. B. Enter Street Number and Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line3e_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. Mailing Address. 5. C. Enter Apartment, Suite or Floor Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line3f_CityOrTown[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. Mailing Address. 5. D. Enter City or Town.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line3g_PostalCode[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. Mailing Address. 5. F. Enter Postal Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line3i_Country[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. Mailing Address. 5. G. Enter Country.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line3h_Province[0]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. Mailing Address. 5. E. Enter Province.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line3e_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. Mailing Address. 5. C. Check this box for Suite.",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line3e_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. Mailing Address. 5. C. Check this box for Floor.",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line3e_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. Mailing Address. 5. C. Check this box for Apartment.",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line2a_InCareofName[1]",
+  "type": "/Tx",
+  "label": "Part 4. Processing Information. Mailing Address. 5. A. Enter In Care Of Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line4_Form485[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line4_Form131[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line4_Form765[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line4_OtherAttach[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line7_Yes[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line7_No[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line5_No[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line5_Yes[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line6_No[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line6_Yes[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line8_Yes[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line8_No[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line1a_Employer[0]",
+  "type": "/Btn",
+  "label": "Part 5. Additional Information About the Petitioner. Type of petitioner (select only one box). 1. A. Check this box for Employer.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line1b_Self[0]",
+  "type": "/Btn",
+  "label": "Part 5. Additional Information About the Petitioner. Type of petitioner (select only one box). 1. B. Check this box for Self.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line1c_Other[0]",
+  "type": "/Btn",
+  "label": "Part 5. Additional Information About the Petitioner. Type of petitioner (select only one box). 1. C. Check this box for Other (For example, Lawful Permanent Resident, U.S. citizen or any other person ",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line1c_Explain[0]",
+  "type": "/Tx",
+  "label": "Part 5. Additional Information About the Petitioner. Type of petitioner (select only one box). 1. C. Other (For example, Lawful Permanent Resident, U.S. citizen or any other person filing on behalf of",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2a_TypeofBusiness[0]",
+  "type": "/Tx",
+  "label": "Part 5. Additional Information About the Petitioner. If a company or an organization is filing this petition, provide the following information. 2. Enter Type of Business.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2b_DateEstablished[0]",
+  "type": "/Tx",
+  "label": "Part 5. Additional Information About the Petitioner. If a company or an organization is filing this petition, provide the following information. 3. Enter Date Established. Enter as 2-digit Month, 2-di",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2c_NumberofEmployees[0]",
+  "type": "/Tx",
+  "label": "Part 5. Additional Information About the Petitioner. If a company or an organization is filing this petition, provide the following information. 4. Enter Current Number of U. S. Employees.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2d_GrossAnnualIncome[0]",
+  "type": "/Tx",
+  "label": "Part 5. Additional Information About the Petitioner. If a company or an organization is filing this petition, provide the following information. 5. Enter Gross Annual Income.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2e_NetAnnualIncome[0]",
+  "type": "/Tx",
+  "label": "Part 5. Additional Information About the Petitioner. If a company or an organization is filing this petition, provide the following information. 6. Enter Net Annual Income.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line4_Yes[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line4_No[0]",
+  "type": "/Btn",
+  "label": "Part 4. Processing Information. If you answer \"Yes\" to Item Numbers 6. A. through 10., provide the case number, office location, date of decision, and disposition of the decision in the space provided",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[2].Line2g_LaborCertification[0]",
+  "type": "/Tx",
+  "label": "Part 5. Additional Information About the Petitioner. If a company or an organization is filing this petition, provide the following information. 8. Enter Labor Certification Department of Labor (D O L",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2f[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[2].Line2f[0].Line2f_NAICSCode[0]",
+  "type": "/Tx",
+  "label": "Part 5. Additional Information About the Petitioner. If a company or an organization is filing this petition, provide the following information. 7. Enter North American Industry Classification System ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line2i_LaborCertificationDate[0]",
+  "type": "/Tx",
+  "label": "Part 5. Additional Information About the Petitioner. 10. Enter Labor Certification Expiration Date. Enter as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line3b_AnnualIncome[0]",
+  "type": "/Tx",
+  "label": "Part 5. Additional Information About the Petitioner. If an individual is filing this petition, provide the following information. 12. Enter Annual Income.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line3a_Occupation[0]",
+  "type": "/Tx",
+  "label": "Part 5. Additional Information About the Petitioner. If an individual is filing this petition, provide the following information. 11. Enter Occupation.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line2_SOCCode1[0]",
+  "type": "/Tx",
+  "label": "Part 6. Basic Information About the Proposed Employment. 2. Enter first 2 digits of Standard Occupational Classification (S O C) Code. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line2_SOCCode2[0]",
+  "type": "/Tx",
+  "label": "Part 6. Basic Information About the Proposed Employment. 2. Enter last 4 digits of Standard Occupational Classification (S O C) Code.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line1_JobTitle[0]",
+  "type": "/Tx",
+  "label": "Part 6. Basic Information About the Proposed Employment. 1. Enter Job Title.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line3_JobDescription[0]",
+  "type": "/Tx",
+  "label": "Part 6. Basic Information About the Proposed Employment. 3. Enter Nontechnical Job Description.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line5_Hours[0]",
+  "type": "/Tx",
+  "label": "Part 6. Basic Information About the Proposed Employment. 5. If the answer to Item Number 4. is \"No,\" how many hours per week for the position? Enter Number of Hours Per Week.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line4_No1[0]",
+  "type": "/Btn",
+  "label": "Part 6. Basic Information About the Proposed Employment. 4. Is this a full-time position? Check this box for No.  ",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Line4_Yes1[0]",
+  "type": "/Btn",
+  "label": "Part 6. Basic Information About the Proposed Employment. 4. Is this a full-time position? Check this box for Yes.  ",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Line7_No1[0]",
+  "type": "/Btn",
+  "label": "Part 6. Basic Information About the Proposed Employment. 7. Is this a new position? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Line7_Yes1[0]",
+  "type": "/Btn",
+  "label": "Part 6. Basic Information About the Proposed Employment. 7. Is this a new position? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Line6_No1[0]",
+  "type": "/Btn",
+  "label": "Part 6. Basic Information About the Proposed Employment. 6. Is this a permanent position? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Line6_Yes1[0]",
+  "type": "/Btn",
+  "label": "Part 6. Basic Information About the Proposed Employment. 6. Is this a permanent position? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Line1c_Person1MiddleName[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person One. 1. C. Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line1b_Person1GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person One. 1. B. Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line1a_Person1FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. For Part 7., provide information on the spouse and all children related to the individual for whom you are ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line1d_Person1DateOfBirth[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person One. 2. Enter Date of Birth. Enter as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line1e_CountryOfBirth[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person One. 3. Enter Country of Birth.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line1f_Relationship[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person One. 4. Enter Relationship.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt7ItemNumber5_CheckboxYes[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person One. 5. Is he or she applying for adjustment of status? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Pt7ItemNumber5_CheckboxNo[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person One. 5. Is he or she applying for adjustment of status? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Line8_Wages[0]",
+  "type": "/Tx",
+  "label": "Part 6. Basic Information About the Proposed Employment. 8. Enter Wages.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line8_Per[0]",
+  "type": "/Tx",
+  "label": "Part 6. Basic Information About the Proposed Employment. 8. Enter per (Specify hour, week, month, or year).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line2h_LaborCertification[0]",
+  "type": "/Tx",
+  "label": "Part 5. Additional Information About the Petitioner. 9. Enter Labor Certification Department of Labor (D O L) Filing Date. Enter as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line9a_StreetNumberName[0]",
+  "type": "/Tx",
+  "label": "Part 6. Basic Information About the Proposed Employment. Worksite Location. For Item Numbers 9. A. through 9. E., provide the address where the person will work if different from the address provided ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line9b_AptSteFlrNumber[0]",
+  "type": "/Tx",
+  "label": "Part 6. Basic Information About the Proposed Employment. Worksite Location. For Item Numbers 9. A. through 9. E., provide the address where the person will work if different from the address provided ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line9c_CityOrTown[0]",
+  "type": "/Tx",
+  "label": "Part 6. Basic Information About the Proposed Employment. Worksite Location. For Item Numbers 9. A. through 9. E., provide the address where the person will work if different from the address provided ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line9d_State[0]",
+  "type": "/Ch",
+  "label": "Part 6. Basic Information About the Proposed Employment. Worksite Location. For Item Numbers 9. A. through 9. E., provide the address where the person will work if different from the address provided ",
+  "states": [
+   "[' ', ' ']",
+   "['AA', 'AA']",
+   "['AE', 'AE']",
+   "['AK', 'AK']",
+   "['AL', 'AL']",
+   "['AP', 'AP']",
+   "['AR', 'AR']",
+   "['AS', 'AS']",
+   "['AZ', 'AZ']",
+   "['CA', 'CA']",
+   "['CO', 'CO']",
+   "['CT', 'CT']"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Line9e_ZipCode[0]",
+  "type": "/Tx",
+  "label": "Part 6. Basic Information About the Proposed Employment. Worksite Location. For Item Numbers 9. A. through 9. E., provide the address where the person will work if different from the address provided ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line9b_Unit[0]",
+  "type": "/Btn",
+  "label": "Part 6. Basic Information About the Proposed Employment. Worksite Location. For Item Numbers 9. A. through 9. E., provide the address where the person will work if different from the address provided ",
+  "states": [
+   "/ STE ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Line9b_Unit[1]",
+  "type": "/Btn",
+  "label": "Part 6. Basic Information About the Proposed Employment. Worksite Location. For Item Numbers 9. A. through 9. E., provide the address where the person will work if different from the address provided ",
+  "states": [
+   "/ FLR ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Line9b_Unit[2]",
+  "type": "/Btn",
+  "label": "Part 6. Basic Information About the Proposed Employment. Worksite Location. For Item Numbers 9. A. through 9. E., provide the address where the person will work if different from the address provided ",
+  "states": [
+   "/ APT ",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Line2f_Relationship[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Two. 10. Enter Relationship.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line2c_Person2MiddleName[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Two. 7. C. Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line2b_Person2GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Two. 7. B. Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line2a_Person2FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Two. 7. A. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line2d_DateOfBirth[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Two. 8. Enter Date of Birth. Enter as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Line2e_CountryOfBirth[0]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Two. 9. Enter Country of Birth.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[3].Pt7ItemNumber6_CheckboxYes[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person One. 5. Is he or she applying for adjustment of status? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Pt7ItemNumber6_CheckboxNo[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person One. 5. Is he or she applying for adjustment of status? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Pt7ItemNumber11_CheckboxYes[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person One. 5. Is he or she applying for adjustment of status? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Pt7ItemNumber11_CheckboxNo[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person One. 5. Is he or she applying for adjustment of status? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Pt7ItemNumber12_CheckboxYes[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person One. 5. Is he or she applying for adjustment of status? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[3].Pt7ItemNumber12_CheckboxNo[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person One. 5. Is he or she applying for adjustment of status? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2c_Person2MiddleName[1]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Three. 13. C. Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2b_Person2GivenName[1]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Three. 13. B. Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2a_Person2FamilyName[1]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Three. 13. A. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2f_Relationship[1]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Three. 16. Enter Relationship.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2d_DateOfBirth[1]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Three. 14. Enter Date of Birth. Enter as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2e_CountryOfBirth[1]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Three. 15. Enter Country of Birth.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2c_Person2MiddleName[2]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Four. 19. C. Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2b_Person2GivenName[2]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Four. 19. B. Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2a_Person2FamilyName[2]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Four. 19. A. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2d_DateOfBirth[2]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Four. 20. Enter Date of Birth. Enter as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2c_Person2MiddleName[3]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Five. 25. C. Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2b_Person2GivenName[3]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Five. 25. B. Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2a_Person2FamilyName[3]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Five. 25. A. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2f_Relationship[2]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Five. 28. Enter Relationship.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2d_DateOfBirth[3]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Five. 26. Enter Date of Birth. Enter as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2e_CountryOfBirth[2]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Five. 27. Enter Country of Birth.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2c_Person2MiddleName[4]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Six. 31. C. Enter Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2b_Person2GivenName[4]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Six. 31. B. Enter Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2a_Person2FamilyName[4]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Six. 31. A. Enter Family Name (Last Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2f_Relationship[3]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Six. 34. Enter Relationship.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2d_DateOfBirth[4]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Six. 32. Enter Date of Birth. Enter as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2e_CountryOfBirth[3]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Six. 33. Enter Country of Birth.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber17_CheckboxNo[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Three. 17. Is he or she applying for adjustment of status? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber17_CheckboxYes[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Three. 17. Is he or she applying for adjustment of status? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber18_CheckboxNo[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Three. 18. Is he or she applying for a visa abroad? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber18_CheckboxYes[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Three. 18. Is he or she applying for a visa abroad? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber29_CheckboxNo[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Five. 29. Is he or she applying for adjustment of status? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber29_CheckboxYes[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Five. 29. Is he or she applying for adjustment of status? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber30_CheckboxNo[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Five. 30. Is he or she applying for a visa abroad? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber30_CheckboxYes[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Five. 30. Is he or she applying for a visa abroad? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber35_CheckboxNo[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Six. 35. Is he or she applying for adjustment of status? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber35_CheckboxYes[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Six. 35. Is he or she applying for adjustment of status? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber36_CheckboxNo[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Six. 36. Is he or she applying for a visa abroad? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber36_CheckboxYes[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Six. 36. Is he or she applying for a visa abroad? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Line2f_Relationship[4]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Four. 22. Enter Relationship.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Line2e_CountryOfBirth[4]",
+  "type": "/Tx",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Four. 21. Enter Country of Birth.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber23_CheckboxNo[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Four. 23. Is he or she applying for adjustment of status? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber23_CheckboxYes[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Four. 23. Is he or she applying for adjustment of status? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber24_CheckboxNo[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Four. 24. Is he or she applying for a visa abroad? Check this box for No.",
+  "states": [
+   "/N",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[4].Pt7ItemNumber24_CheckboxYes[0]",
+  "type": "/Btn",
+  "label": "Part 7. Information About the Spouse and All Children of the Person for Whom You Are Filing. Person Four. 24. Is he or she applying for a visa abroad? Check this box for Yes.",
+  "states": [
+   "/Y",
+   "/Off"
+  ]
+ },
+ {
+  "name": "form1[0].#subform[5]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part7_Item3a_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 8. Statement, Contact Information, Declaration, Certification, and Signature of the Petitioner or Authorized Signatory and Signature. Authorized Signatory's Contact Information. 3. A. Enter Autho",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part7_Item4_Title[0]",
+  "type": "/Tx",
+  "label": "Part 8. Statement, Contact Information, Declaration, Certification, and Signature of the Petitioner or Authorized Signatory and Signature. Authorized Signatory's Contact Information. 4. Enter Authoriz",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part7_Item3b_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 8. Statement, Contact Information, Declaration, Certification, and Signature of the Petitioner or Authorized Signatory and Signature. Authorized Signatory's Contact Information. 3. B. Enter Autho",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part7_Item7_Email[0]",
+  "type": "/Tx",
+  "label": "Part 8. Statement, Contact Information, Declaration, Certification, and Signature of the Petitioner or Authorized Signatory and Signature. Authorized Signatory's Contact Information. 7. Enter Authoriz",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part7_Item6_MobilePhone[0]",
+  "type": "/Tx",
+  "label": "Part 8. Statement, Contact Information, Declaration, Certification, and Signature of the Petitioner or Authorized Signatory and Signature. Authorized Signatory's Contact Information. 6. Enter Authoriz",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part7_Item5_DayPhone[0]",
+  "type": "/Tx",
+  "label": "Part 8. Statement, Contact Information, Declaration, Certification, and Signature of the Petitioner or Authorized Signatory and Signature. Authorized Signatory's Contact Information. 5. Enter Authoriz",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part7_Item8b_Date[0]",
+  "type": "/Tx",
+  "label": "Part 8. Statement, Contact Information, Declaration, Certification, and Signature of the Petitioner or Authorized Signatory and Signature. Petitioner's or Authorized Signatory's Signature. 8. B. Enter",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part8_Item1a_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 9. Interpreter's Contact Information,  Certification, and Signature. Provide the following information about the interpreter. Interpreter's Full Name. 1. A. Enter Interpreter's Family Name (Last ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part8_Item2_OrgName[0]",
+  "type": "/Tx",
+  "label": "Part 9. Interpreter's Contact Information,  Certification, and Signature. Interpreter's Full Name. 2. Enter Interpreter's Business or Organization Name, if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part8_Item1b_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 9. Interpreter's Contact Information,  Certification, and Signature. Interpreter's Full Name. 1. B. Enter Interpreter's Given Name (First Name).",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Line1a_SignatureofPetitioner[0]",
+  "type": "/Tx",
+  "label": "Part 8. Statement, Contact Information, Declaration, Certification, and Signature of the Petitioner or Authorized Signatory and Signature. Petitioner's or Authorized Signatory's Signature. 8. A. Petit",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part8_Item4_DayPhone[0]",
+  "type": "/Tx",
+  "label": "Part 9. Interpreter's Contact Information,  Certification, and Signature. Interpreter's Contact Information. 4. Enter Interpreter's Daytime Telephone Number. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part8_Item6_Email[0]",
+  "type": "/Tx",
+  "label": "Part 9. Interpreter's Contact Information,  Certification, and Signature. Interpreter's Contact Information. 6. Enter Interpreter's Email Address, if any.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part8_Item5_MobilePhone[0]",
+  "type": "/Tx",
+  "label": "Part 9. Interpreter's Contact Information,  Certification, and Signature. Interpreter's Contact Information. 5. Enter Interpreter's Mobile Telephone Number. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part8_Item6_Language[0]",
+  "type": "/Tx",
+  "label": "Part 9. Interpreter's Contact Information,  Certification, and Signature. Interpreter's Certification. I certify, under penalty of perjury, that: I am fluent in English and another language, which is ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part6_Line6a_InterpretersSignature[0]",
+  "type": "/Tx",
+  "label": "Part 9. Interpreter's Contact Information,  Certification, and Signature. Interpreter's Signature. 7. A. Interpreter's Signature. No Entry. Print and Sign completed form.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[5].Part8_Item7b_Date[0]",
+  "type": "/Tx",
+  "label": "Part 9. Interpreter's Contact Information,  Certification, and Signature. Interpreter's Signature. 7. B. Enter Date of Signature. Enter as 2-digit Month, 2-digit Day, and 4-digit Year.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Part10_Item1_FamilyName[0]",
+  "type": "/Tx",
+  "label": "Part 10.  Contact Information, Certification, and Signature of the Person Preparing this Petition, if Other Than the Petitioner or Authorized Signatory. Preparer's Full Name. 1. Enter Preparer's Famil",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Part10_Item2_OrgName[0]",
+  "type": "/Tx",
+  "label": "Part 10.  Contact Information, Certification, and Signature of the Person Preparing this Petition, if Other Than the Petitioner or Authorized Signatory. Preparer's Full Name. 2. Enter Preparer's Busin",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Part10_Item1_GivenName[0]",
+  "type": "/Tx",
+  "label": "Part 10.  Contact Information, Certification, and Signature of the Person Preparing this Petition, if Other Than the Petitioner or Authorized Signatory. Preparer's Full Name. 1. Enter Interpreter's Gi",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Part10_Item3_DayPhone[0]",
+  "type": "/Tx",
+  "label": "Part 10.  Contact Information, Certification, and Signature of the Person Preparing this Petition, if Other Than the Petitioner or Authorized Signatory. Preparer's Contact Information. 4. Enter Prepar",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Part10_Item5_Email[0]",
+  "type": "/Tx",
+  "label": "Part 10.  Contact Information, Certification, and Signature of the Person Preparing this Petition, if Other Than the Petitioner or Authorized Signatory. Preparer's Contact Information. 5. Enter Prepar",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Part10_Item4_MobilePhone[0]",
+  "type": "/Tx",
+  "label": "Part 10.  Contact Information, Certification, and Signature of the Person Preparing this Petition, if Other Than the Petitioner or Authorized Signatory. Preparer's Contact Information. 4. Enter Prepar",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Part10_Item6__Date[0]",
+  "type": "/Tx",
+  "label": "Part 10.  Contact Information, Certification, and Signature of the Person Preparing this Petition, if Other Than the Petitioner or Authorized Signatory. Preparer's Certification and Signature. 6. Ente",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[6].Part10_Item6_SignatureofPetitioner[0]",
+  "type": "/Tx",
+  "label": "Part 10.  Contact Information, Certification, and Signature of the Person Preparing this Petition, if Other Than the Petitioner or Authorized Signatory. Preparer's Certification and Signature. I certi",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line3d_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 3. D. Enter Additional Information. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt1Line1a_FamilyName[1]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. If you need extra space to provide any additional information within this petition, use the space below.  If you need more space than what is provided, you may make co",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt1Line1b_GivenName[1]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 1. B. Given Name (First Name). This field is pre-populated from Page 1.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt1Line1c_MiddleName[1]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 1. C. Middle Name. This field is pre-populated from Page 1.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line3a_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 3. A. Enter Page Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line3b_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 3. B. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line3c_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 3. C. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line4d_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 4. D. Enter Additional Information. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line4a_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 4. A. Enter Page Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line4b_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 4. B. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line4c_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 4. C. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line5d_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 5. D. Enter Additional Information. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line5a_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 5. A. Enter Page Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line5b_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 5. B. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line5c_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 5. C. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line6d_AdditionalInfo[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 6. D. Enter Additional Information. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line6c_ItemNumber[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 7. C. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line6b_PartNumber[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 7. B. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line6a_PageNumber[0]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 7. A. Enter Page Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line6d_AdditionalInfo[1]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 7. D. Enter Additional Information. ",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line6a_PageNumber[1]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 6. A. Enter Page Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line6b_PartNumber[1]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 6. B. Enter Part Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].Pt9Line6c_ItemNumber[1]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 6. C. Enter Item Number.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].#area[6]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[7].#area[6].Pt1Line3_TaxNumber[1]",
+  "type": "/Tx",
+  "label": "Part 11. Additional Information. 2. I R S Employer Identification Number. This field is pre-populated from Page 1.",
+  "states": []
+ }
+]

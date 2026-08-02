@@ -1,40 +1,47 @@
-"""Programmatic filling of the official NIW filing forms.
+#!/usr/bin/env python3
+"""Fill official NIW form PDFs from a case answers file. Standalone.
 
-Approach: each vendored PDF keeps its original AcroForm field names (XFA-hybrid
-USCIS forms use names like `form1[0].#subform[1].Pt3Line1a_FamilyName[0]`).
-We map a flat dict of semantic answers (collected by the forms wizard) onto
-field-name *suffixes*, resolve suffixes to fully-qualified names at runtime,
-and let pypdf write values. NeedAppearances is set so viewers render them.
+Usage:
+    pip install pypdf cryptography          # one-time
+    python3 fill_form.py <answers.json> <form> [blank_dir] [out_dir]
 
-Forms covered in v1: I-140 (self-petition NIW), ETA-9089 Appendix A,
-ETA-9089 Final Determination (identity fields; signatures stay manual),
-G-1145. Others ship as blank PDFs with instructions.
+<form>: i-140 | eta-9089-appendix-a | eta-9089-final-determination | g-1145 | all
+<answers.json>: flat semantic keys — see the "forms" reference for the full
+key list. Example:
+    {
+      "beneficiary.family_name": "DOE", "beneficiary.given_name": "JANE",
+      "mailing.street": "1 Main St", "mailing.city": "...", "mailing.state": "CA",
+      "employment.job_title": "Research Scientist", "employment.soc_code": "15-2051",
+      "degrees": [{"level": "master", "field": "...", "institution": "...",
+                    "country": "...", "month_year": "06/2023"}],
+      "current_employer": {"name": "...", "duties": "..."},
+      "family": [{"family_name": "...", "given_name": "...", "dob": "...",
+                   "country_of_birth": "...", "relationship": "Spouse"}]
+    }
+
+Unfilled/unmatched fields are reported — nothing is silently dropped.
 """
 import io
+import json
 import pathlib
-from typing import Any, Callable
+import sys
+from typing import Any
 
-from pypdf import PdfReader, PdfWriter
-from pypdf.generic import NameObject
+try:
+    from pypdf import PdfReader, PdfWriter
+except ImportError:
+    print("Missing dependency. Run:  pip install pypdf cryptography")
+    raise SystemExit(2)
 
-FORMS_DIR = pathlib.Path(__file__).resolve().parents[3] / "forms"
-
-A = dict[str, Any]  # answers
+A = dict[str, Any]
 
 
 def _yn(v: Any) -> bool:
     return v in (True, "true", "yes", "Yes", "Y", "1", 1)
 
 
-# ---------------------------------------------------------------------------
-# Per-form mappings: field-name suffix -> callable(answers) -> value | None.
-# Text fields get strings; checkbox fields get True (their "on" state is
-# resolved from the PDF) or None to leave untouched.
-# ---------------------------------------------------------------------------
-
 def _i140(a: A) -> dict[str, Any]:
     m: dict[str, Any] = {
-        # Part 1 — petitioner (= the beneficiary, self-petition)
         "Pt1Line1a_FamilyName[0]": a.get("beneficiary.family_name"),
         "Pt1Line1b_GivenName[0]": a.get("beneficiary.given_name"),
         "Pt1Line1c_MiddleName[0]": a.get("beneficiary.middle_name"),
@@ -48,14 +55,11 @@ def _i140(a: A) -> dict[str, Any]:
         "Line6i_Country[0]": a.get("mailing.country", "United States"),
         "Line7_SSN[0]": a.get("beneficiary.ssn"),
         "Pt1Line8_USCISOnlineActNumber[0]": a.get("beneficiary.uscis_account"),
-        # Asylum Program Fee: individual self-petitioners answer these
         "P1_Line5_Checkbox[0]": True if not _yn(a.get("petitioner.nonprofit")) else None,
         "P1_Line5_Checkbox[1]": True if _yn(a.get("petitioner.nonprofit")) else None,
         "P1_Line6_Checkbox[1]": True if _yn(a.get("petitioner.small_employer", True)) else None,
         "P1_Line6_Checkbox[0]": True if not _yn(a.get("petitioner.small_employer", True)) else None,
-        # Part 2 — petition type box 1.h: NIW (advanced degree / exceptional ability)
-        "prt2PetitionType[6]": True,
-        # Part 3 — beneficiary
+        "prt2PetitionType[6]": True,  # Part 2 box 1.h — National Interest Waiver
         "Pt3Line1a_FamilyName[0]": a.get("beneficiary.family_name"),
         "Pt3Line1b_GivenName[0]": a.get("beneficiary.given_name"),
         "Pt3Line1c_MiddleName[0]": a.get("beneficiary.middle_name"),
@@ -85,7 +89,6 @@ def _i140(a: A) -> dict[str, Any]:
             "Line14e_ExpDate[0]": a.get("us_presence.passport_exp"),
             "Line15_CurrentNon[0]": a.get("us_presence.current_status"),
         })
-    # Part 4 — processing: consular vs adjustment
     if _yn(a.get("processing.adjustment")):
         m["Line1b_Status[0]"] = True
         m["Line1b_Country[0]"] = a.get("processing.country_of_residence")
@@ -102,16 +105,13 @@ def _i140(a: A) -> dict[str, Any]:
         "Line3a_FamilyName2[0]": a.get("native_name.family"),
         "Line3b_GivenName2[0]": a.get("native_name.given"),
         "Line3c_MiddleName2[0]": a.get("native_name.middle"),
-        # Part 4 items 5-8 (prior petitions / proceedings): default No
         "Line5_No[0]": True if not _yn(a.get("processing.prior_petition")) else None,
         "Line5_Yes[0]": True if _yn(a.get("processing.prior_petition")) else None,
         "Line6_No[0]": True if not _yn(a.get("processing.in_proceedings")) else None,
         "Line6_Yes[0]": True if _yn(a.get("processing.in_proceedings")) else None,
-        # Part 5 — petitioner type: Self
-        "Line1b_Self[0]": True,
+        "Line1b_Self[0]": True,  # Part 5 — Self petitioner
         "Line3a_Occupation[0]": a.get("petitioner.occupation"),
         "Line3b_AnnualIncome[0]": a.get("petitioner.annual_income"),
-        # Part 6 — proposed employment
         "Line1_JobTitle[0]": a.get("employment.job_title"),
         "Line2_SOCCode1[0]": (a.get("employment.soc_code") or "")[:2] or None,
         "Line2_SOCCode2[0]": (a.get("employment.soc_code") or "").replace("-", "")[2:6] or None,
@@ -125,7 +125,6 @@ def _i140(a: A) -> dict[str, Any]:
         "Line7_No1[0]": True if not _yn(a.get("employment.new_position", True)) else None,
         "Line8_Wages[0]": a.get("employment.wages"),
         "Line8_Per[0]": a.get("employment.wages_per"),
-        # Part 8 — petitioner contact + signature date (signature itself is wet-ink)
         "Part7_Item3a_FamilyName[0]": a.get("beneficiary.family_name"),
         "Part7_Item3b_GivenName[0]": a.get("beneficiary.given_name"),
         "Part7_Item4_Title[0]": "Self-petitioner",
@@ -133,7 +132,6 @@ def _i140(a: A) -> dict[str, Any]:
         "Part7_Item6_MobilePhone[0]": a.get("contact.mobile_phone"),
         "Part7_Item7_Email[0]": a.get("contact.email"),
     })
-    # Part 7 — spouse and children (up to 2 in v1; more via Part 11 addendum)
     family = a.get("family") or []
     if len(family) > 0:
         p = family[0]
@@ -145,8 +143,9 @@ def _i140(a: A) -> dict[str, Any]:
             "Line1e_CountryOfBirth[0]": p.get("country_of_birth"),
             "Line1f_Relationship[0]": p.get("relationship"),
         })
-    # family[1:6] (Persons Two..Six) use scrambled widget indices on the
-    # official PDF and are resolved by field label in fill() below.
+    # family[1:6] (Persons Two..Six) use widget indices that are NOT in person
+    # order on the official PDF — they are resolved by field label at fill time
+    # (see _family_by_label). Family members beyond six need a Part 11 addendum.
     return m
 
 
@@ -163,7 +162,9 @@ _FAMILY_ATTRS = [
 
 
 def _family_by_label(answers: A, fields: dict) -> tuple[dict[str, str], int]:
-    """Match family[1:] to I-140 Part 7 Persons Two..Six via /TU labels."""
+    """Map family[1:] to I-140 Part 7 Persons Two..Six by matching each
+    widget's /TU label (widget indices are scrambled on the official form).
+    Returns (full_field_name -> value, n_overflow)."""
     family = answers.get("family") or []
     updates: dict[str, str] = {}
     for i, person in enumerate(family[1:6]):
@@ -208,13 +209,13 @@ def _appendix_a(a: A) -> dict[str, Any]:
         "14  Country of birth": a.get("beneficiary.country_of_birth"),
         "15  Country of citizenship or nationality": a.get("beneficiary.citizenship"),
     }
-    degrees = a.get("degrees") or []
-    for i, d in enumerate(degrees[:5]):
+    for i, d in enumerate((a.get("degrees") or [])[:5]):
         sfx = "" if i == 0 else f"_{i + 1}"
         level = str(d.get("level", "")).lower()
         box = _DEGREE_BOXES.get(level)
         if box:
-            # blocks 4-5 rename Associate/Master and restart their suffixes
+            # Education blocks 4-5 rename the Associate/Master checkboxes and
+            # restart their suffix counter on the official PDF.
             if i >= 3 and level == "associate":
                 m["Associates" if i == 3 else "Associates_2"] = True
             elif i >= 3 and level == "master":
@@ -222,8 +223,10 @@ def _appendix_a(a: A) -> dict[str, Any]:
             else:
                 m[f"{box}{sfx}"] = True
         if level == "other" and d.get("other_label"):
-            m["1a If Other degree in question 1 specify the diplomadegree "
-              "attained" + sfx] = d.get("other_label")
+            m[
+                "1a If Other degree in question 1 specify the diplomadegree "
+                "attained" + sfx
+            ] = d.get("other_label")
         m[f"1c  Name of institution that issued the degreediploma{sfx}"] = d.get("institution")
         m[f"1d  Name of country of institution identified in question 1c{sfx}"] = d.get("country")
         m[f"1e  Monthyear attained mmyyyy{sfx}"] = d.get("month_year")
@@ -245,17 +248,13 @@ def _appendix_a(a: A) -> dict[str, Any]:
             "1h  Start date mmyyyy": emp.get("start"),
             "1i  End date mmyyyy": emp.get("end"),
             "1k  Hours worked per week": emp.get("hours_per_week"),
-        })
-        m[
             "1l Job duties Specify details of job work tasks performed use of "
-            "toolsequipment supervision etc up to 3500 characters"
-        ] = emp.get("duties")
+            "toolsequipment supervision etc up to 3500 characters": emp.get("duties"),
+        })
     return m
 
 
 def _final_determination(a: A) -> dict[str, Any]:
-    # NIW: DOL never processes this page; USCIS wants it attached with the
-    # worker identified and signed by the petitioner. DOL-only fields stay blank.
     return {
         "5  Foreign Workers Last family Name": a.get("beneficiary.family_name"),
         "6  Foreign Workers First given Name": a.get("beneficiary.given_name"),
@@ -276,35 +275,34 @@ def _g1145(a: A) -> dict[str, Any]:
     }
 
 
-FORM_SOURCES: dict[str, tuple[str, Callable[[A], dict[str, Any]]]] = {
-    "i-140": ("uscis/i-140.pdf", _i140),
-    "eta-9089-appendix-a": ("dol/ETA-9089-Appendix-A.pdf", _appendix_a),
-    "eta-9089-final-determination": (
-        "dol/ETA-9089-Final-Determination.pdf", _final_determination,
-    ),
-    "g-1145": ("uscis/g-1145.pdf", _g1145),
+FORMS = {
+    "i-140": ("i-140.pdf", _i140),
+    "eta-9089-appendix-a": ("ETA-9089-Appendix-A.pdf", _appendix_a),
+    "eta-9089-final-determination": ("ETA-9089-Final-Determination.pdf", _final_determination),
+    "g-1145": ("g-1145.pdf", _g1145),
 }
 
 
-def fill(form_code: str, answers: A) -> tuple[bytes, dict]:
-    """Fill one form; returns (pdf bytes, report of filled/unmatched fields)."""
-    src, builder = FORM_SOURCES[form_code]
-    reader = PdfReader(str(FORMS_DIR / src))
+def fill(form_code: str, answers: A, blank_dir: pathlib.Path,
+         out_dir: pathlib.Path) -> dict:
+    src, builder = FORMS[form_code]
+    src_path = blank_dir / src
+    if not src_path.exists():
+        return {"error": f"{src_path} not found — run fetch_forms.py first"}
+    reader = PdfReader(str(src_path))
     writer = PdfWriter()
     writer.append(reader)
 
     fields = reader.get_fields() or {}
-    # suffix -> (fully qualified name, field object)
     by_suffix: dict[str, tuple[str, Any]] = {}
     for full_name, f in fields.items():
         by_suffix[full_name.split(".")[-1]] = (full_name, f)
         by_suffix.setdefault(full_name, (full_name, f))
 
     wanted = {k: v for k, v in builder(answers).items() if v not in (None, "")}
-    text_updates: dict[str, str] = {}
-    checkbox_updates: dict[str, str] = {}
+    updates: dict[str, str] = {}
     unmatched: list[str] = []
-
+    warnings: list[str] = []
     for suffix, value in wanted.items():
         hit = by_suffix.get(suffix)
         if hit is None:
@@ -314,13 +312,12 @@ def fill(form_code: str, answers: A) -> tuple[bytes, dict]:
         if f.get("/FT") == "/Btn":
             states = [s for s in (f.get("/_States_") or []) if s != "/Off"]
             if value is True and states:
-                checkbox_updates[full_name] = states[0]
+                updates[full_name] = states[0]
         else:
-            text_updates[full_name] = str(value)
+            updates[full_name] = str(value)
 
-    updates = {**text_updates, **checkbox_updates}
-    warnings: list[str] = []
     if form_code == "i-140":
+        # Persons Two..Six are matched by field label (scrambled widget indices).
         fam_updates, overflow = _family_by_label(answers, fields)
         updates.update(fam_updates)
         if overflow:
@@ -328,17 +325,16 @@ def fill(form_code: str, answers: A) -> tuple[bytes, dict]:
                 f"{overflow} family member(s) beyond six do not fit Part 7 — "
                 "list them in Part 11 (Additional Information) by hand."
             )
+
     for page in writer.pages:
-        writer.update_page_form_field_values(
-            page, updates, auto_regenerate=False
-        )
+        writer.update_page_form_field_values(page, updates, auto_regenerate=False)
     try:
         writer.set_need_appearances_writer(True)
     except Exception:
         pass
-    # USCIS PDFs are XFA hybrids: Adobe renders from the XFA layer, so a
-    # filled AcroForm can display as BLANK in Acrobat. Dropping the XFA key
-    # forces every viewer to render the filled AcroForm values.
+    # USCIS PDFs are XFA hybrids: Adobe renders from the XFA layer, which we
+    # cannot write, so a filled AcroForm can display as BLANK in Acrobat.
+    # Dropping the XFA key forces every viewer to render the filled AcroForm.
     try:
         acro = writer._root_object.get("/AcroForm")
         if acro is not None:
@@ -348,12 +344,42 @@ def fill(form_code: str, answers: A) -> tuple[bytes, dict]:
     except Exception:
         pass
 
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / f"{form_code}-filled.pdf"
     buf = io.BytesIO()
     writer.write(buf)
-    report = {
-        "filled": len(updates),
-        "unmatched_fields": unmatched,
-        "warnings": warnings,
-        "total_form_fields": len(fields),
-    }
-    return buf.getvalue(), report
+    out_path.write_bytes(buf.getvalue())
+    return {"output": str(out_path), "filled": len(updates),
+            "unmatched": unmatched, "warnings": warnings}
+
+
+def main() -> int:
+    if len(sys.argv) < 3:
+        print(__doc__)
+        return 2
+    answers = json.loads(pathlib.Path(sys.argv[1]).read_text())
+    form = sys.argv[2]
+    blank_dir = pathlib.Path(sys.argv[3] if len(sys.argv) > 3 else "forms/blank")
+    out_dir = pathlib.Path(sys.argv[4] if len(sys.argv) > 4 else "forms")
+    codes = list(FORMS) if form == "all" else [form]
+    ok = True
+    for code in codes:
+        if code not in FORMS:
+            print(f"unknown form: {code} (choose from {list(FORMS)})")
+            return 2
+        report = fill(code, answers, blank_dir, out_dir)
+        if "error" in report:
+            ok = False
+            print(f"{code}: ERROR {report['error']}")
+        else:
+            note = f", unmatched: {report['unmatched']}" if report["unmatched"] else ""
+            print(f"{code}: {report['filled']} fields -> {report['output']}{note}")
+            for w in report.get("warnings", []):
+                print(f"  WARNING: {w}")
+    print("\nAlways PRINT the filled PDFs and visually verify every page "
+          "before signing — do not trust one on-screen viewer.")
+    return 0 if ok else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

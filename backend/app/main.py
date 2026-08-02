@@ -22,8 +22,19 @@ from .routers import (
 )
 
 
+_KNOWN_DEFAULT_SECRETS = {"change-me", "selfhost-dev-secret-change-me", ""}
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    if get_settings().secret_key in _KNOWN_DEFAULT_SECRETS:
+        import logging
+        logging.getLogger("uvicorn.error").warning(
+            "SECRET_KEY is a shipped default — anyone who can reach this "
+            "server can forge login tokens. Generate one: "
+            "python3 -c \"import secrets; print(secrets.token_hex(32))\" "
+            "and set it in .env. Safe only on localhost."
+        )
     await migrate()
     yield
     await db.close_pool()

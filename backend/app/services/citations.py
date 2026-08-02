@@ -46,8 +46,14 @@ def _norm(name: str) -> str:
 
 
 def _fam_init(display_name: str) -> tuple[str, str]:
-    """('doe', 'j') from 'Jane Doe'. OpenAlex display names are given-first."""
-    parts = [p for p in _norm(display_name).replace(",", " ").split() if p]
+    """('doe', 'j') from 'Jane Doe' or 'Doe, Jane'."""
+    n = _norm(display_name)
+    if "," in n:  # "Last, First" style
+        family, _, given = n.partition(",")
+        fam = family.strip().split()[-1] if family.strip() else ""
+        giv = given.strip()
+        return (fam, giv[:1] if giv else "")
+    parts = n.split()
     if not parts:
         return ("", "")
     return (parts[-1], parts[0][:1])

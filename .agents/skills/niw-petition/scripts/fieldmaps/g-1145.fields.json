@@ -1,0 +1,62 @@
+[
+ {
+  "name": "form1[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#pageSet[0].Page1[0].PDF417BarCode1[0]",
+  "type": "/Tx",
+  "label": "PDF417BarCode1",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0]",
+  "type": "",
+  "label": "",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].LastName[0]",
+  "type": "/Tx",
+  "label": "Complete this form and clip it on top of the first page of your immigration form or forms. Enter Applicant or Petitioner Full Last Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].FirstName[0]",
+  "type": "/Tx",
+  "label": "Complete this form and clip it on top of the first page of your immigration form or forms. Enter Applicant or Petitioner Full First Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].MiddleName[0]",
+  "type": "/Tx",
+  "label": "Complete this form and clip it on top of the first page of your immigration form or forms. Enter Applicant or Petitioner Full Middle Name.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].Email[0]",
+  "type": "/Tx",
+  "label": "Complete this form and clip it on top of the first page of your immigration form or forms. Enter E-mail Address.",
+  "states": []
+ },
+ {
+  "name": "form1[0].#subform[0].MobilePhoneNumber[0]",
+  "type": "/Tx",
+  "label": "Complete this form and clip it on top of the first page of your immigration form or forms.  Enter Mobile Telephone Number without spaces, dashes, slashes or parenthesis; for example (011) 555-0101 ent",
+  "states": []
+ }
+]
