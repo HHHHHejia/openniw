@@ -100,9 +100,10 @@ database, no AI — you remain the brain.
 
 **Ensure the companion once**: `openniw --version`. If missing, try in
 order: `uv tool install openniw` → `pipx install openniw` →
-`python3 -m pip install --user openniw`. All fail (offline/sandbox)? Use
-the chat flow + the bundled `scripts/*.py` fallbacks — the GUI is an
-accelerator, never a requirement.
+`python3 -m pip install --user openniw` → (if PyPI has no release yet)
+the same three with `git+https://github.com/HHHHHejia/openniw` as the
+package name. All fail (offline/sandbox)? Use the chat flow + the bundled
+`scripts/*.py` fallbacks — the GUI is an accelerator, never a requirement.
 
 **Open** (case folder as CWD): `openniw ui forms` (or `ui citations`).
 This starts a DETACHED server (survives terminal close, spans days), prints
