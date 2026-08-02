@@ -19,6 +19,7 @@ HEARTBEAT_SECONDS = 15
 STALE_AFTER_SECONDS = 90
 
 FILES_OWNED = {
+    "intake": ["intake.json", "sources/*"],
     "forms": ["forms/answers.json", "forms/answers.meta.json",
               "forms/*-filled.pdf", "forms/fill-report.json"],
     "citations": ["citations/selection.json"],

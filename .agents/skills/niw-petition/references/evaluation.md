@@ -3,38 +3,39 @@
 Produce an honest, prong-by-prong read of the applicant's NIW case from their
 public record. Write the result to `evaluation.md` in the case folder.
 
-## Open with the benchmark page (default first move)
+## Open with the intake page (default first move)
 
-Before (or while) gathering sources, launch the visual peer comparison —
-`openniw ui benchmark` (Browser sessions rules apply; step owns
-`benchmark.json`). It plots 7,400+ publicly posted approved I-140 cases:
-the user picks category/field and enters citations/papers, sees the
-monthly distribution bands of approved peers with their own number as a
-reference line, and clicks "Save to my case". The page's copy is
-survivor-bias-safe (percentile among APPROVED cases, never an approval
-probability) — keep your own language consistent with that.
+Launch `openniw ui intake` as the very first act of a new case (Browser
+sessions rules; step owns `intake.json` + `sources/`). In the browser the
+user: pastes links (Scholar / homepage / LinkedIn / other), drags files
+(CV, LinkedIn "Save to PDF" export) straight into `sources/`, and answers
+the fixed basics (position, degree, field, in-U.S.). Tell them what
+happens next: "when you click Done there, come back here — I'll fetch and
+analyze everything." On Done, read `intake.json` and the `sources/`
+listing, then do the non-standard half yourself:
+- fetch every link, archiving each page under `sources/fetched/` as
+  `<YYYY-MM-DD>-<slug>.md` before extracting (facts must stay traceable;
+  page captures are exhibit material later);
+- read every uploaded file;
+- consolidate into profile.md, each section noting its source file.
 
-After the session, read `benchmark.json` and use its `computed` block
-(percentile, peer medians, low-citation precedents) as hard numbers in the
-Calibration section of evaluation.md. No browser/companion? Skip the page;
-calibrate from the guidance below instead.
+**Chat fallback** (no browser/companion): ask for links pasted in chat and
+files dropped into `niw-case/sources/` (create the folder first, tell them
+the exact path). Wrong place? Copy, don't scold — a path elsewhere
+(`~/Downloads/cv.pdf`) or a wrong subfolder gets copied into `sources/`
+yourself (standing rule 4), confirmed in one clause.
 
-## Gather sources first
+## Then the benchmark page
 
-Ask only for links/files, never for typed-out lists — and be explicit about
-HOW to hand each one over:
-- **Links — paste right here in the chat**: Google Scholar profile URL
-  (fetch it: name, affiliation, citations, h-index, per-paper cited-by
-  counts, publication list), personal homepage URL, lab/company pages.
-- **Files — tell the user exactly where to put them**: "drop your CV (and
-  any other documents) into `niw-case/sources/` and tell me when done" —
-  create the folder first so it exists when they look for it. LinkedIn
-  blocks robots: ask for its "Save to PDF" export into `sources/`, or
-  pasted text.
-- **Wrong place? Copy, don't scold.** If they give a path elsewhere
-  (`~/Downloads/cv.pdf`), name a file in another folder, or drop it in the
-  wrong subfolder — copy it into `sources/` yourself (standing rule 4),
-  confirm in one clause ("copied to sources/cv.pdf"), and move on.
+After profile.md exists, pre-fill `benchmark.json` with the profile's
+citations/papers/field and launch `openniw ui benchmark`. It plots 7,400+
+publicly posted approved I-140 cases: monthly distribution bands of
+approved peers with the user's numbers as reference lines. The page's copy
+is survivor-bias-safe (percentile among APPROVED cases, never an approval
+probability) — keep your own language consistent with that. After the
+session, use `benchmark.json`'s `computed` block (percentiles, peer
+medians, low-citation precedents) as hard numbers in the Calibration
+section of evaluation.md. No browser? Calibrate from the guidance below.
 
 **Archive everything you fetch.** Every page you download becomes part of
 the case record: save it under `sources/fetched/` as

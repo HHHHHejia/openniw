@@ -10,7 +10,7 @@ type StageId = "I" | "II·a" | "II·b" | "III" | "IV" | "V";
 type StageStatus = "done" | "current" | "todo";
 
 const STAGES: { id: StageId; name: string; href: string | null; page?: string }[] = [
-  { id: "I", name: "Evaluate", href: "/benchmark/", page: "Benchmark" },
+  { id: "I", name: "Evaluate", href: "/intake/", page: "Intake · Benchmark" },
   { id: "II·a", name: "Endeavor", href: null },
   { id: "II·b", name: "Evidence", href: "/citations/", page: "Citation review" },
   { id: "III", name: "Draft", href: null },
@@ -43,7 +43,7 @@ function parseStages(stateMd: string): Record<StageId, StageStatus> {
 }
 
 export function Header({ active, progress }: {
-  active: "overview" | "benchmark" | "citations" | "forms";
+  active: "overview" | "intake" | "benchmark" | "citations" | "forms";
   progress?: { label: string; done: number; total: number };
 }) {
   const [stateMd, setStateMd] = useState<string>(stateCache || "");
@@ -58,7 +58,8 @@ export function Header({ active, progress }: {
 
   const stages = parseStages(stateMd);
   const activeStage: StageId | null =
-    active === "benchmark" ? "I" : active === "citations" ? "II·b"
+    active === "intake" || active === "benchmark" ? "I"
+      : active === "citations" ? "II·b"
       : active === "forms" ? "IV" : null;
 
   return (
@@ -141,9 +142,10 @@ export function Header({ active, progress }: {
   );
 }
 
-export function FinishBar({ summary, beforeFinish }: {
+export function FinishBar({ summary, beforeFinish, doneMessage }: {
   summary: () => Record<string, any>;
   beforeFinish?: () => Promise<void>;
+  doneMessage?: string;
 }) {
   const [state, setState] = useState<"open" | "busy" | "done" | "later">("open");
 
@@ -169,7 +171,8 @@ export function FinishBar({ summary, beforeFinish }: {
           </div>
           <p className="text-lg" style={{ fontFamily: "var(--font-serif), serif" }}>
             {state === "done"
-              ? "Everything is saved to your case folder. Close this tab and continue in your chat."
+              ? (doneMessage ||
+                 "Everything is saved to your case folder. Close this tab and continue in your chat.")
               : "Your progress is saved. Close this tab — you can reopen the session from your chat anytime."}
           </p>
         </div>

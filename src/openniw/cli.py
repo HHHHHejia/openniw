@@ -20,7 +20,7 @@ import urllib.request
 from . import __version__, ui_session
 from .casefolder import CaseFolder
 
-STEPS = ("forms", "citations", "benchmark")
+STEPS = ("intake", "benchmark", "citations", "forms")
 
 
 def _free_port() -> int:

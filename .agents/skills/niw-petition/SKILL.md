@@ -100,13 +100,25 @@ Stage: II·b Evidence
 
 ## Browser sessions (interaction-heavy steps)
 
-Some steps beat chat in a local browser page — Stage I opens with the
-peer-benchmark chart (`ui benchmark`, owns benchmark.json); Stage IV forms
-review is mandatory-canonical (61+ structured fields, `ui forms`); Stage
-II·b citation-portfolio selection is optional (`ui citations`). The
-`openniw` pip companion serves the page over the case folder ONLY:
-127.0.0.1, random token in the URL, no account, no database, no AI — you
-remain the brain.
+**The division of labor**: everything STANDARDIZABLE — fixed questions,
+link submission, file uploads, structured field entry, pick-from-a-list —
+happens in the browser. Everything NON-standard — judgment, analysis,
+drafting, open-ended discussion — happens here in chat; the browser pages
+hand the user back to you at those junctures. So the very FIRST move of a
+new case (right after creating the folder + STATE.md) is
+`openniw ui intake`: the user pastes links (Scholar/homepage/LinkedIn),
+drops files (CV, LinkedIn PDF — straight into sources/), and answers the
+fixed basics there, then returns to chat for your non-standard work.
+
+Pages: `ui intake` (Stage I opener, owns intake.json + sources/) ·
+`ui benchmark` (Stage I peer comparison, owns benchmark.json) · `ui
+citations` (Stage II·b portfolio pick, optional) · `ui forms` (Stage IV,
+mandatory-canonical: 61+ structured fields). Every page carries the global
+six-stage stepper (live from STATE.md — keep STATE.md's stage checklist
+formatted exactly as the template so the browser can parse it). The
+`openniw` pip companion serves pages over the case folder ONLY: 127.0.0.1,
+random token in the URL, no account, no database, no AI — you remain the
+brain.
 
 **Ensure the companion once**: `openniw --version`. If missing, try in
 order: `uv tool install openniw` → `pipx install openniw` →
@@ -170,17 +182,20 @@ outcome in STATE.md, then DELETE the sentinel.
 Work stages in order; each has a reference file — read it when you reach the
 stage (not before):
 
-**I. Evaluate** — read `references/evaluation.md`. Open with the visual
-peer benchmark (`openniw ui benchmark` — the user compares their numbers
-against 7,400+ approved cases; results land in benchmark.json). Ask for
-links, not paperwork (Scholar URL pasted in chat; files into `sources/`).
-Fetch, archive every fetched page under `sources/fetched/`, consolidate
-into profile.md — then AUTO-download all the applicant's papers
+**I. Evaluate** — read `references/evaluation.md`. FIRST MOVE:
+`openniw ui intake` — the user submits links, uploads files, and answers
+the fixed basics in the browser (chat fallback: ask for links directly,
+files into `sources/`). On Done, read intake.json: fetch and archive every
+link under `sources/fetched/`, read the uploads, consolidate into
+profile.md — then AUTO-download all the applicant's papers
 (`openniw papers`, fallback `scripts/fetch_papers.py`) into
-`sources/papers/` and ask the user to manually supply only what couldn't
-be fetched. Write the tiered, prong-by-prong evaluation, folding the
-benchmark percentiles into Calibration. If the tier is borderline/not-yet,
-present the strengthening plan and let the user decide before continuing.
+`sources/papers/`, asking the user to supply only what couldn't be
+fetched. Pre-fill benchmark.json from the profile (citations, papers,
+field) and open `openniw ui benchmark` for the visual peer comparison
+against 7,400+ approved cases. Write the tiered, prong-by-prong
+evaluation, folding the benchmark percentiles into Calibration. If the
+tier is borderline/not-yet, present the strengthening plan and let the
+user decide before continuing.
 
 **II·a. Endeavor** — read `references/endeavor.md`. Compose the canonical
 sentence from method/topic/impact, score the six executability elements,

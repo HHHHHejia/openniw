@@ -21,6 +21,7 @@ from .casefolder import CaseFolder
 from .routers import benchmark as benchmark_router
 from .routers import citations as citations_router
 from .routers import forms as forms_router
+from .routers import intake as intake_router
 from .routers import meta as meta_router
 
 
@@ -74,7 +75,8 @@ def create_app(case_dir, *, token: str, step: str = "forms",
         return response
 
     for r in (meta_router.router, forms_router.router,
-              citations_router.router, benchmark_router.router):
+              citations_router.router, benchmark_router.router,
+              intake_router.router):
         app.include_router(r)
 
     ui = _ui_dir()

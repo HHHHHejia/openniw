@@ -39,6 +39,22 @@ export async function api(path: string, opts: { method?: string; body?: any } = 
   return ct.includes("application/json") ? res.json() : res.blob();
 }
 
+export async function uploadFile(path: string, file: File) {
+  const form = new FormData();
+  form.append("file", file);
+  const res = await fetch(path, {
+    method: "POST",
+    headers: { "X-OpenNIW-Token": getToken() },
+    body: form,
+  });
+  if (!res.ok) {
+    let detail = `${res.status}`;
+    try { detail = (await res.json()).detail || detail; } catch {}
+    throw new Error(detail);
+  }
+  return res.json();
+}
+
 export async function download(path: string, filename: string) {
   const blob = (await api(path)) as Blob;
   const url = URL.createObjectURL(blob);
