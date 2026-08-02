@@ -381,8 +381,20 @@ export default function BenchmarkPage() {
         </p>
       )}
 
+      {/* trend bands — the highest-information view, so they lead */}
+      <div className="grid gap-4 mt-3 mb-4">
+        <BandChart title="Citations of approved cases by month"
+                   note="bands: middle 50% and 80% · 3-month window · log scale"
+                   series={citesSeries} user={myCites} ymLabel={ymLabel}
+                   ticks={[10, 100, 1000, 10000, 50000]} />
+        <BandChart title="Papers of approved cases by month"
+                   note="journal + conference papers · same window · log scale"
+                   series={pubsSeries} user={myPubs} ymLabel={ymLabel}
+                   ticks={[5, 10, 25, 50, 100, 250]} />
+      </div>
+
       {/* histogram + what-if slider */}
-      <section className="border border-[--rule] bg-white px-5 py-4 mt-3 mb-4">
+      <section className="border border-[--rule] bg-white px-5 py-4 mb-4">
         <div className="docket-line mb-3">
           Where approved cases sit by citations
           <span className="text-[#4f5a55]"> · {poolNote} · n={stats.n}</span>
@@ -497,18 +509,6 @@ export default function BenchmarkPage() {
           </p>
         )}
       </section>
-
-      {/* trend bands */}
-      <div className="grid gap-4 mb-4">
-        <BandChart title="Citations of approved cases by month"
-                   note="bands: middle 50% and 80% · 3-month window · log scale"
-                   series={citesSeries} user={myCites} ymLabel={ymLabel}
-                   ticks={[10, 100, 1000, 10000, 50000]} />
-        <BandChart title="Papers of approved cases by month"
-                   note="journal + conference papers · same window · log scale"
-                   series={pubsSeries} user={myPubs} ymLabel={ymLabel}
-                   ticks={[5, 10, 25, 50, 100, 250]} />
-      </div>
 
       {/* insight cards */}
       <div className="grid sm:grid-cols-2 gap-3 mb-4">
