@@ -20,9 +20,11 @@ certified translations · endeavor-support evidence · employment letter ·
 recommenders (+ each recommender's CV, max 5 pages, or a bio page).
 
 Per-type evidence specs (from real successful filings):
-- **Publications**: official published version, first 3-5 pages per exhibit,
-  applicant's name highlighted, venue+year visible. Accepted-but-unpublished:
-  attach acceptance email/forum page. Books: cover + TOC + © page + 3 pages.
+- **Publications**: start from the PDFs auto-downloaded to `sources/papers/`
+  in Stage I (chase any still-missing ones now). Official published version,
+  first 3-5 pages per exhibit, applicant's name highlighted, venue+year
+  visible. Accepted-but-unpublished: attach acceptance email/forum page.
+  Books: cover + TOC + © page + 3 pages.
 - **Conference presentations** (oral/poster): program or schedule first page
   + the page listing the talk, name highlighted; poster PDF or session
   photos also work.

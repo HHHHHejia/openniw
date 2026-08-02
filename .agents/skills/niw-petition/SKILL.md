@@ -169,10 +169,14 @@ Work stages in order; each has a reference file — read it when you reach the
 stage (not before):
 
 **I. Evaluate** — read `references/evaluation.md`. Ask for links, not
-paperwork (Scholar URL, homepage, CV PDF, LinkedIn export). Fetch and
-consolidate into profile.md, then write the tiered, prong-by-prong
-evaluation. If the tier is borderline/not-yet, present the strengthening
-plan and let the user decide before continuing.
+paperwork (Scholar URL pasted in chat; files into `sources/`). Fetch,
+archive every fetched page under `sources/fetched/`, consolidate into
+profile.md — then AUTO-download all the applicant's papers
+(`openniw papers`, fallback `scripts/fetch_papers.py`) into
+`sources/papers/` and ask the user to manually supply only what couldn't
+be fetched. Write the tiered, prong-by-prong evaluation. If the tier is
+borderline/not-yet, present the strengthening plan and let the user decide
+before continuing.
 
 **II·a. Endeavor** — read `references/endeavor.md`. Compose the canonical
 sentence from method/topic/impact, score the six executability elements,
@@ -219,6 +223,9 @@ same JSON reports its browser UI uses. Always run from the CASE FOLDER:
   Determination / G-1145 (XFA-stripped, print-safe)
 - `openniw package` — filing ZIP with USCIS assembly order + the correct
   lockbox address (state + premium aware)
+- `openniw papers "Title" ...` — batch-download the applicant's own
+  papers (OpenAlex → arXiv/PMC/publisher OA) into sources/papers/ +
+  provenance manifest; run by DEFAULT in Stage I
 - `openniw harvest "Title" ...` — OpenAlex citing-paper harvest +
   independence/published screening
 - `openniw fetch-forms` · `docx <md>` · `highlight <pdf> --needle X`
@@ -226,6 +233,7 @@ same JSON reports its browser UI uses. Always run from the CASE FOLDER:
 Stdlib fallbacks bundled with the skill for offline/sandboxed sessions
 (fill_form.py needs `pip install pypdf cryptography`):
 - `scripts/fetch_forms.py [dest]`
+- `scripts/fetch_papers.py "Title" ... [--out sources/papers]`
 - `scripts/harvest_citations.py "Title" ... [--out f] [--max-per-work N]`
 - `scripts/fill_form.py answers.json all [blank_dir] [out_dir]`
 - `scripts/fieldmaps/*.fields.json` — full field inventories, for verifying

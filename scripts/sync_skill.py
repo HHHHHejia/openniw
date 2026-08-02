@@ -23,6 +23,9 @@ PAIRS = [
     ("citation screening",
      REPO / "src" / "openniw" / "services" / "citations_pure.py",
      SKILL / "harvest_citations.py"),
+    ("paper download",
+     REPO / "src" / "openniw" / "services" / "papers.py",
+     SKILL / "fetch_papers.py"),
 ]
 
 

@@ -157,6 +157,17 @@ def _cmd_harvest(ns) -> int:
     return 0
 
 
+def _cmd_papers(ns) -> int:
+    from .services.papers import download_papers
+    summary = download_papers(ns.titles, pathlib.Path(ns.out))
+    print(json.dumps(summary, ensure_ascii=False))
+    if summary["preprint_only"]:
+        print(f"NOTE: {summary['preprint_only']} paper(s) only available as "
+              "preprints — the officially published version is the preferred "
+              "exhibit; ask the user to supply it (institutional access).")
+    return 0 if summary["downloaded"] or not ns.titles else 1
+
+
 def _cmd_fetch_forms(ns) -> int:
     from .services.fetch_forms import fetch_forms
     case = CaseFolder(ns.case)
@@ -241,6 +252,13 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--out", default="citations/harvest.json")
     p.add_argument("--max-per-work", type=int, default=200)
     p.set_defaults(fn=_cmd_harvest)
+
+    p = sub.add_parser("papers",
+                       help="batch-download the applicant's own papers "
+                            "(OpenAlex -> arXiv/PMC/publisher OA PDFs)")
+    p.add_argument("titles", nargs="+")
+    p.add_argument("--out", default="sources/papers")
+    p.set_defaults(fn=_cmd_papers)
 
     p = sub.add_parser("fetch-forms", help="download official blank PDFs")
     _case_arg(p)

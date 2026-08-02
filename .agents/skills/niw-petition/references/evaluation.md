@@ -35,6 +35,31 @@ each section noting which `sources/` file it came from.
 Mark authorship position only from explicit signals (name order,
 equal-contribution notes); never guess.
 
+## Auto-download the applicant's papers (default step, not optional)
+
+As soon as the publication list exists in profile.md, batch-download the
+papers WITHOUT being asked — they are needed as exhibits (Stage II·b) and
+for your own reading:
+
+    openniw papers "Title 1" "Title 2" ...
+    (fallback: python3 scripts/fetch_papers.py "Title 1" ...)
+
+This resolves each title on OpenAlex and pulls the best open-access PDF
+(arXiv, PubMed Central, publisher OA) into `sources/papers/` with a
+provenance manifest. Then report the outcome and hand the gaps to the user
+in one message:
+- **downloaded** — say how many, done.
+- **preprint_only** — the published version is the preferred exhibit: list
+  these and ask the user to download the published PDFs via their
+  institutional access into `sources/papers/` (suggest the exact filename
+  from the manifest).
+- **no_oa_pdf / unresolved / failed** — list each title and ask the user
+  to drop the PDF into `sources/papers/` manually (or give you a path —
+  you copy it in, standing rule 4).
+
+Track the missing ones as an open item in STATE.md until every paper in
+profile.md has a PDF in `sources/papers/`.
+
 ## Legal framework to apply
 
 1. EB-2 threshold: advanced degree (or bachelor's + 5 years progressive
