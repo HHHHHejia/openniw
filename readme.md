@@ -73,8 +73,8 @@ see [docs/analysis/](docs/analysis/)):
 
 ```
 openniw/
-├── frontend/   Next.js 14 + Tailwind (Node.js)      — Railway service 1
-├── backend/    FastAPI (Python 3.12) + asyncpg      — Railway service 2
+├── frontend/   Next.js 14 + Tailwind (Node.js)      — localhost:3000
+├── backend/    FastAPI (Python 3.12) + asyncpg      — localhost:8400
 │   └── app/
 │       ├── routers/     auth, eval, cases, evidence, documents,
 │       │                recommenders, chat, ingest, forms, jobs
@@ -102,19 +102,13 @@ openniw/
 - **Long jobs** (evaluation, drafting): a `jobs` table + background tasks;
   the frontend polls.
 
-## Three ways to run OpenNIW
+## Two ways to run OpenNIW
 
-### 1 · Hosted (zero setup)
+There is no hosted service and no maintainer server — by design. Your case
+data never leaves your machine except for calls to your own OpenAI account
+and the public OpenAlex API.
 
-Use the maintained deployment — nothing to install:
-
-- App: https://frontend-production-3c7f.up.railway.app
-- API: https://backend-production-9b6c.up.railway.app (health: `/health`, docs: `/docs`)
-
-### 2 · Self-hosted (your keys, your database, your machine)
-
-The only outbound traffic is to your own OpenAI account and the public
-OpenAlex API — never to any maintainer server:
+### 1 · Local website (your keys, your database, your machine)
 
 ```bash
 git clone https://github.com/HHHHHejia/openniw && cd openniw
@@ -140,13 +134,7 @@ cp ../.env.example .env   # here DATABASE_URL is required (no bundled db), plus 
 cd frontend && npm install && NEXT_PUBLIC_API_URL=http://localhost:8400 npm run dev
 ```
 
-Deploy your own cloud copy on Railway: two services from this repo —
-**backend** (config `backend/railway.json`; vars `DATABASE_URL`, `SECRET_KEY`,
-`OPENAI_API_KEY`, `CORS_ORIGINS=https://<frontend-domain>`, `DATA_DIR=/data`
-+ a volume at `/data`) and **frontend** (config `frontend/railway.json`;
-`NEXT_PUBLIC_API_URL=https://<backend-domain>`).
-
-### 3 · Agent Skill (no server, no database, no API key)
+### 2 · Agent Skill (no server, no database, no API key)
 
 The whole workflow also ships as an [Agent Skill](https://agentskills.io) at
 [.agents/skills/niw-petition/](.agents/skills/niw-petition/): your coding
@@ -176,6 +164,13 @@ itself scores citations; no OpenAI key needed) → draft → forms & package —
 writing everything into a `niw-case/` folder you own. Progressive disclosure
 keeps it light: per-stage reference files load only when that stage begins.
 
+Built for a weeks-long process in short sessions: the skill keeps a
+`STATE.md` working-state file in the case folder — it reads it first at
+every session start and updates it after every completed step — so you can
+stop anytime, switch machines or agents, and the next session resumes
+exactly where you left off (including decisions already made, so nothing is
+re-asked).
+
 ## Filing facts (2026, verify before filing)
 
 - NIW package: I-140 + ETA-9089 Appendix A + signed Final Determination +
@@ -198,10 +193,10 @@ keeps it light: per-stage reference files load only when that stage begins.
 
 ## Privacy
 
-- Self-hosted: your data lives in **your** database and **your** OpenAI
-  account. The only third-party calls are your OpenAI API and the public
-  OpenAlex API (citation metadata); nothing goes to any maintainer server.
-  The skill mode needs no API key at all — your coding agent does the work.
+- Local website mode: your data lives in **your** database and **your**
+  OpenAI account. The only third-party calls are your OpenAI API and the
+  public OpenAlex API (citation metadata); there is no maintainer server at
+  all. The skill mode needs no API key — your coding agent does the work.
 - The repo contains no personal data. Analyses in `docs/analysis/` are
   structural only, with all identifiers replaced by placeholders.
 - Never commit `.env`; see `.env.example`.

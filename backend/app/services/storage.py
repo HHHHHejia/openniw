@@ -1,6 +1,6 @@
-"""Local-disk storage adapter (Railway volume in production).
+"""Local-disk storage adapter (DATA_DIR).
 
-Kept behind one module so a cloud object store can be swapped in later.
+Kept behind one module so a different store can be swapped in later.
 """
 import pathlib
 import uuid

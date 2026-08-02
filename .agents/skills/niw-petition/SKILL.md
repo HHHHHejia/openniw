@@ -20,6 +20,7 @@ licensed attorney.
 
 ```
 niw-case/
+├── STATE.md           # working state — read FIRST every session, write after EVERY step
 ├── case.json          # canonical fact table — the single source of truth
 ├── profile.md         # consolidated record (from Scholar/CV/homepage)
 ├── evaluation.md      # Stage I output
@@ -31,15 +32,63 @@ niw-case/
 └── rfe/               # only if an RFE arrives: response-plan.md, drafts
 ```
 
-Two standing rules, enforced at every step:
+Three standing rules, enforced at every step:
 1. **Never invent facts.** Missing information becomes `[TODO: ...]` or a
    question to the user — never a plausible guess. Identity numbers, dates,
    metrics and quotes come only from sources or the user.
 2. **case.json is canonical.** Venues, years, authorship positions, counts
    (+as-of dates), award ratios, employment terms live there; every document
    must match it exactly. On any edit, re-check affected documents.
+3. **STATE.md is the session bridge.** A petition takes weeks of short
+   sessions; the state file is what makes them one continuous process.
 
-## Workflow — five stages (copy this checklist into the conversation)
+## Session protocol — state first
+
+Treat every session as if it could be interrupted at any moment:
+
+1. **On EVERY session start**: read `STATE.md` and `case.json` before doing
+   anything else — even when the user's message dives straight into a task.
+   If no case folder exists yet, create it and initialize STATE.md from the
+   template below. Then announce the resume point in one sentence ("Stage
+   II·b: 12/19 checklist items provided; next: citation portfolio
+   selection") and continue from `Next actions`.
+2. **After EVERY completed step** — a stage milestone, a generated or
+   edited document, a script run, a user decision — update STATE.md
+   immediately. Never batch updates for the end of the session: an
+   interrupted session must lose at most one step.
+3. **Record decisions, not just progress.** User choices (tier accepted,
+   endeavor frozen, recommender list confirmed, premium processing yes/no)
+   go in the Decision log with dates, so no later session re-asks or
+   silently contradicts them.
+
+STATE.md template:
+
+```markdown
+# Case state — read first, update after every step
+Stage: II·b Evidence
+- [x] I    Evaluate   (done 2026-08-01)
+- [x] II·a Endeavor   (frozen 2026-08-02 — sentence in endeavor.md)
+- [ ] II·b Evidence   ← in progress
+- [ ] III  Draft
+- [ ] IV   Forms
+- [ ] V    Package
+
+## Next actions
+1. <single most important next step, concrete enough to start cold>
+2. <second>
+
+## Decision log
+- 2026-08-02: endeavor sentence frozen (endeavor.md)
+
+## Open questions for the user
+- <anything blocked on user input>
+
+## File inventory
+- profile.md ✓ · evaluation.md ✓ · citations/harvest.json (400 papers) ·
+  documents/pes.md (draft v2, unreviewed §4-6)
+```
+
+## Workflow — five stages (mirror this checklist in STATE.md)
 
 ```
 - [ ] I    Evaluate   — sources → profile.md → evaluation.md
@@ -107,5 +156,6 @@ relative paths). All stdlib-only except fill_form.py
 One topic at a time; at most two short questions per message. Prefer
 fetching/deriving over asking. Give the user explicit word budgets when
 requesting text (e.g. "≤50 words"). Surface trade-offs as ranked
-recommendations, not open questions. Track progress against the stage
-checklist and always tell the user what happens next.
+recommendations, not open questions. Track progress against STATE.md and
+always tell the user what happens next — the same "next" that STATE.md's
+`Next actions` records.
