@@ -22,6 +22,7 @@ licensed attorney.
 niw-case/
 ├── STATE.md           # working state — read FIRST every session, write after EVERY step
 ├── case.json          # canonical fact table — the single source of truth
+├── sources/           # user-dropped files (CV, LinkedIn PDF…) + fetched/ page archives
 ├── profile.md         # consolidated record (from Scholar/CV/homepage)
 ├── evaluation.md      # Stage I output
 ├── endeavor.md        # the frozen endeavor sentence + projects
@@ -32,7 +33,7 @@ niw-case/
 └── rfe/               # only if an RFE arrives: response-plan.md, drafts
 ```
 
-Three standing rules, enforced at every step:
+Four standing rules, enforced at every step:
 1. **Never invent facts.** Missing information becomes `[TODO: ...]` or a
    question to the user — never a plausible guess. Identity numbers, dates,
    metrics and quotes come only from sources or the user.
@@ -41,6 +42,13 @@ Three standing rules, enforced at every step:
    must match it exactly. On any edit, re-check affected documents.
 3. **STATE.md is the session bridge.** A petition takes weeks of short
    sessions; the state file is what makes them one continuous process.
+4. **The case folder is self-contained.** When the user hands you a file
+   from anywhere else (a `~/Downloads/...` path, a drag-drop, a file
+   dropped into the wrong subfolder), COPY it to its proper home
+   immediately (`sources/` for background material, `evidence/exhibits/`
+   for exhibits) and work from the copy. No case artifact may ever
+   reference a path outside the folder — the user must be able to zip or
+   move `niw-case/` and lose nothing.
 
 ## Session protocol — state first
 

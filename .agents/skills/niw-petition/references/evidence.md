@@ -2,6 +2,10 @@
 
 Maintain `evidence/checklist.md` as a ledger: one line per item with status
 (`suggested | needed | provided | na`), and `evidence/exhibits/` for files.
+Exhibit files the user hands over from anywhere else get COPIED into
+`evidence/exhibits/` immediately (standing rule 4) — tell them the
+destination up front ("drop it in evidence/exhibits/ or just give me the
+path and I'll copy it").
 Objective evidence beats subjective: every claim a letter makes must be
 shadowed by an objective exhibit. Build the exhibit index FROM the claims.
 

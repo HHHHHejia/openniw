@@ -5,16 +5,33 @@ public record. Write the result to `evaluation.md` in the case folder.
 
 ## Gather sources first
 
-Ask only for links/files, never for typed-out lists:
-- Google Scholar profile URL (fetch it: name, affiliation, citations, h-index,
-  per-paper cited-by counts, publication list)
-- Personal homepage URL (fetch and read)
-- CV PDF (read it)
-- LinkedIn "Save to PDF" export or pasted text (LinkedIn blocks robots)
+Ask only for links/files, never for typed-out lists — and be explicit about
+HOW to hand each one over:
+- **Links — paste right here in the chat**: Google Scholar profile URL
+  (fetch it: name, affiliation, citations, h-index, per-paper cited-by
+  counts, publication list), personal homepage URL, lab/company pages.
+- **Files — tell the user exactly where to put them**: "drop your CV (and
+  any other documents) into `niw-case/sources/` and tell me when done" —
+  create the folder first so it exists when they look for it. LinkedIn
+  blocks robots: ask for its "Save to PDF" export into `sources/`, or
+  pasted text.
+- **Wrong place? Copy, don't scold.** If they give a path elsewhere
+  (`~/Downloads/cv.pdf`), name a file in another folder, or drop it in the
+  wrong subfolder — copy it into `sources/` yourself (standing rule 4),
+  confirm in one clause ("copied to sources/cv.pdf"), and move on.
+
+**Archive everything you fetch.** Every page you download becomes part of
+the case record: save it under `sources/fetched/` as
+`<YYYY-MM-DD>-<slug>.md` (rendered text; keep raw HTML only if the
+rendering loses data) before extracting from it. Two reasons: facts in
+profile.md must stay traceable to a dated source, and printed page
+captures are themselves exhibit material later. Note the archive path
+next to the corresponding entry in the File inventory of STATE.md.
 
 Consolidate into `profile.md`: name, education, positions, field/subfields,
 publications (title, venue, venue type, year, authorship position, citations),
-metrics, peer-review service, awards, funding, open source, patents, media.
+metrics, peer-review service, awards, funding, open source, patents, media —
+each section noting which `sources/` file it came from.
 Mark authorship position only from explicit signals (name order,
 equal-contribution notes); never guess.
 
