@@ -501,9 +501,13 @@ export default function FormsPage() {
     </nav>
   );
 
+  const doneCount = cards.filter((c) => cardState(c) === "done").length;
+
   return (
     <div className="max-w-5xl mx-auto px-6 py-6">
-      <Header active="forms" />
+      <Header active="forms"
+              progress={{ label: `${doneCount} of ${cards.length} sections complete`,
+                          done: doneCount, total: cards.length }} />
       {conflict && (
         <div className="border border-[--stamp] text-[--stamp] px-4 py-2 mb-4 flex items-center justify-between">
           <span className="docket-line">The answers file changed on disk (your agent may have edited it).</span>

@@ -160,6 +160,7 @@ export default function BenchmarkPage() {
   const [range, setRange] = useState<"recent" | "5y" | "all">("recent");
   const [view, setView] = useState<"chart" | "table">("chart");
   const [saved, setSaved] = useState(false);
+  const [savedOnce, setSavedOnce] = useState(false);
 
   useEffect(() => {
     fetch("/benchmark-data.json").then((r) => r.json()).then(setData)
@@ -170,6 +171,7 @@ export default function BenchmarkPage() {
       if (s.field) setField(s.field);
       if (s.citations != null) setCites(String(s.citations));
       if (s.publications != null) setPubs(String(s.publications));
+      if (Object.keys(s).length) setSavedOnce(true);
     }).catch(() => {});
   }, []);
 
@@ -261,6 +263,7 @@ export default function BenchmarkPage() {
       } },
     });
     setSaved(true);
+    setSavedOnce(true);
     setTimeout(() => setSaved(false), 1800);
   }
 
@@ -278,9 +281,16 @@ export default function BenchmarkPage() {
   );
   const poolNote = `of approved ${field === "All fields" ? "" : "same-field "}peers (${stats.poolIsRecent ? "last 24 mo" : "selected range"})`;
 
+  const bmSteps = (myCites != null || myPubs != null ? 1 : 0) + (savedOnce ? 1 : 0);
   return (
     <div className="max-w-4xl mx-auto px-6 py-6">
-      <Header active="benchmark" />
+      <Header active="benchmark"
+              progress={{
+                label: savedOnce ? "saved to your case ✓"
+                  : (myCites != null || myPubs != null)
+                    ? "now: Save to my case" : "enter your numbers below",
+                done: bmSteps, total: 2,
+              }} />
       <h1 className="text-2xl mb-1" style={{ fontFamily: "var(--font-serif), serif" }}>
         How you compare with approved cases
       </h1>

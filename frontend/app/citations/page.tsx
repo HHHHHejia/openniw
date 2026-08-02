@@ -80,7 +80,9 @@ export default function CitationsPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-6">
-      <Header active="citations" />
+      <Header active="citations"
+              progress={{ label: `${picked} of ~10 examples selected`,
+                          done: Math.min(picked, 10), total: 10 }} />
       <div className="flex items-center justify-between flex-wrap gap-3 mb-2">
         <h1 className="text-2xl" style={{ fontFamily: "var(--font-serif), serif" }}>
           Citation portfolio — pick your best ~10
