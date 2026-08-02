@@ -8,14 +8,26 @@ shadowed by an objective exhibit. Build the exhibit index FROM the claims.
 ## Checklist taxonomy (personalize; drop irrelevant, add case-specific)
 
 identity/status · degrees (diploma + official transcript + NACES general
-evaluation for foreign degrees) · CV · publications · citation record ·
+evaluation for foreign degrees; current PhD students add an enrollment/
+candidacy verification letter) · CV · publications · conference
+presentations · venue rankings & selectivity · citation record ·
 peer-review service · awards · funding · open source · patents · media ·
-endeavor-support evidence · employment letter · recommenders.
+certified translations · endeavor-support evidence · employment letter ·
+recommenders (+ each recommender's CV, max 5 pages, or a bio page).
 
 Per-type evidence specs (from real successful filings):
-- **Publications**: official published version, first 3 pages per exhibit,
+- **Publications**: official published version, first 3-5 pages per exhibit,
   applicant's name highlighted, venue+year visible. Accepted-but-unpublished:
   attach acceptance email/forum page. Books: cover + TOC + © page + 3 pages.
+- **Conference presentations** (oral/poster): program or schedule first page
+  + the page listing the talk, name highlighted; poster PDF or session
+  photos also work.
+- **Venue rankings & selectivity**: Google Scholar Metrics or CORE ranking
+  page per venue, journal impact factors, published acceptance rates
+  ("Acceptance Rate: 22%").
+- **Translations**: EVERY foreign-language document needs a full English
+  translation + the translator's signed certification (complete, accurate,
+  competent to translate).
 - **Citation record**: Google Scholar ONLY (multiple databases confuse
   officers and invite RFEs). Print the profile to PDF, logged out.
 - **Peer review**: per-review email trails (invitation → acceptance/assignment

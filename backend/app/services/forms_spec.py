@@ -92,6 +92,13 @@ WIZARD: list[dict] = [
                      "answering consular is easier to change later than the "
                      "reverse. India/China-born applicants usually cannot file "
                      "I-485 concurrently due to visa retrogression."},
+            {"key": "processing.premium",
+             "label": "Request premium processing (Form I-907)?",
+             "type": "boolean",
+             "help": "Optional. USCIS decides within 45 business days for the "
+                     "extra I-907 fee. Changes the mailing address (premium "
+                     "lockbox) and adds I-907 to the package; the I-907 fee "
+                     "needs its own payment form."},
             {"key": "processing.country_of_residence",
              "label": "Current country of residence", "type": "text"},
             {"key": "processing.consulate_city",
@@ -187,13 +194,102 @@ FEES = {
     "asylum_program_fee_self": 300,
     "i-907_premium": 2965,
     "total_standard": 1015,
+    "total_premium": 3980,
 }
+
+# Direct filing addresses for Form I-140 ("Direct Filing Addresses for Form
+# I-140" at uscis.gov — state lists last verified 2026-08; they change, so the
+# package README always tells the user to re-check just before mailing).
+# Standard filing: Dallas or Chicago lockbox by state of intended employment.
+# Premium (I-140 + I-907): Phoenix or Elgin lockbox. Concurrent I-140 + I-485
+# without premium: Dallas "Attn: NFB" for every state.
+_CHICAGO_STANDARD = {
+    "CT", "DE", "DC", "IL", "IN", "IA", "KS", "ME", "MA", "MI", "MN", "MO",
+    "NE", "NH", "NJ", "NY", "ND", "OH", "PA", "RI", "SD", "VT", "WI",
+}
+_PHOENIX_PREMIUM = {
+    "AK", "AZ", "AR", "AA", "AE", "AP", "CA", "CO", "GA", "GU", "HI", "ID",
+    "LA", "MH", "MT", "NV", "NM", "MP", "OK", "OR", "TX", "VI", "UT", "WA",
+    "WY",
+}
+
+LOCKBOXES = {
+    "dallas": {
+        "name": "USCIS Dallas Lockbox",
+        "usps": "USCIS\nAttn: I-140\nP.O. Box 660128\nDallas, TX 75266-0128",
+        "courier": "USCIS\nAttn: I-140 (Box 660128)\n"
+                   "2501 S. State Hwy. 121 Business\nSuite 400\n"
+                   "Lewisville, TX 75067-8003",
+    },
+    "chicago": {
+        "name": "USCIS Chicago Lockbox",
+        "usps": "USCIS\nAttn: I-140\nP.O. Box 88774\nChicago, IL 60680-1774",
+        "courier": "USCIS\nAttn: I-140 (Box 88774)\n"
+                   "131 S. Dearborn St., 3rd Floor\nChicago, IL 60603-5517",
+    },
+    "dallas_nfb": {
+        "name": "USCIS Dallas Lockbox (concurrent I-140 + I-485)",
+        "usps": "USCIS\nAttn: NFB\nP.O. Box 660867\nDallas, TX 75266-0867",
+        "courier": "USCIS\nAttn: NFB (Box 660867)\n"
+                   "2501 S. State Highway 121 Business\nSuite 400\n"
+                   "Lewisville, TX 75067-8003",
+    },
+    "phoenix_premium": {
+        "name": "USCIS Phoenix Lockbox (premium)",
+        "usps": "USCIS\nAttn: Premium I-140\nP.O. Box 21500\n"
+                "Phoenix, AZ 85036-1500",
+        "courier": "USCIS\nAttn: Premium I-140 (Box 21500)\n"
+                   "2108 E. Elliot Rd.\nTempe, AZ 85284-1806",
+    },
+    "elgin_premium": {
+        "name": "USCIS Elgin Lockbox (premium)",
+        "usps": "USCIS\nAttn: Premium I-140\nP.O. Box 4008\n"
+                "Carol Stream, IL 60197-4008",
+        "courier": "USCIS\nAttn: Premium I-140 (Box 4008)\n"
+                   "2500 Westfield Drive\nElgin, IL 60124-7836",
+    },
+}
+
+
+def filing_address(state: str | None, premium: bool = False,
+                   concurrent_i485: bool = False) -> dict:
+    """Pick the USCIS lockbox for an I-140 mailing.
+
+    `state` is the 2-letter state of intended employment. Returns the LOCKBOXES
+    entry plus a `verified` note; falls back to the standard Dallas lockbox
+    with a warning when the state is unknown.
+    """
+    st = (state or "").strip().upper()
+    if premium:
+        key = "phoenix_premium" if st in _PHOENIX_PREMIUM else "elgin_premium"
+    elif concurrent_i485:
+        key = "dallas_nfb"
+    else:
+        key = "chicago" if st in _CHICAGO_STANDARD else "dallas"
+    out = dict(LOCKBOXES[key])
+    out["key"] = key
+    out["note"] = (
+        "State lists last verified 2026-08. Always re-check the current "
+        "address at uscis.gov (Direct Filing Addresses for Form I-140) just "
+        "before mailing."
+    )
+    if not st:
+        out["note"] = "No state on file — defaulted to the most common lockbox. " + out["note"]
+    return out
+
 
 LOCKBOX_NOTE = (
     "Mail the package to the USCIS lockbox for Form I-140 for your state — "
     "verify the current address at uscis.gov/i-140 (Direct Filing Addresses) "
-    "just before mailing; addresses change. Payment must be electronic "
-    "(G-1650 ACH recommended over G-1450 credit card: a declined card causes "
-    "rejection of the entire package). Premium processing requires a separate "
-    "payment form. Print single-sided, no staples, sign in black ink."
+    "just before mailing; addresses change, and premium (I-907) filings use a "
+    "different lockbox. Payment must be electronic — G-1650 ACH (recommended) "
+    "or G-1450 credit card (a declined card rejects the entire package) — or "
+    "file Form G-1651 if you qualify for a paper-payment exemption. The I-907 "
+    "premium fee needs its own payment form. USCIS recommends the payment "
+    "form on top, then G-1145, then the forms. Mark the envelope and cover "
+    "letter with 'Original Submission — Form I-140'. Print single-sided on "
+    "8.5x11, no staples or binders, sign in black ink; never use highlighter "
+    "or correction fluid on a form (start the page over instead). If shipping "
+    "FedEx, use 'Direct Signature Required' — lockboxes cannot accept 'Adult "
+    "Signature Required'."
 )

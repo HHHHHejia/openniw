@@ -12,7 +12,9 @@ objective evidence. Ranked effectiveness:
 Signer selection: established professionals only (no students/postdocs);
 familiarity with the work beats title; ≥half U.S.-based, ideally different
 states. The signer's CV/bio for the exhibit must NOT contain their own
-citation/publication counts (invites unfair comparison).
+citation/publication counts (invites unfair comparison). Collect each
+signer's CV early — max 5 pages (a printed bio page works if no CV); it is
+filed directly behind their signed letter in the package.
 
 NEVER use in any letter: speculative language about the work (potential/
 possible/may/probably), qualifying language (young researcher / early-career /

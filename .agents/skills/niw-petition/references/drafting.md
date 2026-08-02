@@ -52,18 +52,27 @@ alignment with named federal frameworks · concrete projects + federal
 standards · national economy (only with real data) · employer-independence ·
 federal R&D priorities · Critical & Emerging Technologies mapping ·
 open-source metrics · funding ("participated in projects funded by...") ·
-Policy Manual restatement · one-sentence close. CRITICAL: argue from the
-SPECIFIC endeavor and concrete projects, never from field importance.
+expert corroboration (quote 1-2 attributed sentences from signed support
+letters where they exist) · Policy Manual restatement — quote the
+"significant potential to broadly enhance societal welfare ... or to
+contribute to the advancement of a valuable technology or field of study"
+language; demonstrated POTENTIAL suffices · one-sentence close. CRITICAL:
+argue from the SPECIFIC endeavor and concrete projects, never from field
+importance.
 
 **III. Prong 2 (well positioned)** — the quantitative core: Dhanasar framing +
 waiver disclaimer ("the petitioner's proposed endeavor is separate from the
 proposed employment") · education/plan · peer-review (count + venue rankings)
 · 3-5 contribution bullets (gerund-initial: problem → method → result) ·
-publication tally by type × authorship role + venue-ranking bullets · total
-citations + per-paper percentile bullets where data exists · 3 independent
-citing-work bullets ("In a [YEAR] study in [VENUE], [AUTHOR] et al.
-employed/incorporated/built upon the work to X, showing Y") · awards with
-computed selectivity ratios · close restating the frozen sentence verbatim.
+publication tally by type × authorship role + venue-ranking bullets (Google
+Scholar Metrics rank, CORE rank, or published acceptance rates) · total
+citations + per-paper percentile bullets where data exists · citation
+geography where the data supports it (N institutions across M countries;
+name 2-3 prominent citing institutions with rankings — never invent the
+numbers) · 3 independent citing-work bullets ("In a [YEAR] study in [VENUE],
+[AUTHOR] et al. employed/incorporated/built upon the work to X, showing Y")
+· awards with computed selectivity ratios · close restating the frozen
+sentence verbatim.
 State authorship positions explicitly. Prong 2 is NOT a comparative test —
 note that once. Never expose diminishing denominators/ratios.
 
@@ -71,6 +80,11 @@ note that once. Never expose diminishing denominators/ratios.
 outweigh labor-cert interests · urgency (DISTINCT from importance — tie to
 short-term national priorities) · bridge · impracticality of labor cert ·
 minimum-requirements argument · "clearly satisfies the third prong."
+When the applicant has an advanced STEM degree (especially a PhD) AND the
+endeavor furthers a critical and emerging technology, add the Policy Manual
+strong-positive-factor paragraph (STEM PhD + critical technology + well
+positioned = expressly a strong positive factor). Entrepreneurs: concrete
+job-creation/revenue potential only with real supporting data.
 
 **INDEX OF EXHIBITS** (also saved standalone as documents/exhibit-index.md)
 — three groups: Academic and Professional Background /

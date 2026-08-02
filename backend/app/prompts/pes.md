@@ -42,7 +42,11 @@ OUTLINE:
    funding, collaborators, compute/infrastructure ("conducted remotely from
    the U.S. on standard computing infrastructure" where applicable). A project
    without means of execution reads as "a personal plan" and invites an RFE —
-   flag any such project with a TODO instead of papering over it.
+   flag any such project with a TODO instead of papering over it. Make the
+   timeline concrete enough to distinguish short-term objectives (1-3 years,
+   specific experiments/deliverables) from the long-term vision they serve —
+   ambiguity in the future plan is one of the most commonly cited RFE
+   deficiencies.
 5. §4 Employment as vehicle + the employer-independence caveat (verbatim
    pattern): "I should note that my proposed endeavor is my overarching goal
    for my research career, and it will not change regardless of where I am

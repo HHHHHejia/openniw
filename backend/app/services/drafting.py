@@ -120,12 +120,36 @@ async def draft_exhibit_list(bundle_args: dict) -> str:
 
 
 async def draft_cover_letter(bundle_args: dict) -> str:
+    answers = bundle_args.get("answers") or {}
+    premium = answers.get("processing.premium") is True
+    premium_note = (
+        "This is a PREMIUM PROCESSING filing: title the letter 'Form I-140 "
+        "(EB-2 National Interest Waiver) — Premium Processing Request', state "
+        "that Form I-907 requesting Premium Processing Service is enclosed "
+        "with its fee, and include Form I-907 in the enclosed-documents list "
+        "(after G-1145, before Form I-140). "
+        if premium else
+        "Title the letter 'Form I-140 (EB-2 National Interest Waiver) — "
+        "Original Submission'. "
+    )
     return await llm.complete(
-        "Draft a one-page filing cover letter for this I-140 NIW package: "
-        "petitioner name, classification sought (INA 203(b)(2)(B)), list of "
-        "enclosed items in lockbox order (G-1145 on top if used, payment, "
-        "I-140, ETA-9089 Appendix A + signed Final Determination, petition "
-        "letter, exhibits), and a one-paragraph case summary. Markdown.\n\n"
+        "Draft a one-page filing cover letter for this I-140 NIW package, in "
+        "the style of professionally prepared filings: USCIS lockbox address "
+        "block at top, a bold title line identifying the submission, "
+        "'Dear Sir or Madam:', one paragraph stating the enclosed petition — "
+        "filed by the self-petitioner under EB-2 with a request for a "
+        "National Interest Waiver pursuant to INA §203(b)(2)(B) and 8 C.F.R. "
+        "§204.5(k), satisfying Matter of Dhanasar, 26 I&N Dec. 884 (AAO "
+        "2016) — then a numbered ENCLOSED DOCUMENTS list in physical "
+        "package order (payment authorization; Form G-1145; Form I-140 with "
+        "filing fee; this cover letter; Form ETA-9089 Appendix A and signed "
+        "Final Determination submitted in support of the NIW request; "
+        "Petition Letter in Support of EB-2 National Interest Waiver; signed "
+        "Proposed Endeavor Statement; support letters; Supporting Evidence "
+        "(tabbed and indexed)), a closing request for approval, and "
+        "'Respectfully submitted,' with the petitioner's name and "
+        "'Self-Petitioner' beneath the signature line. " + premium_note +
+        "Markdown.\n\n"
         "CASE BUNDLE:\n" + _bundle(**bundle_args),
         effort="medium",
     )

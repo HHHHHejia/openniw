@@ -182,6 +182,15 @@ keeps it light: per-stage reference files load only when that stage begins.
   petition letter + evidence. Fees: I-140 **$715** + Asylum Program Fee
   **$300** (self-petitioner) = **$1,015**; optional premium processing (I-907)
   **$2,965**, 45 business days.
+- The package README and forms wizard pick the correct USCIS lockbox
+  automatically (standard: Dallas/Chicago; premium: Phoenix/Elgin — premium
+  filings use a *different* lockbox), and follow the USCIS-recommended
+  assembly order (payment form on top, then G-1145, then the forms).
+- Primary sources baked into the templates: USCIS [EB-2 page & NIW filing
+  tips](https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2),
+  [I-140 initial-evidence checklist](https://www.uscis.gov/forms/filing-guidance/checklist-of-required-initial-evidence-for-form-i-140-for-informational-purposes-only),
+  [tips for filing by mail](https://www.uscis.gov/forms/filing-guidance/tips-for-filing-forms-by-mail),
+  and [I-140 direct filing addresses](https://www.uscis.gov/forms/all-forms/direct-filing-addresses-for-form-i-140-immigrant-petition-for-alien-worker).
 - Jan 15, 2025 USCIS Policy Manual update raised scrutiny: degree–endeavor
   alignment must be explicit; broad economy-benefit claims are insufficient;
   entrepreneur claims need concrete support. OpenNIW's evaluation and

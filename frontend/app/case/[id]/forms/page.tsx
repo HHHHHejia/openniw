@@ -280,6 +280,17 @@ export default function FormsPage() {
               Fees: I-140 ${spec.fees["i-140"]} + Asylum Program Fee ${spec.fees["asylum_program_fee_self"]}
               {" "}(self) · Premium optional ${spec.fees["i-907_premium"]}
             </p>
+            {spec.filing_address && (
+              <div className="mt-3 border-t border-[--docket] pt-3">
+                <div className="docket-line text-[--docket] mb-1">
+                  Mail to — {spec.filing_address.name}
+                </div>
+                <pre className="text-xs leading-relaxed whitespace-pre-wrap font-mono">
+                  {spec.filing_address.usps}
+                </pre>
+                <p className="text-xs text-[#4f5a55] mt-1">{spec.filing_address.note}</p>
+              </div>
+            )}
           </section>
 
           <p className="text-xs text-[#4f5a55] leading-relaxed">{spec.lockbox_note}</p>

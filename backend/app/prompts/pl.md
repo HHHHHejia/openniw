@@ -26,8 +26,15 @@ alignment; (4) national economy (only if real market data provided); (5)
 employer-independence argument; (6) federal R&D priorities; (7) Critical &
 Emerging Technologies list mapping if applicable; (8) open-source/public-good
 contributions with metrics; (9) federal/major research funding ("participated
-in projects funded by..." — never "grantee", never ratios); (10) USCIS Policy
-Manual national-importance standard restatement; (11) one-sentence close.
+in projects funded by..." — never "grantee", never ratios); (10) expert
+corroboration — where signed support letters exist in the bundle, quote 1-2
+sentences from a named expert on the merit/importance of the work
+(attributed: "Professor [X] of [org] notes in [his/her/their] letter that
+..."); (11) USCIS Policy Manual national-importance standard restatement —
+quote its "significant potential to broadly enhance societal welfare ... or
+to contribute to the advancement of a valuable technology or field of study"
+language and note that demonstrated POTENTIAL suffices; the endeavor need not
+already have achieved national impact; (12) one-sentence close.
 Skip modules with no supporting data. CRITICAL: argue from the applicant's
 SPECIFIC endeavor and concrete projects, never from the importance of the
 field or industry in general.
@@ -40,8 +47,13 @@ endeavor is separate from [his/her/their] proposed employment..." Modules:
 education/employment/plan; peer-review service (count + venue rankings);
 3–5 research-contribution bullets (gerund-initial: problem → method → result);
 publication tally by type × authorship role + venue-ranking bullets
-("[VENUE]: Ranked #N in [CATEGORY] by Google Scholar."); total citations +
-per-paper citation-percentile bullets where percentile data exists; independent
+("[VENUE]: Ranked #N in [CATEGORY] by Google Scholar." — CORE rank and
+published conference acceptance rates, e.g. "Acceptance Rate: 22%", are
+equally good selectivity evidence when provided); total citations +
+per-paper citation-percentile bullets where percentile data exists; a
+citation-geography paragraph where the data supports it (researchers from N
+institutions across M countries have cited the work — name 2-3 prominent
+institutions with rankings; never invent the numbers); independent
 citing-work bullets (3, each: "[In a YEAR study in VENUE, AUTHOR et al.
 employed/incorporated/built upon the work to X, showing Y]"); awards with
 computed selectivity ratios; close with one long sentence restating the
@@ -55,7 +67,14 @@ the interests served by the labor certification process"); urgency (distinct
 from importance — tie to short-term national priorities); bridge; impracticality
 of labor certification; minimum-requirements argument (labor cert assesses
 minimums, cannot capture unique expertise); conclusion "clearly satisfies the
-third prong."
+third prong." Where the applicant holds an advanced STEM degree (especially a
+PhD) AND the endeavor furthers a critical and emerging technology or STEM
+area important to U.S. competitiveness or national security, add the USCIS
+Policy Manual strong-positive-factor paragraph: the combination of (a)
+advanced STEM degree, (b) work furthering a critical and emerging technology,
+and (c) being well positioned, is expressly identified by USCIS as a strong
+positive factor on balance. For entrepreneurial endeavors, add concrete
+job-creation or revenue potential ONLY if real supporting data exists.
 
 # INDEX OF EXHIBITS
 Three groups: "Academic and Professional Background", "Publications and
