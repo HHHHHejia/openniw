@@ -22,6 +22,7 @@ FILES_OWNED = {
     "forms": ["forms/answers.json", "forms/answers.meta.json",
               "forms/*-filled.pdf", "forms/fill-report.json"],
     "citations": ["citations/selection.json"],
+    "benchmark": ["benchmark.json"],
 }
 
 LIVE, DONE, ABANDONED, STALE, NONE = 0, 2, 3, 4, 6

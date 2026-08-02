@@ -100,11 +100,13 @@ Stage: II·b Evidence
 
 ## Browser sessions (interaction-heavy steps)
 
-Some steps beat chat in a local browser page — Stage IV forms review is
-mandatory-canonical (61+ structured fields); Stage II·b citation-portfolio
-selection is optional. The `openniw` pip companion serves the page over the
-case folder ONLY: 127.0.0.1, random token in the URL, no account, no
-database, no AI — you remain the brain.
+Some steps beat chat in a local browser page — Stage I opens with the
+peer-benchmark chart (`ui benchmark`, owns benchmark.json); Stage IV forms
+review is mandatory-canonical (61+ structured fields, `ui forms`); Stage
+II·b citation-portfolio selection is optional (`ui citations`). The
+`openniw` pip companion serves the page over the case folder ONLY:
+127.0.0.1, random token in the URL, no account, no database, no AI — you
+remain the brain.
 
 **Ensure the companion once**: `openniw --version`. If missing, try in
 order: `uv tool install openniw` → `pipx install openniw` →
@@ -168,15 +170,17 @@ outcome in STATE.md, then DELETE the sentinel.
 Work stages in order; each has a reference file — read it when you reach the
 stage (not before):
 
-**I. Evaluate** — read `references/evaluation.md`. Ask for links, not
-paperwork (Scholar URL pasted in chat; files into `sources/`). Fetch,
-archive every fetched page under `sources/fetched/`, consolidate into
-profile.md — then AUTO-download all the applicant's papers
+**I. Evaluate** — read `references/evaluation.md`. Open with the visual
+peer benchmark (`openniw ui benchmark` — the user compares their numbers
+against 7,400+ approved cases; results land in benchmark.json). Ask for
+links, not paperwork (Scholar URL pasted in chat; files into `sources/`).
+Fetch, archive every fetched page under `sources/fetched/`, consolidate
+into profile.md — then AUTO-download all the applicant's papers
 (`openniw papers`, fallback `scripts/fetch_papers.py`) into
 `sources/papers/` and ask the user to manually supply only what couldn't
-be fetched. Write the tiered, prong-by-prong evaluation. If the tier is
-borderline/not-yet, present the strengthening plan and let the user decide
-before continuing.
+be fetched. Write the tiered, prong-by-prong evaluation, folding the
+benchmark percentiles into Calibration. If the tier is borderline/not-yet,
+present the strengthening plan and let the user decide before continuing.
 
 **II·a. Endeavor** — read `references/endeavor.md`. Compose the canonical
 sentence from method/topic/impact, score the six executability elements,

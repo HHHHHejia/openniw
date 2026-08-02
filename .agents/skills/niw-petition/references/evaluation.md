@@ -3,6 +3,22 @@
 Produce an honest, prong-by-prong read of the applicant's NIW case from their
 public record. Write the result to `evaluation.md` in the case folder.
 
+## Open with the benchmark page (default first move)
+
+Before (or while) gathering sources, launch the visual peer comparison —
+`openniw ui benchmark` (Browser sessions rules apply; step owns
+`benchmark.json`). It plots 7,400+ publicly posted approved I-140 cases:
+the user picks category/field and enters citations/papers, sees the
+monthly distribution bands of approved peers with their own number as a
+reference line, and clicks "Save to my case". The page's copy is
+survivor-bias-safe (percentile among APPROVED cases, never an approval
+probability) — keep your own language consistent with that.
+
+After the session, read `benchmark.json` and use its `computed` block
+(percentile, peer medians, low-citation precedents) as hard numbers in the
+Calibration section of evaluation.md. No browser/companion? Skip the page;
+calibrate from the guidance below instead.
+
 ## Gather sources first
 
 Ask only for links/files, never for typed-out lists — and be explicit about

@@ -2,11 +2,12 @@
 import { useState } from "react";
 import { api, withToken } from "@/lib/api";
 
-export function Header({ active }: { active: "overview" | "forms" | "citations" }) {
+export function Header({ active }: { active: "overview" | "benchmark" | "forms" | "citations" }) {
   const tabs: [string, string, string][] = [
     ["overview", "Overview", "/"],
-    ["forms", "IV · Forms", "/forms/"],
+    ["benchmark", "I · Benchmark", "/benchmark/"],
     ["citations", "II·b · Citations", "/citations/"],
+    ["forms", "IV · Forms", "/forms/"],
   ];
   return (
     <header className="border-b border-[--rule] mb-6 pb-3 flex items-end justify-between flex-wrap gap-3">
