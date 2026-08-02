@@ -102,25 +102,49 @@ def main() -> int:
     con = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True)
     rows = con.execute(
         """SELECT approval_date, category, general_field,
-                  citations_count, publications_count
+                  citations_count, publications_count,
+                  processing_days, premium_processing
            FROM cases
            WHERE approval_date IS NOT NULL
              AND citations_count IS NOT NULL
              AND needs_review = 0""").fetchall()
+
+    # --- precomputed aggregates for the insight cards / weekly pulse -----
+    def one(sql: str):
+        return con.execute(sql).fetchone()
+
+    rec_rows = con.execute(
+        """SELECT rec_letters_count, COUNT(*) FROM cases
+           WHERE category='NIW' AND rec_letters_count IS NOT NULL
+           GROUP BY 1 ORDER BY 1""").fetchall()
+    rec_hist = {str(min(int(k), 10)): 0 for k, _ in rec_rows}
+    for k, n in rec_rows:
+        rec_hist[str(min(int(k), 10))] = rec_hist.get(str(min(int(k), 10)), 0) + n
+    rfe = one("""SELECT ROUND(100.0*SUM(rfe='received_overcome')
+                        / SUM(rfe IN ('none','received_overcome')), 1),
+                        SUM(rfe IN ('none','received_overcome'))
+                 FROM cases WHERE category='NIW' AND approval_date>='2024'""")
+    weekly = con.execute(
+        """SELECT week_start, total_approvals, niw_count, niw_cite_med
+           FROM weekly_stats WHERE week_start IS NOT NULL
+           ORDER BY week_start DESC LIMIT 12""").fetchall()
     con.close()
 
     groups = [name for name, _ in FIELD_GROUPS] + ["Other fields"]
     g_idx = {g: i for i, g in enumerate(groups)}
     categories: list[str] = []
     cases = []
-    for date, cat, field, cites, pubs in rows:
+    PREMIUM = {"yes": 1, "upfront": 1, "upgrade": 2}
+    for date, cat, field, cites, pubs, pdays, prem in rows:
         ym = ym_index(date)
         if ym is None or ym < 0:
             continue
         if cat not in categories:
             categories.append(cat)
         cases.append([ym, categories.index(cat), g_idx[field_group(field)],
-                      int(cites), int(pubs) if pubs is not None else -1])
+                      int(cites), int(pubs) if pubs is not None else -1,
+                      int(pdays) if pdays is not None else -1,
+                      PREMIUM.get(prem, 0)])
 
     cases.sort()
     out = {
@@ -131,7 +155,15 @@ def main() -> int:
         "ym0": f"{YM0[0]}-{YM0[1]:02d}",
         "categories": categories,
         "fields": groups,
-        "columns": ["ym", "category", "field", "citations", "publications"],
+        "columns": ["ym", "category", "field", "citations", "publications",
+                    "processing_days", "premium"],
+        "premium_codes": {"0": "none or undisclosed", "1": "premium",
+                          "2": "mid-case upgrade"},
+        "aggregates": {
+            "rec_letters_niw_hist": rec_hist,
+            "rfe_overcome_2024": {"rate": rfe[0], "n": rfe[1]},
+            "weekly": [[w, t, n, m] for w, t, n, m in weekly],
+        },
         "cases": cases,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)

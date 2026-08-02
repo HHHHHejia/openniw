@@ -21,8 +21,8 @@ def test_benchmark_dataset_shape():
     p = REPO / "frontend" / "public" / "benchmark-data.json"
     assert p.exists(), "run scripts/export_benchmark.py"
     d = json.loads(p.read_text())
-    assert d["columns"] == ["ym", "category", "field",
-                            "citations", "publications"]
+    assert d["columns"] == ["ym", "category", "field", "citations",
+                            "publications", "processing_days", "premium"]
     assert len(d["cases"]) > 7000
     assert "NIW" in d["categories"]
     assert "survivor" in d["source"].lower() or "Approved" in d["source"]
@@ -30,7 +30,12 @@ def test_benchmark_dataset_shape():
     assert all(isinstance(v, int) for v in d["cases"][0])
     # no raw narrative fields anywhere
     assert set(d.keys()) == {"generated", "source", "ym0", "categories",
-                             "fields", "columns", "cases"}
+                             "fields", "columns", "premium_codes",
+                             "aggregates", "cases"}
+    agg = d["aggregates"]
+    assert agg["rfe_overcome_2024"]["rate"] > 0
+    assert len(agg["weekly"]) > 0
+    assert sum(agg["rec_letters_niw_hist"].values()) > 2000
 
 
 def test_benchmark_step_registered():
