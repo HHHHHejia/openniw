@@ -2,12 +2,12 @@ import { SiteNav, SiteFooter } from "@/components/nav";
 import { CopyBlock } from "@/components/copy";
 
 const STAGES: [string, string, string][] = [
-  ["I", "Evaluate", "Paste your Google Scholar link. Your agent fetches your record, downloads your papers, benchmarks you against 7,458 approved cases, and gives an honest, prong-by-prong read."],
-  ["II·a", "Endeavor", "Compose and freeze the one canonical endeavor sentence — every document quotes it verbatim, because USCIS treats rewording as a material-change risk."],
+  ["I", "Evaluate", "Paste your Google Scholar link. Your agent fetches your record, downloads your papers, benchmarks you against 7,458 approved cases, and gives an honest read — Dhanasar prong-by-prong (NIW) or criterion-by-criterion (EB-1A / O-1A)."],
+  ["II·a", "Frame", "Compose and freeze the case frame — the canonical NIW endeavor sentence, the EB-1A field + claim frame, or the O-1 petitioner structure and itinerary scope. Every later document quotes it verbatim; rewording is a material-change risk."],
   ["II·b", "Evidence", "A personalized checklist plus the citation pipeline: every citing paper harvested, screened for independence, verified in full text, scored by depth of use — you pick the best ~10 in a browser page."],
-  ["III", "Draft", "Proposed Endeavor Statement → support letters → the Petition Letter (a Dhanasar three-prong brief, every claim bound to an exhibit) → Index of Exhibits."],
-  ["IV", "Forms", "Your agent pre-fills the official PDFs' 61-field answer set (never guessing identity numbers), then opens a browser wizard: verify amber AI fields card by card, generate the real I-140 and companions, inspect them live."],
-  ["V", "Package", "A twelve-rule mock-officer pass, then the ZIP in USCIS-recommended assembly order with fees and the correct lockbox address picked by your state and premium choice."],
+  ["III", "Draft", "Support letters plus the petition letter in the shape officers expect — a Dhanasar three-prong brief (NIW), a Kazarian two-step brief with a Final Merits section (EB-1A), or the petitioner support letter + consultation package (O-1A) — every claim bound to an exhibit."],
+  ["IV", "Forms", "NIW: a browser wizard verifies the 61-field answer set card by card and generates the real I-140 and companions. EB-1A / O-1A: precise field guides for the I-140 (E11) and I-129 — identity numbers are never guessed, in any category."],
+  ["V", "Package", "A mock-officer red-team pass, then the filing package in USCIS-recommended assembly order — with current fees and the correct filing address for your category, state, and premium choice."],
 ];
 
 export default function Landing() {
@@ -22,13 +22,15 @@ export default function Landing() {
         </div>
         <h1 className="text-4xl leading-tight mb-4"
             style={{ fontFamily: "var(--font-serif), serif" }}>
-          An open-source <em>skill</em> for your NIW application.
+          Open-source <em>skills</em> for your NIW · EB-1A · O-1
+          application.
         </h1>
         <div className="grid gap-2 text-lg text-[#333] leading-relaxed mb-6 max-w-2xl">
           <p>
-            Install it into <b>Claude Code, Codex, or Cursor</b> — the AI
-            you already have — and it organizes your <b>EB-2 NIW
-            self-petition</b> end to end.
+            Install them into <b>Claude Code, Codex, or Cursor</b> — the AI
+            you already have — and they organize your <b>EB-2 NIW or
+            EB-1A self-petition</b>, or your <b>O-1A petition kit</b>,
+            end to end.
           </p>
           <p>
             <b>Everything stays in a folder on your computer.</b> No
@@ -37,11 +39,6 @@ export default function Landing() {
           <p>
             <b>Free, forever.</b> We charge nothing and provide no
             service — <b>you</b> prepare and file your own petition.
-          </p>
-          <p>
-            <b>New:</b> the same repo now ships beta skills for{" "}
-            <b>EB-1A</b> and <b>O-1A</b> — same install, same
-            local-folder privacy, same six-stage workflow.
           </p>
         </div>
         <div className="flex gap-3 flex-wrap">
@@ -58,13 +55,13 @@ export default function Landing() {
         <div className="border border-[--rule] bg-white px-6 py-5 mb-4">
           <pre className="text-xs leading-relaxed overflow-x-auto font-mono text-[#333]">{`
   ┌──────────────────────────────────────┐
-  │  your agent + the niw-petition skill │   the BRAIN — judgment,
-  │  (Claude Code / Codex / Cursor …)    │   drafting, conversation
+  │  your agent + a petition skill       │   the BRAIN — judgment,
+  │  (niw / eb1a / o1 · any major agent) │   drafting, conversation
   └──────┬─────────────────────┬─────────┘
  reads/   │                    │ opens at structured steps
  writes   ▼                    ▼
   ┌────────────┐   ┌──────────────────────────┐
-  │ niw-case/  │◄──┤ local browser pages      │   the HANDS — intake,
+  │ your case/ │◄──┤ local browser pages      │   the HANDS — intake,
   │ your files │   │ (run on 127.0.0.1 only)  │   benchmark, citation
   │ = the only │   │ + deterministic PDF fill │   picks, forms wizard
   │  storage   │   └──────────────────────────┘
@@ -72,7 +69,7 @@ export default function Landing() {
         </div>
         <ul className="grid gap-2 text-[#333]">
           <li className="border-l-2 border-[--docket] pl-3">
-            <b>It&apos;s a skill, not an app.</b> The whole thing is a folder
+            <b>They&apos;re skills, not an app.</b> The whole thing is a folder
             of markdown instructions and small scripts that your agent
             reads — you can audit every line on GitHub in ten minutes.
           </li>
@@ -124,7 +121,7 @@ export default function Landing() {
         </h2>
         <div className="border border-[--docket] bg-[--field] px-6 py-5 mb-4">
           <div className="docket-line text-[--docket] mb-2">
-            1 · Add the skill to your agent
+            1 · Add the skills to your agent
           </div>
           <CopyBlock copyText="npx skills add HHHHHejia/openniw">npx skills add HHHHHejia/openniw</CopyBlock>
           <p className="text-xs text-[#4f5a55]">
@@ -141,9 +138,9 @@ export default function Landing() {
           <div className="docket-line text-[--docket] mb-2">
             2 · Say the magic words
           </div>
-          <CopyBlock copyText={"mkdir my-niw && cd my-niw\nclaude"}
+          <CopyBlock copyText={"mkdir my-case && cd my-case\nclaude"}
                      className="bg-[--field] border border-[--rule]">
-            {"mkdir my-niw && cd my-niw\nclaude        # or your agent of choice\n> 帮我准备 NIW 申请   /   evaluate my NIW case"}
+            {"mkdir my-case && cd my-case\nclaude        # or your agent of choice\n> 帮我准备 NIW 申请 / evaluate my EB-1A case / prepare my O-1 petition"}
           </CopyBlock>
           <p className="text-xs text-[#4f5a55]">
             The skill opens a browser intake page for your links and files,
@@ -159,8 +156,10 @@ export default function Landing() {
           <p className="text-sm text-[#333] leading-relaxed">
             Nothing, beyond what you already pay: the project is MIT-licensed
             and the AI is your own subscription. Your actual USCIS filing
-            fees (2026: I-140 $715 + $300 Asylum Program Fee; optional
-            premium processing $2,965) go to the government, not to us.
+            fees (2026: I-140 $715 + $300 Asylum Program Fee for NIW /
+            EB-1A self-petitions; O-1&apos;s I-129 $1,055 + an
+            employer-size-based fee; optional premium processing $2,965)
+            go to the government, not to us.
           </p>
         </div>
       </section>

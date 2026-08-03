@@ -1,25 +1,23 @@
-# OpenNIW
+# OpenNIW — NIW · EB-1A · O-1
 
-**A free, open-source tool that helps you organize and speed up your own
-EB-2 National Interest Waiver (NIW) self-petition — your coding agent does
-the organizing, a local folder is the case file, and a browser wizard
-appears exactly when a GUI beats chat.**
-
-**Now also ships two sibling skills in the same repo: `eb1a-petition`
-(EB-1A extraordinary ability, beta) and `o1-petition` (O-1A petition kit,
-beta) — same install, same local-folder privacy, same six-stage workflow.**
+**Free, open-source agent skills that help you organize and speed up your
+own U.S. immigration petition — the EB-2 NIW and EB-1A self-petitions, and
+the O-1A petition kit. Your coding agent does the organizing, a local
+folder is the case file, and a browser wizard appears exactly when a GUI
+beats chat.**
 
 Website: **[openniw.com](https://openniw.com)** — project intro, install
 guide, and a free no-signup statistical evaluation against 7,458 approved cases
 (fully static; source in [webpage/](webpage/)).
 
-OpenNIW is an [Agent Skill](https://agentskills.io). Install it into
+OpenNIW ships three [Agent Skills](https://agentskills.io) —
+`niw-petition`, `eb1a-petition`, and `o1-petition`. Install them into
 Claude Code, Codex, Cursor, or any Agent-Skills tool, and your existing AI
 subscription runs the entire preparation workflow — evaluation, evidence,
 drafting, official forms, filing package — with **zero configuration**:
 
 - **No account.** Nothing to sign up for.
-- **No database.** Your case lives in a `niw-case/` folder you own.
+- **No database.** Your case lives in a local case folder you own.
 - **No API key.** Your agent's subscription is the AI.
 - **No server.** A localhost companion opens only when you reach a
   form-heavy step, and only talks to your case folder.
@@ -67,20 +65,20 @@ applicant or practitioner — we would love your review.**
 
 ```
         ┌──────────────────────────────────────┐
-        │   Your agent + the niw-petition      │   the BRAIN — conversation,
-        │   skill (Claude Code / Codex / …)    │   judgment, drafting, prefill
+        │   Your agent + a petition skill      │   the BRAIN — conversation,
+        │   (niw / eb1a / o1 · any agent)      │   judgment, drafting, prefill
         └──────┬─────────────────────┬─────────┘
    reads/writes│                     │ launches at interaction-heavy steps
                ▼                     ▼
         ┌────────────┐   ┌───────────────────────────┐
-        │ niw-case/  │◄──┤ openniw (pip companion)   │  the ORGAN — browser
+        │ your case/ │◄──┤ openniw (pip companion)   │  the ORGAN — browser
         │ STATE.md   │   │ localhost form wizard +   │  wizard & deterministic
         │ case.json  │   │ citation review + PDF     │  compute; zero LLM,
         │ forms/ …   │   │ fill / package / harvest  │  zero keys, zero DB
         └────────────┘   └───────────────────────────┘
 ```
 
-- The **skill** drives all five stages and survives weeks of short sessions:
+- Each **skill** drives all six stages and survives weeks of short sessions:
   `STATE.md` in the case folder is read at every session start and updated
   after every step, so any session resumes exactly where the last one ended.
 - The **companion** (`pip install openniw`, installed by your agent when
@@ -102,21 +100,27 @@ applicant or practitioner — we would love your review.**
   tomorrow, and the agent reconciles what you did from the session file.
   If the companion can't be installed (offline/sandboxed), the skill falls
   back to pure-stdlib scripts bundled with it — the GUI is an accelerator,
-  never a requirement.
+  never a requirement. Intake, benchmark, and citation pages work for all
+  three categories; the forms wizard, PDF fill, and package ZIP are
+  NIW-only today (EB-1A / O-1A run Stages IV–V as guided chat + field
+  guides — wizard support is on the roadmap).
 
-## The five stages
+## The six stages
 
-| Stage | What happens |
-|---|---|
-| **I — Evaluate** | Paste your Scholar link / homepage / CV → tiered, prong-by-prong evaluation with strengthening plan. |
-| **II·a — Endeavor** | Compose and FREEZE the one canonical endeavor sentence (method + topic + impact) — every document quotes it verbatim. |
-| **II·b — Evidence** | Personalized checklist; citation pipeline (harvest → independence screen → the agent verifies full text and scores depth of use → browser review to pick the portfolio). |
-| **III — Draft** | Proposed Endeavor Statement → support letters → Petition Letter (Dhanasar three-prong brief, cited to exhibits) → Index of Exhibits. |
-| **IV — Forms** | The agent pre-fills `forms/answers.json` (never guessing identity numbers), then opens the browser wizard: review amber AI fields, fill the official PDFs, inspect them live. |
-| **V — Package** | Twelve-rule RFE red-team pass, then the ZIP in lockbox order with fees and the correct USCIS lockbox address picked by state + premium status. |
+All three skills follow the same shape; each stage adapts to its law:
 
-Plus an **RFE module**: paste an RFE letter and get a structured response
-plan and supplemental-statement outline.
+| Stage | NIW | EB-1A | O-1A |
+|---|---|---|---|
+| **I — Evaluate** | Tiered, Dhanasar prong-by-prong read | All ten 204.5(h)(3) criteria + Kazarian two-step test | 8 O-1A criteria + petitioner-feasibility read |
+| **II·a — Frame** | FREEZE the canonical endeavor sentence | FREEZE field definition + target criteria + continue-work statement | FREEZE petitioner structure + field + role/itinerary + consultation plan |
+| **II·b — Evidence** | Personalized checklist; citation pipeline (harvest → independence screen → full-text verify → browser portfolio pick) — shared by all three | ← same | ← same, plus contracts / deal memos / itinerary |
+| **III — Draft** | PES → support letters → Dhanasar three-prong Petition Letter → exhibit index | Continue-work statement → letters → Kazarian two-step letter with Final Merits section | Petitioner support letter → consultation request → itinerary → expert letters |
+| **IV — Forms** | Browser wizard over the 61-field answer set → deterministic I-140/ETA-9089 PDF fill | I-140 (E11) field-by-field guide | I-129 + O supplement field guide |
+| **V — Package** | ZIP in lockbox order, state+premium-aware address | Assembly checklist, standard-vs-premium lockbox tables | Signature-ready hand-off kit for the petitioner |
+
+Every skill starts each stage with an RFE-prevention mindset and includes a
+full **RFE module**: paste an RFE letter and get a structured response plan
+and supplemental-statement outline.
 
 ## What makes the drafting good
 
@@ -132,6 +136,11 @@ see [docs/analysis/](docs/analysis/)):
 - RFE-prevention rules are built in: no uncorroborated third-party claims,
   no diminishing denominators, citation depth over citer prestige, legal
   authorities in footnotes, and a pre-filing mock-officer pass.
+- The EB-1A and O-1A letters follow their categories' expected
+  architectures — the Kazarian two-step brief with an explicit Final
+  Merits section, and the criterion-by-criterion petitioner support
+  letter with consultation package — built from cited primary sources
+  and MIT-licensed open materials (see References & acknowledgments).
 - The AI never invents facts — anything missing becomes an explicit `[TODO]`
   or a question to you.
 
@@ -141,6 +150,14 @@ see [docs/analysis/](docs/analysis/)):
   petition letter + evidence. Fees: I-140 **$715** + Asylum Program Fee
   **$300** (self-petitioner) = **$1,015**; optional premium processing
   (I-907) **$2,965**, 45 business days.
+- EB-1A package: same I-140 fees ($715 + $300 self-petitioner), but **no
+  ETA-9089 pages** and no ability-to-pay evidence; premium is **15
+  business days** (vs NIW's 45) — and the premium lockbox state split
+  *differs* from the standard split.
+- O-1A package: Form I-129 + O supplement, filed by the **employer or
+  agent** (never self-petitioned). I-129 (O) **$1,055** ($530 small
+  employer/nonprofit) + Asylum Program Fee by employer size; premium
+  **$2,965**, 15 business days; consultation letter required.
 - The package README and the wizard pick the correct USCIS lockbox
   automatically (standard: Dallas/Chicago; premium: Phoenix/Elgin — premium
   filings use a *different* lockbox) and follow the USCIS-recommended
