@@ -270,7 +270,10 @@ def _appendix_a(a: A) -> dict[str, Any]:
 
 def _final_determination(a: A) -> dict[str, Any]:
     # NIW: DOL never processes this page; USCIS wants it attached with the
-    # worker identified and signed by the petitioner. DOL-only fields stay blank.
+    # worker identified and signed by BOTH the petitioner and the
+    # beneficiary (same person when self-petitioning). DOL-only fields and
+    # the attorney block stay blank; signatures and sign-dates are wet-ink
+    # on signing day (they surface in the required_unfilled report).
     return {
         "5  Foreign Workers Last family Name": a.get("beneficiary.family_name"),
         "6  Foreign Workers First given Name": a.get("beneficiary.given_name"),
@@ -278,6 +281,11 @@ def _final_determination(a: A) -> dict[str, Any]:
         "8  Job Title": a.get("employment.job_title"),
         "9  SOC Code": a.get("employment.soc_code"),
         "10 SOC Occupational Title": a.get("employment.soc_title"),
+        # Employer/petitioner declaration block (self-petitioner = beneficiary)
+        "1 Last family Name": a.get("beneficiary.family_name"),
+        "2 First given Name_2": a.get("beneficiary.given_name"),
+        "3 Middle Initial_2": (a.get("beneficiary.middle_name") or "")[:1] or None,
+        "4 Title": "Self-petitioner",
     }
 
 
@@ -361,13 +369,39 @@ def fill(form_code: str, answers: A, blank_dir: pathlib.Path,
     except Exception:
         pass
 
+    # Required-flagged PDF fields still blank after the fill — surface what
+    # each one needs instead of shipping silent blanks.
+    required_unfilled: list[dict[str, str]] = []
+    seen_req: set[tuple[str, str]] = set()
+    for full_name, f in fields.items():
+        if not (int(f.get("/Ff") or 0) & 2):
+            continue
+        if updates.get(full_name):
+            continue
+        label = str(f.get("/TU") or full_name.split(".")[-1]).strip()
+        low = label.lower()
+        if "signature" in low:
+            action = "sign by hand in black ink on signing day"
+        elif "date signed" in low:
+            action = "write the date by hand when you sign"
+        elif "attorney" in low or "agent" in low or "firm" in low:
+            action = "leave blank unless an attorney represents you"
+        else:
+            action = "complete by hand"
+        key = (label, action)
+        if key in seen_req:
+            continue
+        seen_req.add(key)
+        required_unfilled.append({"field": label, "action": action})
+
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / f"{form_code}-filled.pdf"
     buf = io.BytesIO()
     writer.write(buf)
     out_path.write_bytes(buf.getvalue())
     return {"output": str(out_path), "filled": len(updates),
-            "unmatched": unmatched, "warnings": warnings}
+            "unmatched": unmatched, "warnings": warnings,
+            "required_unfilled": required_unfilled}
 
 
 def main() -> int:

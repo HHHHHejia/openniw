@@ -146,6 +146,8 @@ def _cmd_fill(ns) -> int:
               f"{len(report['unmatched_fields'])} unmatched -> {out}")
         for w in report["warnings"]:
             print(f"  warning: {w}")
+        for q in report.get("required_unfilled", []):
+            print(f"  required, still blank: {q['field']} — {q['action']}")
     existing, _ = case.read_json(case.fill_report)
     existing.update(reports)
     case.write_json(case.fill_report, existing)

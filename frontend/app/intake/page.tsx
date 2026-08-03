@@ -208,8 +208,8 @@ export default function IntakePage() {
       </div>
 
       <FinishBar
+        stepId="intake"
         beforeFinish={save}
-        doneMessage={"Saved. Now RETURN TO YOUR AGENT (Claude Code / Codex) — it will fetch and read everything you provided, download your papers, and come back to you with an honest evaluation. That part is judgment, not form-filling, so it happens in the chat."}
         summary={() => ({
           intake: {
             links: Object.fromEntries(

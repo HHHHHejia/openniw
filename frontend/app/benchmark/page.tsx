@@ -574,6 +574,7 @@ export default function BenchmarkPage() {
       </div>
 
       <FinishBar
+        stepId="benchmark"
         beforeFinish={async () => { if (myCites != null || myPubs != null) await save(); }}
         summary={() => ({
           benchmark: { category, field, citations: myCites, publications: myPubs,

@@ -100,10 +100,12 @@ export function Header({ active, progress }: {
                       : st === "current" ? "text-[--ink]" : "text-[#9aa39e]"}`}>
                   {s.id} {s.name}
                 </div>
-                <div className="text-[0.65rem] leading-none"
-                     style={{ color: clickable ? "#1f6f54" : "#9aa39e" }}>
-                  {clickable ? (s.page || "open") : "in chat"}
-                </div>
+                <span className="border px-1 py-px text-[0.6rem] leading-none"
+                      style={clickable
+                        ? { color: "#1f6f54", borderColor: "#1f6f54", background: "#fff" }
+                        : { color: "#8a8f8a", borderColor: "#d8d5cc" }}>
+                  {clickable ? "browser" : "agent chat"}
+                </span>
               </div>
             );
             return (
@@ -142,12 +144,40 @@ export function Header({ active, progress }: {
   );
 }
 
-export function FinishBar({ summary, beforeFinish, doneMessage }: {
+// What each browser step is called, what the agent does right after it,
+// and what comes later — drives the finish overlay's handoff flow.
+const STEP_FLOW: Record<string, { name: string; agentNext: string; later: string }> = {
+  intake: {
+    name: "Intake",
+    agentNext: "fetch and read everything you provided, download your papers, and build your profile",
+    later: "it opens the benchmark comparison page for you",
+  },
+  benchmark: {
+    name: "Peer benchmark",
+    agentNext: "fold your percentiles into an honest, prong-by-prong written evaluation",
+    later: "Stage II·a — defining your endeavor, in chat",
+  },
+  citations: {
+    name: "Citation review",
+    agentNext: "turn your picks into the Citation Examples document with highlighted PDFs",
+    later: "drafting continues in chat",
+  },
+  forms: {
+    name: "Forms wizard",
+    agentNext: "review your answers, list any hand-fill fields, and walk you through printing and signing",
+    later: "Stage V — assembling the filing package",
+  },
+};
+
+export function FinishBar({ summary, beforeFinish, stepId }: {
   summary: () => Record<string, any>;
   beforeFinish?: () => Promise<void>;
-  doneMessage?: string;
+  stepId?: "intake" | "benchmark" | "citations" | "forms";
 }) {
   const [state, setState] = useState<"open" | "busy" | "done" | "later">("open");
+  const flow = STEP_FLOW[stepId || ""] || {
+    name: "This step", agentNext: "pick up from your case folder", later: "the next stage",
+  };
 
   async function finish(kind: "done" | "later") {
     setState("busy");
@@ -163,17 +193,51 @@ export function FinishBar({ summary, beforeFinish, doneMessage }: {
   }
 
   if (state === "done" || state === "later") {
+    const done = state === "done";
     return (
-      <div className="fixed inset-0 bg-[--paper] z-50 grid place-items-center">
-        <div className="text-center max-w-md px-6">
-          <div className="docket-line text-[--docket] mb-3">
-            {state === "done" ? "Session finished" : "Saved for later"}
+      <div className="fixed inset-0 bg-[--paper] z-50 grid place-items-center overflow-y-auto">
+        <div className="max-w-lg px-6 py-10 w-full">
+          <div className="docket-line text-[--docket] mb-2 text-center">
+            {done ? `${flow.name} — complete ✓` : `${flow.name} — saved for later`}
           </div>
-          <p className="text-lg" style={{ fontFamily: "var(--font-serif), serif" }}>
-            {state === "done"
-              ? (doneMessage ||
-                 "Everything is saved to your case folder. Close this tab and continue in your chat.")
-              : "Your progress is saved. Close this tab — you can reopen the session from your chat anytime."}
+          <h2 className="text-3xl text-center mb-8"
+              style={{ fontFamily: "var(--font-serif), serif" }}>
+            {done ? "Now return to your agent" : "Come back anytime"}
+          </h2>
+
+          {/* handoff flow: where you were → where to go now → what's later */}
+          <div className="grid gap-2 mb-8">
+            <div className="border border-[--rule] bg-white px-4 py-3 flex items-center gap-3 opacity-70">
+              <span className="docket-line border px-1.5 py-0.5 shrink-0"
+                    style={{ color: "#1f6f54", borderColor: "#1f6f54" }}>browser</span>
+              <span className="text-sm">
+                {flow.name} — {done ? "done ✓" : "progress saved"}
+              </span>
+            </div>
+            <div className="text-center docket-line text-[#4f5a55]">↓</div>
+            <div className="border-2 border-[--docket] bg-white px-4 py-3 flex items-center gap-3">
+              <span className="docket-line border px-1.5 py-0.5 shrink-0 verify-nag"
+                    style={{ color: "#fff", background: "#1f6f54", borderColor: "#1f6f54" }}>
+                now: agent chat
+              </span>
+              <span className="text-sm">
+                Switch back to your terminal (Claude Code / Codex)
+                {done ? <> — your agent will {flow.agentNext}.</> : " whenever you're ready."}
+              </span>
+            </div>
+            {done && (
+              <>
+                <div className="text-center docket-line text-[#4f5a55]">↓</div>
+                <div className="border border-[--rule] bg-[--field] px-4 py-3 flex items-center gap-3 opacity-70">
+                  <span className="docket-line border border-[--rule] px-1.5 py-0.5 shrink-0 text-[#4f5a55]">later</span>
+                  <span className="text-sm text-[#4f5a55]">{flow.later}</span>
+                </div>
+              </>
+            )}
+          </div>
+
+          <p className="text-xs text-center text-[#4f5a55]">
+            Everything is saved in your case folder. You can close this tab.
           </p>
         </div>
       </div>

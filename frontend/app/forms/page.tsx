@@ -492,6 +492,18 @@ export default function FormsPage() {
                   {(r.warnings || []).map((w: string, i: number) => (
                     <div key={i} className="text-[--stamp]">{w}</div>
                   ))}
+                  {(r.required_unfilled || []).length > 0 && (
+                    <div className="mt-1.5 border-l-2 border-[--stamp] pl-2 grid gap-0.5">
+                      <span className="text-[--stamp]">
+                        This form&apos;s required fields still blank — each needs:
+                      </span>
+                      {(r.required_unfilled || []).map((q: any, i: number) => (
+                        <span key={i}>
+                          <b>{q.field}</b> — {q.action}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               )}
             </div>
@@ -681,6 +693,7 @@ export default function FormsPage() {
 
           {card.kind === "finish" && (
             <FinishBar
+              stepId="forms"
               beforeFinish={async () => { await save(); }}
               summary={() => ({
                 fields_edited: editedKeys.current.size,

@@ -180,6 +180,7 @@ export default function CitationsPage() {
       </div>
 
       <FinishBar
+        stepId="citations"
         beforeFinish={async () => { await save(); }}
         summary={() => ({ citations_selected: picked })}
       />
