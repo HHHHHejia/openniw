@@ -194,6 +194,19 @@ export default function Landing() {
             </p>
           </div>
         </div>
+        <div className="border border-[--docket] bg-[--field] px-5 py-4 mb-4">
+          <div className="docket-line text-[--docket] mb-1.5">
+            OpenO1 · OpenEB1A · OpenH1B · Open-anything-immigration
+          </div>
+          <p className="text-sm leading-relaxed">
+            We would love to build these — but they&apos;re beyond our
+            firsthand knowledge. The framework is fully reusable (agent
+            skill + local companion + approved-case benchmark); what each
+            new category needs is someone who has actually been through
+            it: an applicant with a filed case, or a practitioner. If
+            that&apos;s you, reach out — let&apos;s build the next one together.
+          </p>
+        </div>
         <p className="docket-line text-[#4f5a55]">
           Contact — WeChat: <span className="text-[--ink]">LittleGeng</span>
           {" · "}X:{" "}

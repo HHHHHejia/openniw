@@ -182,11 +182,18 @@ It gets better through three kinds of contribution:
    into the skill's playbooks. Open an issue or reach out directly —
    credited or anonymous, your choice.
 
-## Contact
+## Contact & collaboration
 
 - WeChat: `LittleGeng`
 - X: [x.com/hejia0530](https://x.com/hejia0530)
 - GitHub issues: the preferred channel for anything public
+
+**OpenO1 · OpenEB1A · OpenH1B · Open-anything-immigration** — we would
+love to build them, but they are beyond our firsthand knowledge. The
+whole framework is reusable (agent skill + local companion + approved-case
+benchmark); what each new category needs is someone who has actually been
+through it — an applicant with a filed case, or a practitioner. If that's
+you, reach out and let's build the next one together.
 
 ## License
 
