@@ -4,6 +4,10 @@
 your coding agent is the paralegal, a local folder is the case file, and a
 browser wizard appears exactly when a GUI beats chat.**
 
+Website: **[openniw.com](https://openniw.com)** — project intro, install
+guide, and a free no-signup benchmark against 7,458 approved cases
+(fully static; source in [webpage/](webpage/)).
+
 OpenNIW is an [Agent Skill](https://agentskills.io). Install it into
 Claude Code, Codex, Cursor, or any Agent-Skills tool, and your existing AI
 subscription runs the entire law-firm workflow — evaluation, evidence,

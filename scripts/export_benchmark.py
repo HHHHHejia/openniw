@@ -167,7 +167,11 @@ def main() -> int:
         "cases": cases,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(out, separators=(",", ":")))
+    payload = json.dumps(out, separators=(",", ":"))
+    OUT.write_text(payload)
+    web_out = REPO / "webpage" / "public" / "benchmark-data.json"
+    if web_out.parent.is_dir():
+        web_out.write_text(payload)  # keep the public site's copy in sync
     # report
     from collections import Counter
     per_group = Counter(groups[c[2]] for c in cases)
