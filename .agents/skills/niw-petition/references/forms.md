@@ -104,9 +104,14 @@ through a USCIS online account (both options listed at uscis.gov/i-140,
 verified 2026-08-02): the same package uploads as PDFs, the fee is paid
 online, the receipt is an IOE number. Paper remains mandatory for
 premium-at-filing (I-140 + I-907 together) and for concurrent I-140 + I-485
-packages. Premium can be ADDED online later (standalone I-907 by PDF
-upload) only once an IOE receipt exists. Online filers reuse the assembly
-order below as the upload order; the lockbox tables apply to paper only.
+packages. Premium may be ADDABLE online later (standalone I-907 by PDF
+upload) once an IOE receipt exists — but SOURCES CONFLICT: USCIS "Forms
+Available to File Online" (07/24/2026) lists I-907 for an I-140 as
+paper-only. Verify that page AND the uscis.gov/i-907 direct-filing chart
+before choosing a channel, and default to paper; the same conflict is
+flagged in `rfe-response.md` R6, where a premium upgrade filed with an RFE
+response is the only speed lever. Online filers reuse the assembly order
+below as the upload order; the lockbox tables apply to paper only.
 
 ## Assembly & mailing rules
 

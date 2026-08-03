@@ -1,4 +1,11 @@
-# RFE — Prevention (at filing) and Response (if one arrives)
+# RFE Prevention — run at filing time (Stage V red team)
+
+A notice has already arrived? Read `rfe-response.md` FIRST (R1–R7,
+deadline-driven), then come back here for the pre-ship red team. The rules
+below are the FILING-side checks; at RFE time they work twice — as a
+diagnostic (each officer finding usually maps to a rule that was not satisfied
+when the case was filed) and, at R6, as the quality gate the assembled
+response package must clear before it is printed.
 
 ## Twelve prevention rules (check EVERY case against these before assembly)
 
@@ -57,48 +64,19 @@ dates consistent across ALL documents; titles consistent across resume, HR
 letter, and forms. Close with a verdict line: READY / NEEDS FIXES / MAJOR
 ISSUES. Approach with skepticism, not trust.
 
-## If an RFE arrives
+## The three prevention habits that make an RFE survivable later
 
-Read the letter and produce `rfe/response-plan.md`:
-1. **Anatomy**: which prongs challenged; each deficiency quoted and
-   classified (missing-corroboration / comparative-test error / ratio
-   arithmetic / authorship misreading / foreign-venue-resources /
-   employer-only-benefit / urgency-not-shown), plus its root cause (8):
-   no evidence submitted · wrong evidence type · evidence too weak ·
-   missing sub-element · legal misframing · factual gap · self-serving
-   evidence only · stale/irrelevant evidence — the root cause dictates the
-   fix. The RFE's "you may submit" bullets are a LITERAL checklist: answer
-   every bullet with evidence or an explicit reason it does not apply.
-2. **Officer errors to rebut** — factual misreadings and legal-standard
-   errors, each with the rebuttal + the physical proof needed.
-3. **Evidence plan** by the officer's own suggested categories; classify each
-   item pre-filing / post-filing-as-continuation (name the pre-filing thread
-   it continues) / not-worth-it.
-4. **Supplemental Personal Statement** (6 sections): endeavor restated
-   VERBATIM + firewall sentence ("This supplemental statement clarifies...
-   does not replace or materially alter..."); future plans anchored to the
-   original with start dates and means of execution; broader implications;
-   past accomplishments and interest; U.S. employment plans
-   (benefit-beyond-employer + dissemination); references weighted toward
-   U.S. government sources.
-5. **Letters plan** — each letter described by the specific RFE finding it
-   rebuts. Factual testimonials (employer/investor) are attestations, not
-   expert opinions.
-6. **Timeline** working back from the deadline: evidence for letters -8wk,
-   drafting -5wk, first draft -3wk, exhibits assembled -2wk, delivery -1wk.
-   Only ONE response submission is accepted, so everything ships at once —
-   a partial response is permitted (8 CFR 103.2(b)(11)) but is adjudicated
-   as a request for a decision on the record as-is.
-
-Drafting the response: respond in the RFE's own ORDER, mirroring its
-criterion headings; lead every point with NEW evidence ("We submit New
-Exhibit X, which shows …") — the adjudicator already read the original
-record and was not convinced; cite original + new exhibits together; every
-point gets argument AND evidence, never re-argument alone (denials
-increasingly recycle the RFE's own language against bare re-argument).
-
-Never propose rewording the endeavor. Exhibit indexes should QUOTE the RFE
-sentence each exhibit answers.
+Filing-side work that pays off only if an RFE arrives — do it now, not then:
+- **Date-class every exhibit as you file it** (rule 11). At RFE time the
+  at-time-of-filing doctrine decides what may still be used, and a case whose
+  exhibits were never date-classed has to be re-audited under deadline.
+- **Keep `documents/source-registry.md` current** (drafting.md). It becomes the
+  rebuttal-ammunition list: officer error → corrective fact → the exhibit.
+- **Ask the government-connections question at filing**, not only at RFE time:
+  letters from governmental or quasi-governmental entities are the class
+  practitioners describe as the only one able to support all three prongs (an
+  attorney-practice observation, not a USCIS rule; details in
+  `rfe-response.md`).
 
 Sources: USCIS Policy Manual Vol. 6 Pt. F Ch. 5 (prong-1 negative examples,
 verified live 2026-08-02); claim-log and RFE-response heuristics adapted

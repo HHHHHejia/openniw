@@ -1,6 +1,6 @@
 ---
 name: niw-petition
-description: Prepares a complete EB-2 NIW (National Interest Waiver) self-petition package in a local case folder — free evaluation from a Google Scholar profile or CV, evidence checklist and citation pipeline, drafting the Proposed Endeavor Statement, Petition Letter and support letters in the structure of real approved filings, filling official USCIS/DOL PDFs, and assembling the filing package. Use when the user mentions NIW, EB-2, national interest waiver, I-140 self-petition, RFE response, 国家利益豁免, or preparing a U.S. green-card petition from their research record. Document preparation only, not legal advice.
+description: Prepares a complete EB-2 NIW (National Interest Waiver) self-petition package in a local case folder — free evaluation from a Google Scholar profile or CV, evidence checklist and citation pipeline, drafting the Proposed Endeavor Statement, Petition Letter and support letters in the structure of real approved filings, filling official USCIS/DOL PDFs, assembling the filing package, and running a deadline-driven response if USCIS issues an RFE. Use when the user mentions NIW, EB-2, national interest waiver, I-140 self-petition, RFE response, Request for Evidence, NOID, 国家利益豁免, 补件, 补充材料通知, or preparing a U.S. green-card petition from their research record. Document preparation only, not legal advice.
 license: MIT
 metadata:
   source: https://github.com/HHHHHejia/openniw
@@ -33,7 +33,10 @@ niw-case/
 ├── citations/         # harvest.json, selected.md, examples.md
 ├── documents/         # pes.md, petition-letter.md, letters/, exhibit-index.md, source-registry.md
 ├── forms/             # answers.json, blank/, filled PDFs
-└── rfe/               # only if an RFE arrives: response-plan.md, drafts
+└── rfe/               # only if a notice arrives (RFE mode): letter.pdf,
+                       # response-plan.md, evidence-matrix.md, letters-plan.md,
+                       # supplemental-statement.md, response-letter.md,
+                       # exhibit-index.md, package/, sources/petition/
 ```
 
 Four standing rules, enforced at every step:
@@ -60,11 +63,10 @@ Treat every session as if it could be interrupted at any moment:
 1. **On EVERY session start**: read `STATE.md` and `case.json` before doing
    anything else — even when the user's message dives straight into a task.
    If no case folder exists yet, create it and initialize STATE.md from the
-   template below. If `.openniw/ui-session.json` exists, run
-   `openniw status` and follow the Browser sessions rules below. Then
-   announce the resume point in one sentence ("Stage II·b: 12/19 checklist
-   items provided; next: citation portfolio selection") and continue from
-   `Next actions`.
+   template below. If `.openniw/ui-session.json` exists, run `openniw status`
+   and follow the Browser sessions rules below. Then announce the resume point
+   in one sentence ("Stage II·b: 12/19 checklist items provided; next:
+   citation portfolio selection") and continue from `Next actions`.
 2. **After EVERY completed step** — a stage milestone, a generated or
    edited document, a script run, a user decision — update STATE.md
    immediately. Never batch updates for the end of the session: an
@@ -117,11 +119,11 @@ Pages: `ui intake` (Stage I opener, owns intake.json + sources/) ·
 `ui benchmark` (Stage I peer comparison, owns benchmark.json) · `ui
 citations` (Stage II·b portfolio pick, optional) · `ui forms` (Stage IV,
 mandatory-canonical: 61+ structured fields). Every page carries the global
-six-stage stepper (live from STATE.md — keep STATE.md's stage checklist
-formatted exactly as the template so the browser can parse it). The
-`openniw` pip companion serves pages over the case folder ONLY: 127.0.0.1,
-random token in the URL, no account, no database, no AI — you remain the
-brain.
+stage stepper (live from STATE.md — keep the stage checklist formatted
+exactly as the template so the browser can parse it; the seventh stage shows
+only in RFE mode, and only on companions new enough to know it). The `openniw`
+pip companion serves pages over the case folder ONLY: 127.0.0.1, random token
+in the URL, no account, no database, no AI — you remain the brain.
 
 **Ensure the companion once**: `openniw --version`. If missing, try in
 order: `uv tool install openniw` → `pipx install openniw` →
@@ -171,7 +173,7 @@ the files hold the user's last saves — log "recovered from interrupted
 browser session"; re-open only if the user wants to keep editing. Log the
 outcome in STATE.md, then DELETE the sentinel.
 
-## Workflow — five stages (mirror this checklist in STATE.md)
+## Workflow — five stages + a conditional RFE stage (mirror in STATE.md)
 
 ```
 - [ ] I    Evaluate   — sources → profile.md → evaluation.md
@@ -180,25 +182,27 @@ outcome in STATE.md, then DELETE the sentinel.
 - [ ] III  Draft      — PES → support letters → Petition Letter → index
 - [ ] IV   Forms      — answers.json → fill official PDFs
 - [ ] V    Package    — lint, assemble, filing instructions
+- [ ] R    RFE        — R1-R7, only if a notice arrives (RFE mode below)
 ```
+
+The `R` line enters STATE.md ONLY when a notice arrives (RFE mode below).
 
 Work stages in order; each has a reference file — read it when you reach the
 stage (not before):
 
 **I. Evaluate** — read `references/evaluation.md`. FIRST MOVE:
-`openniw ui intake` — the user submits links, uploads files, and answers
-the fixed basics in the browser (chat fallback: ask for links directly,
-files into `sources/`). On Done, read intake.json: fetch and archive every
-link under `sources/fetched/`, read the uploads, consolidate into
-profile.md — then AUTO-download all the applicant's papers
-(`openniw papers`, fallback `scripts/fetch_papers.py`) into
-`sources/papers/`, asking the user to supply only what couldn't be
-fetched. Pre-fill benchmark.json from the profile (citations, papers,
-field) and open `openniw ui benchmark` for the visual peer comparison
-against 7,400+ approved cases. Write the tiered, prong-by-prong
-evaluation, folding the benchmark percentiles into Calibration. If the
-tier is borderline/not-yet, present the strengthening plan and let the
-user decide before continuing.
+`openniw ui intake` — the user submits links, uploads files, and answers the
+fixed basics in the browser (chat fallback: ask for links directly, files
+into `sources/`). On Done, read intake.json: fetch and archive every link
+under `sources/fetched/`, read the uploads, consolidate into profile.md —
+then AUTO-download all the applicant's papers (`openniw papers`, fallback
+`scripts/fetch_papers.py`) into `sources/papers/`, asking the user to supply
+only what couldn't be fetched. Pre-fill benchmark.json from the profile
+(citations, papers, field) and open `openniw ui benchmark` for the visual
+peer comparison against 7,400+ approved cases. Write the tiered,
+prong-by-prong evaluation, folding the benchmark percentiles into
+Calibration. If the tier is borderline/not-yet, present the strengthening
+plan and let the user decide before continuing.
 
 **II·a. Endeavor** — read `references/endeavor.md`. Compose the canonical
 sentence from method/topic/impact, score the six executability elements,
@@ -228,16 +232,57 @@ sessions rules (`openniw ui forms`). After Done: run `openniw fill all` as
 the final deterministic pass, walk unmatched fields with the user for
 hand-filling. No browser available? Interview + `scripts/fill_form.py`.
 
-**V. Package** — before assembly, run the twelve RFE-prevention rules AND
-the claim-verification log in `references/rfe.md` against the whole case as
-a red-team pass (adopt the officer's perspective; every finding gets fixed
-or consciously accepted).
-Then produce the assembly checklist from forms.md and a final summary of
-what to print, sign, and mail.
+**V. Package** — before assembly, run the twelve RFE-prevention rules AND the
+claim-verification log in `references/rfe.md` against the whole case as a
+red-team pass (adopt the officer's perspective; every finding gets fixed or
+consciously accepted). Then produce the assembly checklist from forms.md and a
+final summary of what to print, sign, and mail. Once the case is filed and a
+decision later arrives, invite the user (once, never assume) to contribute an
+anonymous data point + suggestions — mechanics in R7 of
+`references/rfe-response.md`.
 
-**If the user has received an RFE**: skip to `references/rfe.md` (response
-section) — read the RFE letter, build the response plan and timeline, then
-reuse stages II·b–IV for the supplemental evidence and statement.
+## RFE mode (only when a notice arrives)
+
+Two triggers: (a) an in-flight case in this folder receives an RFE/NOID;
+(b) **emergency entry** — an attorney-prepared or DIY petition, no case folder,
+and the user arrives with a notice and a deadline. Read
+`references/rfe-response.md` in full before answering anything substantive.
+
+Say three things in your first reply: timeliness is RECEIVED-BY, not postmark
+(target delivery 5-7 days early) · the deadline cannot be extended, ever · one
+response, everything at once (a partial submission is legally a request for a
+decision on the record as-is).
+
+STATE.md contract, both parts:
+1. APPEND a seventh line to the stage checklist, formatted exactly like the
+   others: `- [ ] R    RFE        ← in progress`. The six original lines keep
+   their format but LOSE the `←` marker — finished stages become `[x]`; on an
+   emergency entry all six stay UNCHECKED and unmarked (never copy the
+   template's sample `[x]`/`←` values into a Path B STATE.md). The stepper
+   calls the FIRST `←`-bearing line current, so a stale marker above `R`
+   steals the highlight; companions predating the R stage show six.
+2. Add a block below the checklist — the heading
+   `## RFE response (received: YYYY-MM-DD · notice date: YYYY-MM-DD · DEADLINE: YYYY-MM-DD)`
+   then one checkbox per line: R1 Intake · R2 Diagnose · R3 Evidence ·
+   R4 Letters · R5 Statement · R6 Assemble · R7 Contribute (optional).
+
+The seven sub-steps run in chat, reusing the existing browser pages — there
+is no RFE-specific page. **R1 Intake** — copy the notice in; Path A reads the
+existing case, Path B reverse-builds case.json + a FROZEN-as-filed endeavor
+from the filed documents; take the printed deadline and lay the timeline
+backwards. **R2 Diagnose** — every challenged point quoted in the officer's
+words, root-caused, plus the officer errors to rebut. **R3 Evidence** — the
+evidence matrix + a one-item-at-a-time supply loop, date-classing everything
+and refreshing the citation examples. **R4 Letters** / **R5 Statement** — one
+row per letter tied to the finding it rebuts; the six-part supplemental
+Personal Statement. **R6 Assemble** — response letter mirroring the notice,
+exhibit index, package, the `rfe.md` red-team pass before shipping, and the
+submission + delivery logistics. **R7 Contribute** — optional anonymous data
+point; always ask, never assume.
+
+Red lines: the printed deadline on the notice always controls (never compute
+past it) · never reword the frozen or as-filed endeavor · eligibility is judged
+as of the ORIGINAL filing date · never promise an outcome or a timeline.
 
 ## Tools (run, don't read)
 
