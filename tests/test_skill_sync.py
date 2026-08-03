@@ -5,7 +5,7 @@ import pathlib
 import py_compile
 
 REPO = pathlib.Path(__file__).resolve().parents[1]
-SKILL = REPO / ".agents" / "skills" / "niw-petition" / "scripts"
+SKILLS = REPO / ".agents" / "skills"
 
 
 def test_sync_regions_match():
@@ -16,5 +16,7 @@ def test_sync_regions_match():
 
 
 def test_skill_scripts_compile():
-    for script in ("fill_form.py", "harvest_citations.py", "fetch_forms.py"):
-        py_compile.compile(str(SKILL / script), doraise=True)
+    scripts = sorted((SKILLS).glob("*/scripts/*.py"))
+    assert len(scripts) >= 10, scripts
+    for script in scripts:
+        py_compile.compile(str(script), doraise=True)

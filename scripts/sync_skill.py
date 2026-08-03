@@ -14,19 +14,24 @@ import re
 import sys
 
 REPO = pathlib.Path(__file__).resolve().parents[1]
-SKILL = REPO / ".agents" / "skills" / "niw-petition" / "scripts"
+SKILLS = REPO / ".agents" / "skills"
+SRC = REPO / "src" / "openniw" / "services"
 
+# Shared regions mirror into every skill; "fill maps" is NIW-only (the other
+# categories have no machine-fill support yet). Category-specific scripts
+# (eb1a fetch_forms.py, o1 fetch_forms_o1.py) are standalone adaptations and
+# deliberately unmanaged.
 PAIRS = [
-    ("fill maps",
-     REPO / "src" / "openniw" / "services" / "formfill.py",
-     SKILL / "fill_form.py"),
-    ("citation screening",
-     REPO / "src" / "openniw" / "services" / "citations_pure.py",
-     SKILL / "harvest_citations.py"),
-    ("paper download",
-     REPO / "src" / "openniw" / "services" / "papers.py",
-     SKILL / "fetch_papers.py"),
+    ("fill maps", SRC / "formfill.py",
+     SKILLS / "niw-petition" / "scripts" / "fill_form.py"),
 ]
+for _skill in ("niw-petition", "eb1a-petition", "o1-petition"):
+    PAIRS += [
+        ("citation screening", SRC / "citations_pure.py",
+         SKILLS / _skill / "scripts" / "harvest_citations.py"),
+        ("paper download", SRC / "papers.py",
+         SKILLS / _skill / "scripts" / "fetch_papers.py"),
+    ]
 
 
 def region(text: str, name: str, path: pathlib.Path) -> tuple[int, int, str]:

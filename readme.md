@@ -5,6 +5,10 @@ EB-2 National Interest Waiver (NIW) self-petition — your coding agent does
 the organizing, a local folder is the case file, and a browser wizard
 appears exactly when a GUI beats chat.**
 
+**Now also ships two sibling skills in the same repo: `eb1a-petition`
+(EB-1A extraordinary ability, beta) and `o1-petition` (O-1A petition kit,
+beta) — same install, same local-folder privacy, same six-stage workflow.**
+
 Website: **[openniw.com](https://openniw.com)** — project intro, install
 guide, and a free no-signup statistical evaluation against 7,458 approved cases
 (fully static; source in [webpage/](webpage/)).
@@ -28,10 +32,11 @@ drafting, official forms, filing package — with **zero configuration**:
 ## Install
 
 ```bash
-# cross-agent installer (Claude Code, Codex, Cursor, 70+ agents):
+# cross-agent installer (Claude Code, Codex, Cursor, 70+ agents) —
+# offers all three skills; install what you need:
 npx skills add HHHHHejia/openniw
 
-# or manually — Claude Code:
+# or manually — Claude Code (swap in eb1a-petition / o1-petition as needed):
 git clone https://github.com/HHHHHejia/openniw
 mkdir -p ~/.claude/skills && cp -r openniw/.agents/skills/niw-petition ~/.claude/skills/
 
@@ -39,7 +44,24 @@ mkdir -p ~/.claude/skills && cp -r openniw/.agents/skills/niw-petition ~/.claude
 mkdir -p ~/.agents/skills && cp -r openniw/.agents/skills/niw-petition ~/.agents/skills/
 ```
 
-Then say **"帮我准备 NIW 申请"** or **"evaluate my NIW case"** in your agent.
+Then say **"帮我准备 NIW 申请"** or **"evaluate my NIW case"** in your
+agent — or "evaluate my EB-1A case" / "prepare my O-1 petition" for the
+sibling skills.
+
+## The three skills
+
+| Skill | Category | Status | What differs |
+|---|---|---|---|
+| `niw-petition` | EB-2 NIW self-petition (I-140 + ETA-9089 App. A) | shipped | Full flow incl. browser forms wizard, deterministic PDF fill, filing-package ZIP |
+| `eb1a-petition` | EB-1A extraordinary ability self-petition (I-140, E11) | beta | All ten 8 CFR 204.5(h)(3) criteria, Kazarian two-step petition letter with Final Merits section, benchmark vs ~2,300 approved EB-1A cases; I-140 by field guide (wizard = roadmap) |
+| `o1-petition` | O-1A petition kit (I-129; employer / agent / founder-owned entity) | beta | Petitioner-structure decision tree, consultation/advisory opinion, itinerary, signature-ready hand-off package for the petitioner; I-129 by field guide |
+
+The beta skills were built from primary sources (USCIS Policy Manual, 8 CFR,
+current fee schedules — all cited inline with as-of dates), open-source MIT
+materials, and our 7,458-case approved-case dataset. They follow the same
+frozen-frame doctrine, exhibit-bound drafting, and RFE red-team pass as the
+NIW flagship. **If you have been through an EB-1A or O-1 filing —
+applicant or practitioner — we would love your review.**
 
 ## How it works
 
@@ -144,7 +166,9 @@ see [docs/analysis/](docs/analysis/)):
 
 ```
 openniw/
-├── .agents/skills/niw-petition/  # the skill (the product's entry point)
+├── .agents/skills/niw-petition/  # the flagship skill (EB-2 NIW)
+│              └── eb1a-petition/ # EB-1A skill (beta)
+│              └── o1-petition/   # O-1A skill (beta)
 ├── src/openniw/                  # the pip companion: FastAPI folder-mode
 │   │                             #   server + CLI + committed UI bundle
 │   └── ui/                       # built Next.js static export (make ui)
@@ -188,12 +212,48 @@ It gets better through three kinds of contribution:
 - X: [x.com/hejia0530](https://x.com/hejia0530)
 - GitHub issues: the preferred channel for anything public
 
-**OpenO1 · OpenEB1A · OpenH1B · Open-anything-immigration** — we would
-love to build them, but they are beyond our firsthand knowledge. The
-whole framework is reusable (agent skill + local companion + approved-case
-benchmark); what each new category needs is someone who has actually been
-through it — an applicant with a filed case, or a practitioner. If that's
-you, reach out and let's build the next one together.
+**EB-1A and O-1A are now here (beta)** — built from USCIS primary sources,
+MIT-licensed open materials, and our approved-case dataset, not from
+firsthand filings. That is exactly why they need you: if you have actually
+been through an EB-1A or O-1 case — as applicant, or as practitioner —
+your review of the playbooks is the single highest-value contribution
+right now. **OpenH1B · Open-anything-immigration** — still on the wish
+list; the whole framework is reusable (agent skill + local companion +
+approved-case benchmark). Reach out and let's build the next one together.
+
+## References & acknowledgments
+
+The skills' legal and procedural content is distilled from these sources
+(each skill's reference files carry inline citations with as-of dates):
+
+**Primary sources**
+- [USCIS Policy Manual](https://www.uscis.gov/policy-manual) — Vol. 6
+  Part F Ch. 2 (EB-1A) & Ch. 5 (NIW), Vol. 2 Part M (O-1)
+- [8 CFR 204.5](https://www.ecfr.gov/current/title-8/section-204.5) and
+  [8 CFR 214.2(o)](https://www.ecfr.gov/current/title-8/section-214.2)
+  via eCFR; INA via uscode.house.gov
+- uscis.gov form pages, filing checklists, direct-filing-address pages, and
+  the [G-1055 fee schedule](https://www.uscis.gov/g-1055);
+  federalregister.gov (fee rules); travel.state.gov Visa Bulletin
+- Case law: *Matter of Dhanasar*, 26 I&N Dec. 884 (AAO 2016); *Kazarian v.
+  USCIS*, 596 F.3d 1115 (9th Cir. 2010); *Matter of Price*, 20 I&N Dec. 953
+
+**Open-source projects**
+- [juntoku9/claude_immigration_attorney](https://github.com/juntoku9/claude_immigration_attorney)
+  (MIT) — evidence-hierarchy, expert-letter assignment matrix, RFE
+  root-cause taxonomy, and national-importance research-method patterns
+  were adapted with gratitude
+- [razvanmarinescu/EB1A](https://github.com/razvanmarinescu/EB1A) and
+  [Ryan-Rhys/EB1A](https://github.com/Ryan-Rhys/EB1A) — public approved
+  self-petitions studied for structure (no text reused)
+
+**Data & practitioner knowledge**
+- [public-approval-source](https://www.public-approval-source) public approval notices
+  (2012–2026) — the de-identified benchmark dataset
+- Structure of real, professionally prepared NIW filings and a real RFE
+  cycle (fully de-identified, see [docs/analysis/](docs/analysis/)), plus
+  published analyses by immigration practitioners and university
+  international offices consulted during research
 
 ## License
 

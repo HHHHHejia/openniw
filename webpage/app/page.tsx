@@ -38,6 +38,11 @@ export default function Landing() {
             <b>Free, forever.</b> We charge nothing and provide no
             service — <b>you</b> prepare and file your own petition.
           </p>
+          <p>
+            <b>New:</b> the same repo now ships beta skills for{" "}
+            <b>EB-1A</b> and <b>O-1A</b> — same install, same
+            local-folder privacy, same six-stage workflow.
+          </p>
         </div>
         <div className="flex gap-3 flex-wrap">
           <a href="/eval/" className="btn">Try the statistical evaluation — free, no sign-up</a>
@@ -124,7 +129,10 @@ export default function Landing() {
           <CopyBlock copyText="npx skills add HHHHHejia/openniw">npx skills add HHHHHejia/openniw</CopyBlock>
           <p className="text-xs text-[#4f5a55]">
             Works with Claude Code, Codex, Cursor and 70+ agents (when the
-            installer asks, tick your agent — e.g. &quot;Claude Code&quot;). Manual
+            installer asks, tick your agent — e.g. &quot;Claude Code&quot;). One
+            command offers all three skills: <span className="font-mono">niw-petition</span>,{" "}
+            <span className="font-mono">eb1a-petition</span> (beta),{" "}
+            <span className="font-mono">o1-petition</span> (beta). Manual
             install: copy <span className="font-mono">.agents/skills/niw-petition</span>{" "}
             from the repo into <span className="font-mono">~/.claude/skills/</span>.
           </p>
@@ -196,15 +204,19 @@ export default function Landing() {
         </div>
         <div className="border border-[--docket] bg-[--field] px-5 py-4 mb-4">
           <div className="docket-line text-[--docket] mb-1.5">
-            OpenO1 · OpenEB1A · OpenH1B · Open-anything-immigration
+            EB-1A &amp; O-1A are here (beta) · OpenH1B — you&apos;re next
           </div>
           <p className="text-sm leading-relaxed">
-            We would love to build these — but they&apos;re beyond our
-            firsthand knowledge. The framework is fully reusable (agent
-            skill + local companion + approved-case benchmark); what each
-            new category needs is someone who has actually been through
-            it: an applicant with a filed case, or a practitioner. If
-            that&apos;s you, reach out — let&apos;s build the next one together.
+            The <span className="font-mono">eb1a-petition</span> and{" "}
+            <span className="font-mono">o1-petition</span> skills now ship
+            in the same repo — built from USCIS primary sources,
+            MIT-licensed open materials, and our approved-case dataset,
+            not from firsthand filings. That&apos;s exactly why they need
+            you: if you have actually been through an EB-1A or O-1 case —
+            applicant or practitioner — reviewing their playbooks is the
+            single most valuable contribution right now. And H1B (or any
+            other category) is still waiting for its veteran: the whole
+            framework is reusable. Reach out — let&apos;s build it together.
           </p>
         </div>
         <p className="docket-line text-[#4f5a55]">

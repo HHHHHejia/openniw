@@ -1,20 +1,25 @@
 # OpenNIW — agent instructions
 
-Open-source AI-assisted EB-2 NIW (National Interest Waiver) petition
-preparation. The product is an Agent Skill plus a pip companion:
-`.agents/skills/niw-petition/` (the skill — the single entry point) ·
+Open-source AI-assisted U.S. immigration petition preparation. The product
+is three sibling Agent Skills plus a pip companion:
+`.agents/skills/niw-petition/` (EB-2 NIW — the flagship) ·
+`.agents/skills/eb1a-petition/` (EB-1A, beta) ·
+`.agents/skills/o1-petition/` (O-1A, beta) ·
 `src/openniw/` (the `openniw` pip package: localhost browser UI +
 deterministic compute over a case folder) · `frontend/` UI source (Next.js
 14, maintainers only) · `forms/` vendored official USCIS/DOL fillable PDFs +
 field maps · `docs/` design + de-identified structural analyses.
 
-## The NIW petition skill
+## The petition skills
 
-Codex, Cursor and other Agent-Skills tools discover the skill at
-`.agents/skills/niw-petition/` automatically; `.claude/skills` symlinks to
-the same folder for Claude Code. If the user asks to prepare, evaluate, or
-fix a NIW/EB-2 petition, use that skill — it runs the whole workflow in a
-local case folder with no server, no database, and no API keys.
+Codex, Cursor and other Agent-Skills tools discover the skills under
+`.agents/skills/` automatically; `.claude/skills` symlinks to the same
+folder for Claude Code. NIW/EB-2 requests → `niw-petition`; EB-1A /
+extraordinary-ability green card → `eb1a-petition`; O-1/O-1A visa →
+`o1-petition`. Each runs its whole workflow in a local case folder with no
+server, no database, and no API keys. The browser wizard + PDF fill
+(`openniw fill` / `ui forms` / `package`) are NIW-only; the sibling skills
+use guided chat + field guides for their forms stages.
 
 ## Working on the code
 
@@ -34,8 +39,11 @@ local case folder with no server, no database, and no API keys.
   `forms/fieldmaps/*.json` inventories; report unmatched fields, never drop
   silently.
 - Skill fallback scripts mirror package services between
-  `# --- BEGIN/END SYNC ---` markers — edit the package source, then run
-  `python3 scripts/sync_skill.py`; `make check` fails on drift.
+  `# --- BEGIN/END SYNC ---` markers — across ALL THREE skills — edit the
+  package source, then run `python3 scripts/sync_skill.py`; `make check`
+  fails on drift. Category-specific scripts (eb1a `fetch_forms.py`,
+  o1 `fetch_forms_o1.py`) are standalone adaptations, deliberately
+  unmanaged.
 - There is no LLM anywhere in this repo's runtime: the user's agent is the
   AI. Do not add API-key dependencies.
 - Domain rules (frozen endeavor sentence, no uninvented facts, exhibit
