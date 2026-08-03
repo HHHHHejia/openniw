@@ -20,7 +20,8 @@ type Card = {
 export default function CitationsPage() {
   const [scored, setScored] = useState<Card[]>([]);
   const [selection, setSelection] = useState<Record<string, any>>({});
-  const [version, setVersion] = useState(0);
+  // Opaque server-issued version string (mtime_ns exceeds JS safe integers)
+  const [version, setVersion] = useState<string>("0");
   const [saved, setSaved] = useState(false);
   const [conflict, setConflict] = useState(false);
   const [filter, setFilter] = useState<"all" | "selected">("all");
@@ -29,7 +30,7 @@ export default function CitationsPage() {
     const r = await api("/api/citations/review");
     setScored(r.scored || []);
     setSelection(r.selection || {});
-    setVersion(r.version || 0);
+    setVersion(String(r.version ?? "0"));
     setConflict(false);
   };
   useEffect(() => { load().catch(() => {}); }, []);

@@ -29,8 +29,25 @@ def _free_port() -> int:
         return s.getsockname()[1]
 
 
+def _check_case_dir(case: CaseFolder) -> str | None:
+    """Fail fast on the classic mistake: launching from the project root
+    instead of the case folder — the sentinel and the case files end up in
+    different directories and every save looks like a foreign edit."""
+    if (case.root / "STATE.md").exists() or (case.root / "case.json").exists():
+        return None
+    for candidate in sorted(case.root.glob("*/STATE.md")):
+        return (f"{case.root} does not look like a case folder (no STATE.md), "
+                f"but {candidate.parent.name}/ does. Run from inside it or "
+                f"pass --case {candidate.parent.name}")
+    return None  # brand-new case: allowed, the agent creates STATE.md next
+
+
 def _cmd_ui(ns) -> int:
     case = CaseFolder(ns.case)
+    problem = _check_case_dir(case)
+    if problem:
+        print(f"refusing to start: {problem}", file=sys.stderr)
+        return 3
     code, sent = ui_session.status(case)
     if code == ui_session.LIVE:
         print(f"A browser session is already open: {sent['url']}")

@@ -53,7 +53,7 @@ def write_sentinel(case: CaseFolder, *, step: str, url: str, port: int,
 
 def read_sentinel(case: CaseFolder) -> dict | None:
     data, version = case.read_json(case.sentinel, default=None)
-    return data if version else None
+    return data if version != "0" else None
 
 
 def _pid_alive(pid: int) -> bool:

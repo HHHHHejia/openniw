@@ -6,7 +6,7 @@ REPO = pathlib.Path(__file__).resolve().parents[1]
 
 def test_benchmark_inputs_roundtrip(client, case_dir):
     r = client.get("/api/benchmark/inputs").json()
-    assert r["inputs"] == {} and r["version"] == 0
+    assert r["inputs"] == {} and r["version"] == "0"
     payload = {"category": "NIW", "field": "Computer Science & AI",
                "citations": 350,
                "computed": {"percentile_among_approved": 62, "sample_n": 512}}

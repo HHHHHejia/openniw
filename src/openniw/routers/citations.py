@@ -19,7 +19,7 @@ def _case(request: Request) -> CaseFolder:
 
 class SelectionUpdate(BaseModel):
     selection: dict
-    base_version: int | None = None
+    base_version: str | int | float | None = None
 
 
 @router.get("/review")

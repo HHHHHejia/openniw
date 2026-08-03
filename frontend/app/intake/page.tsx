@@ -34,7 +34,7 @@ export default function IntakePage() {
       setLinks(r.intake?.links || {});
       setBasics(r.intake?.basics || {});
       setFiles(r.files || []);
-      if (r.version) setSavedOnce(true);
+      if (r.version && r.version !== "0") setSavedOnce(true);
     }).catch(() => {});
   }, []);
 

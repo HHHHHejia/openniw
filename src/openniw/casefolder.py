@@ -73,26 +73,47 @@ class CaseFolder:
         return self.meta_dir / "server.log"
 
     # ---- json io ----------------------------------------------------------
-    def version(self, path: pathlib.Path) -> int:
+    # Versions are mtime_ns AS STRINGS: mtime_ns (~1.8e18) exceeds
+    # JavaScript's Number.MAX_SAFE_INTEGER (~9e15), so sending it as a JSON
+    # number gets silently rounded by every browser and can never round-trip
+    # — which made every optimistic-concurrency save 409. Strings are
+    # opaque and exact. Numeric base_versions (older clients / pre-fix tabs
+    # that already hold a rounded value) are accepted within the double-
+    # precision rounding error at this magnitude.
+    _FLOAT_TOLERANCE_NS = 4096  # 2^12 > 2^(61-53), the ulp at ~1.8e18
+
+    def version(self, path: pathlib.Path) -> str:
         try:
-            return path.stat().st_mtime_ns
+            return str(path.stat().st_mtime_ns)
         except FileNotFoundError:
-            return 0
+            return "0"
 
     def read_json(self, path: pathlib.Path, default: Any = None
-                  ) -> tuple[Any, int]:
-        """Returns (data, version). version==0 means the file doesn't exist."""
+                  ) -> tuple[Any, str]:
+        """Returns (data, version). version=="0" means the file doesn't exist."""
         try:
             raw = path.read_text()
         except FileNotFoundError:
-            return (default if default is not None else {}), 0
+            return (default if default is not None else {}), "0"
         return json.loads(raw), self.version(path)
 
+    def _version_matches(self, path: pathlib.Path,
+                         base_version: str | int | float) -> bool:
+        current = int(self.version(path))
+        if isinstance(base_version, str):
+            try:
+                return int(base_version) == current
+            except ValueError:
+                return False
+        # numeric: a JS double that lost precision — compare with tolerance
+        return abs(int(base_version) - current) <= self._FLOAT_TOLERANCE_NS
+
     def write_json(self, path: pathlib.Path, data: Any,
-                   base_version: int | None = None) -> int:
+                   base_version: str | int | float | None = None) -> str:
         """Atomic write. If base_version is given and stale, raises Conflict.
         Returns the new version."""
-        if base_version is not None and self.version(path) != base_version:
+        if base_version is not None and not self._version_matches(
+                path, base_version):
             raise Conflict(f"{path.name} changed on disk")
         path.parent.mkdir(parents=True, exist_ok=True)
         fd, tmp = tempfile.mkstemp(dir=str(path.parent),

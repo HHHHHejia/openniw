@@ -18,7 +18,7 @@ def _case(request: Request) -> CaseFolder:
 
 class AnswersUpdate(BaseModel):
     answers: dict
-    base_version: int | None = None
+    base_version: str | int | float | None = None
     edited_keys: list[str] = []
     verified_keys: list[str] = []
 

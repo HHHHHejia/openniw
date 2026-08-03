@@ -167,7 +167,8 @@ function EmployerForm({ value, onChange }: { value: any; onChange: (v: any) => v
 export default function FormsPage() {
   const [spec, setSpec] = useState<any>(null);
   const [answers, setAnswers] = useState<any>({});
-  const [version, setVersion] = useState<number>(0);
+  // Opaque server-issued version string (mtime_ns exceeds JS safe integers)
+  const [version, setVersion] = useState<string>("0");
   const [aiKeys, setAiKeys] = useState<Set<string>>(new Set());
   const [filled, setFilled] = useState<any[]>([]);
   const [reports, setReports] = useState<Record<string, any>>({});
@@ -185,7 +186,7 @@ export default function FormsPage() {
     const [s, a, f] = await Promise.all([
       api("/api/forms/spec"), api("/api/forms/answers"), api("/api/forms/filled"),
     ]);
-    setSpec(s); setAnswers(a.answers || {}); setVersion(a.version || 0);
+    setSpec(s); setAnswers(a.answers || {}); setVersion(String(a.version ?? "0"));
     setAiKeys(new Set(a.meta?.ai_keys || []));
     setVerified(new Set(a.meta?.verified_keys || []));
     setFilled(f.filled || []); setConflict(false);
