@@ -39,7 +39,7 @@ export default function Landing() {
           </p>
         </div>
         <div className="flex gap-3 flex-wrap">
-          <a href="/eval/" className="btn">Try the free benchmark — no sign-up</a>
+          <a href="/eval/" className="btn">Try the free evaluation — no sign-up</a>
           <a href="#install" className="btn-quiet">Install the skill</a>
         </div>
       </section>
@@ -166,7 +166,7 @@ claude        # or your agent of choice
           simulation. Runs entirely in your browser; nothing you type leaves
           your machine.
         </p>
-        <a href="/eval/" className="btn">Open the free benchmark →</a>
+        <a href="/eval/" className="btn">Open the free evaluation →</a>
       </section>
 
       <SiteFooter />
