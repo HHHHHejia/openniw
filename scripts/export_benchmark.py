@@ -139,6 +139,8 @@ def main() -> int:
         ym = ym_index(date)
         if ym is None or ym < 0:
             continue
+        if cat == "O1A":  # merge into one O-1 pool for the UI
+            cat = "O1"
         if cat not in categories:
             categories.append(cat)
         cases.append([ym, categories.index(cat), g_idx[field_group(field)],
@@ -149,8 +151,8 @@ def main() -> int:
     cases.sort()
     out = {
         "generated": time.strftime("%Y-%m-%d"),
-        "source": ("Aggregated from publicly posted I-140 approval notices "
-                   "(public-approval-source), 2012-2026. Approved cases only - "
+        "source": ("Aggregated from publicly posted I-140 and O-1 approval "
+                   "notices (public-approval-source), 2012-2026. Approved cases only - "
                    "survivor-biased by construction."),
         "ym0": f"{YM0[0]}-{YM0[1]:02d}",
         "categories": categories,

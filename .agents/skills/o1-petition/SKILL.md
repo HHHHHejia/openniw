@@ -135,9 +135,11 @@ straight into sources/), and answers the fixed basics there, then returns
 to chat for your non-standard work.
 
 Pages used by this skill: `ui intake` (Stage I opener, owns intake.json +
-sources/) · `ui citations` (Stage II·b portfolio pick, optional). Do NOT
-open `ui benchmark` (its category picker has no O-1 option — calibrate in
-chat per references/evaluation.md) or `ui forms` (a NIW-only wizard).
+sources/) · `ui benchmark` (Stage I calibration — pre-write benchmark.json
+with `"category": "O1"`; small O-1 pool, the page shows its own caveat
+banner; older companion builds without an O1 option → calibrate in chat
+per references/evaluation.md) · `ui citations` (Stage II·b portfolio pick,
+optional). Do NOT open `ui forms` (a NIW-only wizard).
 Every page carries the global six-stage stepper (live from STATE.md —
 keep STATE.md's stage checklist formatted exactly as the template so the
 browser can parse it). The `openniw` pip companion serves pages over the
@@ -210,8 +212,9 @@ profile.md — then AUTO-download all the applicant's papers
 fetched. Then write the evaluation: the O-1A test (one major
 internationally recognized award OR ≥3 of the 8 criteria at
 8 CFR 214.2(o)(3)(iii)), a per-criterion read, the honest bar comparison
-vs EB-1A, and calibration IN CHAT from the bundled approved-case numbers
-(never `ui benchmark`, never approval probabilities). If the tier is
+vs EB-1A, and calibration via `openniw ui benchmark` (category "O1",
+small-pool caveats — see references/evaluation.md; never approval
+probabilities). If the tier is
 borderline/not-yet, present the strengthening plan and let the user decide
 before continuing.
 
@@ -278,9 +281,9 @@ same JSON reports its browser UI uses. Always run from the CASE FOLDER:
 
 Do NOT use for this case (NIW-hardwired): `openniw fill` (auto-checks the
 I-140 NIW box and fills ETA-9089), `openniw ui forms` (61-key NIW wizard),
-`openniw package` (NIW assembly order + I-140 lockbox logic),
-`openniw fetch-forms` and `openniw ui benchmark` (NIW form set / no O-1
-category). Stage IV–V run as guided chat per forms.md.
+`openniw package` (NIW assembly order + I-140 lockbox logic), and
+`openniw fetch-forms` (NIW form set — use scripts/fetch_forms_o1.py).
+Stage IV–V run as guided chat per forms.md.
 
 Stdlib fallbacks bundled with the skill for offline/sandboxed sessions:
 - `scripts/fetch_forms_o1.py [dest]` — blank I-129, I-907, G-1145

@@ -326,7 +326,7 @@ export default function BenchmarkPage() {
         <label className="text-xs">
           <span className="docket-line block mb-0.5">Category</span>
           <select value={category} onChange={(e) => setCategory(e.target.value)}>
-            {data.categories.filter((c) => ["NIW", "EB1A", "EB1B"].includes(c)).map((c) => <option key={c}>{c}</option>)}
+            {data.categories.filter((c) => ["NIW", "EB1A", "EB1B", "O1"].includes(c)).map((c) => <option key={c}>{c}</option>)}
           </select>
         </label>
         <label className="text-xs">
@@ -372,6 +372,14 @@ export default function BenchmarkPage() {
         {tile("Approved sample", stats.n.toLocaleString(),
               pool.widened ? "widened to all fields" : stats.n < 30 ? "small — interpret loosely" : undefined)}
       </div>
+      {stats.n > 0 && stats.n < 200 && (
+        <p className="text-sm border border-[--docket] bg-[--field] px-4 py-2.5 mb-3">
+          <b>Small pool.</b> Only {stats.n.toLocaleString()} publicly posted
+          approved {category} cases match this window — read every band and
+          percentile as a rough anchor among approved cases, never a precise
+          cutoff (and never an approval probability).
+        </p>
+      )}
       {myCites != null && stats.lowWins != null && stats.lowWins > 0 &&
         stats.citesPercentile != null && stats.citesPercentile < 40 && (
         <p className="text-sm text-[#4f5a55] mb-2">

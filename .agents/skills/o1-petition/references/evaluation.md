@@ -98,9 +98,13 @@ the missing ones as an open item in STATE.md.
 
 ## Calibration (percentile among publicly posted APPROVED cases — small sample)
 
-Do NOT open `openniw ui benchmark` (no O-1 category there). Calibrate in
-chat from these numbers — 128 O-1/O-1A approvals publicly posted by one
-research-focused U.S. law firm, 2013–2026 (database snapshot 2026-08):
+Pre-write `benchmark.json` with `{"category": "O1", field, citations,
+publications}` and open `openniw ui benchmark` — the page has an O1 pool
+(123 cases) and shows its own small-pool banner. (Older companion builds
+have no O1 option in the picker; then calibrate in chat instead.) Either
+way, anchor the discussion on these numbers — 123 O-1/O-1A approvals
+publicly posted by one research-focused U.S. law firm, 2013–2026
+(database snapshot 2026-08):
 - citations: P25 111 · **median 261** · P75 491 (2024+ median 208)
 - publications: P25 10 · **median 15** · P75 24 (2024+ median 13)
 - every case that disclosed a processing mode used premium processing;
@@ -110,7 +114,7 @@ research-focused U.S. law firm, 2013–2026 (database snapshot 2026-08):
   its recent EB-1A medians.
 
 MANDATORY wording: "your X exceeds ~N% of publicly posted APPROVED O-1
-cases in this 128-case sample" — never an approval probability or odds.
+cases in this 123-case sample" — never an approval probability or odds.
 Always attach the caveats: tiny sample from one firm's research-heavy
 clientele; approved cases only (no denominator); self-reported; says
 little about profiles built on entrepreneurial, industry, arts, or
