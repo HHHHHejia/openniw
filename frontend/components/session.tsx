@@ -6,9 +6,11 @@ import { api, withToken } from "@/lib/api";
 // case's STATE.md (the agent maintains it); stages with a browser page
 // link to it, chat-only stages say so.
 
-type StageId = "I" | "II·a" | "II·b" | "III" | "IV" | "V";
+type StageId = "I" | "II·a" | "II·b" | "III" | "IV" | "V" | "R";
 type StageStatus = "done" | "current" | "todo";
 
+// "R" (RFE response) is a conditional stage: it renders only when the
+// agent has appended an R line to STATE.md's checklist (RFE mode active).
 const STAGES: { id: StageId; name: string; href: string | null; page?: string }[] = [
   { id: "I", name: "Evaluate", href: "/intake/", page: "Intake · Benchmark" },
   { id: "II·a", name: "Endeavor", href: null },
@@ -16,16 +18,17 @@ const STAGES: { id: StageId; name: string; href: string | null; page?: string }[
   { id: "III", name: "Draft", href: null },
   { id: "IV", name: "Forms", href: "/forms/", page: "Forms wizard" },
   { id: "V", name: "Package", href: null },
+  { id: "R", name: "RFE", href: null },
 ];
 
 let stateCache: string | null = null;
 
-function parseStages(stateMd: string): Record<StageId, StageStatus> {
+function parseStages(stateMd: string, visible: typeof STAGES): Record<StageId, StageStatus> {
   const out = {} as Record<StageId, StageStatus>;
-  STAGES.forEach((s) => { out[s.id] = "todo"; });
+  visible.forEach((s) => { out[s.id] = "todo"; });
   let sawCurrent = false;
   for (const line of stateMd.split("\n")) {
-    const m = line.match(/^\s*-\s*\[( |x|X)\]\s+(I{1,3}V?|IV|V)(·[ab])?\s/);
+    const m = line.match(/^\s*-\s*\[( |x|X)\]\s+(I{1,3}V?|IV|V|R)(·[ab])?\s/);
     if (!m) continue;
     const id = (m[2] + (m[3] || "")) as StageId;
     if (!(id in out)) continue;
@@ -36,7 +39,7 @@ function parseStages(stateMd: string): Record<StageId, StageStatus> {
     }
   }
   if (!sawCurrent) {
-    const firstTodo = STAGES.find((s) => out[s.id] === "todo");
+    const firstTodo = visible.find((s) => out[s.id] === "todo");
     if (firstTodo) out[firstTodo.id] = "current";
   }
   return out;
@@ -56,7 +59,9 @@ export function Header({ active, progress }: {
     }).catch(() => { stateCache = ""; });
   }, []);
 
-  const stages = parseStages(stateMd);
+  const hasRfe = /^\s*-\s*\[( |x|X)\]\s+R\s/m.test(stateMd);
+  const visibleStages = hasRfe ? STAGES : STAGES.filter((s) => s.id !== "R");
+  const stages = parseStages(stateMd, visibleStages);
   const activeStage: StageId | null =
     active === "intake" || active === "benchmark" ? "I"
       : active === "citations" ? "II·b"
@@ -80,8 +85,8 @@ export function Header({ active, progress }: {
 
       {/* global journey stepper */}
       <div className="border border-[--rule] bg-white px-4 py-3 overflow-x-auto">
-        <div className="flex items-start min-w-[560px]">
-          {STAGES.map((s, i) => {
+        <div className="flex items-start" style={{ minWidth: hasRfe ? 640 : 560 }}>
+          {visibleStages.map((s, i) => {
             const st = stages[s.id];
             const isHere = s.id === activeStage;
             const clickable = !!s.href;
@@ -115,7 +120,7 @@ export function Header({ active, progress }: {
                 ) : (
                   <div title="This stage happens in the chat with your agent.">{node}</div>
                 )}
-                {i < STAGES.length - 1 && (
+                {i < visibleStages.length - 1 && (
                   <div className="flex-1 h-[2px] mt-3 mx-1"
                        style={{ background: st === "done" ? "#1f6f54" : "#d8d5cc" }} />
                 )}

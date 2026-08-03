@@ -1,0 +1,114 @@
+name: Anonymous data point (case outcome)
+description: >-
+  Share your anonymized petition outcome — every real data point sharpens the
+  benchmark for the next applicant. No account details, no case numbers.
+title: "[data] case outcome"
+labels: ["data-point"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thank you!** This form collects only anonymous, aggregate-ready
+        numbers — the same columns our public benchmark uses.
+        **Do NOT include** your name, receipt/case number, employer,
+        recommender names, or anything else identifying.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: [NIW, EB1A, EB1B, O1, Other]
+    validations:
+      required: true
+  - type: dropdown
+    id: field
+    attributes:
+      label: Field
+      options:
+        - Computer Science & AI
+        - Electrical & Electronics Eng.
+        - Mechanical & Aerospace Eng.
+        - Civil & Environmental Eng.
+        - Materials Science
+        - Chemistry & Chemical Eng.
+        - Energy & Sustainability
+        - Life Sciences
+        - Medicine & Health
+        - Physics & Astronomy
+        - Math & Statistics
+        - Earth & Geosciences
+        - Business, Economics & Finance
+        - Social Sciences & Humanities
+        - Arts, Design & Sports
+        - Other fields
+    validations:
+      required: true
+  - type: input
+    id: citations
+    attributes:
+      label: Citations at filing
+      placeholder: "e.g. 350"
+    validations:
+      required: true
+  - type: input
+    id: publications
+    attributes:
+      label: Publications at filing
+      placeholder: "e.g. 12"
+  - type: input
+    id: filing_month
+    attributes:
+      label: Filing month
+      description: Year and month only (YYYY-MM)
+      placeholder: "2026-03"
+    validations:
+      required: true
+  - type: dropdown
+    id: premium
+    attributes:
+      label: Premium processing
+      options:
+        - "No"
+        - Premium from filing
+        - Upgraded mid-case
+        - Prefer not to say
+  - type: dropdown
+    id: rfe
+    attributes:
+      label: RFE / NOID
+      options:
+        - No RFE
+        - RFE received — overcame (approved)
+        - RFE received — denied
+        - NOID received
+        - Prefer not to say
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Final outcome
+      options: [Approved, Denied, Withdrawn, Still pending]
+    validations:
+      required: true
+  - type: input
+    id: processing_days
+    attributes:
+      label: Processing days (optional)
+      description: Filing date to decision date, in days
+      placeholder: "e.g. 58"
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: How should we improve OpenNIW? (optional)
+      description: >-
+        What did the workflow get wrong or miss for your case? Concrete
+        suggestions get folded into the playbooks.
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Anonymization check
+      options:
+        - label: >-
+            I confirm this submission contains no personal identifiers (no
+            names, case/receipt numbers, employers, or recommender names).
+          required: true
