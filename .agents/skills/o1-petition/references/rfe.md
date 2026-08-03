@@ -1,8 +1,12 @@
-# RFE — Prevention (at filing) and Response (if one arrives)
+# RFE prevention (at filing)
 
-O-1 RFEs are common but survivable: practitioner-compiled USCIS data put
-the FY2025 O RFE rate near 20% with overall approvals above 90% — an RFE
-is a curable defect list, not a denial. Prevention first.
+O-1 RFEs are common but survivable: practitioner-compiled figures from
+USCIS data (immi-usa, FY2025) put the O RFE rate near 20% and the
+OVERALL O approval rate above 90% — an overall rate across all filings,
+NOT a post-RFE outcome rate and not any individual case's odds;
+directional only. An RFE is a curable defect list, not a denial.
+Prevention first; if a notice has already arrived, the response workflow
+lives in `references/rfe-response.md`.
 
 ## Twelve prevention rules (check EVERY case against these before assembly)
 
@@ -46,42 +50,17 @@ is a curable defect list, not a denial. Prevention first.
     changes after filing are material changes → amended petition, never
     a quiet rewording in the response.
 
-## If an RFE arrives
+## If a notice has already arrived
 
-The response goes out under the PETITIONER's signature, to the address in
-the RFE letter, by the deadline printed on it (I-129 RFEs typically allow
-~87 days — the letter controls); one shot — submit everything at once:
-USCIS treats a partial response as a request for a decision on the
-existing record (8 CFR 103.2(b)(11)). Premium clock (if any) resets when
-the response is received. Produce `rfe/response-plan.md`:
-
-1. **Anatomy**: extract every deficiency in USCIS's EXACT words; classify
-   each (itinerary/agent-authority/consultation/ability-vs-role/
-   criterion-substance/founder-control/documentary-gap). USCIS's own
-   "you may submit" bullets are a roadmap — treat them as a checklist.
-2. **Fixability triage** per deficiency: Yes / Partially / Unlikely.
-   Only 3 criteria are needed — withdrawing a weak criterion explicitly
-   ("The Petitioner respectfully withdraws the claim under...") and
-   reinforcing the strong three often beats defending five.
-3. **Officer errors to rebut** — factual misreadings and legal-standard
-   errors (e.g. demanding EB-1A-level final merits, ignoring prospective
-   remuneration or comparable evidence), each with the rebuttal + the
-   physical proof needed.
-4. **Evidence plan** keyed to the officer's own categories; NEW evidence
-   is the rule — re-submitting the original exhibits with more adjectives
-   almost always fails. Classify each item pre-filing / post-filing-as-
-   continuation / not-worth-it.
-5. **Response letter** mirrors the RFE's own headings and order; tone
-   "We respectfully submit", never adversarial; exhibit index QUOTES the
-   RFE sentence each new exhibit answers.
-6. **Timeline** working back from the deadline: signer asks -6wk, new
-   documents -4wk, first draft -3wk, exhibits assembled -2wk, petitioner
-   signature + delivery -1wk.
-
-Re-run the twelve rules against the response package before it ships.
+Stop here and switch to `references/rfe-response.md` — the R1–R7 response
+workflow (intake and emergency reverse-build of an externally filed case,
+diagnosis against USCIS's own O-1A RFE template, the evidence matrix and
+supply loop, letters, the petitioner's supplemental letter, assembly, and
+the petitioner hand-off). The twelve rules above come back one last time
+as a red-team pass over the response package before it ships.
 
 Sources: RFE taxonomy from practitioner guides (immi-usa.com, tukki.ai,
-compassvisas.com) and USCIS Policy Manual Vol. 2 Part M Ch. 8; response
-discipline (deficiency table, criterion withdrawal, new-evidence rule)
-adapted from juntoku9/claude_immigration_attorney (MIT); rate figures are
-practitioner-compiled from USCIS data — directional only.
+compassvisas.com) and USCIS Policy Manual Vol. 2 Part M Ch. 8; prevention
+checklist patterns adapted from juntoku9/claude_immigration_attorney
+(MIT); rate figures are practitioner-compiled from USCIS data —
+directional only.

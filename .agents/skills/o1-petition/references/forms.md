@@ -58,8 +58,13 @@
   black ink; preparer/interpreter sections completed truthfully (the user
   prepared it; you are software assistance, not a preparer).
 - **I-907** (premium, strongly recommended — see fees): petitioner as on
-  the I-129; the O-1 premium clock is 15 business days, resets on RFE; a
-  standalone online I-907 upgrade works later for a pending IOE receipt.
+  the I-129; the O-1 premium clock is 15 business days, resets on RFE.
+  Paper I-907 is always accepted — filed with the petition or mailed per
+  the uscis.gov/i-907 direct-filing chart to upgrade a pending one. A
+  STANDALONE online I-907 upgrade may be available for a pending petition
+  with an IOE receipt: check uscis.gov "Forms Available to File Online"
+  and the petitioner's account before assuming it (sources conflict as of
+  2026-08); the same caveat is in references/rfe-response.md R6.
 - **G-1145**: e-notification of acceptance; clip to the top form.
 
 ## Fees (2026 schedule — verify at uscis.gov/g-1055 before mailing)
@@ -125,7 +130,8 @@ The deliverable is a kit the petitioner can execute without research:
    against their own records, not just case.json.
 4. **Mail** to the freshly pulled lockbox address; file no more than
    1 year and ideally at least 45 days before the start date.
-5. **After filing**: receipt notice (I-797C) → any RFE goes to rfe.md →
+5. **After filing**: receipt notice (I-797C) → any RFE or NOID switches to
+   `references/rfe-response.md` (RFE mode, stages R1–R7) →
    approval (I-797). COS approvals take effect on the notice. Consular
    route: DS-160, in-person interview (waivers for O-1 effectively ended
    late 2025 — practitioner-reported; expect possible 221(g) processing
@@ -154,7 +160,8 @@ The deliverable is a kit the petitioner can execute without research:
   unlimited extensions. Job/petitioner change → new (or amended, if
   agent-filed) petition BEFORE the new work begins.
 
-Sources: uscis.gov/i-129, uscis.gov/i-129-addresses, uscis.gov/g-1055;
-8 CFR part 106 (fees) and 8 CFR 214.2(o) via eCFR; 91 FR 1059 (premium
-fee, 2026); travel.state.gov (MRV); consular-climate notes are
-practitioner-reported (manifestlaw.com, lighthousehq.com) — verify.
+Sources: uscis.gov/i-129, uscis.gov/i-129-addresses, uscis.gov/i-907,
+uscis.gov/g-1055; 8 CFR part 106 (fees) and 8 CFR 214.2(o) via eCFR;
+premium fee "Adjustment to Premium Processing Fees", FR doc 2026-00321
+(Jan 12, 2026), eff. 2026-03-01; travel.state.gov (MRV); consular-climate
+notes are practitioner-reported (manifestlaw.com, lighthousehq.com).
