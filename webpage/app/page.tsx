@@ -157,6 +157,72 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* contribute + contact */}
+      <section id="contribute" className="mb-12">
+        <h2 className="text-2xl mb-2" style={{ fontFamily: "var(--font-serif), serif" }}>
+          Help the next applicant
+        </h2>
+        <p className="text-sm text-[#4f5a55] mb-4 max-w-2xl">
+          OpenNIW is a fully open-source, free, public-interest project
+          (开源利益众生). It gets better through three kinds of contribution:
+        </p>
+        <div className="grid sm:grid-cols-3 gap-3 mb-4">
+          <div className="border border-[--rule] bg-white px-4 py-4">
+            <div className="docket-line text-[--docket] mb-2">Code</div>
+            <p className="text-sm leading-relaxed">
+              Issues and PRs welcome — form mappings, new browser pages,
+              translations, anything on the{" "}
+              <a className="text-[--docket] underline" target="_blank" rel="noreferrer"
+                 href="https://github.com/HHHHHejia/openniw/issues">issue tracker</a>.
+            </p>
+          </div>
+          <div className="border border-[--rule] bg-white px-4 py-4">
+            <div className="docket-line text-[--docket] mb-2">Data points</div>
+            <p className="text-sm leading-relaxed">
+              Filed with or without us? Open an issue with your anonymized
+              numbers and outcome (field, citations, timeline, RFE, result) —
+              every real data point sharpens the benchmark for the next
+              person.
+            </p>
+          </div>
+          <div className="border border-[--rule] bg-white px-4 py-4">
+            <div className="docket-line text-[--docket] mb-2">Attorneys</div>
+            <p className="text-sm leading-relaxed">
+              Prepare NIW cases professionally? Your frontier experience —
+              what draws RFEs now, what wording holds up — can be folded
+              into the playbooks. Credited or anonymous, your choice.
+            </p>
+          </div>
+        </div>
+        <p className="docket-line text-[#4f5a55]">
+          Contact — WeChat: <span className="text-[--ink]">LittleGeng</span>
+          {" · "}X:{" "}
+          <a className="text-[--docket] underline" target="_blank" rel="noreferrer"
+             href="https://x.com/hejia0530">x.com/hejia0530</a>
+          {" · "}or{" "}
+          <a className="text-[--docket] underline" target="_blank" rel="noreferrer"
+             href="https://github.com/HHHHHejia/openniw/issues">GitHub issues</a>
+        </p>
+      </section>
+
+      {/* prominent disclaimer */}
+      <section className="border-2 border-[--stamp] bg-white px-6 py-5 mb-12">
+        <div className="docket-line text-[--stamp] mb-2">Read this before you rely on anything here</div>
+        <ul className="grid gap-1.5 text-sm text-[#333] leading-relaxed">
+          <li>· <b>Completely free, open-source, public-interest.</b> No paid
+            tier, no service, no upsell — ever.</li>
+          <li>· <b>Your data never reaches us.</b> Your entire case is
+            processed by <b>your own local AI</b> in a folder on <b>your
+            computer</b>. We run no server that could even receive it; this
+            website is static and nothing you type here leaves your browser.</li>
+          <li>· <b>No liability for outcomes.</b> We are not attorneys and
+            this is not legal advice. We accept no legal responsibility for
+            the success or failure of any application — you prepare, review,
+            sign, and file your own petition, and outcomes depend on your
+            facts and adjudicator discretion.</li>
+        </ul>
+      </section>
+
       {/* free eval CTA */}
       <section className="border border-[--docket] bg-white px-6 py-6 text-center">
         <h2 className="text-xl mb-2" style={{ fontFamily: "var(--font-serif), serif" }}>

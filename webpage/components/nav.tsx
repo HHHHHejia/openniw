@@ -18,6 +18,10 @@ export function SiteNav({ active }: { active: "home" | "eval" }) {
            className={`docket-line px-3 py-1.5 border ${active === "eval" ? "border-[--docket] text-[--docket]" : "border-[--rule] hover:border-[--ink]"}`}>
           Statistical Evaluation
         </a>
+        <a href="/#contribute"
+           className="docket-line px-3 py-1.5 border border-[--rule] hover:border-[--ink]">
+          Contribute
+        </a>
         <a href="https://github.com/HHHHHejia/openniw" target="_blank" rel="noreferrer"
            className="docket-line px-3 py-1.5 border border-[--rule] hover:border-[--ink]">
           GitHub ↗
@@ -31,22 +35,26 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-[--rule] mt-12 pt-4 pb-8">
       <p className="text-xs text-[#4f5a55] leading-relaxed max-w-2xl">
-        <b>Disclaimer.</b> OpenNIW is a free, open-source (MIT) self-help
-        tool for organizing your own immigration paperwork. We are not
-        attorneys; OpenNIW is not a law firm, provides no service, and
-        nothing on this site or in the software is legal advice. Using
-        OpenNIW creates no attorney–client relationship. You are the
-        petitioner and remain fully responsible for everything you sign and
-        file; immigration outcomes depend on individual facts and
-        adjudicator discretion — consider having a licensed immigration
-        attorney review your case. The software is provided &quot;AS IS&quot;
-        without warranty of any kind, and the authors accept no liability
-        arising from its use (MIT license). Benchmark data is aggregated
-        from publicly posted approval notices (public-approval-source, 2012–2026),
-        self-reported and successful cases only — it shows distributions of
-        approved profiles, never an individual&apos;s approval probability.
-        This site is fully static: no accounts, no cookies, no tracking;
-        nothing you type here leaves your browser.
+        <b>Disclaimer.</b> OpenNIW is a completely free, open-source (MIT),
+        public-interest self-help tool for organizing your own immigration
+        paperwork. We are not attorneys; OpenNIW is not a law firm, provides
+        no service, and nothing on this site or in the software is legal
+        advice. Using OpenNIW creates no attorney–client relationship.
+        <b> We accept no legal responsibility for the success or failure of
+        any application.</b> You are the petitioner and remain fully
+        responsible for everything you sign and file; immigration outcomes
+        depend on individual facts and adjudicator discretion — consider
+        having a licensed immigration attorney review your case. The
+        software is provided &quot;AS IS&quot; without warranty of any kind,
+        and the authors accept no liability arising from its use (MIT
+        license). <b>Your case data is processed only by your own local AI
+        on your own computer — it is never sent to us</b>; we run no server
+        that could receive it. This site is fully static: no accounts, no
+        cookies, no tracking; nothing you type here leaves your browser.
+        Benchmark data is aggregated from publicly posted approval notices
+        (public-approval-source, 2012–2026), self-reported and successful cases only
+        — it shows distributions of approved profiles, never an
+        individual&apos;s approval probability.
       </p>
     </footer>
   );

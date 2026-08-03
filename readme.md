@@ -166,9 +166,27 @@ openniw/
 
 ## Contributing
 
-Issues and PRs welcome. High-value directions: more form mappings (I-907,
-I-485 family), more browser pages (evidence ledger, document review),
-percentile data sources, consular-processing variants, UI translations.
+OpenNIW is a fully open-source, free, public-interest project (开源利益众生).
+It gets better through three kinds of contribution:
+
+1. **Code** — issues and PRs welcome. High-value directions: more form
+   mappings (I-907, I-485 family), more browser pages (evidence ledger,
+   document review), consular-processing variants, UI translations.
+2. **Data points** — open an issue with your (anonymized) numbers and
+   outcome: category, field, citations/papers at filing, premium choice,
+   timeline, RFE or not, result. Every real data point sharpens the
+   benchmark that helps the next applicant calibrate honestly.
+3. **Attorneys & practitioners** — if you prepare NIW cases
+   professionally, your frontier knowledge (what draws RFEs this quarter,
+   what wording holds up, what evidence moves adjudicators) can be folded
+   into the skill's playbooks. Open an issue or reach out directly —
+   credited or anonymous, your choice.
+
+## Contact
+
+- WeChat: `LittleGeng`
+- X: [x.com/hejia0530](https://x.com/hejia0530)
+- GitHub issues: the preferred channel for anything public
 
 ## License
 
@@ -177,7 +195,15 @@ MIT.
 ## Disclaimer
 
 OpenNIW is free software that helps you organize and prepare your own
-immigration paperwork. To be explicit:
+immigration paperwork. It is a **completely open-source, free,
+public-interest project** — no paid tier, no service, no upsell, ever.
+To be explicit:
+
+- **Your data never reaches us.** Your entire case is processed by YOUR
+  own local AI agent in a folder on YOUR computer. Nothing is sent to us —
+  we run no server that could even receive it. (The public website's
+  evaluation page is fully static too: what you type stays in your
+  browser.)
 
 - **We are not attorneys and OpenNIW is not a law firm.** Nothing here is
   legal advice, and using OpenNIW creates no attorney–client relationship.
