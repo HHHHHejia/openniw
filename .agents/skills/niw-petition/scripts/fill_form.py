@@ -300,6 +300,15 @@ def _g1145(a: A) -> dict[str, Any]:
 
 # --- END SYNC: fill maps ---
 
+# Final Determination attorney/agent block: generic labels ("First (given)
+# Name *"), so categorized by exact field name. Pro-se filers leave it blank.
+_FD_ATTORNEY_SUFFIXES = {
+    "1 Attorney or Agents Last family Name", "2 First given Name",
+    "3 Middle Initial", "4  FirmBusiness Name",
+    "1  Signature_es_:signature", "2 Date Signed",
+}
+
+
 FORMS = {
     "i-140": ("i-140.pdf", _i140),
     "eta-9089-appendix-a": ("ETA-9089-Appendix-A.pdf", _appendix_a),
@@ -378,9 +387,12 @@ def fill(form_code: str, answers: A, blank_dir: pathlib.Path,
             continue
         if updates.get(full_name):
             continue
-        label = str(f.get("/TU") or full_name.split(".")[-1]).strip()
+        suffix = full_name.split(".")[-1]
+        label = str(f.get("/TU") or suffix).strip()
         low = label.lower()
-        if "signature" in low:
+        if suffix in _FD_ATTORNEY_SUFFIXES:
+            action = "leave blank unless an attorney represents you"
+        elif "signature" in low:
             action = "sign by hand in black ink on signing day"
         elif "date signed" in low:
             action = "write the date by hand when you sign"

@@ -293,6 +293,15 @@ FORM_SOURCES: dict[str, tuple[str, Callable[[A], dict[str, Any]]]] = {
 }
 
 
+# Final Determination attorney/agent block: generic labels ("First (given)
+# Name *"), so categorized by exact field name. Pro-se filers leave it blank.
+_FD_ATTORNEY_SUFFIXES = {
+    "1 Attorney or Agents Last family Name", "2 First given Name",
+    "3 Middle Initial", "4  FirmBusiness Name",
+    "1  Signature_es_:signature", "2 Date Signed",
+}
+
+
 def blank_pdf_path(form_code: str, blank_dir: pathlib.Path) -> pathlib.Path:
     """Locate the blank official PDF for a form under blank_dir.
 
@@ -382,9 +391,12 @@ def fill(form_code: str, answers: A,
             continue
         if updates.get(full_name):
             continue
-        label = str(f.get("/TU") or full_name.split(".")[-1]).strip()
+        suffix = full_name.split(".")[-1]
+        label = str(f.get("/TU") or suffix).strip()
         low = label.lower()
-        if "signature" in low:
+        if suffix in _FD_ATTORNEY_SUFFIXES:
+            action = "leave blank unless an attorney represents you"
+        elif "signature" in low:
             action = "sign by hand in black ink on signing day"
         elif "date signed" in low:
             action = "write the date by hand when you sign"
