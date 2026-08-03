@@ -6,6 +6,16 @@ the O-1A petition kit. Your coding agent does the organizing, a local
 folder is the case file, and a browser wizard appears exactly when a GUI
 beats chat.**
 
+<p align="center">
+  <a href="https://star-history.com/#HHHHHejia/openniw&Date">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=HHHHHejia/openniw&type=Date&theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=HHHHHejia/openniw&type=Date" />
+      <img alt="Star history of HHHHHejia/openniw" src="https://api.star-history.com/svg?repos=HHHHHejia/openniw&type=Date" width="600" />
+    </picture>
+  </a>
+</p>
+
 Website: **[openniw.com](https://openniw.com)** — project intro, install
 guide, and a free no-signup statistical evaluation against 7,458 approved cases
 (fully static; source in [webpage/](webpage/)).
