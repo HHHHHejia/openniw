@@ -66,8 +66,13 @@
 - SOC code: what USCIS uses at the I-485 stage to check "same or similar
   field" — look it up at onetonline.org; choose deliberately.
 - Processing: if unsure between adjustment and consular, consular is easier
-  to change later than the reverse. India/China-born usually cannot file
-  I-485 concurrently (retrogression).
+  to change later than the reverse.
+- Concurrent I-485 is a Visa Bulletin question. Aug 2026 Final Action Dates:
+  EB-2 Worldwide Current — and DOS itself warns retrogression or
+  unavailability may follow within months; China 09/01/2021; India
+  Unavailable (FY2026 numbers exhausted; none before FY2027 opens
+  2026-10-01). Check the current month's bulletin (travel.state.gov → Visa
+  Bulletin) BEFORE advising concurrent filing.
 - ETA-9089 Appendix A education: highest U.S. advanced degree relevant to
   the endeavor, or an evaluated foreign equivalent. Use the diploma's
   conferral date; the transcript's "Plan/Major" wording for the field.
@@ -78,14 +83,32 @@
 - Priority date for NIW = the date USCIS receives the properly completed,
   signed I-140 with the correct fee (there is no DOL step).
 
-## Fees & assembly (2026 — verify at uscis.gov before mailing)
+## Fees & payment mechanics (verified 2026-08-02 — re-verify at uscis.gov)
 
-I-140 $715 + Asylum Program Fee $300 (self-petitioner) = $1,015.
-Optional premium processing (I-907) $2,965 — 45 business days; the I-907 fee
-needs its OWN payment form (one payment per form, USCIS recommends never
-combining). Payment is electronic: G-1650 (ACH, recommended) or G-1450
-(card; a declined card rejects the entire package) — or Form G-1651 if the
-filer qualifies for a paper-payment exemption.
+I-140 $715 + Asylum Program Fee $300 (self-petitioner, ≤25 full-time U.S.
+employees) = $1,015 — as TWO SEPARATE payments of the SAME payment type
+(USCIS: packages "filed with more than one type of payment may be
+rejected"). The fee questions drive I-140 Part 1: self-petitioner ⇒ Q5 = No,
+Q6 = Yes; leaving Q5/Q6 blank ⇒ rejection, as does a wrong fee.
+Optional premium processing (I-907) $2,965 — effective 2026-03-01 (Federal
+Register doc 2026-00321); the E21 NIW premium clock is 45 BUSINESS days
+(not the 15 that applies to most other I-140 classifications) and stops on
+RFE issuance. The I-907 fee needs its OWN payment form. Payment is
+electronic: G-1650 (ACH, recommended) or G-1450 (card; a declined card
+rejects the entire package) — or G-1651 if paper-payment exempt.
+
+## Filing channel — paper by mail is the default deliverable
+
+A standalone, regular-processing I-140 can alternatively be filed ONLINE
+through a USCIS online account (both options listed at uscis.gov/i-140,
+verified 2026-08-02): the same package uploads as PDFs, the fee is paid
+online, the receipt is an IOE number. Paper remains mandatory for
+premium-at-filing (I-140 + I-907 together) and for concurrent I-140 + I-485
+packages. Premium can be ADDED online later (standalone I-907 by PDF
+upload) only once an IOE receipt exists. Online filers reuse the assembly
+order below as the upload order; the lockbox tables apply to paper only.
+
+## Assembly & mailing rules
 
 Assembly order (top to bottom — USCIS recommends the payment form FIRST):
 payment form(s) → G-1145 → I-907 (premium only, signed) → cover letter
@@ -142,3 +165,9 @@ pursuant to INA §203(b)(2)(B) and 8 C.F.R. §204.5(k), satisfying Matter of
 Dhanasar, 26 I&N Dec. 884 (AAO 2016); a numbered ENCLOSED DOCUMENTS list in
 physical package order ending with "Supporting Evidence (tabbed and
 indexed)"; "Respectfully submitted," + name + "Self-Petitioner".
+
+Sources: uscis.gov/i-140 · USCIS I-140 fee-payment alert (rel. 2024-09-23) ·
+uscis.gov "How Do I Request Premium Processing" · federalregister.gov doc
+2026-00321 · USCIS Direct Filing Addresses for Form I-140 ·
+travel.state.gov Visa Bulletin (August 2026). All checked 2026-08-02;
+volatile facts are stamped above — re-verify before filing.

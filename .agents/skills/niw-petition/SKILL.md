@@ -31,7 +31,7 @@ niw-case/
 ├── endeavor.md        # the frozen endeavor sentence + projects
 ├── evidence/checklist.md + evidence/exhibits/
 ├── citations/         # harvest.json, selected.md, examples.md
-├── documents/         # pes.md, petition-letter.md, letters/, exhibit-index.md
+├── documents/         # pes.md, petition-letter.md, letters/, exhibit-index.md, source-registry.md
 ├── forms/             # answers.json, blank/, filled PDFs
 └── rfe/               # only if an RFE arrives: response-plan.md, drafts
 ```
@@ -214,9 +214,12 @@ portfolio selection, write `citations/scored.json` and offer
 with the per-type specs.
 
 **III. Draft** — read `references/drafting.md` and, for letters,
-`references/support-letters.md`. Order: PES first, then letters, then the
-Petition Letter, then the exhibit index. After each draft, run the lint
-checks listed in drafting.md, then review with the user section by section.
+`references/support-letters.md`; for the Prong-1 policy hooks, research and
+rank government sources per `references/national-importance-sources.md`
+(mandatory currency check — no rescinded EOs). Order: PES first, then
+letters, then the Petition Letter, then the exhibit index. After each
+draft, run the lint checks listed in drafting.md, then review with the user
+section by section.
 
 **IV. Forms** — read `references/forms.md`. Run `openniw fetch-forms`
 (fallback: `scripts/fetch_forms.py`), pre-fill forms/answers.json +
@@ -225,9 +228,10 @@ sessions rules (`openniw ui forms`). After Done: run `openniw fill all` as
 the final deterministic pass, walk unmatched fields with the user for
 hand-filling. No browser available? Interview + `scripts/fill_form.py`.
 
-**V. Package** — before assembly, run the twelve RFE-prevention rules in
-`references/rfe.md` against the whole case as a red-team pass (adopt the
-officer's perspective; every finding gets fixed or consciously accepted).
+**V. Package** — before assembly, run the twelve RFE-prevention rules AND
+the claim-verification log in `references/rfe.md` against the whole case as
+a red-team pass (adopt the officer's perspective; every finding gets fixed
+or consciously accepted).
 Then produce the assembly checklist from forms.md and a final summary of
 what to print, sign, and mail.
 

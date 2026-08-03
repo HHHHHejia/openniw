@@ -20,6 +20,20 @@ NEVER use in any letter: speculative language about the work (potential/
 possible/may/probably), qualifying language (young researcher / early-career /
 rising star), or the signer's own metrics.
 
+## Assignment matrix (build BEFORE drafting; re-run AFTER)
+
+One row per letter, agreed with the user before any drafting:
+
+| Letter/signer | Credential | Assigned prong + specific claims | Unique angle |
+|---|---|---|---|
+
+Rules: match credential to claim; every argued prong gets ≥1 letter; **at
+least one letter must specifically address national importance**; no two
+letters argue the same point the same way. After drafting, re-run the
+matrix as a coverage/overlap check: fill coverage gaps, cut or reassign
+overlaps, and check tone — different signers must sound like different
+people, never mass-produced from one template.
+
 ## Templates (500–850 words each; vary voice between letters)
 
 **National Importance TL** ("Dear USCIS,"): signer credentials + relationship
@@ -58,3 +72,6 @@ hand/verified signature ("do not simply type your signature") + contact info.
 Every fact must match case.json exactly; refresh counts at signature time.
 Academic letters do not mention the applicant's company unless that is the
 letter's assigned angle.
+
+Sources: assignment-matrix + coverage/overlap method adapted from
+juntoku9/claude_immigration_attorney (MIT).

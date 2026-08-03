@@ -49,6 +49,15 @@ Per-type evidence specs (from real successful filings):
 - **Screenshots**: full URL visible, captured logged-out.
 - Date-class every exhibit: pre-filing / post-filing. Eligibility is judged
   AS OF the filing date; post-filing evidence only works as continuation.
+- **Entrepreneur profile extension** (Policy Manual favorable-evidence
+  categories; broad economy/job-creation assertions alone establish
+  nothing): ownership + active central role in a U.S. entity · outside
+  investment consistent with industry standards · admission to a SELECTIVE
+  incubator/accelerator (document the selectivity) · government awards or
+  grants, including non-monetary support · IP with demonstrated
+  significance, not mere existence · revenue-growth and job-creation
+  metrics. Each item needs corroborating documents — claims lacking
+  corroborating evidence do not meet the burden of proof.
 
 ## The citation pipeline (the highest-value automation)
 
@@ -90,3 +99,6 @@ Maintain `case.json` as the single source of truth: every venue, year,
 authorship position, citation count (+as-of date), award ratio, employment
 term, entity fact. Every drafted artifact must match it exactly; recheck at
 signature time (counts drift). Scan ALL case documents for contradictions.
+
+Sources: entrepreneur categories from USCIS Policy Manual Vol. 6 Pt. F
+Ch. 5 (Jan 15, 2025 update; verified live 2026-08-02).

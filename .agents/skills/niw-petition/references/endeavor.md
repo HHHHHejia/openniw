@@ -25,6 +25,24 @@ Then polish into 2-3 candidates. Requirements for the winner:
 - The topic must sit inside the applicant's degree field (Jan-2025 policy
   requires explicit degree–endeavor alignment)
 
+## The occupation gate (Jan-2025 Policy Manual — clear BEFORE freezing)
+
+USCIS reads eligibility as a chain: degree → occupation → endeavor. Verify
+in order:
+1. **Occupation is a profession.** The occupation through which the endeavor
+   is advanced must itself require at least a bachelor's; the occupation
+   UNDERLYING THE ENDEAVOR is determinative, not the applicant's credentials
+   (Policy Manual: an engineering PhD proposing to open a bakery fails).
+2. **Endeavor is more specific than the occupation.** (Manual's Dhanasar
+   example: occupation = engineer; endeavor = R&D relating to air and space
+   propulsion systems.)
+3. **Bachelor's + 5 route:** the 5 years of progressive experience must be
+   post-baccalaureate, in the specialty, and related to BOTH the degree and
+   the endeavor (chemistry BS + 5 years as restaurant manager ≠ master's).
+A project failing the gate gets reframed or cut here — not papered over in
+drafting. Also test each planned project against the Prong-1 anti-patterns
+in rfe.md (prevention rule 1) before Stage III.
+
 ## The six executability elements (score 0/1/2 each)
 
 For each planned project under the endeavor, check:
@@ -58,3 +76,6 @@ My proposed endeavor is to ...
 
 Once the user confirms, mark it FROZEN with the date. Every later document
 must quote the sentence exactly; check this during drafting review.
+
+Sources: USCIS Policy Manual Vol. 6 Pt. F Ch. 5 §D (Jan 15, 2025 update;
+verified live 2026-08-02); Matter of Dhanasar, 26 I&N Dec. 884 (AAO 2016).

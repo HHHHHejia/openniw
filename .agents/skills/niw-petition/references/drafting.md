@@ -15,9 +15,11 @@ numbering with a List of References. Outline:
    "[Please insert date of signature in MM/DD/YYYY format]"
 2. §1 "My proposed endeavor is to [FROZEN SENTENCE, first person]."
 3. §2 National-interest alignment: three "policy hook → my contribution"
-   pairs, each `(Reference N)`. Weight references toward U.S. GOVERNMENT
-   sources (agency frameworks, executive orders, statutes, federal reports);
-   a market-size figure may appear but never carries the argument alone.
+   pairs, each `(Reference N)`. Research, verify (currency rule: no dead
+   EOs), and rank the hooks per `national-importance-sources.md`. Weight
+   references toward U.S. GOVERNMENT sources (agency data, statutes, federal
+   reports); a market-size figure may appear but never carries the argument
+   alone.
 4. §3 Planned projects — 2-3 bullets, each rigidly: (a) bold gerund title;
    (b) goal with technical specifics; (c) U.S. beneficiaries/domains;
    (d) explicit linkage "This work directly supports my proposed endeavor,
@@ -58,7 +60,9 @@ letters where they exist) · Policy Manual restatement — quote the
 contribute to the advancement of a valuable technology or field of study"
 language; demonstrated POTENTIAL suffices · one-sentence close. CRITICAL:
 argue from the SPECIFIC endeavor and concrete projects, never from field
-importance.
+importance. Source every policy/statistic module per
+`national-importance-sources.md` (routing, SOURCE/QUOTE/CONNECTION format,
+ranking, currency rule).
 
 **III. Prong 2 (well positioned)** — the quantitative core: Dhanasar framing +
 waiver disclaimer ("the petitioner's proposed endeavor is separate from the
@@ -75,6 +79,24 @@ numbers) · 3 independent citing-work bullets ("In a [YEAR] study in [VENUE],
 sentence verbatim.
 State authorship positions explicitly. Prong 2 is NOT a comparative test —
 note that once. Never expose diminishing denominators/ratios.
+
+Walk the Policy Manual's well-positioned evidence list as a checklist —
+every item that exists goes in; applicable gaps get flagged to the user:
+degrees/licenses/certifications · patents/trademarks/copyrights · published
+articles/media about the person's work · citation-history documentation, or
+excerpts showing positive discourse around / adoption of the work ·
+evidence of influence on the field · a U.S. continuation plan ·
+correspondence from prospective customers, users, or investors · feasible
+financial-support plans/models · U.S. investment (VC/angel/accelerator,
+amounts appropriate to the endeavor) · contracts/agreements/licenses ·
+letters from government or quasi-governmental entities · government
+awards/grants/non-monetary support · evidence of others using the work
+(contracts using the person's products; technology others use; significant
+patents/licenses with adoption).¹
+
+¹ Policy Manual, Vol. 6 Pt. F Ch. 5: letters "may be persuasive when they
+are from experts … and are supported by other independent evidence";
+"unsubstantiated claims would not meet the petitioner's burden of proof."
 
 **IV. Prong 3 (on balance)** — seven short paragraphs: recap · benefits
 outweigh labor-cert interests · urgency (DISTINCT from importance — tie to
@@ -94,9 +116,20 @@ applicant-proof with legitimizing context. Inline citations `(Exhibit N)` /
 `(Exhibits N–M)` (en-dash), sentence-final. Legal authorities (Dhanasar,
 Policy Manual) in FOOTNOTES only.
 
+**Source registry** (documents/source-registry.md, printable) — one line per
+factual claim: claim → its exhibit number, or URL + verbatim quote +
+retrieval date for web-sourced facts. Build it WHILE drafting, not after;
+it feeds Stage V's claim-verification log (rfe.md) and any later RFE
+response.
+
 ## Quality bars (lint before showing the user)
 
 Consistent honorific throughout · endeavor sentence verbatim at every
 occurrence · no [TODO] left at finalization · no dangling template
 instructions · every entity claim exhibit-bound · no field-level-importance
-arguments standing alone · all numbers match case.json.
+arguments standing alone · all numbers match case.json · every claim has a
+source-registry line.
+
+Sources: USCIS Policy Manual Vol. 6 Pt. F Ch. 5 (prong-2 evidence list +
+letters language, verified live 2026-08-02); source-registry packaging idea
+adapted from juntoku9/claude_immigration_attorney (MIT).

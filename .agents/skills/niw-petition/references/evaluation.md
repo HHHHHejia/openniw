@@ -29,7 +29,8 @@ yourself (standing rule 4), confirmed in one clause.
 
 After profile.md exists, pre-fill `benchmark.json` with the profile's
 citations/papers/field and launch `openniw ui benchmark`. It plots 7,400+
-publicly posted approved I-140 cases: monthly distribution bands of
+publicly posted approved cases (I-140 categories plus a small O-1 pool):
+monthly distribution bands of
 approved peers with the user's numbers as reference lines. The page's copy
 is survivor-bias-safe (percentile among APPROVED cases, never an approval
 probability) — keep your own language consistent with that. After the
@@ -89,10 +90,14 @@ profile.md has a PDF in `sources/papers/`.
      the U.S.
 3. USCIS Policy Manual update (Jan 15, 2025) — stricter scrutiny:
    - The degree must relate DIRECTLY to the proposed endeavor
+   - The occupation underlying the endeavor must itself be a profession
+     (bachelor's-required) — full gate in endeavor.md; apply it here too
    - Broad "benefits the economy" claims are insufficient; tie to specific
      national priorities (CET areas, agency frameworks, federal targets)
    - Entrepreneur claims need concrete support: funding, contracts, letters of
      interest, active central role in a U.S. entity
+   - Letters alone are insufficient — they must be "supported by other
+     independent evidence"; unsubstantiated claims fail the burden of proof
 
 ## Calibration (what strong filings actually look like)
 
@@ -103,6 +108,25 @@ researchers building on the work. A specific well-scoped endeavor matters as
 much as credentials. RFE triggers to warn about: vague endeavor ("continue my
 research"), degree–endeavor mismatch, no evidence of third-party use,
 everything tied to one employer.
+
+## Adjudication climate (as of 2026-08-02 — refresh quarterly)
+
+USCIS publishes no official NIW approval/RFE-rate page; every figure below
+is a practitioner tally of USCIS quarterly I-140 data, and counting methods
+differ across trackers — so always state period + source together, never a
+bare number.
+- Approval rate: ~95.7% FY2022 (visafranchise/manifestlaw, USCIS data) →
+  ~43.3% FY2024 (calivisa) → ~42.6% Q1 FY2026, Oct–Dec 2025 (visafranchise).
+  Drivers: ~3× filing volume since FY2022 + the Jan-2025 policy tightening.
+- RFE rate, regular processing: ~50% Jan 2026 → ~39% Mar 2026 (Lawfully
+  tracking via manifestlaw).
+- AAO appeals are near-futile: FY2021–FY2025, 64 sustained vs 2,831
+  dismissed, ~2.2% (public_source tally) — the initial filing must be right.
+- Premium processing accelerates outcomes, not odds.
+Consequence for the Tier verdict: in this climate "borderline" means
+strengthen-first is the DEFAULT recommendation; "file now" needs an explicit
+articulated reason. These are population rates among adjudicated petitions —
+never present any of them as this applicant's approval probability.
 
 ## Output format (evaluation.md)
 
@@ -116,3 +140,8 @@ everything tied to one employer.
 6. **Bottom line** — file now vs strengthen first, honestly.
 
 Never invent facts. End with: "This is informational analysis, not legal advice."
+
+Sources: USCIS Policy Manual Vol. 6 Pt. F Ch. 5 (incl. Jan 15, 2025 update)
+· visafranchise.com/blog/eb2-niw-approval-rate · manifestlaw.com/blog/
+eb2-niw-approval-rate · calivisa.com (FY2024 stats post) · public-approval-source
+(2026 adjudication-shifts post, AAO tally). Rates checked 2026-08-02.
