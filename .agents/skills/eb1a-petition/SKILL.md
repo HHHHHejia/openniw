@@ -1,6 +1,6 @@
 ---
 name: eb1a-petition
-description: Prepares a complete EB-1A (extraordinary ability, E11) self-petition package in a local case folder — free evaluation against all ten 8 CFR 204.5(h)(3) criteria from a Google Scholar profile or CV, evidence checklist and citation pipeline, the Kazarian two-step Petition Letter with a Final Merits section, support letters, the intent-to-continue-work statement, an I-140 field guide, and filing-package assembly. Use when the user mentions EB-1A, EB-1, extraordinary ability, E11, I-140 self-petition, RFE response, 杰出人才, 杰出人才绿卡, or preparing a U.S. green-card petition from their research record. Document preparation only, not legal advice.
+description: Prepares a complete EB-1A (extraordinary ability, E11) self-petition package in a local case folder — free evaluation against all ten 8 CFR 204.5(h)(3) criteria from a Google Scholar profile or CV, evidence checklist and citation pipeline, the Kazarian two-step Petition Letter with a Final Merits section, support letters, the intent-to-continue-work statement, an I-140 field guide, filing-package assembly, and a full RFE/NOID response workflow (including for petitions filed elsewhere). Use when the user mentions EB-1A, EB-1, extraordinary ability, E11, I-140 self-petition, RFE response, Request for Evidence, NOID, 补件, 杰出人才, 杰出人才绿卡, or preparing a U.S. green-card petition from their research record. Document preparation only, not legal advice.
 license: MIT
 metadata:
   source: https://github.com/HHHHHejia/openniw
@@ -34,7 +34,8 @@ eb1a-case/
 ├── citations/         # harvest.json, selected.md, examples.md
 ├── documents/         # statement.md, petition-letter.md, letters/, exhibit-index.md, source-registry.md
 ├── forms/             # worksheet.md, blank/, hand-completed PDFs
-└── rfe/               # only if an RFE arrives: response-plan.md, drafts
+└── rfe/               # only if a notice arrives: letter.pdf (the notice) + the response files and
+                       # package/ listed in rfe-response.md (+ sources/petition/ if filed elsewhere)
 ```
 
 Four standing rules, enforced at every step:
@@ -104,8 +105,12 @@ Stage: II·b Evidence
 ```
 
 Keep the six stage-checklist lines formatted exactly as above (IDs `I`,
-`II·a`, `II·b`, `III`, `IV`, `V`; `←` marks current) — the browser pages
-parse them for the live stepper.
+`II·a`, `II·b`, `III`, `IV`, `V`; exactly ONE `←` in the whole checklist
+marks the current stage) — the browser pages parse them for the live
+stepper. In RFE mode a seventh line in the same format
+(`- [ ] R    RFE`) is APPENDED and the `←` moves to it; nothing else about
+the six changes. Companions predating the R stage ignore that line and
+keep showing six — never promise the user a seventh chip.
 
 ## Browser sessions (interaction-heavy steps)
 
@@ -123,14 +128,15 @@ Pages used by this skill: `ui intake` (Stage I opener, owns intake.json +
 sources/) · `ui benchmark` (Stage I peer comparison, owns benchmark.json —
 pre-write `"category": "EB1A"` into it so the page compares against
 approved EB-1A cases) · `ui citations` (Stage II·b portfolio pick,
-optional). Every page carries the global six-stage stepper (live from
-STATE.md). The `openniw` pip companion serves pages over the case folder
-ONLY: 127.0.0.1, random token in the URL, no account, no database, no AI —
-you remain the brain. Do NOT open `ui forms` for this category (see the
-NIW-only list below). Two current-stepper quirks to warn the user about
-up front: it labels stage II·a "Endeavor" — for this category read it as
-"Frame" — and its "Forms" step links to the NIW-only forms wizard; tell
-the user not to click it (Stage IV for EB-1A happens in chat).
+optional). Every page carries the global stepper, live from STATE.md. The
+`openniw` pip companion serves pages over the case folder ONLY:
+127.0.0.1, random token in the URL, no account, no database, no AI — you
+remain the brain. Do NOT open `ui forms` for this category (see the
+NIW-only list below). Warn the user up front about three stepper quirks:
+stage II·a is labelled "Endeavor" (read it as "Frame"); the "Forms" step
+links to the NIW-only wizard — do not click it (Stage IV happens in
+chat); and an older companion shows six stages only, so the RFE `R` chip
+may never appear.
 
 **Ensure the companion once**: `openniw --version`. If missing, try in
 order: `uv tool install openniw` → `pipx install openniw` →
@@ -244,24 +250,45 @@ review with the user section by section.
 **IV. Forms** — read `references/forms.md`. Run `openniw fetch-forms`
 (fallback: `scripts/fetch_forms.py`) for blank I-140/I-907/G-1145 (the
 CLI also downloads NIW-only ETA-9089 PDFs — delete those; the bundled
-script skips them). Interview for
-every answer, record them in forms/worksheet.md, then walk the user
-through hand-filling each form in a PDF editor with the field guide.
-NEVER run `openniw fill` — it would check the wrong Part 2 box.
+script skips them). Interview for every answer, record them in
+forms/worksheet.md, then walk the user through hand-filling each form in a
+PDF editor with the field guide. NEVER run `openniw fill` — it would check
+the wrong Part 2 box.
 
 **V. Package** — before assembly, run the twelve RFE-prevention rules AND
 the claim-verification log in `references/rfe.md` against the whole case
 as a red-team pass (adopt the officer's perspective; every finding gets
-fixed or consciously accepted).
-Then produce the assembly checklist from forms.md — payment on top, then
-G-1145, I-907 (premium only), I-140, letter, exhibits with tabbed index —
-and a final summary of what to print, sign, and mail. Mind that the
-premium lockbox state split DIFFERS from the standard split (tables in
-forms.md).
+fixed or consciously accepted). Then produce the assembly checklist from
+forms.md — payment on top, then G-1145, I-907 (premium only), I-140,
+letter, exhibits with tabbed index — and a final summary of what to print,
+sign, and mail. Mind that the premium lockbox state split DIFFERS from the
+standard split (tables in forms.md). Once the package has shipped, OFFER
+once — never assume — the anonymous data point that feeds the public
+benchmark (fields, anonymization rules, submission mechanics:
+`references/rfe-response.md`, R7).
 
-**If the user has received an RFE**: skip to `references/rfe.md` (response
-section) — read the RFE letter, build the response plan and timeline, then
-reuse stages II·b–IV for the supplemental evidence and statement.
+## RFE mode (a notice arrived — stages R1–R7)
+
+An RFE, NOID or 补件 notice starts a different workflow, not another stage:
+read `references/rfe-response.md` and run R1–R7. Two entry paths both work —
+a case prepared here, or an EMERGENCY ENTRY where an attorney or the user
+filed the petition and no case folder exists (create one, collect the filed
+record into `sources/petition/`, reverse-build case.json + claim-frame.md
+from it — field definition and claimed-criteria list VERBATIM, frozen as
+filed, never improved or reworded; unsourceable facts become `[TODO]`).
+
+First moves, in order: read the notice; extract the notice date, printed
+DEADLINE and response address into STATE.md; then tell the user three
+things — timeliness is RECEIVED-BY, not postmark; the deadline cannot be
+extended; everything ships in ONE package. Then APPEND the seventh
+checklist line (`- [ ] R    RFE        ← in progress`), CLEAR the `←` from
+every other line (finished stages `[x]`; on an emergency entry the six stay
+unchecked and unmarked — the stepper calls the FIRST `←` line current), and
+add the dated RFE block + R1–R7 sub-checkboxes below it (rfe-response.md).
+
+R2–R6 reuse this skill's machinery — `references/evidence.md`, the citation
+pipeline, `references/support-letters.md`, `references/drafting.md`. No
+browser page exists for the R stages; the NIW-only commands stay off-limits.
 
 ## Tools (run, don't read)
 
@@ -269,9 +296,8 @@ Prefer the `openniw` companion CLI (pip; `openniw>=0.3`) — it prints the
 same JSON reports its browser UI uses. Always run from the CASE FOLDER:
 - `openniw ui intake|benchmark|citations` · `status` · `wait` · `stop` —
   browser sessions (see Browser sessions above)
-- `openniw papers "Title" ...` — batch-download the applicant's own
-  papers (OpenAlex → arXiv/PMC/publisher OA) into sources/papers/ +
-  provenance manifest; run by DEFAULT in Stage I
+- `openniw papers "Title" ...` — batch-download the applicant's papers
+  (OpenAlex → arXiv/PMC/OA) into sources/papers/ + manifest; Stage I default
 - `openniw harvest "Title" ...` — OpenAlex citing-paper harvest +
   independence/published screening
 - `openniw fetch-forms` — blank I-140/I-907/G-1145 (+ NIW-only ETA-9089

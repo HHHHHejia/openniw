@@ -1,4 +1,7 @@
-# RFE — Prevention (at filing) and Response (if one arrives)
+# RFE prevention (at filing)
+
+A notice already arrived? Stop here and read `rfe-response.md` — the R1–R7
+response workflow. This file is the pre-filing red-team pass.
 
 ## Twelve prevention rules (check EVERY case against these before assembly)
 
@@ -42,9 +45,10 @@
     judging, or citation-mill signature is now an affirmative liability
     (2025-26 revocation wave) — exclude it entirely.
 12. **Date-classify everything; the frame is frozen once filed.**
-    Eligibility is judged as of the filing date; nothing post-filing
-    helps, nothing new can be added on appeal; never propose rewording
-    the frozen field definition in any response.
+    Eligibility is judged as of the filing date; post-filing achievements
+    never establish it (documents created later that evidence pre-filing
+    facts do), nothing new can be added on appeal, and the frozen field
+    definition is never reworded in any response.
 
 ## Claim-verification log (run alongside the twelve rules at Stage V)
 
@@ -58,49 +62,16 @@ dates consistent across ALL documents; titles consistent across resume, HR
 letter, and forms. Close with a verdict line: READY / NEEDS FIXES / MAJOR
 ISSUES. Approach with skepticism, not trust.
 
-## If an RFE arrives
+## If an RFE or NOID arrives
 
-Read the letter and produce `rfe/response-plan.md`:
-1. **Anatomy**: which claimed criteria found not met vs a final-merits
-   challenge; each deficiency QUOTED in USCIS's exact language; treat the
-   RFE's "you may submit" bullet lists as a literal checklist.
-2. **Root-cause each deficiency** (pick one): no evidence submitted ·
-   wrong evidence type · evidence too weak · missing sub-element · legal
-   misframing · factual gap · self-serving evidence only ·
-   stale/irrelevant evidence. For each: what was submitted → what USCIS
-   found insufficient → the fix → **Fixable? Yes / Partially / Unlikely**.
-   Unlikely ⇒ withdraw that criterion explicitly ("the Petitioner
-   respectfully withdraws the claim under ...") — only 3 of 10 are
-   needed; a doomed claim drags the rest down.
-3. **Officer errors to rebut** — factual misreadings and legal-standard
-   errors (e.g., importing final-merits caliber tests into Step-1
-   counting, contra Kazarian), each with the rebuttal + the physical
-   proof attached.
-4. **Evidence plan**: NEW evidence first — the adjudicator already read
-   the old set and wasn't convinced; argument alone is a denial waiting
-   to happen. Everything must pre-date filing (or document a pre-filing
-   fact); classify each item pre-filing / pre-filing-fact-newly-documented
-   / not-usable.
-5. **Response brief**: mirror USCIS's own headings and order; new-exhibit
-   list up front; a refreshed Final Merits section if final merits was
-   challenged; respectful tone; exhibit index QUOTING the RFE sentence
-   each exhibit answers.
-6. **Letters plan** — each new letter described by the specific RFE
-   finding it rebuts; independents preferred; factual attestations
-   (employer/editor) are attestations, not expert opinions.
-7. **Timeline** working back from the deadline: evidence for letters
-   -8wk, drafting -5wk, first draft -3wk, exhibits assembled -2wk,
-   delivery -1wk. USCIS treats a partial response as a request for a
-   decision on the existing record — so everything ships at once, no
-   second installment, to the address in the RFE letter (never a
-   lockbox). Premium cases: the 15-business-day clock resets on receipt
-   of the response.
+Switch to `rfe-response.md` and run stages R1–R7 (intake and the deadline
+clock · diagnosis into rfe/response-plan.md · the evidence matrix and supply
+loop · letters plan · supplemental statement · assembly and submission ·
+the optional anonymous data point). Two rules from this file survive into the
+response and are worth repeating there: the frozen field definition is never
+reworded, and eligibility is judged as of the filing date.
 
-Run the full lint from drafting.md on the response package before it
-ships; re-check every count in case.json (they drift between filing and
-RFE).
-
-Sources: claim-log, RFE root-cause taxonomy and withdrawal pattern adapted
-from juntoku9/claude_immigration_attorney (MIT); 2026 AAO dismissal patterns
-via millermayer.com and greencard.writewing.in reviews; USCIS Policy
-Manual Vol. 6 Part F Ch. 2 (RFE/denial articulation standards).
+Sources: claim-verification log adapted from
+juntoku9/claude_immigration_attorney (MIT); 2026 AAO dismissal patterns via
+millermayer.com and greencard.writewing.in reviews; USCIS Policy Manual
+Vol. 6 Part F Ch. 2 (criterion considerations, letters, final merits).

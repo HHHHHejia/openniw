@@ -80,15 +80,13 @@ separate payment on its own payment form: $3,980 total across three
 payments. Payment is electronic: G-1650 (ACH, recommended) or G-1450
 (card; a declined card rejects the entire package).
 
-**Filing channel** — paper by mail is the default deliverable. A
-standalone, regular-processing I-140 can alternatively be filed ONLINE
-through a USCIS online account ($665 online vs $715 paper; both options
-listed at uscis.gov/i-140 — verify there): the same package uploads as
-PDFs, the fee is paid online, and the receipt is an IOE number (which
-later allows an online I-907 upgrade). Paper remains mandatory for
-premium-at-filing (I-140 + I-907 together) and for concurrent
-I-140 + I-485 packages. Online filers reuse the assembly order below as
-the upload order; the lockbox tables apply to paper only.
+**Filing channel** — paper by mail is the ONLY channel: the I-140 is not
+online-filable, and neither is an I-907 for an I-140 (USCIS "Forms
+Available to File Online", updated 07/24/2026 — re-check there before
+filing). A paper case receipted into the electronic system gets an **IOE**
+receipt number, which lets the user later link the case to a myUSCIS
+account for notices and — if the case is processed electronically — for
+uploading an RFE response. The lockbox tables below govern every filing.
 
 Assembly order (top to bottom — USCIS recommends the payment form FIRST):
 payment form(s) → G-1145 → I-907 (premium only, signed) → cover letter
@@ -140,9 +138,10 @@ table for what is actually in the envelope.
   Attn: NFB, P.O. Box 660867, Dallas, TX 75266-0867 (courier: Attn: NFB
   (Box 660867), 2501 S. State Highway 121 Business, Suite 400,
   Lewisville, TX 75067-8003).
-- **Upgrading a pending I-140 later**: a standalone I-907 goes to the
-  Elgin/Phoenix I-907 boxes, or online if the receipt number starts with
-  IOE.
+- **Upgrading a pending I-140 later**: a standalone I-907 is PAPER-ONLY
+  (there is no online I-907 for an I-140, whatever the receipt number) and
+  goes to the Elgin/Phoenix I-907 boxes as listed 2026-08 — verify on the
+  uscis.gov/i-907 direct-filing chart before mailing.
 
 ## Cover letter
 
@@ -156,10 +155,11 @@ work in the area of expertise; a numbered ENCLOSED DOCUMENTS list in
 physical package order ending with "Supporting Evidence (tabbed and
 indexed)"; "Respectfully submitted," + name + "Self-Petitioner".
 
-Sources: uscis.gov/i-140 (form + edition + filing tips + online-filing
-option), USCIS G-1055 fee schedule (ed. 05/29/26), USCIS I-140
+Sources: uscis.gov/i-140 (form + edition + filing tips), USCIS "Forms
+Available to File Online" (updated 07/24/2026 — I-140 and I-907-for-I-140
+absent), USCIS G-1055 fee schedule (ed. 05/29/26), USCIS I-140
 fee-payment alert (rel. 2024-09-23, separate-payments rule), USCIS I-140
-direct filing addresses page (last
+and I-907 direct filing addresses pages (last
 reviewed 04/08/2025, fetched 2026-08), USCIS E11 initial-evidence
 checklist, Federal Register 2026-00321 (premium fee $2,965 eff.
 2026-03-01). All figures re-verifiable on uscis.gov before filing.
