@@ -1,8 +1,9 @@
 # OpenNIW
 
-**Open-source, AI-assisted EB-2 National Interest Waiver (NIW) self-petitions —
-your coding agent is the paralegal, a local folder is the case file, and a
-browser wizard appears exactly when a GUI beats chat.**
+**A free, open-source tool that helps you organize and speed up your own
+EB-2 National Interest Waiver (NIW) self-petition — your coding agent does
+the organizing, a local folder is the case file, and a browser wizard
+appears exactly when a GUI beats chat.**
 
 Website: **[openniw.com](https://openniw.com)** — project intro, install
 guide, and a free no-signup benchmark against 7,458 approved cases
@@ -10,7 +11,7 @@ guide, and a free no-signup benchmark against 7,458 approved cases
 
 OpenNIW is an [Agent Skill](https://agentskills.io). Install it into
 Claude Code, Codex, Cursor, or any Agent-Skills tool, and your existing AI
-subscription runs the entire law-firm workflow — evaluation, evidence,
+subscription runs the entire preparation workflow — evaluation, evidence,
 drafting, official forms, filing package — with **zero configuration**:
 
 - **No account.** Nothing to sign up for.
@@ -171,5 +172,25 @@ percentile data sources, consular-processing variants, UI translations.
 
 ## License
 
-MIT. 开源利益众生 — built so that strong researchers can afford a strong
-petition.
+MIT.
+
+## Disclaimer
+
+OpenNIW is free software that helps you organize and prepare your own
+immigration paperwork. To be explicit:
+
+- **We are not attorneys and OpenNIW is not a law firm.** Nothing here is
+  legal advice, and using OpenNIW creates no attorney–client relationship.
+- **We charge nothing and provide no service.** There is no engagement, no
+  representation, and no promise of any outcome. Immigration results
+  depend on your individual facts and on adjudicator discretion.
+- **You are the petitioner and remain fully responsible** for everything
+  you sign and file. Review every document and form yourself before
+  filing, and consider having a licensed immigration attorney review your
+  case.
+- **The software is provided "AS IS"**, without warranty of any kind; the
+  authors and contributors accept no liability arising from its use (see
+  the MIT license).
+- Benchmark data reflects publicly posted, self-reported approval notices
+  (successful cases only) and describes distributions of approved
+  profiles — it does not predict any individual outcome.

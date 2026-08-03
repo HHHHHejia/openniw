@@ -331,8 +331,7 @@ export default function BenchmarkPage() {
         stats.citesPercentile != null && stats.citesPercentile < 40 && (
         <p className="text-sm text-[#4f5a55] mb-2">
           <b>{stats.lowWins}</b> approved {category} cases in this pool had
-          citations at or below yours — citations are one factor, not a
-          threshold.
+          citations at or below yours — approved profiles vary widely on this dimension.
         </p>
       )}
 
@@ -407,9 +406,9 @@ export default function BenchmarkPage() {
             </div>
           ))}
           <p className="text-xs text-[#4f5a55]">
-            The same citation count usually lands far lower among EB1A
-            approvals — which is why &quot;NIW now, EB1A when the record
-            matures&quot; is a common path. Scale: percentile among approved
+            The same citation count usually sits at a much lower percentile
+            among EB1A approvals — the two categories have very different
+            approved-profile distributions. Scale: percentile among approved
             cases of that track (left = below most, right = above most).
           </p>
         </section>
@@ -483,7 +482,7 @@ export default function BenchmarkPage() {
           <p className="text-sm leading-relaxed">
             Among 2024+ approved NIW cases that disclosed their RFE status,{" "}
             <b>{data.aggregates.rfe_overcome_2024.rate}%</b> had received an
-            RFE and overcame it. An RFE is a detour, not a verdict.
+            RFE and later received approval.
           </p>
           <p className="text-xs text-[#4f5a55] mt-1">
             Based on {data.aggregates.rfe_overcome_2024.n} disclosing cases.

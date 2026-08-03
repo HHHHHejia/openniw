@@ -17,21 +17,24 @@ export default function Landing() {
       {/* hero */}
       <section className="mb-12">
         <div className="docket-line text-[--docket] mb-3">
-          open source · MIT · no accounts · no API keys · not legal advice
+          free · open source (MIT) · no accounts · no API keys · not a law
+          firm · not legal advice
         </div>
         <h1 className="text-4xl leading-tight mb-4"
             style={{ fontFamily: "var(--font-serif), serif" }}>
-          Your AI subscription can prepare your NIW petition.
+          Organize your NIW self-petition faster — with the AI you
+          already have.
         </h1>
         <p className="text-lg text-[#333] leading-relaxed mb-2 max-w-2xl">
-          OpenNIW turns the coding agent you already pay for — Claude Code,
-          Codex, Cursor — into an EB-2 National Interest Waiver paralegal.
-          It runs the whole law-firm workflow in a folder on your computer:
+          OpenNIW is a free tool that helps you structure and speed up your
+          own EB-2 National Interest Waiver paperwork, using the coding
+          agent you already pay for — Claude Code, Codex, Cursor. The whole
+          preparation workflow runs in a folder on your computer:
           evaluation, evidence, drafting, official forms, filing package.
         </p>
         <p className="text-lg text-[#333] leading-relaxed mb-6 max-w-2xl">
-          Free and open source, because a strong petition shouldn&apos;t cost
-          $10,000. <span className="text-[#4f5a55]">开源利益众生。</span>
+          We charge nothing and provide no service — you prepare and file
+          your own petition; we just built the tool.
         </p>
         <div className="flex gap-3 flex-wrap">
           <a href="/eval/" className="btn">Try the free benchmark — no sign-up</a>
