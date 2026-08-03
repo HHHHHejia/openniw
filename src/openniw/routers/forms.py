@@ -20,6 +20,7 @@ class AnswersUpdate(BaseModel):
     answers: dict
     base_version: int | None = None
     edited_keys: list[str] = []
+    verified_keys: list[str] = []
 
 
 @router.get("/spec")
@@ -56,16 +57,23 @@ def put_answers(request: Request, body: AnswersUpdate) -> dict:
                                   base_version=body.base_version)
     except Conflict as exc:
         raise HTTPException(409, str(exc))
-    # editing a field clears its AI-prefill mark
+    # editing OR explicitly verifying a field clears its AI-prefill mark;
+    # both count as human review and land in meta.verified_keys
     meta, _ = case.read_json(case.answers_meta)
-    if body.edited_keys and meta.get("ai_keys"):
-        meta["ai_keys"] = [k for k in meta["ai_keys"]
-                           if k not in set(body.edited_keys)]
-        edited = set(meta.get("edited_keys") or []) | set(body.edited_keys)
-        meta["edited_keys"] = sorted(edited)
+    reviewed = set(body.edited_keys) | set(body.verified_keys)
+    if reviewed:
+        if meta.get("ai_keys"):
+            meta["ai_keys"] = [k for k in meta["ai_keys"]
+                               if k not in reviewed]
+        if body.edited_keys:
+            meta["edited_keys"] = sorted(
+                set(meta.get("edited_keys") or []) | set(body.edited_keys))
+        meta["verified_keys"] = sorted(
+            set(meta.get("verified_keys") or []) | reviewed)
         meta["last_ui_save"] = time.strftime("%Y-%m-%dT%H:%M:%S%z")
         case.write_json(case.answers_meta, meta)
-    case.append_event("saved_answers", edited=len(body.edited_keys))
+    case.append_event("saved_answers", edited=len(body.edited_keys),
+                      verified=len(body.verified_keys))
     return {"ok": True, "version": version}
 
 

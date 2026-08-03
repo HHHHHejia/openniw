@@ -40,6 +40,19 @@ def test_edited_keys_clear_ai_marks(client, case_dir):
     assert meta["edited_keys"] == ["beneficiary.ssn"]
 
 
+def test_verified_keys_clear_ai_marks(client, case_dir):
+    import json
+    (case_dir / "forms" / "answers.meta.json").write_text(json.dumps(
+        {"ai_keys": ["beneficiary.dob", "employment.soc_code"]}))
+    got = client.get("/api/forms/answers").json()
+    client.put("/api/forms/answers", json={
+        "answers": got["answers"], "base_version": got["version"],
+        "verified_keys": ["beneficiary.dob"]})
+    meta = client.get("/api/forms/answers").json()["meta"]
+    assert meta["ai_keys"] == ["employment.soc_code"]
+    assert "beneficiary.dob" in meta["verified_keys"]
+
+
 def test_fill_i140_and_pdf(client, case_dir):
     import pytest
     if not (case_dir / "forms" / "blank" / "i-140.pdf").exists():

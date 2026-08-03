@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { api, withToken } from "@/lib/api";
 import { Header, FinishBar } from "@/components/session";
+import { COUNTRIES, US_STATES, mdyToIso, isoToMdy } from "@/lib/options";
 
 // ---------------------------------------------------------------------------
 // The guided card flow. One small card per screen; a docket-index rail shows
@@ -174,7 +175,9 @@ export default function FormsPage() {
   const [busy, setBusy] = useState<string | null>(null);
   const [conflict, setConflict] = useState(false);
   const [railOpen, setRailOpen] = useState(false);
+  const [verified, setVerified] = useState<Set<string>>(new Set());
   const editedKeys = useRef<Set<string>>(new Set());
+  const pendingVerified = useRef<Set<string>>(new Set());
   const dirty = useRef(false);
 
   // ---- data ----------------------------------------------------------------
@@ -184,6 +187,7 @@ export default function FormsPage() {
     ]);
     setSpec(s); setAnswers(a.answers || {}); setVersion(a.version || 0);
     setAiKeys(new Set(a.meta?.ai_keys || []));
+    setVerified(new Set(a.meta?.verified_keys || []));
     setFilled(f.filled || []); setConflict(false);
   };
   useEffect(() => { load().catch(() => {}); }, []);
@@ -232,6 +236,14 @@ export default function FormsPage() {
       if (!s.has(key)) return s;
       const next = new Set(s); next.delete(key); return next;
     });
+    setVerified((s) => s.has(key) ? s : new Set(s).add(key));
+  };
+
+  const verify = (key: string) => {
+    pendingVerified.current.add(key);
+    dirty.current = true;
+    setAiKeys((s) => { const n = new Set(s); n.delete(key); return n; });
+    setVerified((s) => new Set(s).add(key));
   };
 
   async function save(): Promise<boolean> {
@@ -240,10 +252,12 @@ export default function FormsPage() {
       const res = await api("/api/forms/answers", {
         method: "PUT",
         body: { answers, base_version: version,
-                edited_keys: Array.from(editedKeys.current) },
+                edited_keys: Array.from(editedKeys.current),
+                verified_keys: Array.from(pendingVerified.current) },
       });
       setVersion(res.version);
       editedKeys.current = new Set();
+      pendingVerified.current = new Set();
       dirty.current = false;
       return true;
     } catch (e: any) {
@@ -269,8 +283,55 @@ export default function FormsPage() {
     } finally { setBusy(null); }
   }
 
+  // gating: required fields + unverified AI marks block Continue
+  const isEmpty = (k: string) => {
+    const f = fieldByKey[k]; const v = answers[k];
+    if (f?.type === "boolean") return v === undefined || v === null;
+    return v === undefined || v === null || v === "";
+  };
+  const structKeyOf = (c: CardDef) =>
+    c.kind === "degrees" ? "degrees"
+      : c.kind === "employer" ? "current_employer"
+      : c.kind === "family" ? "family" : null;
+  const gate = (c: CardDef) => {
+    const sk = structKeyOf(c);
+    const keys = sk ? [sk] : (c.keys || []);
+    const aiPending = keys.filter((k) => aiKeys.has(k));
+    let requiredMissing: string[] = [];
+    if (c.kind == null)
+      requiredMissing = keys.filter((k) => fieldByKey[k]?.required && isEmpty(k));
+    if (c.kind === "degrees" && !(answers.degrees || []).length)
+      requiredMissing = ["degrees"];
+    return { aiPending, requiredMissing,
+             blocked: aiPending.length > 0 || requiredMissing.length > 0 };
+  };
+
+  const structVerify = (key: string) => {
+    if (aiKeys.has(key)) {
+      return (
+        <button type="button"
+                className="verify-nag border px-2 py-1 mb-3 font-semibold docket-line cursor-pointer"
+                style={{ color: "#fff", background: "#b3402a", borderColor: "#b3402a" }}
+                onClick={() => verify(key)}>
+          AI pre-filled this section — review the rows, then click to verify
+        </button>
+      );
+    }
+    if (verified.has(key)) {
+      return (
+        <span className="docket-line border px-2 py-1 mb-3 inline-block"
+              style={{ color: "#1f6f54", borderColor: "#1f6f54" }}>
+          Verified ✓
+        </span>
+      );
+    }
+    return null;
+  };
+
   // completeness per card (for the rail)
   const cardState = (c: CardDef): "done" | "partial" | "todo" => {
+    const g = gate(c);
+    if (g.aiPending.length) return "partial";
     if (c.kind === "degrees") return (answers.degrees || []).length ? "done" : "todo";
     if (c.kind === "employer")
       return answers.current_employer?.name ? "done" : "todo";
@@ -313,19 +374,45 @@ export default function FormsPage() {
     }
     if (f.type === "textarea")
       return <textarea rows={4} value={v || ""} onChange={(e) => setValue(f.key, e.target.value)} />;
+    if (f.type === "select" || f.type === "country" || f.type === "state") {
+      const opts = f.type === "country" ? COUNTRIES
+        : f.type === "state" ? US_STATES : (f.options || []);
+      const isOther = f.options?.includes("Other")
+        && v && !f.options.includes(v);
+      return (
+        <div className="grid gap-2">
+          <select value={isOther ? "Other" : (v || "")}
+                  onChange={(e) => setValue(f.key,
+                    e.target.value === "Other" ? "Other" : e.target.value)}>
+            <option value="">— choose —</option>
+            {opts.map((o: string) => <option key={o}>{o}</option>)}
+          </select>
+          {(v === "Other" || isOther) && f.options?.includes("Other") && (
+            <input value={isOther ? v : ""} placeholder="please specify"
+                   onChange={(e) => setValue(f.key, e.target.value || "Other")} />
+          )}
+        </div>
+      );
+    }
+    if (f.type === "date")
+      return <input type="date" value={mdyToIso(v || "")}
+                    onChange={(e) => setValue(f.key, isoToMdy(e.target.value))} />;
     return <input value={v || ""} onChange={(e) => setValue(f.key, e.target.value)} />;
   }
 
   function renderCardBody() {
     if (card.kind === "degrees")
-      return <RowList value={answers.degrees} cols={DEGREE_COLS} levelKey="level"
-                      onChange={(x) => setValue("degrees", x)} />;
+      return (<div>{structVerify("degrees")}
+        <RowList value={answers.degrees} cols={DEGREE_COLS} levelKey="level"
+                 onChange={(x) => setValue("degrees", x)} /></div>);
     if (card.kind === "employer")
-      return <EmployerForm value={answers.current_employer}
-                           onChange={(x) => setValue("current_employer", x)} />;
+      return (<div>{structVerify("current_employer")}
+        <EmployerForm value={answers.current_employer}
+                      onChange={(x) => setValue("current_employer", x)} /></div>);
     if (card.kind === "family")
-      return <RowList value={answers.family} cols={FAMILY_COLS}
-                      onChange={(x) => setValue("family", x)} />;
+      return (<div>{structVerify("family")}
+        <RowList value={answers.family} cols={FAMILY_COLS}
+                 onChange={(x) => setValue("family", x)} /></div>);
     if (card.kind === "fill") return renderFillCard();
     if (card.kind === "package") return renderPackageCard();
     if (card.kind === "finish") return renderFinishCard();
@@ -335,16 +422,26 @@ export default function FormsPage() {
           const f = fieldByKey[k];
           if (!f) return null;
           const isAi = aiKeys.has(k);
+          const isVerified = !isAi && verified.has(k);
           return (
-            <div key={k} className={isAi ? "border-l-2 pl-3" : ""}
-                 style={isAi ? { borderColor: "#8a7a2a" } : undefined}>
+            <div key={k} className={isAi ? "border-l-2 pl-3" : isVerified ? "border-l-2 pl-3 border-[--docket]" : ""}
+                 style={isAi ? { borderColor: "#b3402a" } : undefined}>
               <label className="block">
-                <span className="docket-line mb-1.5 flex items-center gap-2">
+                <span className="docket-line mb-1.5 flex items-center gap-2 flex-wrap">
                   {f.label}
                   {f.required && <span className="text-[--stamp]">*</span>}
                   {isAi && (
-                    <span className="border px-1" style={{ color: "#8a7a2a", borderColor: "#8a7a2a" }}>
-                      AI — please verify
+                    <button type="button"
+                            className="verify-nag border px-2 py-0.5 cursor-pointer font-semibold"
+                            style={{ color: "#fff", background: "#b3402a", borderColor: "#b3402a" }}
+                            onClick={(e) => { e.preventDefault(); verify(k); }}>
+                      AI — click to verify
+                    </button>
+                  )}
+                  {isVerified && (
+                    <span className="border px-2 py-0.5"
+                          style={{ color: "#1f6f54", borderColor: "#1f6f54" }}>
+                      Verified ✓
                     </span>
                   )}
                 </span>
@@ -551,15 +648,34 @@ export default function FormsPage() {
             {renderCardBody()}
           </div>
 
-          <div className="flex items-center justify-between mt-5">
+          <div className="flex items-start justify-between mt-5">
             <button className="btn-quiet" disabled={step === 0} onClick={() => go(step - 1)}>
               ← Back
             </button>
-            {card.kind !== "finish" ? (
-              <button className="btn" onClick={() => go(step + 1)}>
-                Continue →
-              </button>
-            ) : <span />}
+            {card.kind !== "finish" ? (() => {
+              const g = gate(card);
+              return (
+                <div className="flex flex-col items-end gap-1">
+                  <button className="btn" disabled={g.blocked}
+                          style={g.blocked ? { opacity: 0.45, cursor: "not-allowed" } : undefined}
+                          onClick={() => go(step + 1)}>
+                    Continue →
+                  </button>
+                  {g.blocked && (
+                    <span className="docket-line text-[--stamp] text-right">
+                      {[
+                        g.requiredMissing.length
+                          ? `${g.requiredMissing.length} required field${g.requiredMissing.length > 1 ? "s" : ""} to fill`
+                          : "",
+                        g.aiPending.length
+                          ? `${g.aiPending.length} AI field${g.aiPending.length > 1 ? "s" : ""} to verify`
+                          : "",
+                      ].filter(Boolean).join(" · ")}
+                    </span>
+                  )}
+                </div>
+              );
+            })() : <span />}
           </div>
 
           {card.kind === "finish" && (

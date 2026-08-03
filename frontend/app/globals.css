@@ -92,3 +92,10 @@ label { @apply block; }
     hover:border-[--ink] transition-colors disabled:opacity-40
     disabled:pointer-events-none cursor-pointer;
 }
+
+/* AI-prefill verify nag: blinks until clicked */
+@keyframes verify-nag-blink { 50% { opacity: 0.35; } }
+.verify-nag { animation: verify-nag-blink 1.1s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .verify-nag { animation: none; }
+}
