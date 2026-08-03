@@ -6,7 +6,7 @@ the organizing, a local folder is the case file, and a browser wizard
 appears exactly when a GUI beats chat.**
 
 Website: **[openniw.com](https://openniw.com)** — project intro, install
-guide, and a free no-signup evaluation against 7,458 approved cases
+guide, and a free no-signup statistical evaluation against 7,458 approved cases
 (fully static; source in [webpage/](webpage/)).
 
 OpenNIW is an [Agent Skill](https://agentskills.io). Install it into

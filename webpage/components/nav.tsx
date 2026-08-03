@@ -16,7 +16,7 @@ export function SiteNav({ active }: { active: "home" | "eval" }) {
         </a>
         <a href="/eval/"
            className={`docket-line px-3 py-1.5 border ${active === "eval" ? "border-[--docket] text-[--docket]" : "border-[--rule] hover:border-[--ink]"}`}>
-          Free Evaluation
+          Statistical Evaluation
         </a>
         <a href="https://github.com/HHHHHejia/openniw" target="_blank" rel="noreferrer"
            className="docket-line px-3 py-1.5 border border-[--rule] hover:border-[--ink]">

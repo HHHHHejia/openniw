@@ -21,7 +21,7 @@ export default function Landing() {
         </div>
         <h1 className="text-4xl leading-tight mb-4"
             style={{ fontFamily: "var(--font-serif), serif" }}>
-          An open-source <em>skill</em> for your AI —<br />not a product.
+          An open-source <em>skill</em> for your NIW application.
         </h1>
         <div className="grid gap-2 text-lg text-[#333] leading-relaxed mb-6 max-w-2xl">
           <p>
@@ -39,7 +39,7 @@ export default function Landing() {
           </p>
         </div>
         <div className="flex gap-3 flex-wrap">
-          <a href="/eval/" className="btn">Try the free evaluation — no sign-up</a>
+          <a href="/eval/" className="btn">Try the statistical evaluation — free, no sign-up</a>
           <a href="#install" className="btn-quiet">Install the skill</a>
         </div>
       </section>
@@ -166,7 +166,7 @@ claude        # or your agent of choice
           simulation. Runs entirely in your browser; nothing you type leaves
           your machine.
         </p>
-        <a href="/eval/" className="btn">Open the free evaluation →</a>
+        <a href="/eval/" className="btn">Open the statistical evaluation →</a>
       </section>
 
       <SiteFooter />
