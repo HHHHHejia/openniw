@@ -1,4 +1,5 @@
 import { SiteNav, SiteFooter } from "@/components/nav";
+import { CopyBlock } from "@/components/copy";
 
 const STAGES: [string, string, string][] = [
   ["I", "Evaluate", "Paste your Google Scholar link. Your agent fetches your record, downloads your papers, benchmarks you against 7,458 approved cases, and gives an honest, prong-by-prong read."],
@@ -120,7 +121,7 @@ export default function Landing() {
           <div className="docket-line text-[--docket] mb-2">
             1 · Add the skill to your agent
           </div>
-          <pre className="bg-white border border-[--rule] px-4 py-3 text-sm font-mono overflow-x-auto mb-2">npx skills add HHHHHejia/openniw</pre>
+          <CopyBlock copyText="npx skills add HHHHHejia/openniw">npx skills add HHHHHejia/openniw</CopyBlock>
           <p className="text-xs text-[#4f5a55]">
             Works with Claude Code, Codex, Cursor and 70+ agents (when the
             installer asks, tick your agent — e.g. &quot;Claude Code&quot;). Manual
@@ -132,9 +133,10 @@ export default function Landing() {
           <div className="docket-line text-[--docket] mb-2">
             2 · Say the magic words
           </div>
-          <pre className="bg-[--field] border border-[--rule] px-4 py-3 text-sm font-mono overflow-x-auto mb-2">mkdir my-niw && cd my-niw
-claude        # or your agent of choice
-&gt; 帮我准备 NIW 申请   /   evaluate my NIW case</pre>
+          <CopyBlock copyText={"mkdir my-niw && cd my-niw\nclaude"}
+                     className="bg-[--field] border border-[--rule]">
+            {"mkdir my-niw && cd my-niw\nclaude        # or your agent of choice\n> 帮我准备 NIW 申请   /   evaluate my NIW case"}
+          </CopyBlock>
           <p className="text-xs text-[#4f5a55]">
             The skill opens a browser intake page for your links and files,
             then your agent takes it from there — stage by stage, resumable
