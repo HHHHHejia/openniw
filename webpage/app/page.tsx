@@ -17,25 +17,27 @@ export default function Landing() {
       {/* hero */}
       <section className="mb-12">
         <div className="docket-line text-[--docket] mb-3">
-          free · open source (MIT) · no accounts · no API keys · not a law
-          firm · not legal advice
+          free · open source (MIT) · not a law firm · not legal advice
         </div>
         <h1 className="text-4xl leading-tight mb-4"
             style={{ fontFamily: "var(--font-serif), serif" }}>
-          Organize your NIW self-petition faster — with the AI you
-          already have.
+          An open-source <em>skill</em> for your AI —<br />not a product.
         </h1>
-        <p className="text-lg text-[#333] leading-relaxed mb-2 max-w-2xl">
-          OpenNIW is a free tool that helps you structure and speed up your
-          own EB-2 National Interest Waiver paperwork, using the coding
-          agent you already pay for — Claude Code, Codex, Cursor. The whole
-          preparation workflow runs in a folder on your computer:
-          evaluation, evidence, drafting, official forms, filing package.
-        </p>
-        <p className="text-lg text-[#333] leading-relaxed mb-6 max-w-2xl">
-          We charge nothing and provide no service — you prepare and file
-          your own petition; we just built the tool.
-        </p>
+        <div className="grid gap-2 text-lg text-[#333] leading-relaxed mb-6 max-w-2xl">
+          <p>
+            Install it into <b>Claude Code, Codex, or Cursor</b> — the AI
+            you already have — and it organizes your <b>EB-2 NIW
+            self-petition</b> end to end.
+          </p>
+          <p>
+            <b>Everything stays in a folder on your computer.</b> No
+            account, no cloud, no API keys.
+          </p>
+          <p>
+            <b>Free, forever.</b> We charge nothing and provide no
+            service — <b>you</b> prepare and file your own petition.
+          </p>
+        </div>
         <div className="flex gap-3 flex-wrap">
           <a href="/eval/" className="btn">Try the free benchmark — no sign-up</a>
           <a href="#install" className="btn-quiet">Install the skill</a>
@@ -63,6 +65,11 @@ export default function Landing() {
   └────────────┘`}</pre>
         </div>
         <ul className="grid gap-2 text-[#333]">
+          <li className="border-l-2 border-[--docket] pl-3">
+            <b>It&apos;s a skill, not an app.</b> The whole thing is a folder
+            of markdown instructions and small scripts that your agent
+            reads — you can audit every line on GitHub in ten minutes.
+          </li>
           <li className="border-l-2 border-[--docket] pl-3">
             <b>No accounts, no cloud, no API keys.</b> Your case lives in a
             folder you own; the AI is your existing agent subscription;
