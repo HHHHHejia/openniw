@@ -88,7 +88,7 @@ applicant or practitioner — we would love your review.**
         └────────────┘   └───────────────────────────┘
 ```
 
-- Each **skill** drives all six stages and survives weeks of short sessions:
+- Each **skill** drives every stage and survives weeks of short sessions:
   `STATE.md` in the case folder is read at every session start and updated
   after every step, so any session resumes exactly where the last one ended.
 - The **companion** (`pip install openniw`, installed by your agent when
@@ -115,9 +115,10 @@ applicant or practitioner — we would love your review.**
   NIW-only today (EB-1A / O-1A run Stages IV–V as guided chat + field
   guides — wizard support is on the roadmap).
 
-## The six stages
+## The workflow, stage by stage
 
-All three skills follow the same shape; each stage adapts to its law:
+All three skills follow the same shape — six stages to filing, plus the
+RFE-response stage if USCIS pushes back; each adapts to its law:
 
 | Stage | NIW | EB-1A | O-1A |
 |---|---|---|---|
@@ -127,10 +128,18 @@ All three skills follow the same shape; each stage adapts to its law:
 | **III — Draft** | PES → support letters → Dhanasar three-prong Petition Letter → exhibit index | Continue-work statement → letters → Kazarian two-step letter with Final Merits section | Petitioner support letter → consultation request → itinerary → expert letters |
 | **IV — Forms** | Browser wizard over the 61-field answer set → deterministic I-140/ETA-9089 PDF fill | I-140 (E11) field-by-field guide | I-129 + O supplement field guide |
 | **V — Package** | ZIP in lockbox order, state+premium-aware address | Assembly checklist, standard-vs-premium lockbox tables | Signature-ready hand-off kit for the petitioner |
+| **R — RFE response** | Prong-by-prong diagnosis → evidence loop → government-letter line → supplemental PS → response package | Criterion-by-criterion + final-merits rebuttal → new-evidence loop → response package | Itinerary / consultation / agent-authority cures → petitioner-signed response kit |
 
-Every skill starts each stage with an RFE-prevention mindset and includes a
-full **RFE module**: paste an RFE letter and get a structured response plan
-and supplemental-statement outline.
+**RFE response is a full workflow, not a footnote** (stage R, shown in the
+browser stepper once active): upload the RFE letter, get the deadline
+worked backward into a plan, diagnose every challenged point against its
+root cause, close evidence gaps item by item, refresh citation examples
+(harvested, independence-screened, highlighted PDFs), draft the letters
+and the supplemental statement, and assemble the response package — with
+an **emergency entry** for petitions that were NOT prepared with OpenNIW
+(attorney-filed or DIY): drop in the original petition + the RFE letter
+and the skill rebuilds the case file first. Every stage also bakes in
+RFE-prevention rules at filing time.
 
 ## What makes the drafting good
 
@@ -223,10 +232,13 @@ It gets better through three kinds of contribution:
 1. **Code** — issues and PRs welcome. High-value directions: more form
    mappings (I-907, I-485 family), more browser pages (evidence ledger,
    document review), consular-processing variants, UI translations.
-2. **Data points** — open an issue with your (anonymized) numbers and
-   outcome: category, field, citations/papers at filing, premium choice,
-   timeline, RFE or not, result. Every real data point sharpens the
-   benchmark that helps the next applicant calibrate honestly.
+2. **Data points** — file the
+   [anonymous data-point form](https://github.com/HHHHHejia/openniw/issues/new?template=data-point.yml)
+   with your (anonymized) numbers and outcome: category, field,
+   citations/papers at filing, premium choice, timeline, RFE or not,
+   result — plus anything we should improve. The skills offer this as an
+   optional final step, and every real data point sharpens the benchmark
+   that helps the next applicant calibrate honestly.
 3. **Attorneys & practitioners** — if you prepare NIW cases
    professionally, your frontier knowledge (what draws RFEs this quarter,
    what wording holds up, what evidence moves adjudicators) can be folded

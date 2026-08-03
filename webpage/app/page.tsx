@@ -8,6 +8,7 @@ const STAGES: [string, string, string][] = [
   ["III", "Draft", "Support letters plus the petition letter in the shape officers expect — a Dhanasar three-prong brief (NIW), a Kazarian two-step brief with a Final Merits section (EB-1A), or the petitioner support letter + consultation package (O-1A) — every claim bound to an exhibit."],
   ["IV", "Forms", "NIW: a browser wizard verifies the 61-field answer set card by card and generates the real I-140 and companions. EB-1A / O-1A: precise field guides for the I-140 (E11) and I-129 — identity numbers are never guessed, in any category."],
   ["V", "Package", "A mock-officer red-team pass, then the filing package in USCIS-recommended assembly order — with current fees and the correct filing address for your category, state, and premium choice."],
+  ["R", "RFE response", "If USCIS pushes back: upload the RFE letter and get a deadline-driven response workflow — diagnosis of every challenged point, an evidence-gap loop, fresh highlighted citation examples, new letters, a supplemental statement, and the assembled response package. Works even if your original petition wasn't prepared with OpenNIW."],
 ];
 
 export default function Landing() {
@@ -99,7 +100,7 @@ export default function Landing() {
       {/* five stages */}
       <section className="mb-12">
         <h2 className="text-2xl mb-4" style={{ fontFamily: "var(--font-serif), serif" }}>
-          The six stages
+          The workflow, stage by stage
         </h2>
         <div className="grid gap-2">
           {STAGES.map(([num, name, desc]) => (
@@ -186,10 +187,14 @@ export default function Landing() {
           <div className="border border-[--rule] bg-white px-4 py-4">
             <div className="docket-line text-[--docket] mb-2">Data points</div>
             <p className="text-sm leading-relaxed">
-              Filed with or without us? Open an issue with your anonymized
-              numbers and outcome (field, citations, timeline, RFE, result) —
-              every real data point sharpens the benchmark for the next
-              person.
+              Filed with or without us? Use the{" "}
+              <a className="text-[--docket] underline" target="_blank" rel="noreferrer"
+                 href="https://github.com/HHHHHejia/openniw/issues/new?template=data-point.yml">
+                anonymous data-point form
+              </a>{" "}
+              (field, citations, timeline, RFE, result — no names, no case
+              numbers) — every real data point sharpens the benchmark for
+              the next person.
             </p>
           </div>
           <div className="border border-[--rule] bg-white px-4 py-4">
