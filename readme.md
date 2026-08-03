@@ -6,15 +6,15 @@ the O-1A petition kit. Your coding agent does the organizing, a local
 folder is the case file, and a browser wizard appears exactly when a GUI
 beats chat.**
 
-<p align="center">
-  <a href="https://star-history.com/#HHHHHejia/openniw&Date">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=HHHHHejia/openniw&type=Date&theme=dark" />
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=HHHHHejia/openniw&type=Date" />
-      <img alt="Star history of HHHHHejia/openniw" src="https://api.star-history.com/svg?repos=HHHHHejia/openniw&type=Date" width="600" />
-    </picture>
-  </a>
-</p>
+## Star History
+
+<a href="https://www.star-history.com/?type=date&repos=HHHHHejia%2Fopenniw">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=HHHHHejia/openniw&type=date&theme=dark&legend=top-left&sealed_token=LM_nSQf175i0EfYyrAMhEuCJKFbbUAaocH7IoAZkHAxLZsJKZsEUT5jhWB0gDxHpvmgMvGA0UQJOxMtD109gKhJwWKXLoZC0Rvo6cM6JA9Uw-pw9m3g4fQ" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=HHHHHejia/openniw&type=date&legend=top-left&sealed_token=LM_nSQf175i0EfYyrAMhEuCJKFbbUAaocH7IoAZkHAxLZsJKZsEUT5jhWB0gDxHpvmgMvGA0UQJOxMtD109gKhJwWKXLoZC0Rvo6cM6JA9Uw-pw9m3g4fQ" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=HHHHHejia/openniw&type=date&legend=top-left&sealed_token=LM_nSQf175i0EfYyrAMhEuCJKFbbUAaocH7IoAZkHAxLZsJKZsEUT5jhWB0gDxHpvmgMvGA0UQJOxMtD109gKhJwWKXLoZC0Rvo6cM6JA9Uw-pw9m3g4fQ" />
+ </picture>
+</a>
 
 Website: **[openniw.com](https://openniw.com)** — project intro, install
 guide, and a free no-signup statistical evaluation against 7,458 approved cases
