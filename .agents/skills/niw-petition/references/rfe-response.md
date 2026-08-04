@@ -81,6 +81,11 @@ obtain · status · date-class. **Supply loop**: ask for **ONE concrete item at 
 before [filing date]", never "send more evidence"; as each arrives, copy it in, date-class it, update the matrix and STATE.md,
 ask the next.
 
+Where the officer calls something UNSUBSTANTIATED, read the claim's independent-verifier cell in `documents/source-registry.md`
+(drafting.md) before deciding what to obtain — Path B builds those cells while reverse-reading the filed record. If it says NONE,
+the item to obtain is an INDEPENDENT attestation, not another document from the same interested party; sending more of what the
+officer already discounted is the commonest way a response fails.
+
 **At-time-of-filing doctrine**: eligibility is judged as of the filing date, but documents CREATED later that prove facts in
 place at filing are fine (new letters about old work, citation records of pre-filing papers). Date-class every item: pre-filing
 (the target) · post-filing as continuation of a NAMED pre-filing thread · not worth it. Tag post-filing items `[post-filing]`

@@ -107,7 +107,10 @@ officer said is missing | what we filed (exhibit #) | what we must obtain | stat
 **The supply loop** is the heart of this stage: ask for ONE concrete item at a time, named exactly
 ("the signed editor letter confirming the 7 reviews you completed 2021–2023"), never a vague "send
 more evidence"; as each arrives, copy it into `evidence/exhibits/`, date-class it, update the
-matrix and STATE.md, then ask for the next. **Date-class everything**: eligibility is judged AS OF
+matrix and STATE.md, then ask for the next. Where the officer calls something UNSUBSTANTIATED or
+self-serving, read that claim's independent-verifier cell in `documents/source-registry.md`
+(drafting.md) first: if it says NONE, what you must obtain is an INDEPENDENT attestation, not more
+paper from the same interested party. **Date-class everything**: eligibility is judged AS OF
 the filing date (8 CFR 103.2(b)(12); *Katigbak*, 14 I&N Dec. 45). *Pre-filing* (the default)
 proves a fact that existed at filing. *Post-filing as continuation of <named pre-filing thread>*
 is a document CREATED after filing evidencing pre-filing facts (a letter written now about 2022

@@ -116,11 +116,29 @@ applicant-proof with legitimizing context. Inline citations `(Exhibit N)` /
 `(Exhibits N–M)` (en-dash), sentence-final. Legal authorities (Dhanasar,
 Policy Manual) in FOOTNOTES only.
 
-**Source registry** (documents/source-registry.md, printable) — one line per
-factual claim: claim → its exhibit number, or URL + verbatim quote +
-retrieval date for web-sourced facts. Build it WHILE drafting, not after;
-it feeds Stage V's claim-verification log (rfe.md) and any later RFE
-response.
+**Source registry** (documents/source-registry.md, printable) — build it
+WHILE drafting, not after; it feeds Stage V's claim-verification log
+(rfe.md) and any later RFE response. Every factual claim gets a line:
+claim → exhibit number, or URL + verbatim quote + retrieval date for web
+facts. LOAD-BEARING claims — what the petition letter argues from, anything
+about a third-party entity, anything asserting impact — get the full row:
+`claim | source | locator | independent verifier | measure | gap`.
+
+- **locator** — exhibit + page + paragraph ("Ex. 12 at 3, ¶2"); an officer
+  who cannot find the proof has not been given it.
+- **independent verifier** — who attests this OTHER than the applicant and
+  anyone with a stake in the outcome (employer, investor, co-founder, the
+  applicant's own statement). Write "NONE — self-serving" when that is the
+  truth, because the officer will; then get one before filing, or cut the
+  claim. This is the check exhibit-binding alone misses: an employer letter
+  IS an exhibit, so the claim binds — and still reads as an interested party
+  vouching for itself, which is exactly what real RFEs block-quote back.
+- **measure** — impact claims only: the number and its as-of date. Blank
+  elsewhere; never manufacture precision to fill a cell.
+- **gap** — what is still missing for the claim to stand ([TODO] text).
+
+Check each new row against those already written: the same fact carrying a
+different number or date is a contradiction to fix NOW, not at Stage V.
 
 ## Quality bars (lint before showing the user)
 
@@ -128,7 +146,8 @@ Consistent honorific throughout · endeavor sentence verbatim at every
 occurrence · no [TODO] left at finalization · no dangling template
 instructions · every entity claim exhibit-bound · no field-level-importance
 arguments standing alone · all numbers match case.json · every claim has a
-source-registry line.
+source-registry line · every load-bearing claim names an independent
+verifier or says why none exists.
 
 Sources: USCIS Policy Manual Vol. 6 Pt. F Ch. 5 (prong-2 evidence list +
 letters language, verified live 2026-08-02); source-registry packaging idea

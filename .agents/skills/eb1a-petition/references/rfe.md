@@ -57,7 +57,11 @@ documents/source-registry.md), verify each against its source, and log a
 table: claim | source (exhibit / case.json / URL) | verified? | finding.
 Severity: CRITICAL = contradicts the source (canonical example: "50K
 monthly users" where the source says 50K total) · WARNING = unsupported —
-REQUIRES SOURCE · INFO. The two most common failures get explicit passes:
+REQUIRES SOURCE · INFO. A verified source is not the end of it: for every
+load-bearing claim, read the registry's independent-verifier cell too. An
+interested party (employer, investor, the applicant) vouching for a claim
+is SELF-SERVING ONLY — one independent attestation now is far cheaper than
+a final-merits finding later. The two most common failures get explicit passes:
 dates consistent across ALL documents; titles consistent across resume, HR
 letter, and forms. Close with a verdict line: READY / NEEDS FIXES / MAJOR
 ISSUES. Approach with skepticism, not trust.

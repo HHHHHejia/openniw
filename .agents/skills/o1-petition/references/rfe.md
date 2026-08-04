@@ -50,6 +50,23 @@ lives in `references/rfe-response.md`.
     changes after filing are material changes → amended petition, never
     a quiet rewording in the response.
 
+## Claim-verification log (run alongside the twelve rules before assembly)
+
+Extract every factual claim from every document (start from
+`documents/source-registry.md`), verify each against its source, and log a
+table: claim | source (exhibit / case.json / URL) | verified? | finding.
+Severity: CRITICAL = contradicts the source (canonical example: "50K
+monthly users" where the source says 50K total) · WARNING = unsupported —
+REQUIRES SOURCE · INFO. A verified source is not the end of it: for every
+load-bearing claim read the registry's independent-verifier cell too — a
+criterion resting only on the petitioner's own support letter is the
+employer vouching for its own hire, and USCIS says so in the RFE. The
+three most common failures get explicit passes: dates and wages identical
+across I-129, contract, itinerary and support letter; the field label
+identical everywhere; the beneficiary's title identical across CV, letters
+and forms. Close with a verdict line: READY / NEEDS FIXES / MAJOR ISSUES.
+Approach with skepticism, not trust.
+
 ## If a notice has already arrived
 
 Stop here and switch to `references/rfe-response.md` — the R1–R7 response

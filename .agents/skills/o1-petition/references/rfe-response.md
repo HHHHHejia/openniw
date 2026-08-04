@@ -82,7 +82,10 @@ decides, here and on every strategic call, before R3 starts.
 
 One row per deficiency in the notice's own order — deficiency-driven, not criterion-driven. Columns: **quoted deficiency ·
 sub-element · what the officer says is missing · what the record already has (Exhibit N) · what we must obtain · who produces it ·
-status · fact-as-of date**. **Date-class every item** against the filing date: `pre-filing` · `post-filing, continuation of <named
+status · fact-as-of date**. Where the officer calls a claim unsupported or notes it rests on the petitioner's own say-so, read
+that claim's independent-verifier cell in `documents/source-registry.md` (drafting.md) before deciding what to obtain: if it says
+NONE, the item to obtain is an INDEPENDENT attestation, not another document from the petitioner or the beneficiary's own company.
+**Date-class every item** against the filing date: `pre-filing` · `post-filing, continuation of <named
 pre-filing thread>` · `not worth it`. Documents CREATED after filing that prove facts in place AT filing are fine (a citation report
 on pre-filing papers, a letter memorializing a pre-filing relationship, a replacement consultation); post-filing achievements appear
 only as labeled corroboration. **Supply loop — ask for ONE concrete item at a time**: never "send more evidence", but "the signed

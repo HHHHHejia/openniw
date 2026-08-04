@@ -48,7 +48,7 @@ o1-case/
 ├── evidence/checklist.md + evidence/exhibits/
 ├── citations/         # harvest.json, selected.md, examples.md
 ├── documents/         # support-letter.md, consultation.md, itinerary.md,
-│                      #   letters/, exhibit-index.md, handoff.md
+│                      #   letters/, exhibit-index.md, source-registry.md, handoff.md
 ├── forms/             # blank/ PDFs + the user's hand-filled copies + worksheet.md
 └── rfe/               # RFE mode only: letter.pdf, response-plan.md, evidence-matrix.md,
                        #   letters-plan.md, supplemental-letter.md, response-letter.md,
