@@ -142,27 +142,106 @@ an **emergency entry** for petitions that were NOT prepared with OpenNIW
 and the skill rebuilds the case file first. Every stage also bakes in
 RFE-prevention rules at filing time.
 
-## What makes the drafting good
+## How the work is kept honest
 
-The templates and heuristics are distilled from the structure of real,
-professionally-prepared NIW filings and a real RFE cycle (fully de-identified —
-see [docs/analysis/](docs/analysis/)):
+An AI that drafts immigration arguments will produce fluent, plausible
+prose whether or not the evidence is there. Most of this project is the
+machinery that stops a plausible narrative from being filed as supported
+evidence — distilled from the structure of real, professionally-prepared
+filings and a real RFE cycle (fully de-identified, see
+[docs/analysis/](docs/analysis/)) plus USCIS primary sources cited inline
+with as-of dates.
 
-- The petition letter follows the exact section architecture strong filings
-  use (advanced degree → Prong 1 policy-anchored modules → Prong 2
-  quantitative modules → Prong 3 balancing factors → 3-group exhibit index).
-- The **endeavor sentence is treated as frozen** — USCIS treats rewording as
-  a potential material change.
-- RFE-prevention rules are built in: no uncorroborated third-party claims,
-  no diminishing denominators, citation depth over citer prestige, legal
-  authorities in footnotes, and a pre-filing mock-officer pass.
-- The EB-1A and O-1A letters follow their categories' expected
-  architectures — the Kazarian two-step brief with an explicit Final
-  Merits section, and the criterion-by-criterion petitioner support
-  letter with consultation package — built from cited primary sources
-  and MIT-licensed open materials (see References & acknowledgments).
-- The AI never invents facts — anything missing becomes an explicit `[TODO]`
-  or a question to you.
+### Every claim carries its evidence — and a linter checks that it does
+
+While drafting, the agent maintains `documents/source-registry.md`: one row
+per factual claim. **Load-bearing** claims — what the letter argues from,
+anything about a third-party entity, anything asserting impact — carry a
+full row:
+
+| column | why it exists |
+|---|---|
+| **source** | exhibit number, or URL + verbatim quote + retrieval date |
+| **locator** | exhibit **page and paragraph** — an officer who cannot find the proof has not been given it |
+| **independent verifier** | who attests this **other than** the applicant and anyone with a stake in the outcome. `NONE — self-serving` is a legitimate answer, and a decision to make before filing, not after |
+| **measure** | impact claims only: the number and its as-of date |
+| **gap** | what is still missing for the claim to stand |
+
+`openniw registry` parses that table and reports unsourced claims,
+load-bearing claims with no independent verifier, missing locators, exhibit
+numbers absent from the exhibit index, and cells filled with `-` / `N/A` /
+`TBD` / `see above` — which look filled in and say nothing. **A
+verification table that filler can satisfy is worse than no table**: it
+manufactures the appearance of having checked.
+
+The independent-verifier column exists because exhibit-binding alone misses
+the real failure mode. An employer letter *is* an exhibit, so the claim
+binds — and still reads as an interested party vouching for itself. That is
+exactly what the RFE we studied block-quoted back as unsubstantiated.
+
+### The citation pipeline argues depth of use, not prestige
+
+`openniw harvest` pulls citing papers from OpenAlex; the agent then screens
+for **independence** (no shared author between citing and cited paper,
+surname-collisions escalated), discards anything not formally published,
+**verifies in the citing full text that the citation actually exists**
+(observed false-positive rate in indexes: ~5%), and scores by how the work
+was used — implemented / compared-favorably / utilized / verified beats a
+passing background mention. You pick the final portfolio from scored quote
+cards in a browser page; `openniw highlight` produces the exhibit PDFs with
+only the in-text citation and its reference-list entry marked.
+
+Emphasizing *who* cited you actively harms a petition — it invites the
+comparative test the regulations don't ask for. The pipeline is built to
+argue *how*.
+
+### The frame is frozen, and every document quotes it verbatim
+
+The endeavor sentence (NIW), field definition and claimed criteria (EB-1A),
+or petitioner structure and role (O-1) are frozen before any drafting
+begins, because USCIS can treat post-filing rewording as a material change.
+Lint checks that the frozen text appears identically everywhere it appears.
+On an RFE for a petition prepared elsewhere, the skill extracts that text
+from the as-filed record and marks it `FROZEN (as filed)` — it may never be
+improved, only argued from.
+
+### Evidence is date-classed against the priority date
+
+Eligibility is judged as of the filing date (8 CFR 103.2(b)(12)). Every
+exhibit is classed *pre-filing* / *post-filing as continuation of a named
+pre-filing thread* / *not worth it*, so that at RFE time — under a
+non-extendable deadline — the question of what may still be used is already
+answered rather than re-litigated.
+
+### A mock-officer pass before anything is printed
+
+Stage V runs twelve RFE-prevention rules over the whole case from the
+adjudicator's perspective (no uncorroborated third-party claims, never
+expose a denominator, pre-empt "common among researchers", legal
+authorities in footnotes only, and more), plus a claim-verification log
+that extracts every factual claim and grades it CRITICAL (contradicts its
+source) / WARNING (unsupported) / INFO, with explicit passes for the two
+commonest defects: dates consistent across all documents, and titles
+consistent across CV, letters, and forms.
+
+### The agent never invents facts
+
+Missing information becomes an explicit `[TODO]` or a question to you —
+never a plausible guess. Identity numbers, dates, metrics, and quotes come
+only from your sources or from you. Fields the agent derived rather than
+you stating are flagged amber in the forms wizard until you confirm them.
+
+### The engineering follows the same rule
+
+Contract tests fail the build when documentation and code drift apart: the
+61-key `answers.json` contract is enforced three ways (what the PDFs
+consume ≡ what the wizard edits ≡ what the skill documents), and the RFE
+stage is enforced three ways (the STATE.md line the skills tell the agent
+to write ≡ the regex the browser stepper parses it with ≡ the field ids of
+the data-point issue form). Skill fallback scripts are byte-compared against
+their package sources. Benchmark copy is held to one wording rule
+everywhere: **percentile among publicly posted approved cases, never an
+individual's approval probability.**
 
 ## Filing facts (2026, verify before filing)
 
@@ -209,21 +288,38 @@ openniw/
 ├── src/openniw/                  # the pip companion: FastAPI folder-mode
 │   │                             #   server + CLI + committed UI bundle
 │   └── ui/                       # built Next.js static export (make ui)
+│   └── services/                 # deterministic compute: formfill, citations,
+│                                 #   papers, package, registry linter …
 ├── frontend/                     # UI source (Node needed by maintainers only)
 ├── forms/                        # vendored official PDFs + field inventories
-├── tests/                        # pytest: contract, formfill, API, sentinel
+├── tests/                        # pytest: contracts, formfill, API, sentinel,
+│                                 #   registry linter, version precision
+├── scripts/                      # export_benchmark.py · sync_skill.py
 └── docs/                         # design docs + de-identified analyses
 ```
 
-- `make test` — full suite. `make ui` — rebuild the UI bundle from
-  `frontend/` and vendor it into the package. `make check` — tests + skill
-  script sync + UI-bundle freshness. `make release` — checked wheel build.
-- The 61-key `answers.json` contract is enforced three ways by
-  `tests/test_contract.py`: `formfill.py` (what PDFs consume) ≡ the wizard
-  spec (what the UI edits) ≡ `references/forms.md` (what the agent writes).
+- `make test` — full suite (63 tests). `make ui` — rebuild the UI bundle
+  from `frontend/` and vendor it into the package. `make check` — tests +
+  skill script sync + UI-bundle freshness. `make release` — checked wheel
+  build.
+- **Contract tests are the backbone.** The 61-key `answers.json` contract
+  (`tests/test_contract.py`): `formfill.py` (what the PDFs consume) ≡ the
+  wizard spec (what the UI edits) ≡ `references/forms.md` (what the agent
+  writes). The RFE stage (`tests/test_rfe_contract.py`): the STATE.md line
+  the skills document ≡ the regex `session.tsx` parses it with (lifted out
+  of the TSX at test time, so changing it there fails here) ≡ the field ids
+  in `.github/ISSUE_TEMPLATE/data-point.yml`.
+- `openniw registry` is pure-stdlib and side-effect-free
+  (`services/registry.py`) — it reads the case folder and reports; it never
+  edits a user's file. Same rule for every service: the agent decides, the
+  companion computes.
 - Skill fallback scripts mirror package services between
-  `# --- BEGIN/END SYNC ---` markers; `scripts/sync_skill.py` regenerates
-  them and `make check` fails on drift.
+  `# --- BEGIN/END SYNC ---` markers across all three skills;
+  `scripts/sync_skill.py` regenerates them and `make check` fails on drift.
+- Versions in the storage layer are **opaque strings**, never JSON numbers:
+  `st_mtime_ns` exceeds `Number.MAX_SAFE_INTEGER`, so a browser silently
+  rounds it and every optimistic-concurrency save 409s
+  (`tests/test_version_precision.py` pins this).
 
 ## Contributing
 
