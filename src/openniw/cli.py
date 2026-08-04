@@ -168,6 +168,32 @@ def _cmd_package(ns) -> int:
     return 0
 
 
+def _cmd_registry(ns) -> int:
+    from .services import registry
+    case = CaseFolder(ns.case)
+    report = registry.check_case(case.root)
+    if ns.json:
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+    elif not report["exists"]:
+        print(report["message"], file=sys.stderr)
+    else:
+        for f in report["findings"]:
+            where = f"line {f['line']}" if f["line"] else "file"
+            claim = f" [{f['claim']}]" if f["claim"] else ""
+            print(f"{f['severity'].upper():6} {where}{claim}: {f['message']}")
+        c = report["counts"]
+        print(f"\n{report['rows']} claims "
+              f"({report['load_bearing']} load-bearing) · "
+              f"{c['error']} errors · {c['warn']} warnings · "
+              f"{c['decide']} needing a decision"
+              + ("" if report["exhibit_index"]
+                 else "\n(no documents/exhibit-index.md — exhibit references "
+                      "were not cross-checked)"))
+    if not report["exists"]:
+        return 3
+    return 0 if report["ok"] else 1
+
+
 def _cmd_harvest(ns) -> int:
     from .services.harvest import harvest
     summary = harvest(ns.titles, pathlib.Path(ns.out),
@@ -265,6 +291,17 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("package", help="assemble the filing-package ZIP")
     _case_arg(p)
     p.set_defaults(fn=_cmd_package)
+
+    p = sub.add_parser("registry",
+                       help="lint documents/source-registry.md (claims "
+                            "without a source, an independent verifier, a "
+                            "locator, or with a dead exhibit reference)")
+    _case_arg(p)
+    p.add_argument("--check", action="store_true",
+                   help="accepted for symmetry; linting is what this does")
+    p.add_argument("--json", action="store_true",
+                   help="machine-readable report")
+    p.set_defaults(fn=_cmd_registry)
 
     p = sub.add_parser("harvest", help="harvest citing papers from OpenAlex")
     p.add_argument("titles", nargs="+")

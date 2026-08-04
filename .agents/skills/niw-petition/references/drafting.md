@@ -121,8 +121,18 @@ WHILE drafting, not after; it feeds Stage V's claim-verification log
 (rfe.md) and any later RFE response. Every factual claim gets a line:
 claim → exhibit number, or URL + verbatim quote + retrieval date for web
 facts. LOAD-BEARING claims — what the petition letter argues from, anything
-about a third-party entity, anything asserting impact — get the full row:
-`claim | source | locator | independent verifier | measure | gap`.
+about a third-party entity, anything asserting impact — get the full row.
+Two tables, and the headings are a contract: `openniw registry` parses them.
+
+```markdown
+## Load-bearing claims
+| claim | source | locator | independent verifier | measure | gap |
+|---|---|---|---|---|---|
+
+## Supporting facts
+| claim | source |
+|---|---|
+```
 
 - **locator** — exhibit + page + paragraph ("Ex. 12 at 3, ¶2"); an officer
   who cannot find the proof has not been given it.

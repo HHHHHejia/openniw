@@ -232,10 +232,14 @@ sessions rules (`openniw ui forms`). After Done: run `openniw fill all` as
 the final deterministic pass, walk unmatched fields with the user for
 hand-filling. No browser available? Interview + `scripts/fill_form.py`.
 
-**V. Package** — before assembly, run the twelve RFE-prevention rules AND the
-claim-verification log in `references/rfe.md` against the whole case as a
-red-team pass (adopt the officer's perspective; every finding gets fixed or
-consciously accepted). Then produce the assembly checklist from forms.md and a
+**V. Package** — before assembly, run `openniw registry` (the deterministic
+half: unsourced claims, load-bearing claims with no independent verifier,
+dead exhibit references, placeholder cells) and then the twelve
+RFE-prevention rules AND the claim-verification log in `references/rfe.md`
+against the whole case as a red-team pass (adopt the officer's perspective;
+every finding gets fixed or consciously accepted; a `DECIDE` line from the
+linter is a real decision to put to the user, not a warning to wave
+through). Then produce the assembly checklist from forms.md and a
 final summary of what to print, sign, and mail. Once the case is filed and a
 decision later arrives, invite the user (once, never assume) to contribute an
 anonymous data point + suggestions — mechanics in R7 of
@@ -299,6 +303,11 @@ same JSON reports its browser UI uses. Always run from the CASE FOLDER:
   provenance manifest; run by DEFAULT in Stage I
 - `openniw harvest "Title" ...` — OpenAlex citing-paper harvest +
   independence/published screening
+- `openniw registry` — lint documents/source-registry.md: claims with no
+  source, load-bearing claims with no independent verifier, missing
+  locators, dead exhibit references, placeholder cells. Exit 1 = errors
+  found, 3 = no registry yet. Run it in Stage V and again before an RFE
+  response ships
 - `openniw fetch-forms` · `docx <md>` · `highlight <pdf> --needle X`
 
 Stdlib fallbacks bundled with the skill for offline/sandboxed sessions

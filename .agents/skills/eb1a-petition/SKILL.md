@@ -255,10 +255,13 @@ forms/worksheet.md, then walk the user through hand-filling each form in a
 PDF editor with the field guide. NEVER run `openniw fill` — it would check
 the wrong Part 2 box.
 
-**V. Package** — before assembly, run the twelve RFE-prevention rules AND
+**V. Package** — before assembly, run `openniw registry` (unsourced claims,
+load-bearing claims with no independent verifier, dead exhibit references,
+placeholder cells) and then the twelve RFE-prevention rules AND
 the claim-verification log in `references/rfe.md` against the whole case
 as a red-team pass (adopt the officer's perspective; every finding gets
-fixed or consciously accepted). Then produce the assembly checklist from
+fixed or consciously accepted; a `DECIDE` line from the linter is a real
+decision to put to the user). Then produce the assembly checklist from
 forms.md — payment on top, then G-1145, I-907 (premium only), I-140,
 letter, exhibits with tabbed index — and a final summary of what to print,
 sign, and mail. Mind that the premium lockbox state split DIFFERS from the
@@ -300,6 +303,11 @@ same JSON reports its browser UI uses. Always run from the CASE FOLDER:
   (OpenAlex → arXiv/PMC/OA) into sources/papers/ + manifest; Stage I default
 - `openniw harvest "Title" ...` — OpenAlex citing-paper harvest +
   independence/published screening
+- `openniw registry` — lint documents/source-registry.md: claims with no
+  source, load-bearing claims with no independent verifier, missing
+  locators, dead exhibit references, placeholder cells. Exit 1 = errors
+  found, 3 = no registry yet. Run it in Stage V and again before an RFE
+  response ships
 - `openniw fetch-forms` — blank I-140/I-907/G-1145 (+ NIW-only ETA-9089
   PDFs — delete them; the bundled fallback script skips them) ·
   `docx <md>` · `highlight <pdf> --needle X`

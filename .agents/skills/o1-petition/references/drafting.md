@@ -107,8 +107,18 @@ WHILE drafting, not after; it feeds the Stage V claim-verification log
 claim → exhibit number, or URL + verbatim quote + retrieval date for web
 facts. LOAD-BEARING claims — what the support letter argues a criterion
 from, anything about a third-party entity, anything asserting impact — get
-the full row:
-`claim | source | locator | independent verifier | measure | gap`.
+the full row. Two tables, and the headings are a contract:
+`openniw registry` parses them.
+
+```markdown
+## Load-bearing claims
+| claim | source | locator | independent verifier | measure | gap |
+|---|---|---|---|---|---|
+
+## Supporting facts
+| claim | source |
+|---|---|
+```
 
 - **locator** — exhibit + page + paragraph ("Ex. 12 at 3, ¶2"); an officer
   who cannot find the proof has not been given it.

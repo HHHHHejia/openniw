@@ -102,6 +102,7 @@ applicant or practitioner — we would love your review.**
   openniw fill all             # fill I-140 / ETA-9089 App. A / Final Det. / G-1145
   openniw package              # filing-package ZIP in lockbox order
   openniw harvest "Title" …    # OpenAlex citing-paper harvest + screening
+  openniw registry             # lint the claim→evidence table (see below)
   openniw fetch-forms          # download official blank PDFs
   openniw docx / highlight     # DOCX export · exhibit highlighting
   ```

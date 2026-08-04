@@ -236,9 +236,12 @@ hardwired to NIW's I-140/ETA-9089 mappings): work the I-129 + O/P
 supplement field-by-field in chat with forms.md's guide, recording every
 confirmed answer in `forms/worksheet.md`, user types into the PDFs.
 
-**V. Package** — first run rfe.md's twelve RFE-prevention rules against
-the whole case as a red-team pass (adopt the officer's perspective; every
-finding gets fixed or consciously accepted).
+**V. Package** — first run `openniw registry` (unsourced claims,
+load-bearing claims with no independent verifier, dead exhibit references,
+placeholder cells), then rfe.md's twelve RFE-prevention rules and its
+claim-verification log against the whole case as a red-team pass (adopt the
+officer's perspective; every finding gets fixed or consciously accepted; a
+`DECIDE` line from the linter is a real decision to put to the petitioner).
 Then produce the assembly checklist from forms.md and write
 `documents/handoff.md`: what the petitioner receives, signs, and mails,
 and what happens after (receipt → approval I-797 → COS effect or consular
@@ -298,6 +301,11 @@ same JSON reports its browser UI uses. Always run from the CASE FOLDER:
   manifest; run by DEFAULT in Stage I
 - `openniw harvest "Title" ...` — OpenAlex citing-paper harvest +
   independence/published screening
+- `openniw registry` — lint documents/source-registry.md: claims with no
+  source, load-bearing claims with no independent verifier, missing
+  locators, dead exhibit references, placeholder cells. Exit 1 = errors
+  found, 3 = no registry yet. Run it before assembly and again before an
+  RFE response ships
 - `openniw docx <md>` · `highlight <pdf> --needle X`
 
 Do NOT use here (NIW-hardwired): `openniw fill` (auto-checks the I-140 NIW
