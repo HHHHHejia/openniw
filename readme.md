@@ -17,7 +17,7 @@ wizard appears exactly when a GUI beats chat.**
 </a>
 
 Website: **[openniw.com](https://openniw.com)** — project intro, install
-guide, and a free no-signup statistical evaluation against 7,458 approved cases
+guide, and a free no-signup statistical evaluation against 10,999 approved cases
 (fully static; source in [webpage/](webpage/)).
 
 OpenNIW ships four [Agent Skills](https://agentskills.io) —
@@ -68,7 +68,7 @@ agent — or "evaluate my EB-1A case" / "prepare my O-1 petition" /
 
 The beta skills were built from primary sources (USCIS Policy Manual, 8 CFR,
 current fee schedules — all cited inline with as-of dates), open-source MIT
-materials, and our 7,458-case approved-case dataset. They follow the same
+materials, and our 10,999-case approved-case dataset. They follow the same
 frozen-frame doctrine, exhibit-bound drafting, and RFE red-team pass as the
 NIW flagship. **If you have been through an EB-1A, O-1 or I-485 filing —
 applicant or practitioner — we would love your review.**

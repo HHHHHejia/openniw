@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { api } from "@/lib/api";
 import { Header, FinishBar } from "@/components/session";
 
-// The evaluation bench, built on 7,458 publicly posted approvals.
+// The evaluation bench, built on 10,999 publicly posted approvals.
 // Sections (per the DB design doc's priorities): peer histogram + what-if
 // slider · NIW-vs-EB1A dual track · processing-time simulation · monthly
 // trend bands · action-insight cards · weekly pulse. Copy rules: numbers
