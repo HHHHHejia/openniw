@@ -108,8 +108,8 @@ sponsor-income analysis that is not implemented).
 
 ```
         ┌──────────────────────────────────────┐
-        │   Your agent + an OpenNIW skill      │   the BRAIN — conversation,
-        │   (niw / eb1a / o1 / i485 · any agent)│   judgment, drafting, prefill
+        │   Your agent + an OpenNIW skill      │   reads, organizes, drafts,
+        │   (niw / eb1a / o1 / i485 · any agent)│   prefills — you decide
         └──────┬─────────────────────┬─────────┘
    reads/writes│                     │ launches at interaction-heavy steps
                ▼                     ▼
@@ -377,9 +377,17 @@ It gets better through three kinds of contribution:
 
 ## Contact & collaboration
 
+**Read [MAINTAINER-POLICY.md](MAINTAINER-POLICY.md) first.** We answer
+questions about the software — installation, bugs, how something works,
+where a number came from, a stale USCIS citation. We decline case
+questions ("do I qualify", "should I file", "how should I word this", "how
+do I answer this RFE") and we do not review CVs, drafts, or notices — from
+anyone, at any price. For your actual case you need a licensed immigration
+attorney or a DOJ-accredited representative.
+
+- GitHub issues: the preferred channel for anything public
 - WeChat: `LittleGeng`
 - X: [x.com/hejia0530](https://x.com/hejia0530)
-- GitHub issues: the preferred channel for anything public
 
 **EB-1A and O-1A are now here (beta)** — built from USCIS primary sources,
 MIT-licensed open materials, and our approved-case dataset, not from
@@ -441,9 +449,20 @@ To be explicit:
 
 - **We are not attorneys and OpenNIW is not a law firm.** Nothing here is
   legal advice, and using OpenNIW creates no attorney–client relationship.
-- **We charge nothing and provide no service.** There is no engagement, no
-  representation, and no promise of any outcome. Immigration results
-  depend on your individual facts and on adjudicator discretion.
+- **The maintainers do not work on individual cases.** OpenNIW provides no
+  human legal services, no case representation, no individualized
+  assistance from its maintainers, no filing service, and no attorney
+  review. It is freely published software that you install and run
+  yourself, with your own AI tools. There is no engagement, no
+  representation, and no promise of any outcome; immigration results depend
+  on your individual facts and on adjudicator discretion. See the
+  [maintainer policy](MAINTAINER-POLICY.md) — we decline case questions
+  from everyone, and paying or donating does not change that.
+- **The software does not decide whether you qualify.** It organizes your
+  materials against publicly available USCIS criteria, spots issues, and
+  drafts documents for you to review, revise, or discard. It does not
+  determine eligibility, does not tell you whether to file, and does not
+  estimate your odds.
 - **You are the petitioner and remain fully responsible** for everything
   you sign and file. Review every document and form yourself before
   filing, and consider having a licensed immigration attorney review your

@@ -2,13 +2,13 @@ import { SiteNav, SiteFooter } from "@/components/nav";
 import { CopyBlock } from "@/components/copy";
 
 const STAGES: [string, string, string][] = [
-  ["I", "Evaluate", "Paste your Google Scholar link. Your agent fetches your record, downloads your papers, benchmarks you against 10,999 approved cases, and gives an honest read — Dhanasar prong-by-prong (NIW) or criterion-by-criterion (EB-1A / O-1A)."],
+  ["I", "Evaluate", "Paste your Google Scholar link. Your agent fetches your record, downloads your papers, benchmarks you against 10,999 approved cases, and lays your record out under each published criterion — Dhanasar prong-by-prong (NIW) or criterion-by-criterion (EB-1A / O-1A), with what supports and what undercuts each one. It does not decide whether you qualify, and it does not tell you whether to file — you do."],
   ["II·a", "Frame", "Compose and freeze the case frame — the canonical NIW endeavor sentence, the EB-1A field + claim frame, or the O-1 petitioner structure and itinerary scope. Every later document quotes it verbatim; rewording is a material-change risk."],
   ["II·b", "Evidence", "A personalized checklist plus the citation pipeline: every citing paper harvested, screened for independence, verified in full text, scored by depth of use — you pick the best ~10 in a browser page."],
-  ["III", "Draft", "Support letters plus the petition letter in the shape officers expect — a Dhanasar three-prong brief (NIW), a Kazarian two-step brief with a Final Merits section (EB-1A), or the petitioner support letter + consultation package (O-1A) — every claim bound to an exhibit."],
+  ["III", "Draft", "Support letters plus the petition letter, drafted for your independent review in the structure these filings conventionally use — a Dhanasar three-prong brief (NIW), a Kazarian two-step brief with a Final Merits section (EB-1A), or the petitioner support letter + consultation package (O-1A) — every claim bound to an exhibit."],
   ["IV", "Forms", "NIW: a browser wizard verifies the 61-field answer set card by card and generates the real I-140 and companions. EB-1A / O-1A: precise field guides for the I-140 (E11) and I-129 — identity numbers are never guessed, in any category."],
   ["V", "Package", "A mock-officer red-team pass, then the filing package in USCIS-recommended assembly order — with current fees and the correct filing address for your category, state, and premium choice."],
-  ["R", "RFE response", "If USCIS pushes back: upload the RFE letter and get a deadline-driven response workflow — diagnosis of every challenged point, an evidence-gap loop, fresh highlighted citation examples, new letters, a supplemental statement, and the assembled response package. Works even if your original petition wasn't prepared with OpenNIW."],
+  ["R", "RFE response", "If USCIS pushes back: upload the RFE letter and get a deadline-driven response workflow — each challenged point mapped to the evidence that answers it, an evidence-gap loop, fresh highlighted citation examples, new letters, a supplemental statement, and the assembled response package. Works even if your original petition wasn't prepared with OpenNIW."],
 ];
 
 export default function Landing() {
@@ -38,8 +38,9 @@ export default function Landing() {
             account, no cloud, no API keys.
           </p>
           <p>
-            <b>Free, forever.</b> We charge nothing and provide no
-            service — <b>you</b> prepare and file your own petition.
+            <b>Free, forever.</b> Published software you run yourself —{" "}
+            <b>you</b> decide, prepare, sign, and file. The maintainers
+            never work on individual cases.
           </p>
         </div>
         <div className="flex gap-3 flex-wrap">
@@ -56,8 +57,8 @@ export default function Landing() {
         <div className="border border-[--rule] bg-white px-6 py-5 mb-4">
           <pre className="text-xs leading-relaxed overflow-x-auto font-mono text-[#333]">{`
   ┌──────────────────────────────────────┐
-  │  your agent + an OpenNIW skill       │   the BRAIN — judgment,
-  │  (niw/eb1a/o1/i485 · any major agent)│   drafting, conversation
+  │  your agent + an OpenNIW skill       │   reads, organizes,
+  │  (niw/eb1a/o1/i485 · any major agent)│   drafts — you decide
   └──────┬─────────────────────┬─────────┘
  reads/   │                    │ opens at structured steps
  writes   ▼                    ▼
@@ -80,9 +81,10 @@ export default function Landing() {
             browser pages run on localhost only.
           </li>
           <li className="border-l-2 border-[--docket] pl-3">
-            <b>Standardized inputs in the browser, judgment in the chat.</b>{" "}
+            <b>Standardized inputs in the browser, the rest in chat.</b>{" "}
             Links, uploads, fixed questions, and 61 form fields get proper
-            UI; evaluation and drafting stay conversational.
+            UI; organizing and drafting stay conversational — and every
+            decision stays yours.
           </li>
           <li className="border-l-2 border-[--docket] pl-3">
             <b>Built from real filings.</b> Templates distilled from
@@ -235,6 +237,19 @@ export default function Landing() {
             framework is reusable. Reach out — let&apos;s build it together.
           </p>
         </div>
+        <p className="text-sm text-[#4f5a55] mb-2">
+          <b>Before you write:</b> we answer questions about the software —
+          installation, bugs, how a feature works, where a number came from.
+          We do not answer &quot;do I qualify&quot;, &quot;should I
+          file&quot;, &quot;how should I word this&quot; or &quot;how do I
+          answer this RFE&quot;, and we do not review CVs, drafts or notices
+          — for anyone, at any price (
+          <a className="text-[--docket] underline" target="_blank" rel="noreferrer"
+             href="https://github.com/HHHHHejia/openniw/blob/main/MAINTAINER-POLICY.md">
+            maintainer policy
+          </a>). For your actual case you need a licensed immigration
+          attorney or a DOJ-accredited representative.
+        </p>
         <p className="docket-line text-[#4f5a55]">
           Contact — WeChat: <span className="text-[--ink]">LittleGeng</span>
           {" · "}X:{" "}
@@ -261,6 +276,22 @@ export default function Landing() {
             the success or failure of any application — you prepare, review,
             sign, and file your own petition, and outcomes depend on your
             facts and adjudicator discretion.</li>
+          <li>· <b>The software does not decide whether you qualify.</b> It
+            organizes your materials against publicly available USCIS
+            criteria and drafts documents for you to review, revise, or
+            discard. It does not determine eligibility, tell you whether to
+            file, or estimate your odds — and it stops and points you to a
+            licensed attorney when a question needs one.</li>
+          <li>· <b>The maintainers never work on individual cases.</b> We
+            answer questions about the software — installation, bugs, where
+            a number came from. We decline &quot;do I qualify&quot;,
+            &quot;should I file&quot;, &quot;how should I word this&quot;
+            and &quot;how do I answer this RFE&quot;, from everyone, and
+            paying or donating does not change that (
+            <a className="text-[--docket] underline" target="_blank" rel="noreferrer"
+               href="https://github.com/HHHHHejia/openniw/blob/main/MAINTAINER-POLICY.md">
+              maintainer policy
+            </a>).</li>
         </ul>
       </section>
 

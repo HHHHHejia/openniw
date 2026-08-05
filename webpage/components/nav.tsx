@@ -37,9 +37,14 @@ export function SiteFooter() {
       <p className="text-xs text-[#4f5a55] leading-relaxed max-w-2xl">
         <b>Disclaimer.</b> OpenNIW is a completely free, open-source (MIT),
         public-interest self-help tool for organizing your own immigration
-        paperwork. We are not attorneys; OpenNIW is not a law firm, provides
-        no service, and nothing on this site or in the software is legal
-        advice. Using OpenNIW creates no attorney–client relationship.
+        paperwork. We are not attorneys; OpenNIW is not a law firm; and
+        nothing on this site or in the software is legal advice. It provides
+        no human legal services, no case representation, no individualized
+        assistance from its maintainers, no filing service and no attorney
+        review — the maintainers do not work on individual cases, for
+        anyone, at any price. The software does not determine whether you
+        qualify, does not tell you whether to file, and does not estimate
+        your odds. Using OpenNIW creates no attorney–client relationship.
         <b> We accept no legal responsibility for the success or failure of
         any application.</b> You are the petitioner and remain fully
         responsible for everything you sign and file; immigration outcomes

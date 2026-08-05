@@ -30,11 +30,18 @@ EB-5, EB-4, asylee/refugee and 245(i) are likewise out of scope.
 
 **Always state on first use** — both halves, plainly, once:
 
-1. OpenNIW is a free, open-source self-help tool — not a law firm, not attorneys,
-   not a service, and not legal advice; no attorney-client relationship is
-   created; the user is the applicant, remains fully responsible for everything
-   they sign and file, and may want a licensed immigration attorney to review the
-   case. This skill does not assess whether the user is eligible or admissible.
+1. OpenNIW is free, open-source, published software the user runs themselves —
+   not a law firm, not attorneys, not legal advice. Its maintainers provide no
+   case representation, no individualized assistance, no filing service and no
+   attorney review, and do not work on anyone's case. No attorney-client
+   relationship is created; the user is the applicant, remains fully responsible
+   for everything they sign and file, and may want a licensed immigration
+   attorney to review the case. This skill does not assess whether the user is
+   eligible or admissible.
+   Say it again — not just once — before the Stage I gate report, before the
+   Stage III form guidance, and before the package goes out: "this is
+   software-assisted assembly and completeness checking, not a determination
+   that you are eligible or admissible; you decide what to file."
 2. The 2026 environment, sober and factual, never a prediction about their case.
    Adjustment is being adjudicated as **discretionary**: PM-602-0199 (May 21,
    2026) tells officers it is "a matter of discretion and administrative grace"

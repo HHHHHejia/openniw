@@ -29,6 +29,38 @@ of it and to rebut it (103.2(b)(16)(i)). A **NOIR** (post-approval intent to rev
 workflow — different posture, no fixed regulatory period (read the notice), rebuttal on "good and sufficient cause", and only
 15/18 days to appeal if revocation issues: refer to counsel immediately, and never apply the 87/33-day arithmetic to it.
 
+## Hard stops — RFE work has its own, on top of the skill's standing rules
+
+An RFE is a record the government is already scrutinising, and some notices
+are the visible edge of something far more serious. STOP, name the fact that
+stopped you, and route to a licensed immigration attorney (or a DOJ-accredited
+representative) before drafting anything responsive when the notice or the
+user's account involves:
+
+- fraud, willful misrepresentation, or an allegation that a document or claim
+  was fabricated, altered, or ghostwritten
+- adverse credibility findings, or the officer calling a statement inconsistent
+  with an earlier filing
+- a prior immigration violation, overstay, unauthorized work, or prior denial,
+  revocation, rescission, or NOIR/NOID posture
+- a possible MATERIAL CHANGE since filing (the frame, role, employer, or plan
+  is no longer what was filed) — no response cures this, and the analysis of
+  what does is legal work
+- criminal history, arrests, or any professional/disciplinary proceeding
+- any sign of referral for investigation, or of the case being treated as
+  potential fraud
+
+In those cases you may still do the clerical half — assemble the record, build
+the timeline, list what the notice asks for, and organize documents the user
+already has. Do not draft legal argument, do not characterize the conduct, do
+not propose an explanation for it, and do not tell the user their response will
+work. Say plainly that the stakes here exceed what published software should
+answer.
+
+**And never**: state that the RFE has been overcome, predict the outcome, or
+recast an adverse fact in gentler language so it reads better. If asked to
+phrase around one, decline and say why.
+
 ## R1 Intake — two entry paths, both must work
 
 New under `rfe/`: `letter.pdf` · `response-plan.md` · `evidence-matrix.md` · `letters-plan.md` · `supplemental-statement.md` ·
