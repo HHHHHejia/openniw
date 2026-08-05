@@ -281,18 +281,62 @@ document.addEventListener("click", (e) => {
 const evalPanel = { url: null, loaded: false };
 
 async function initEval() {
-  const info = await window.openniw.evalInfo();
-  if (!info.available) return;          // not synced into this build
-  evalPanel.url = info.url;
+  // The button is ALWAYS shown. Hiding it when the bundle is missing made
+  // the feature invisible and the failure silent — the two worst outcomes.
   $("evalBtn").hidden = false;
   $("evalBtnBar").hidden = false;
+  try {
+    const info = await window.openniw.evalInfo();
+    evalPanel.url = info.available ? info.url : null;
+  } catch (err) {
+    evalPanel.url = null;
+    evalPanel.error = String(err && err.message || err);
+  }
+}
+
+function evalFailure(detail) {
+  $("evalView").hidden = true;
+  let box = $("evalMissing");
+  if (!box) {
+    box = document.createElement("div");
+    box.id = "evalMissing";
+    $("evalPanel").appendChild(box);
+  }
+  box.hidden = false;
+  box.innerHTML = `
+    <p class="ph-title">The evaluation page is not in this build</p>
+    <p class="ph-body">${escapeHtml(detail)}</p>
+    <p class="ph-body">Rebuild it from the repo root:</p>
+    <pre class="evalFix">make desktop-eval</pre>
+    <p class="ph-body">Or open the same page online at
+      <a href="#" id="evalOnline">openniw.com/eval</a>.</p>`;
+  const link = $("evalOnline");
+  if (link) link.onclick = (e) => {
+    e.preventDefault();
+    window.openniw.openExternal("https://openniw.com/eval/");
+  };
 }
 
 function openEval() {
-  if (!evalPanel.url) return;
-  const view = $("evalView");
-  if (!evalPanel.loaded) { view.src = evalPanel.url; evalPanel.loaded = true; }
   $("evalPanel").hidden = false;
+  if (!evalPanel.url) {
+    evalFailure(evalPanel.error
+      || "desktop/eval/ is missing, and webpage/out/ was not found either.");
+    return;
+  }
+  const box = $("evalMissing");
+  if (box) box.hidden = true;
+  const view = $("evalView");
+  view.hidden = false;
+  if (!evalPanel.loaded) {
+    evalPanel.loaded = true;
+    view.addEventListener("did-fail-load", (e) => {
+      if (e.errorCode === -3) return;   // aborted, not a real failure
+      evalPanel.loaded = false;
+      evalFailure(`The page failed to load (${e.errorDescription || e.errorCode}).`);
+    });
+    view.src = evalPanel.url;
+  }
 }
 function closeEval() { $("evalPanel").hidden = true; }
 

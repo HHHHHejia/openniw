@@ -336,6 +336,10 @@ individual's approval probability.**
 
 ## Privacy
 
+Full detail — every network call the system can make, what the localhost
+companion is allowed to touch, and every command the skills may run — is in
+[SECURITY.md](SECURITY.md).
+
 - Everything runs on your machine. The case folder is the entire system of
   record — zip it, move it, or open it in any editor.
 - The companion binds 127.0.0.1 only, requires a per-session random token,
