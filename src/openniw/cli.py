@@ -53,6 +53,10 @@ def _host() -> str:
 
 
 def _where(step: str, url: str, host: str) -> str:
+    """The sentence the agent relays. It deliberately never contains the
+    session token: that would push a live credential through the model's
+    context and into every transcript and log that touches it. `openniw
+    open` reopens the page locally from the sentinel instead."""
     if host == "desktop":
         return (f"The {step} page is open in the panel beside this chat — no "
                 "browser needed. It stays open across sessions; finish with "
@@ -61,11 +65,10 @@ def _where(step: str, url: str, host: str) -> str:
         return (f"The {step} page is being displayed by the app that started "
                 "this session. It stays open across sessions; finish with the "
                 "page's 'Done' button.")
-    return (f"Open this in your browser to do the {step} step: {url}\n"
-            "(it should have opened automatically; if not, paste the address). "
-            "The server keeps running even if this terminal closes — you can "
-            "come back to it in several sittings; finish with the page's "
-            "'Done' button.")
+    return (f"Your browser should have opened the {step} page. If it did not, "
+            "run `openniw open` in this folder to reopen it. The server keeps "
+            "running even if this terminal closes — you can come back to it in "
+            "several sittings; finish with the page's 'Done' button.")
 
 
 def _cmd_ui(ns) -> int:
@@ -79,7 +82,6 @@ def _cmd_ui(ns) -> int:
         host = _host()
         print(f"The {sent['step']} session is already open.")
         print(f"SAY: {_where(sent['step'], sent['url'], host)}")
-        print(f"OPENNIW_URL={sent['url']}")
         print(f"OPENNIW_HOST={host}")
         if not ns.no_open and not os.environ.get("OPENNIW_NO_BROWSER"):
             import webbrowser
@@ -106,12 +108,14 @@ def _cmd_ui(ns) -> int:
     # The agent relays the SAY: line verbatim instead of guessing where the
     # page went — in the desktop app there is no browser to send anyone to.
     print(f"SAY: {_where(ns.step, url, host)}")
-    print(f"OPENNIW_URL={url}")
     print(f"OPENNIW_HOST={host}")
+    # The tokenised URL is deliberately NOT printed: it would land in the
+    # agent's context and every transcript downstream. Embedding hosts read
+    # it from .openniw/ui-session.json; humans use `openniw open`.
     if os.environ.get("SSH_CONNECTION") or os.environ.get("SSH_TTY"):
         print(f"Remote session? Forward the port: "
-              f"ssh -L {port}:127.0.0.1:{port} <host> — then open the URL "
-              "locally.")
+              f"ssh -L {port}:127.0.0.1:{port} <host> — then run "
+              "`openniw open` locally.")
     return 0
 
 
@@ -119,6 +123,22 @@ def _cmd_serve(ns) -> int:
     from .server import serve
     serve(ns.case, step=ns.step, port=ns.port, token=ns.token,
           open_browser=ns.open_browser)
+    return 0
+
+
+def _cmd_open(ns) -> int:
+    """Reopen the live session's page in the local browser. Exists so the
+    URL — which carries the session token — never has to be printed for a
+    human to copy, and so never passes through the agent's context."""
+    case = CaseFolder(ns.case)
+    code, sent = ui_session.status(case)
+    if code != ui_session.LIVE:
+        print("no live session in this folder; start one with `openniw ui "
+              "<step>`", file=sys.stderr)
+        return 4
+    import webbrowser
+    webbrowser.open(sent["url"])
+    print(f"reopened the {sent['step']} page in your browser")
     return 0
 
 
@@ -299,6 +319,11 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--token", required=True)
     p.add_argument("--open-browser", action="store_true")
     p.set_defaults(fn=_cmd_serve)
+
+    p = sub.add_parser("open", help="reopen the live session's page in your "
+                                    "browser (keeps the token out of chat)")
+    _case_arg(p)
+    p.set_defaults(fn=_cmd_open)
 
     p = sub.add_parser("status", help="UI-session verdict "
                        "(exit: 0 live, 2 done, 3 abandoned, 4 stale, 6 none)")

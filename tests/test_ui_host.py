@@ -44,9 +44,20 @@ def test_desktop_wording_never_sends_anyone_to_a_browser():
     assert URL not in say          # the URL is noise when the page is on screen
 
 
-def test_browser_wording_gives_the_address():
+def test_browser_wording_routes_through_a_command_not_a_pasted_url():
     say = cli._where("intake", URL, "browser")
-    assert URL in say and "browser" in say.lower()
+    assert "browser" in say.lower()
+    assert "openniw open" in say, "no tokenless way to reopen the page"
+
+
+def test_no_host_wording_ever_leaks_the_session_token():
+    """The token is a live credential for a server holding the user's whole
+    case. Putting it in the sentence the agent speaks would copy it into the
+    model's context and every transcript and log downstream."""
+    for host in ("desktop", "browser", "embedded"):
+        say = cli._where("intake", URL, host)
+        assert "token=" not in say, f"{host} wording leaks the token"
+        assert "abc" not in say, f"{host} wording leaks the token value"
 
 
 def test_embedded_wording_is_host_agnostic():
