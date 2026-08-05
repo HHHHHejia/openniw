@@ -36,17 +36,9 @@ function pct(sorted: number[], p: number): number {
   const lo = Math.floor(i), hi = Math.ceil(i);
   return sorted[lo] + (sorted[hi] - sorted[lo]) * (i - lo);
 }
+const ylog = (c: number) => Math.log10(c + 1);
 function fmt(n: number): string {
   return n >= 10000 ? `${Math.round(n / 1000)}k` : Math.round(n).toLocaleString();
-}
-
-function niceStep(raw: number): number {
-  if (raw <= 0) return 1;
-  let unit = 1, scaled = raw;
-  while (scaled >= 10) { scaled /= 10; unit *= 10; }
-  while (scaled < 1) { scaled *= 10; unit /= 10; }
-  const nice = scaled <= 1 ? 1 : scaled <= 2 ? 2 : scaled <= 5 ? 5 : 10;
-  return Math.max(1, nice * unit);
 }
 
 const CITE_BUCKETS: [string, number, number][] = [
@@ -55,25 +47,20 @@ const CITE_BUCKETS: [string, number, number][] = [
 ];
 
 // ---------------------------------------------------------------- charts --
-function BandChart({ title, note, series, user, ymLabel }: {
+function BandChart({ title, note, series, user, ymLabel, ticks }: {
   title: string; note: string; series: MonthRow[];
-  user: number | null; ymLabel: (ym: number) => string;
+  user: number | null; ymLabel: (ym: number) => string; ticks: number[];
 }) {
   const svgRef = useRef<SVGSVGElement>(null);
   const [hoverX, setHoverX] = useState<number | null>(null);
   const scale = useMemo(() => {
     if (!series.length) return null;
     const x0 = series[0].ym, x1 = series[series.length - 1].ym;
-    const rawMax = Math.max(1, ...series.map((s) => s.p[4]), user ?? 0) * 1.1;
-    const step = niceStep(rawMax / 4);
-    const yMax = Math.ceil(rawMax / step) * step;
-    const ticks = Array.from(
-      { length: Math.floor(yMax / step) + 1 }, (_, i) => i * step,
-    );
+    const yMax = Math.max(...series.map((s) => s.p[4]), user ?? 0) * 1.15 + 5;
     return {
-      x0, x1, yMax, ticks,
+      x0, x1, yMax,
       X: (ym: number) => PAD.l + ((ym - x0) / Math.max(1, x1 - x0)) * (W - PAD.l - PAD.r),
-      Y: (c: number) => PAD.t + (1 - c / yMax) * (H - PAD.t - PAD.b),
+      Y: (c: number) => PAD.t + (1 - ylog(c) / ylog(yMax)) * (H - PAD.t - PAD.b),
     };
   }, [series, user]);
   if (!scale) return null;
@@ -91,7 +78,7 @@ function BandChart({ title, note, series, user, ymLabel }: {
              setHoverX((e.clientX - r.left) * (W / r.width));
            }}
            onMouseLeave={() => setHoverX(null)}>
-        {scale.ticks.map((t) => (
+        {ticks.filter((t) => t < scale.yMax).map((t) => (
           <g key={t}>
             <line x1={PAD.l} x2={W - PAD.r} y1={scale.Y(t)} y2={scale.Y(t)} stroke={RULE} />
             <text x={PAD.l - 6} y={scale.Y(t) + 4} textAnchor="end" fontSize={11} fill={MUTED}>{fmt(t)}</text>
@@ -359,11 +346,13 @@ export default function BenchmarkPage() {
       {/* trend bands — the highest-information view, so they lead */}
       <div className="grid gap-4 mt-3 mb-4">
         <BandChart title="Citations of approved cases by month"
-                   note="bands: middle 50% and 80% · 3-month window · linear scale"
-                   series={citesSeries} user={myCites} ymLabel={ymLabel} />
+                   note="bands: middle 50% and 80% · 3-month window · log scale"
+                   series={citesSeries} user={myCites} ymLabel={ymLabel}
+                   ticks={[10, 100, 1000, 10000, 50000]} />
         <BandChart title="Papers of approved cases by month"
-                   note="journal + conference papers · same window · linear scale"
-                   series={pubsSeries} user={myPubs} ymLabel={ymLabel} />
+                   note="journal + conference papers · same window · log scale"
+                   series={pubsSeries} user={myPubs} ymLabel={ymLabel}
+                   ticks={[5, 10, 25, 50, 100, 250]} />
       </div>
 
       {/* histogram + what-if slider */}
