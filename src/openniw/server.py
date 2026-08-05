@@ -122,7 +122,10 @@ def serve(case_dir, *, step: str, port: int, token: str,
 
     threading.Thread(target=heartbeat, daemon=True).start()
 
-    if open_browser:
+    # OPENNIW_NO_BROWSER lets an embedding host (the desktop app) render the
+    # page itself: it reads the OPENNIW_URL= line below and loads it in its
+    # own view, so popping a system browser would just duplicate the window.
+    if open_browser and not os.environ.get("OPENNIW_NO_BROWSER"):
         def _open() -> None:
             time.sleep(0.8)
             import webbrowser

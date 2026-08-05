@@ -42,6 +42,32 @@ def _check_case_dir(case: CaseFolder) -> str | None:
     return None  # brand-new case: allowed, the agent creates STATE.md next
 
 
+def _host() -> str:
+    """Where the page will actually appear. The embedding host sets this;
+    only the companion can know, which is why it — not the agent — writes
+    the sentence the user reads."""
+    host = (os.environ.get("OPENNIW_HOST") or "").strip().lower()
+    if host in ("desktop", "browser"):
+        return host
+    return "browser" if not os.environ.get("OPENNIW_NO_BROWSER") else "embedded"
+
+
+def _where(step: str, url: str, host: str) -> str:
+    if host == "desktop":
+        return (f"The {step} page is open in the panel beside this chat — no "
+                "browser needed. It stays open across sessions; finish with "
+                "the page's 'Done' button.")
+    if host == "embedded":
+        return (f"The {step} page is being displayed by the app that started "
+                "this session. It stays open across sessions; finish with the "
+                "page's 'Done' button.")
+    return (f"Open this in your browser to do the {step} step: {url}\n"
+            "(it should have opened automatically; if not, paste the address). "
+            "The server keeps running even if this terminal closes — you can "
+            "come back to it in several sittings; finish with the page's "
+            "'Done' button.")
+
+
 def _cmd_ui(ns) -> int:
     case = CaseFolder(ns.case)
     problem = _check_case_dir(case)
@@ -50,9 +76,12 @@ def _cmd_ui(ns) -> int:
         return 3
     code, sent = ui_session.status(case)
     if code == ui_session.LIVE:
-        print(f"A browser session is already open: {sent['url']}")
+        host = _host()
+        print(f"The {sent['step']} session is already open.")
+        print(f"SAY: {_where(sent['step'], sent['url'], host)}")
         print(f"OPENNIW_URL={sent['url']}")
-        if not ns.no_open:
+        print(f"OPENNIW_HOST={host}")
+        if not ns.no_open and not os.environ.get("OPENNIW_NO_BROWSER"):
             import webbrowser
             webbrowser.open(sent["url"])
         return 5
@@ -72,10 +101,13 @@ def _cmd_ui(ns) -> int:
         stdout=log, stderr=log, start_new_session=True,
     )
     url = f"http://127.0.0.1:{port}/{ns.step}/?token={token}"
-    print(f"OpenNIW {ns.step} session: {url}")
-    print(f"Server started (pid {proc.pid}); it keeps running even if this "
-          "terminal closes. Finish with the page's 'Done' button.")
+    host = _host()
+    print(f"OpenNIW {ns.step} session started (pid {proc.pid}).")
+    # The agent relays the SAY: line verbatim instead of guessing where the
+    # page went — in the desktop app there is no browser to send anyone to.
+    print(f"SAY: {_where(ns.step, url, host)}")
     print(f"OPENNIW_URL={url}")
+    print(f"OPENNIW_HOST={host}")
     if os.environ.get("SSH_CONNECTION") or os.environ.get("SSH_TTY"):
         print(f"Remote session? Forward the port: "
               f"ssh -L {port}:127.0.0.1:{port} <host> — then open the URL "

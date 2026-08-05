@@ -189,8 +189,11 @@ finalizes it and exits the server.
 case.json, history/, documents/) stays yours. Update STATE.md right after
 launch — Next actions gets "WAITING on browser: intake at <url> — on done list
 `sources/` fresh and continue at <reference>", plus a Decision log line.
-Tell the user the URL, what to upload, what to leave blank, and that chat stays
-open. Check `openniw
+Relay the companion's `SAY:` line VERBATIM — it knows where the page actually
+opened (a browser tab, or the desktop app's own panel), and you do not; never
+tell the user to open a browser on your own initiative, because when
+`OPENNIW_HOST=desktop` there is no browser to send them to. Then add what to
+upload and what to leave blank; chat stays open. Check `openniw
 status` whenever you get control; if your agent runs background commands, also
 run `openniw wait` in the background (exit 0 live-timeout, 2 done, 4 stale).
 

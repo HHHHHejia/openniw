@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; frame-src http://127.0.0.1:* http://localhost:* openniw:" />
+<title>OpenNIW</title>
+<link rel="stylesheet" href="../node_modules/@xterm/xterm/css/xterm.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header id="bar">
+  <div id="brand">
+    <span class="docket">OpenNIW</span>
+    <span class="muted" id="tagline">runs on your computer · your agent · your files</span>
+  </div>
+  <div id="barRight">
+    <button id="evalBtnBar" class="btn-quiet" hidden title="Compare your record with approved cases">▚ Evaluation</button>
+    <div id="layoutPick" role="group" aria-label="Chat position">
+      <button data-layout="left"   title="Chat on the left">◧</button>
+      <button data-layout="right"  title="Chat on the right">◨</button>
+      <button data-layout="bottom" title="Chat at the bottom">⬓</button>
+    </div>
+    <button id="caseBtn" class="btn-quiet">Open case folder…</button>
+    <span id="caseName" class="docket muted"></span>
+    <button id="revealBtn" class="btn-quiet" hidden>Show in Finder</button>
+  </div>
+</header>
+
+<div id="stepper" hidden></div>
+
+<div id="evalPanel" hidden>
+  <div class="evalHead">
+    <span class="docket accent">Statistical evaluation</span>
+    <span class="muted evalNote">
+      Percentiles among publicly posted <b>approved</b> cases — never an
+      approval probability. Runs entirely in this window; nothing you type
+      leaves your computer.
+    </span>
+    <span class="grow"></span>
+    <button id="evalClose" class="btn-quiet">Close ✕</button>
+  </div>
+  <webview id="evalView"></webview>
+</div>
+
+<div id="dragShield" hidden></div>
+
+<main id="panes" class="lay-left">
+  <section id="left">
+    <div class="paneHead">
+      <span class="docket" id="agentLabel">Agent</span>
+      <span id="agentState" class="pill">not started</span>
+      <div id="skillHint" hidden>
+        <span class="hintLabel">start with</span>
+        <button id="skillCmd" class="cmdChip" title="Click to type this into the agent">/niw-petition</button>
+        <button id="skillMore" class="cmdMore" title="Other skills">▾</button>
+        <div id="skillMenu" hidden></div>
+      </div>
+      <span class="grow"></span>
+      <button id="restartBtn" class="btn-quiet" hidden>Restart</button>
+    </div>
+    <div id="termWrap"><div id="term"></div></div>
+  </section>
+
+  <div id="split" title="Drag to resize"></div>
+
+  <section id="right">
+    <div class="paneHead">
+      <span class="docket" id="pageTitle">Browser step</span>
+      <span id="pageUrl" class="pill mono" hidden></span>
+      <span class="grow"></span>
+      <button id="reloadBtn" class="btn-quiet" hidden>Reload</button>
+      <button id="popOutBtn" class="btn-quiet" hidden>Open in browser</button>
+    </div>
+    <div id="viewWrap">
+      <div id="placeholder">
+        <div class="ph-mark">◫</div>
+        <p class="ph-title">Browser steps appear here</p>
+        <p class="ph-body">
+          When your agent reaches intake, the benchmark, citation review or
+          the forms wizard, it starts the local companion and this pane loads
+          the page automatically — the same page you would otherwise get in a
+          browser tab, on <span class="mono">127.0.0.1</span> only.
+        </p>
+      </div>
+      <webview id="view" hidden></webview>
+    </div>
+  </section>
+</main>
+
+<div id="setup" class="overlay">
+  <div class="card">
+    <div class="docket accent">Before you start</div>
+    <h1>OpenNIW needs two things already on this Mac</h1>
+    <p class="lede">
+      This window does not talk to any AI itself. It runs the coding agent
+      <em>you</em> already installed, under <em>your</em> subscription, on
+      <em>your</em> files — the same thing you would do in a terminal, minus
+      the terminal.
+    </p>
+
+    <ol id="checks"></ol>
+
+    <div class="row">
+      <label class="docket" for="agentSel">Use agent</label>
+      <select id="agentSel"></select>
+      <span class="grow"></span>
+      <button id="evalBtn" class="btn-eval" hidden>
+        <span class="eval-mark">▚</span> See how you compare
+      </button>
+      <button id="recheckBtn" class="btn-quiet">Re-check</button>
+      <button id="beginBtn" class="btn" disabled>Choose case folder →</button>
+    </div>
+
+    <details id="recents" hidden>
+      <summary class="docket muted">Recent case folders</summary>
+      <ul id="recentList"></ul>
+    </details>
+
+    <p class="fineprint">
+      OpenNIW is free, open-source software you run yourself — not a law firm,
+      not attorneys, not legal advice. No account, no server, no API key: your
+      case stays in a folder on this computer and your agent's own login does
+      the work. Review everything before you file, and consider having a
+      licensed immigration attorney look at your case.
+    </p>
+  </div>
+</div>
+
+<script src="../node_modules/@xterm/xterm/lib/xterm.js"></script>
+<script src="../node_modules/@xterm/addon-fit/lib/addon-fit.js"></script>
+<script src="renderer.js"></script>
+</body>
+</html>

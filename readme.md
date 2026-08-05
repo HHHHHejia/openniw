@@ -57,6 +57,31 @@ Then say **"帮我准备 NIW 申请"** or **"evaluate my NIW case"** in your
 agent — or "evaluate my EB-1A case" / "prepare my O-1 petition" /
 "help me file my I-485" for the sibling skills.
 
+### Two ways to run it
+
+**The terminal (default, recommended).** The install above is all you need:
+your agent, your case folder, and a browser tab when a step calls for one.
+Nothing else to install, nothing else to trust.
+
+**A desktop window (beta, optional).** If a terminal is the part that puts
+you off, `desktop/` is an Electron shell that puts the same two things in
+one window — your agent on one side, the companion's pages on the other,
+with a live stage bar and the statistical evaluation one click away. It
+changes nothing about how OpenNIW works: it spawns the very same `claude`
+or `codex` CLI you already installed, under your own subscription, on your
+own files. It never reads, stores, or proxies a credential, runs no server
+of its own, and its embedded view is locked to localhost.
+
+```bash
+git clone https://github.com/HHHHHejia/openniw
+cd openniw/desktop && npm install && npm start
+```
+
+It is source-only for now, so it reaches you before packaged downloads do —
+see [desktop/readme.md](desktop/readme.md). Prebuilt DMG/EXE downloads need
+code signing to install without scary warnings; if that matters to you, say
+so on the issue tracker and it moves up the list.
+
 ## The four skills
 
 | Skill | Category | Status | What differs |
@@ -318,12 +343,15 @@ openniw/
 ├── .agents/skills/niw-petition/  # the flagship skill (EB-2 NIW)
 │              └── eb1a-petition/ # EB-1A skill (beta)
 │              └── o1-petition/   # O-1A skill (beta)
+│              └── i485-adjustment/ # employment-based I-485 (beta)
 ├── src/openniw/                  # the pip companion: FastAPI folder-mode
 │   │                             #   server + CLI + committed UI bundle
 │   └── ui/                       # built Next.js static export (make ui)
 │   └── services/                 # deterministic compute: formfill, citations,
 │                                 #   papers, package, registry linter …
 ├── frontend/                     # UI source (Node needed by maintainers only)
+├── desktop/                      # Electron shell: runs the user's own agent
+│                                 #   CLI + the companion pages in one window
 ├── forms/                        # vendored official PDFs + field inventories
 ├── tests/                        # pytest: contracts, formfill, API, sentinel,
 │                                 #   registry linter, version precision
@@ -342,6 +370,13 @@ openniw/
   the skills document ≡ the regex `session.tsx` parses it with (lifted out
   of the TSX at test time, so changing it there fails here) ≡ the field ids
   in `.github/ISSUE_TEMPLATE/data-point.yml`.
+- `desktop/` is a **shell, not a service** — it spawns the `claude`/`codex`
+  binary the user already installed and renders the companion's own
+  localhost pages, wired together by the single `OPENNIW_URL=` line the CLI
+  already prints. It must never read, store or proxy an AI credential
+  (Anthropic's terms forbid consumer-subscription OAuth in third-party
+  tools, including the Agent SDK), and the embedded view is hard-limited to
+  loopback. See [desktop/readme.md](desktop/readme.md).
 - `openniw registry` is pure-stdlib and side-effect-free
   (`services/registry.py`) — it reads the case folder and reports; it never
   edits a user's file. Same rule for every service: the agent decides, the

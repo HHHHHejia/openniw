@@ -3,6 +3,15 @@
 ui:
 	sh scripts/build_ui.sh
 
+# Bundle the public evaluation page into the desktop app so it works with
+# no network and before any case folder exists. Rebuild webpage/ first if
+# the dataset or the page changed.
+desktop-eval:
+	cd webpage && npm run build
+	rm -rf desktop/eval && mkdir -p desktop/eval
+	cp -R webpage/out/. desktop/eval/
+	@echo "desktop/eval: $$(du -sh desktop/eval | cut -f1)"
+
 test:
 	python3 -m pytest tests/ -q
 

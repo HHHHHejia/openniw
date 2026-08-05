@@ -26,3 +26,6 @@ uploads/
 .DS_Store
 .idea/
 .vscode/
+
+# desktop: bundled copy of the built evaluation page (make desktop-eval)
+desktop/eval/

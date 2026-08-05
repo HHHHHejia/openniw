@@ -185,7 +185,11 @@ pass; the user's picks land in `citations/selection.json`.
 - Update STATE.md right after launch: Next actions gets "WAITING on
   browser: <step> at <url> — on done read <report files> and continue at
   <reference>", plus a Decision log line.
-- Tell the user the URL and what to do there; chat stays open as usual.
+- Relay the companion's `SAY:` line VERBATIM — it knows where the page
+  actually opened (a browser tab, or the desktop app's own panel), and you
+  do not. Never tell the user to open a browser on your own initiative; when
+  `OPENNIW_HOST=desktop` there is no browser to send them to. Then add what
+  to do there; chat stays open as usual.
   Check `openniw status` whenever you get control; if your agent runs
   background commands, also run `openniw wait` in the background (exit 0
   live-timeout, 2 done, 4 stale).

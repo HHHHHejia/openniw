@@ -164,6 +164,33 @@ export default function Landing() {
             is installed automatically for the browser pages and PDF filling.
           </p>
         </div>
+        <div className="border border-[--rule] bg-white px-6 py-5 mb-4">
+          <div className="docket-line text-[--docket] mb-2">
+            Optional · prefer a window to a terminal?
+          </div>
+          <p className="text-sm text-[#333] leading-relaxed mb-2">
+            The terminal above is the supported path and needs nothing else.
+            But if that is the part that puts you off, there is a{" "}
+            <b>desktop app (beta)</b>: your agent on one side, the form pages
+            on the other, a live stage bar across the top, and the
+            statistical evaluation one click away — one window, no terminal.
+          </p>
+          <p className="text-sm text-[#333] leading-relaxed mb-2">
+            It changes nothing about how any of this works. It starts the
+            very same <span className="font-mono">claude</span> or{" "}
+            <span className="font-mono">codex</span> you already installed,
+            under your own subscription, on your own files — it never sees a
+            password, a token or an API key, and it runs no server.
+          </p>
+          <CopyBlock copyText={"git clone https://github.com/HHHHHejia/openniw\ncd openniw/desktop && npm install && npm start"}
+                     className="bg-[--field] border border-[--rule]">
+            {"git clone https://github.com/HHHHHejia/openniw\ncd openniw/desktop && npm install && npm start"}
+          </CopyBlock>
+          <p className="text-xs text-[#4f5a55]">
+            Built from source for now — double-click downloads are waiting on
+            code signing, so that they install without security warnings.
+          </p>
+        </div>
         <div className="border border-[--rule] bg-white px-6 py-5">
           <div className="docket-line text-[--docket] mb-2">
             3 · What it costs
