@@ -54,13 +54,15 @@ Agent skills are instructions, so it matters what they instruct. These are
 all of the external commands the four skills can ask your agent to run:
 
 - `uv tool install openniw` / `pipx install openniw` /
-  `python3 -m pip install --user openniw` — installing this project's own
-  companion, published from this repository;
+  `python3 -m pip install --user openniw` — the companion, from **PyPI**:
+  <https://pypi.org/project/openniw/>. The skills do not install from a
+  GitHub URL; if you ever see one instructed, treat it as a red flag;
 - `pip install pypdf cryptography` — only for the offline PDF-filling
-  fallback;
-- `git clone https://github.com/HHHHHejia/openniw ~/openniw` then
-  `npm install` — **only if you ask for the optional desktop window**, and
-  only from this project's own repository.
+  fallback.
+
+The optional desktop window is **not** installed by any skill. If you ask
+for it, the agent points you at the readme and you run the two commands
+yourself.
 
 Nothing else is installed, downloaded, or executed. No skill reads
 `~/.ssh`, `.env` files, keychains, browser profiles, or any credential
@@ -88,14 +90,23 @@ say so in a minimal issue ("security report, please make contact") and you
 will be contacted; do not include your case data or any personal
 identifiers in the report.
 
-## A note on automated risk scores
+## Published audit findings and what was done
 
-Third-party scanners flag these skills for handling sensitive personal
-identifiers and for instructing package installation. Both are true and
-intended: preparing an I-485 requires an A-Number and a passport number,
-and the companion has to be installed to fill a PDF. The mitigation is not
-to hide those facts but to keep them local and auditable — which is what
-this page, and roughly 3,000 lines of readable markdown and Python in this
-repository, are for. If a scanner reports something concrete that this page
-does not explain, please open an issue; that would be a real finding and it
-will be fixed.
+The skills are scanned by [skills.sh](https://www.skills.sh/hhhhhejia/openniw).
+Every finding raised so far is listed here with its outcome, because a risk
+rating with no explanation is not information.
+
+| Finding | Verdict | Action |
+|---|---|---|
+| **E005 — Suspicious download URL** (installing from a personal GitHub account) | **Valid.** A skill that tells an agent to fetch and run code from an individual's repository is shaped exactly like a supply-chain attack, and no reader can tell the difference from the text. | Fixed. `openniw` is published on [PyPI](https://pypi.org/project/openniw/) and the GitHub fallback is deleted from all four skills. The desktop window is no longer installed by any skill either. Pinned by `tests/test_ui_host.py`. |
+| **W007 — Insecure credential handling** (the page URL carried a session token the agent had to speak) | **Valid.** That token authorises a server holding the entire case, and relaying it copied it into the model's context and every transcript downstream. | Fixed. The URL is no longer printed to the agent at all: hosts read it from the session file, humans use `openniw open`. No host's wording contains a token, asserted for all three. |
+| **W011 — Third-party content exposure** (indirect prompt injection through uploaded documents) | **Valid and inherent.** The product's job is to read CVs, notices and web pages, which are attacker-controllable text. | Mitigated. All four skills now state, beside the standing rules, that documents are data and never instructions; embedded commands are ignored and reported to you rather than acted on. |
+
+Scanners also flag these skills for handling sensitive personal
+identifiers. That one is true and cannot be designed away: preparing an
+I-485 requires an A-Number and a passport number. The mitigation is not to
+hide it but to keep it local and auditable, which is what this page and the
+rest of this repository are for.
+
+If a scan reports something this page does not explain, please open an
+issue. That would be a real finding and it will be fixed.

@@ -174,6 +174,9 @@ sponsor-income analysis that is not implemented).
   openniw docx / highlight     # DOCX export · exhibit highlighting
   ```
 
+  Install it with `pip install openniw` (or `uv tool install openniw`); your
+  agent does this for you the first time a step needs it.
+
   The browser session outlives your terminal: close everything, come back
   tomorrow, and the agent reconciles what you did from the session file.
   If the companion can't be installed (offline/sandboxed), the skill falls

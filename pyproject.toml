@@ -5,12 +5,13 @@ build-backend = "hatchling.build"
 [project]
 name = "openniw"
 version = "0.3.0"
-description = "Local companion for the OpenNIW NIW-petition Agent Skill: browser form wizard, deterministic USCIS PDF filling (XFA strip), filing-package ZIP, DOCX export, OpenAlex citation harvest, PDF highlighting - all over a local case folder. No accounts, no database, no API keys."
+description = "Local companion for the OpenNIW immigration Agent Skills (EB-2 NIW, EB-1A, O-1A, I-485): localhost browser wizard, deterministic USCIS PDF filling, filing-package ZIP, DOCX export, OpenAlex citation harvest, claim-registry linting - all over a case folder on your own machine. No accounts, no database, no API keys, no LLM."
 readme = "readme.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "OpenNIW contributors" }]
-keywords = ["niw", "eb2", "immigration", "uscis", "i-140", "agent-skill"]
+keywords = ["niw", "eb1a", "o1", "i-485", "eb2", "immigration", "uscis",
+            "i-140", "green-card", "agent-skill", "self-petition"]
 dependencies = [
   "fastapi>=0.115",
   "uvicorn>=0.30",
@@ -22,8 +23,22 @@ dependencies = [
   "pymupdf>=1.24",
 ]
 
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Office/Business",
+  "Topic :: Utilities",
+]
+
 [project.urls]
-Homepage = "https://github.com/HHHHHejia/openniw"
+Homepage = "https://openniw.com"
+Repository = "https://github.com/HHHHHejia/openniw"
+Issues = "https://github.com/HHHHHejia/openniw/issues"
+Security = "https://github.com/HHHHHejia/openniw/blob/main/SECURITY.md"
 
 [project.scripts]
 openniw = "openniw.cli:main"

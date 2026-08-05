@@ -168,15 +168,12 @@ re-asks:
 > your own files — the window is just a shell around this.
 
 - **Terminal** — the default. Nothing to install; carry on.
-- **Desktop window** (beta) — needs Node.js (`node --version`). If they want
-  it and Node is present, set it up for them:
-  `git clone https://github.com/HHHHHejia/openniw ~/openniw` then
-  `cd ~/openniw/desktop && npm install`. Tell them to run `npm start` there,
-  click "Open case folder…", and choose THIS folder. Nothing is lost in the
-  switch — STATE.md carries the session, so work resumes exactly where it
-  stands. If Node is missing, say so plainly and continue in the terminal
-  rather than detouring into installing Node; offer the window again later
-  if they ask.
+- **Desktop window** (beta) — needs Node.js (`node --version`). It is not
+  installed from here: point the user at the "Two ways to run it"
+  section of the project readme, which has the two commands. Once they
+  have it running they click "Open case folder…" and choose THIS
+  folder; nothing is lost in the switch — STATE.md carries the session.
+  If Node is missing, say so plainly and continue in the terminal.
 
 ## Browser sessions (interaction-heavy steps)
 
@@ -203,11 +200,10 @@ wizard" links**: the wizard is hardwired to NIW's I-140 and ETA-9089 field maps
 and can write I-140 answers and filled PDFs into this case folder. That is the
 "Do NOT use here" list below, extended to clicking as well as running.
 
-**Ensure the companion once**: `openniw --version`. If missing, try in order:
-`uv tool install openniw` → `pipx install openniw` → `python3 -m pip install
---user openniw` → (if PyPI has no release yet) the same three with
-`git+https://github.com/HHHHHejia/openniw`. All fail (offline/sandbox)? Run the
-chat flow — the user drops files into `sources/` by hand. The GUI is an
+**Ensure the companion once**: `openniw --version`. If missing, install it
+from PyPI: `uv tool install openniw` (or `pipx install openniw`, or
+`python3 -m pip install --user openniw`). All fail (offline/sandbox)?
+Use the chat flow + the bundled `scripts/*.py` fallbacks — the GUI is an
 accelerator, never a requirement.
 
 **Open** (case folder as CWD): `openniw ui intake`. This starts a DETACHED server

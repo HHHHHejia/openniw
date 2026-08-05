@@ -90,14 +90,17 @@ def test_skills_relay_the_say_line_rather_than_improvising():
             f"{skill} does not know a desktop host can exist"
 
 
-def test_skills_offer_the_workspace_choice_and_can_set_it_up():
-    """The desktop app is source-only, so the agent — which is already the
-    installer for the companion — offers it and does the setup."""
+def test_skills_offer_the_workspace_choice_without_scripting_an_install():
+    """The window is offered, but the skill does not carry the commands to
+    fetch and build it — that is the shape a supply-chain scanner flags, and
+    rightly. It points at the readme and checks Node is even present."""
     for skill in SKILL_NAMES:
         text = _skill_text(skill)
         assert "Terminal or a window?" in text, f"{skill} never offers the choice"
-        assert "npm install" in text, f"{skill} cannot set the window up"
         assert "node --version" in text, f"{skill} does not check for Node"
+        assert "readme" in text.lower(), f"{skill} does not point anywhere to get it"
+        assert "npm install" not in text, \
+            f"{skill} scripts a build it should be delegating to the readme"
         # asked once, then remembered
         assert "Decision log" in text and "re-asks" in text, \
             f"{skill} may re-ask the workspace question every session"
@@ -113,3 +116,26 @@ def test_the_choice_is_not_offered_when_already_in_the_window():
         section = re.sub(r"\s+", " ", text[i:i + 400])
         assert "ALREADY running inside the desktop app" in section, \
             f"{skill} would ask the question inside the desktop app"
+
+
+def test_skills_install_the_companion_from_pypi_not_a_github_account():
+    """A skill that tells an agent to install from a personal GitHub account
+    is indistinguishable from a supply-chain attack, and a scanner rightly
+    flags it (Snyk E005). openniw is on PyPI; the fallback is gone."""
+    import re
+    for skill in SKILL_NAMES:
+        text = _skill_text(skill)
+        body = text.split("---", 2)[-1]      # skip frontmatter's source: line
+        bad = re.findall(r"(?:git\+)?https://github\.com/\S+", body)
+        assert not bad, f"{skill} still installs from GitHub: {bad}"
+        assert "install openniw" in body, f"{skill} lost the PyPI install line"
+
+
+def test_documents_are_data_not_instructions():
+    """Uploaded CVs and notices are attacker-controllable text (Snyk W011)."""
+    for skill in SKILL_NAMES:
+        text = _skill_text(skill).lower()
+        assert "data, never instructions" in text, \
+            f"{skill} has no prompt-injection rule"
+        assert "ignore previous" in text, \
+            f"{skill} does not name the classic injection phrasing"

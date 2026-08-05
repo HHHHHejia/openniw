@@ -163,15 +163,12 @@ re-asks:
 > your own files — the window is just a shell around this.
 
 - **Terminal** — the default. Nothing to install; carry on.
-- **Desktop window** (beta) — needs Node.js (`node --version`). If they want
-  it and Node is present, set it up for them:
-  `git clone https://github.com/HHHHHejia/openniw ~/openniw` then
-  `cd ~/openniw/desktop && npm install`. Tell them to run `npm start` there,
-  click "Open case folder…", and choose THIS folder. Nothing is lost in the
-  switch — STATE.md carries the session, so work resumes exactly where it
-  stands. If Node is missing, say so plainly and continue in the terminal
-  rather than detouring into installing Node; offer the window again later
-  if they ask.
+- **Desktop window** (beta) — needs Node.js (`node --version`). It is not
+  installed from here: point the user at the "Two ways to run it"
+  section of the project readme, which has the two commands. Once they
+  have it running they click "Open case folder…" and choose THIS
+  folder; nothing is lost in the switch — STATE.md carries the session.
+  If Node is missing, say so plainly and continue in the terminal.
 
 ## Browser sessions (interaction-heavy steps)
 
@@ -194,11 +191,11 @@ exactly as the template so the browser can parse it. The `openniw` pip
 companion serves pages over the case folder ONLY: 127.0.0.1, random token,
 no account, no database, no AI — you remain the brain.
 
-**Ensure the companion once**: `openniw --version`. If missing, try `uv
-tool install openniw` → `pipx install openniw` → `python3 -m pip install
---user openniw` → (if PyPI has no release yet) the same three with
-`git+https://github.com/HHHHHejia/openniw`. All fail? Chat flow + bundled
-`scripts/*.py` — the GUI is never a requirement.
+**Ensure the companion once**: `openniw --version`. If missing, install it
+from PyPI: `uv tool install openniw` (or `pipx install openniw`, or
+`python3 -m pip install --user openniw`). All fail (offline/sandbox)?
+Use the chat flow + the bundled `scripts/*.py` fallbacks — the GUI is an
+accelerator, never a requirement.
 
 **Open** (case folder as CWD): `openniw ui intake` (or `ui citations`).
 This starts a DETACHED server (survives terminal close, spans days),
