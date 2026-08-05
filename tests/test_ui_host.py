@@ -60,13 +60,45 @@ def test_every_host_mentions_how_to_finish():
         assert "'Done'" in cli._where("intake", URL, host), host
 
 
-def test_skills_relay_the_say_line_rather_than_improvising():
-    """All four skills must defer to the companion's wording."""
+SKILL_NAMES = ("niw-petition", "eb1a-petition", "o1-petition",
+               "i485-adjustment")
+
+
+def _skill_text(name):
     import pathlib
     root = pathlib.Path(__file__).resolve().parents[1] / ".agents" / "skills"
-    for skill in ("niw-petition", "eb1a-petition", "o1-petition",
-                  "i485-adjustment"):
-        text = (root / skill / "SKILL.md").read_text(encoding="utf-8")
+    return (root / name / "SKILL.md").read_text(encoding="utf-8")
+
+
+def test_skills_relay_the_say_line_rather_than_improvising():
+    """All four skills must defer to the companion's wording."""
+    for skill in SKILL_NAMES:
+        text = _skill_text(skill)
         assert "`SAY:` line" in text, f"{skill} does not relay the SAY: line"
         assert "OPENNIW_HOST=desktop" in text, \
             f"{skill} does not know a desktop host can exist"
+
+
+def test_skills_offer_the_workspace_choice_and_can_set_it_up():
+    """The desktop app is source-only, so the agent — which is already the
+    installer for the companion — offers it and does the setup."""
+    for skill in SKILL_NAMES:
+        text = _skill_text(skill)
+        assert "Terminal or a window?" in text, f"{skill} never offers the choice"
+        assert "npm install" in text, f"{skill} cannot set the window up"
+        assert "node --version" in text, f"{skill} does not check for Node"
+        # asked once, then remembered
+        assert "Decision log" in text and "re-asks" in text, \
+            f"{skill} may re-ask the workspace question every session"
+
+
+def test_the_choice_is_not_offered_when_already_in_the_window():
+    """Asking 'terminal or window?' inside the window is nonsense."""
+    import re
+    for skill in SKILL_NAMES:
+        text = _skill_text(skill)
+        i = text.find("Terminal or a window?")
+        # these files wrap at ~76 columns, so compare on unwrapped text
+        section = re.sub(r"\s+", " ", text[i:i + 400])
+        assert "ALREADY running inside the desktop app" in section, \
+            f"{skill} would ask the question inside the desktop app"

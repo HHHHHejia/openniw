@@ -133,6 +133,30 @@ stepper. In RFE mode a seventh line in the same format
 the six changes. Companions predating the R stage ignore that line and
 keep showing six — never promise the user a seventh chip.
 
+## Terminal or a window? (ask once, at the very start)
+
+If the environment has `OPENNIW_HOST` set you are ALREADY running inside the
+desktop app — say nothing about this, ever.
+
+Otherwise, on a brand-new case only, ask one short question before anything
+else, then record the answer in the Decision log so no later session
+re-asks:
+
+> Work here in the terminal, or in a desktop window? The window shows this
+> chat and the form pages side by side. Either way it is your own agent on
+> your own files — the window is just a shell around this.
+
+- **Terminal** — the default. Nothing to install; carry on.
+- **Desktop window** (beta) — needs Node.js (`node --version`). If they want
+  it and Node is present, set it up for them:
+  `git clone https://github.com/HHHHHejia/openniw ~/openniw` then
+  `cd ~/openniw/desktop && npm install`. Tell them to run `npm start` there,
+  click "Open case folder…", and choose THIS folder. Nothing is lost in the
+  switch — STATE.md carries the session, so work resumes exactly where it
+  stands. If Node is missing, say so plainly and continue in the terminal
+  rather than detouring into installing Node; offer the window again later
+  if they ask.
+
 ## Browser sessions (interaction-heavy steps)
 
 **The division of labor**: everything STANDARDIZABLE — fixed questions,

@@ -182,13 +182,23 @@ export default function Landing() {
             under your own subscription, on your own files — it never sees a
             password, a token or an API key, and it runs no server.
           </p>
-          <CopyBlock copyText={"git clone https://github.com/HHHHHejia/openniw\ncd openniw/desktop && npm install && npm start"}
+          <p className="text-sm text-[#333] leading-relaxed mb-2">
+            <b>You do not have to set it up yourself.</b> On a new case the
+            skill asks once — terminal or window? — and if you want the
+            window, your agent checks for Node.js and installs it for you.
+            Switching later costs nothing either: your case folder carries
+            the whole session, so you reopen it in the window and continue
+            where you were.
+          </p>
+          <CopyBlock copyText={"git clone https://github.com/HHHHHejia/openniw ~/openniw\ncd ~/openniw/desktop && npm install && npm start"}
                      className="bg-[--field] border border-[--rule]">
-            {"git clone https://github.com/HHHHHejia/openniw\ncd openniw/desktop && npm install && npm start"}
+            {"# or by hand:\ngit clone https://github.com/HHHHHejia/openniw ~/openniw\ncd ~/openniw/desktop && npm install && npm start"}
           </CopyBlock>
           <p className="text-xs text-[#4f5a55]">
-            Built from source for now — double-click downloads are waiting on
-            code signing, so that they install without security warnings.
+            It runs from source rather than a downloadable installer: a
+            double-click app has to be code-signed or your OS shows
+            &quot;unidentified developer&quot; warnings, and we are not paying a
+            certificate authority to vouch for us. Source is auditable.
           </p>
         </div>
         <div className="border border-[--rule] bg-white px-6 py-5">

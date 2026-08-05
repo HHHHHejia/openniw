@@ -72,15 +72,24 @@ or `codex` CLI you already installed, under your own subscription, on your
 own files. It never reads, stores, or proxies a credential, runs no server
 of its own, and its embedded view is locked to localhost.
 
+**You do not have to set it up yourself.** On a new case the skills ask
+once — terminal or window? — and if you want the window, your agent checks
+for Node.js and does the install for you. Nothing is lost switching later
+either: `STATE.md` carries the whole session, so you reopen the same case
+folder in the window and pick up exactly where you were.
+
+Or do it by hand:
+
 ```bash
-git clone https://github.com/HHHHHejia/openniw
-cd openniw/desktop && npm install && npm start
+git clone https://github.com/HHHHHejia/openniw ~/openniw
+cd ~/openniw/desktop && npm install && npm start
 ```
 
-It is source-only for now, so it reaches you before packaged downloads do —
-see [desktop/readme.md](desktop/readme.md). Prebuilt DMG/EXE downloads need
-code signing to install without scary warnings; if that matters to you, say
-so on the issue tracker and it moves up the list.
+It runs from source rather than a downloadable installer: a double-click
+DMG/EXE has to be code-signed or the OS shows scary "unidentified
+developer" warnings, and this project is not paying a certificate
+authority to say it is trustworthy. Source is honest and auditable — see
+[desktop/readme.md](desktop/readme.md).
 
 ## The four skills
 
