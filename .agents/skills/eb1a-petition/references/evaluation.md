@@ -134,24 +134,41 @@ sequential-with-premium so the I-485 never rides on an undecided I-140.
 ## Output format (evaluation.md)
 
 1. **Summary** — 2-3 sentences, direct.
-2. **Ten-criteria table** — every criterion (i)-(x) rated
-   claimable / arguable / no, each with a one-line reason citing the
-   profile's actual numbers and the strongest exhibit that would prove it.
-3. **Kazarian verdict** — Step 1: which ≥3 criteria are *provable* (not
-   just arguable); Step 2: is there a credible final-merits story
-   (multi-year arc, independent adoption, field-elite comparison)? Both
-   must hold; say plainly if either fails.
-4. **Tier** — strong / promising / borderline / not-yet, one-line reason.
+2. **Ten-criteria map** — every criterion (i)-(x) with, under each:
+   *Facts potentially supporting this criterion* · *Facts potentially
+   weakening it or leaving it unresolved* · *Unresolved issues* ·
+   *Evidence-development considerations*. Cite the profile's actual numbers
+   and name the strongest exhibit that would document each point. Never
+   write that a criterion is met, satisfied, or established — that is the
+   adjudicator's finding, not yours.
+3. **Two-step structure (Kazarian)** — Step 1: which criteria the record
+   currently documents most fully, and which rest on facts still to be
+   obtained. Step 2: how developed the final-merits narrative is
+   (multi-year arc, independent adoption, field-elite comparison). Say
+   plainly where either is thin — that is useful; a verdict on either is
+   not yours to give.
+4. **Record-development level** — one of `well-developed` / `developing` /
+   `substantial gaps` / `insufficient information`, one-line reason,
+   followed verbatim by: *"This is a software-generated record-development
+   indicator, not a legal eligibility determination or approval
+   prediction."*
 5. **Calibration** — benchmark percentiles with the approved-cases wording.
-6. **Strengthening plan** — prioritized, per weak criterion.
-7. **Bottom line** — file now vs strengthen first vs file NIW instead,
-   honestly. If the profile clears NIW comfortably but not EB-1A, say so:
-   NIW-first then EB-1A later (an approved NIW priority date ports to the
-   later EB-1A under 8 CFR 204.5(e)); concurrent NIW+EB-1A dual filing
-   (two I-140s, two fees) is a legitimate hedge — its known risk is
-   narrative inconsistency between the two filings.
+6. **Evidence-development plan** — prioritized, per thinly documented
+   criterion.
+7. **Filing-readiness considerations** — never a verdict. What the record
+   already documents · what remains incomplete or unresolved · risks of
+   submitting as it stands · what further development could include. Where
+   the record is thinner for EB-1A than for NIW, lay out the routes without
+   choosing between them: NIW-first then EB-1A later (an approved NIW
+   priority date ports under 8 CFR 204.5(e)); concurrent NIW+EB-1A (two
+   I-140s, two fees, and a known risk of narrative inconsistency between
+   the filings). Close with: *"OpenNIW does not decide whether, when, or in
+   which category you should file. That choice is yours, and is worth
+   taking to a licensed immigration attorney first."*
 
-Never invent facts. End with: "This is informational analysis, not legal advice."
+Never invent facts. End with: "This is software-generated self-help analysis
+for your independent review, not legal advice and not an eligibility
+determination."
 
 Sources: 8 CFR 204.5(h) (ecfr.gov); INA 203(b)(1)(A); USCIS Policy Manual
 Vol. 6 Part F Ch. 2 (uscis.gov/policy-manual/volume-6-part-f-chapter-2);

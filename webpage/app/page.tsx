@@ -3,7 +3,7 @@ import { CopyBlock } from "@/components/copy";
 
 const STAGES: [string, string, string][] = [
   ["I", "Evaluate", "Paste your Google Scholar link. Your agent fetches your record, downloads your papers, benchmarks you against 10,999 approved cases, and lays your record out under each published criterion — Dhanasar prong-by-prong (NIW) or criterion-by-criterion (EB-1A / O-1A), with what supports and what undercuts each one. It does not decide whether you qualify, and it does not tell you whether to file — you do."],
-  ["II·a", "Frame", "Compose and freeze the case frame — the canonical NIW endeavor sentence, the EB-1A field + claim frame, or the O-1 petitioner structure and itinerary scope. Every later document quotes it verbatim; rewording is a material-change risk."],
+  ["II·a", "Frame", "Draft options for the case frame — the canonical NIW endeavor sentence, the EB-1A field + claim frame, or the O-1 petitioner structure and itinerary scope — with what each emphasises and what each would need in evidence. You choose and confirm one; only then is it fixed, and every later document quotes it verbatim, because rewording after filing is a material-change risk."],
   ["II·b", "Evidence", "A personalized checklist plus the citation pipeline: every citing paper harvested, screened for independence, verified in full text, scored by depth of use — you pick the best ~10 in a browser page."],
   ["III", "Draft", "Support letters plus the petition letter, drafted for your independent review in the structure these filings conventionally use — a Dhanasar three-prong brief (NIW), a Kazarian two-step brief with a Final Merits section (EB-1A), or the petitioner support letter + consultation package (O-1A) — every claim bound to an exhibit."],
   ["IV", "Forms", "NIW: a browser wizard verifies the 61-field answer set card by card and generates the real I-140 and companions. EB-1A / O-1A: precise field guides for the I-140 (E11) and I-129 — identity numbers are never guessed, in any category."],
@@ -302,7 +302,10 @@ export default function Landing() {
         <div className="docket-line text-[--stamp] mb-2">Read this before you rely on anything here</div>
         <ul className="grid gap-1.5 text-sm text-[#333] leading-relaxed">
           <li>· <b>Completely free, open-source, public-interest.</b> No paid
-            tier, no service, no upsell — ever.</li>
+            tier, no upsell — ever. This site distributes open-source
+            software and general project information; the maintainers
+            provide no human legal services, case review, filing service,
+            representation, or individualized immigration assistance.</li>
           <li>· <b>Your data never reaches us.</b> Your entire case is
             processed by <b>your own local AI</b> in a folder on <b>your
             computer</b>. We run no server that could even receive it; this

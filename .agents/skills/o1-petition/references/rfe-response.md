@@ -81,7 +81,26 @@ approval, and a COS denied after the I-94 expired starts unlawful presence the n
 treated as abandoning it (practitioner guidance, unconfirmed against a primary text). Compute the runway against deadline +
 adjudication time; the levers are premium and the consular pivot, and R2's withdraw branch turns on this number.
 
-## R2 Diagnose → `rfe/response-plan.md`
+## R2 Diagnose → rfe/response-plan.md
+
+**Framing.** You are mapping what USCIS said against what the record holds —
+not deciding who is right. Separate the officer's FACTUAL concerns (a document
+absent, a number unsupported) from LEGAL or POLICY ones (a standard applied,
+a test chosen). The factual side is yours to organise; the legal side you
+surface, with the counter-authority if there is one, and leave to the user and
+their attorney. Never write that the officer is legally wrong, that a rebuttal
+wins, or that a response cures the notice.
+
+Per challenged point, produce:
+
+    ### Issue identified by USCIS
+    USCIS's stated concern: [verbatim quote + notice page]
+    Relevant portions of the existing record: ...
+    Potential factual responses: ...
+    Potential documentary responses: ...
+    Unresolved legal or strategic questions: ...
+    Draft response language for user review: ...
+
 
 Real O-1A RFEs still track USCIS's own O-1A template — a 2013 draft for comment, never finalized, still the observed skeleton —
 section by section, each branching "you did not submit evidence" vs. "the evidence is insufficient". Use it as a map, but always
@@ -109,6 +128,20 @@ unlawful presence accrues from that point (180+ days → a 3-year bar); (c) the 
 that this branch specifically warrants licensed-attorney review before the petitioner decides. If the beneficiary is abroad or in
 independent status, say so and proceed. Present it as a ranked recommendation with fee, timing AND status cost; the PETITIONER
 decides, here and on every strategic call, before R3 starts.
+
+**Attorney-review triggers — stop and say so plainly.** If the notice or the
+user's account touches fraud or misrepresentation findings, criminal history,
+fabricated or altered evidence, status violations, unauthorized employment,
+removal history, revocation, or a material change since filing, say that this
+is beyond what self-help software should organise unaided and recommend a
+licensed immigration attorney before the response is assembled. Keep helping
+with the parts that do not depend on it.
+
+**Response posture is the user's choice, never yours.** Complete response ·
+partial response (an irrevocable request for a decision on the record as it
+stands) · withdrawal · re-filing · a motion: lay out what each involves, what
+it costs, and what it forecloses — including the priority-date consequences —
+then ask the user to decide. Do not recommend one.
 
 ## R3 Evidence → `rfe/evidence-matrix.md` + the supply loop
 
@@ -157,6 +190,8 @@ replace or materially alter the petition, the offered position, or its terms."; 
 exhibit-bound; (3) employment terms exactly as filed; (4) governance or agent authority where attacked; (5) the duty-by-duty map of
 role to field label; (6) the request plus any criterion withdrawal. Where the notice challenges facts only the beneficiary can
 attest to, add a short signed beneficiary declaration as an EXHIBIT — supporting evidence, never the response itself.
+
+**Draft header.** The response letter and the supplemental statement each open with the `SELF-HELP DRAFT — NOT ATTORNEY-REVIEWED` header (drafting.md), deleted by the user before filing. Once, at the top — not through the body.
 
 ## R6 Assemble → `rfe/response-letter.md`, `rfe/exhibit-index.md`, `rfe/package/`
 

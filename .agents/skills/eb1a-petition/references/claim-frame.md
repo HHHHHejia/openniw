@@ -1,10 +1,15 @@
-# Stage II·a — The Claim Frame (compose once, freeze forever)
+# Stage II·a — The Claim Frame (the user chooses it; then it is fixed)
 
 An EB-1A petition stands on three framing decisions made BEFORE any
-drafting. They are recorded in `claim-frame.md`, confirmed by the user,
-and then FROZEN: every later document quotes the field definition
-verbatim, argues exactly the chosen criteria, and stays inside the intent
-scope. Inconsistent field labels or criteria lists across documents are a
+drafting. **All three are the user's to make.** Draft options for each,
+explain what each emphasises and what each would require in evidence, and
+name any factual inconsistency you see — but do not label one "best" or
+say a framing satisfies a criterion. Record only what the user expressly
+confirms, headed `User-confirmed claim frame (confirmed YYYY-MM-DD)`.
+
+Once confirmed the frame is fixed: every later document quotes the field
+definition verbatim, argues exactly the chosen criteria, and stays inside
+the intent scope. Inconsistent field labels or criteria lists across documents are a
 classic RFE trigger, and reframing after filing reads as concession.
 
 ## 1. The field-of-endeavor definition (the denominator)

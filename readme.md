@@ -1,10 +1,18 @@
 # OpenNIW — NIW · EB-1A · O-1 · I-485
 
-**Free, open-source agent skills that help you organize and speed up your
-own U.S. immigration paperwork — the EB-2 NIW and EB-1A self-petitions, the
-O-1A petition kit, and the employment-based I-485 that follows. Your coding
-agent does the organizing, a local folder is the case file, and a browser
-wizard appears exactly when a GUI beats chat.**
+**Free, open-source, local-first self-help software for organizing your own
+immigration petition materials and producing editable, user-directed drafts —
+the EB-2 NIW and EB-1A self-petitions, the O-1A petition kit, and the
+employment-based I-485 that follows. Your coding agent does the organizing, a
+local folder is the case file, and a browser wizard appears exactly when a GUI
+beats chat.**
+
+It organizes your source materials, maps the facts you provide to publicly
+available USCIS criteria, prepares forms and exhibits, checks consistency, and
+generates editable drafts for your independent review. **OpenNIW is not a law
+firm or a filing service.** Its maintainers do not review user cases, receive
+user documents, determine legal eligibility, recommend whether or when to
+file, or provide individualized immigration assistance.
 
 ## Star History
 
@@ -97,7 +105,7 @@ authority to say it is trustworthy. Source is honest and auditable — see
 |---|---|---|---|
 | `niw-petition` | EB-2 NIW self-petition (I-140 + ETA-9089 App. A) | shipped | Full flow incl. browser forms wizard, deterministic PDF fill, filing-package ZIP |
 | `eb1a-petition` | EB-1A extraordinary ability self-petition (I-140, E11) | beta | All ten 8 CFR 204.5(h)(3) criteria, Kazarian two-step petition letter with Final Merits section, benchmark vs ~2,300 approved EB-1A cases; I-140 by field guide (wizard = roadmap) |
-| `o1-petition` | O-1A petition kit (I-129; employer / agent / founder-owned entity) | beta | Petitioner-structure decision tree, consultation/advisory opinion, itinerary, signature-ready hand-off package for the petitioner; I-129 by field guide |
+| `o1-petition` | O-1A petition kit (I-129; employer / agent / founder-owned entity) | beta | Petitioner-structure decision tree, consultation/advisory opinion, itinerary, editable hand-off package the petitioner reviews and signs; I-129 by field guide |
 | `i485-adjustment` | Employment-based adjustment of status (I-485 on an approved or pending EB I-140) | beta | The step *after* the petition. Eligibility gating, status-history assembly, personalized document checklist, I-485 part-by-part guidance, package and post-filing timeline — **assembly only, see below** |
 
 The beta skills were built from primary sources (USCIS Policy Manual, 8 CFR,
@@ -198,7 +206,7 @@ RFE-response stage if USCIS pushes back; each adapts to its law:
 | **II·b — Evidence** | Personalized checklist; citation pipeline (harvest → independence screen → full-text verify → browser portfolio pick) — shared by all three | ← same | ← same, plus contracts / deal memos / itinerary |
 | **III — Draft** | PES → support letters → Dhanasar three-prong Petition Letter → exhibit index | Continue-work statement → letters → Kazarian two-step letter with Final Merits section | Petitioner support letter → consultation request → itinerary → expert letters |
 | **IV — Forms** | Browser wizard over the 61-field answer set → deterministic I-140/ETA-9089 PDF fill | I-140 (E11) field-by-field guide | I-129 + O supplement field guide |
-| **V — Package** | ZIP in lockbox order, state+premium-aware address | Assembly checklist, standard-vs-premium lockbox tables | Signature-ready hand-off kit for the petitioner |
+| **V — Package** | ZIP in lockbox order, state+premium-aware address | Assembly checklist, standard-vs-premium lockbox tables | Editable hand-off kit the petitioner reviews and signs |
 | **R — RFE response** | Prong-by-prong diagnosis → evidence loop → government-letter line → supplemental PS → response package | Criterion-by-criterion + final-merits rebuttal → new-evidence loop → response package | Itinerary / consultation / agent-authority cures → petitioner-signed response kit |
 
 **RFE response is a full workflow, not a footnote** (stage R, shown in the
@@ -488,7 +496,10 @@ MIT.
 
 OpenNIW is free software that helps you organize and prepare your own
 immigration paperwork. It is a **completely open-source, free,
-public-interest project** — no paid tier, no service, no upsell, ever.
+public-interest project** — no paid tier and no upsell, ever. What is
+distributed is software and general project information; the maintainers
+provide no human legal services, case review, filing service,
+representation, or individualized immigration assistance.
 To be explicit:
 
 - **Your data never reaches us.** Your entire case is processed by YOUR

@@ -129,3 +129,103 @@ def test_rfe_workflows_hard_stop_on_fraud_and_credibility():
         assert not missing, f"{name} RFE hard stops missing: {missing}"
         assert re.search(r"predict the outcome|never.{0,40}overcome", t), \
             f"{name} does not forbid predicting the RFE outcome"
+
+
+# --------------------------------------------------------------------------
+# The reference workflows, not just the top-level rules.
+#
+# The failure mode this catches is specific and was found in a real audit:
+# every SKILL.md carried the right prohibitions while the reference files
+# they load still told the agent to pick a tier, recommend filing now, and
+# freeze a decision on the user's behalf. A rule that a later file overrides
+# is not a rule, so the scan runs over references/ as well.
+
+CONCLUSORY = [
+    # verdicts about the person
+    r"you qualify", r"you do not qualify", r"you meet (?:this|the) \w+",
+    r"criteri(?:on|a) (?:is|are) satisfied", r"prong \d is (?:met|satisfied)",
+    r"evidence is (?:legally )?sufficient", r"legally sufficient",
+    # decisions belonging to the user
+    r"\bfile now\b", r"should (?:not )?file", r"wait before filing",
+    r"default recommendation", r"strengthen[- ]first is",
+    r"best legal strategy", r"recommended structure", r"best structure",
+    r"agent-selected", r"freeze the petitioner structure",
+    # outcome talk
+    r"approval probabilit", r"guarantee\w* approval", r"will (?:likely )?be approved",
+    r"cures? the rfe", r"winning (?:argument|rebuttal)",
+    r"officer is (?:legally )?wrong",
+    # authority the software does not have
+    r"attorney[- ]level", r"lawyer[- ]approved", r"attorney[- ]reviewed",
+]
+
+# A phrase inside a prohibition is the rule working, not a violation.
+NEGATED = re.compile(
+    r"never|not\b|no\b|avoid|decline|refus|forbid|do not|don't|must not|"
+    r"cannot|rather than|instead of|stop|prohibit|beyond what",
+    re.I)
+
+
+def _reference_files():
+    for skill in ALL_SKILLS:
+        yield from sorted((SKILLS / skill / "references").rglob("*.md"))
+
+
+def test_reference_workflows_do_not_override_the_top_level_rules():
+    """Scan every reference file for conclusory instructions. A hit is
+    allowed only where the surrounding sentence forbids it."""
+    offenders = []
+    for path in _reference_files():
+        text = path.read_text(encoding="utf-8")
+        for pattern in CONCLUSORY:
+            for m in re.finditer(pattern, text, re.I):
+                line = text[:m.start()].count("\n") + 1
+                # wrap-safe window: the negation often sits a line away
+                window = text[max(0, m.start() - 200):m.end() + 120]
+                if NEGATED.search(window):
+                    continue
+                rel = path.relative_to(REPO)
+                offenders.append(f"{rel}:{line}: {m.group(0)!r}")
+    assert not offenders, (
+        "conclusory instruction in a reference workflow — it would override "
+        "the SKILL.md rule:\n  " + "\n  ".join(offenders))
+
+
+def test_evaluations_offer_considerations_not_a_filing_verdict():
+    """The filing decision is the user's. Each evaluation must say so."""
+    for skill in PETITION_SKILLS:
+        text = _flat((SKILLS / skill / "references" / "evaluation.md")
+                     .read_text(encoding="utf-8"))
+        assert "filing-readiness considerations" in text, \
+            f"{skill}: evaluation has no filing-readiness section"
+        assert "does not decide whether" in text, \
+            f"{skill}: evaluation never disclaims the filing decision"
+        assert "record-development" in text, \
+            f"{skill}: still labels the applicant rather than the record"
+
+
+def test_the_frame_is_recorded_only_once_the_user_confirms():
+    """Endeavor sentence, claim frame and petitioner structure are the
+    user's choices; the agent drafts options and records a confirmation."""
+    for skill, fname, needle in (
+        ("niw-petition", "endeavor.md", "user-confirmed canonical"),
+        ("eb1a-petition", "claim-frame.md", "user-confirmed claim frame"),
+        ("o1-petition", "petition-frame.md", "user-and-petitioner-confirmed"),
+    ):
+        text = _flat((SKILLS / skill / "references" / fname)
+                     .read_text(encoding="utf-8"))
+        assert needle in text, f"{skill}/{fname} does not record a user confirmation"
+
+
+def test_generated_documents_carry_a_self_help_draft_header():
+    for skill in PETITION_SKILLS:
+        text = _flat((SKILLS / skill / "references" / "drafting.md")
+                     .read_text(encoding="utf-8"))
+        assert "self-help draft — not attorney-reviewed" in text, \
+            f"{skill}: drafts ship without the self-help header"
+
+
+def test_maintainer_policy_covers_every_channel():
+    text = _flat(POLICY.read_text(encoding="utf-8"))
+    for channel in ("github", "email", "social media", "direct message",
+                    "donation", "sponsorship"):
+        assert channel in text, f"MAINTAINER-POLICY does not name {channel}"

@@ -1,9 +1,17 @@
-# Stage II·a — The Endeavor Sentence (compose once, freeze forever)
+# Stage II·a — The Endeavor Sentence (the user picks it; then it is fixed)
 
 The whole petition stands on one canonical sentence, repeated VERBATIM in
 every document. After filing, USCIS treats rewording as a potential material
-change — a denial risk. Compose it carefully in `endeavor.md`, then never
-paraphrase it anywhere.
+change — a denial risk. So the wording matters, and **the wording is the
+user's to choose**: generate options, lay out what each emphasises and what
+each would require, and let them revise or select. Once they confirm one, it
+is never paraphrased anywhere again.
+
+Draft **two or three formulations**, not one. For each, say plainly: what it
+emphasises, how broad or specific it is, how well the existing record already
+supports it, and what future-plan evidence it would need. Name any factual
+inconsistency you see. Do not label one "best" or say one satisfies national
+importance — that comparison is exactly what the user is deciding.
 
 ## The three-part composer
 
@@ -74,8 +82,16 @@ My proposed endeavor is to ...
 ## Six-element summary + advice
 ```
 
-Once the user confirms, mark it FROZEN with the date. Every later document
-must quote the sentence exactly; check this during drafting review.
+Present the options, then ask the user to revise or choose. Record ONLY the
+version they expressly confirm, headed:
+
+    User-confirmed canonical proposed endeavor (confirmed YYYY-MM-DD)
+
+Never record an agent-selected version, and never mark one confirmed on the
+user's behalf. After confirmation the sentence is fixed: every later document
+quotes it exactly, checked during drafting review. If the user later wants it
+changed, that is their call — but flag that a post-filing change carries
+material-change risk.
 
 Sources: USCIS Policy Manual Vol. 6 Pt. F Ch. 5 §D (Jan 15, 2025 update;
 verified live 2026-08-02); Matter of Dhanasar, 26 I&N Dec. 884 (AAO 2016).

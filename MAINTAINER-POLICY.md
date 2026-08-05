@@ -47,6 +47,10 @@ contain personal information you cannot take back.
 no tier of support that includes case help, because case help is not
 something we provide at any price.
 
+The same boundary applies regardless of whether assistance is requested
+through GitHub, email, social media, direct message, community chat,
+donation, sponsorship, or any other channel.
+
 ## If you need someone to look at your actual case
 
 You need a licensed immigration attorney, or a

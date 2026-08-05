@@ -1,7 +1,13 @@
-# Stage II·a — The Petition Frame (freeze before anything drafts)
+# Stage II·a — The Petition Frame (the user and petitioner choose; then fixed)
 
-An O-1 stands on four framing decisions. Freeze all four in
-`petition-frame.md`, dated, before Stage II·b: every document repeats the
+An O-1 stands on four framing decisions. **None of them is yours to make.**
+The petitioner structure in particular is a legal and commercial choice
+belonging to the beneficiary AND the actual petitioning entity: analyse the
+factual fit, documentation burden and unresolved issues of each structure,
+present the comparison, and ask them to select and confirm. Never label one
+"recommended", "best" or "selected" — mark unavailable structures as such
+where a fact rules them out, and say when the information is too thin to
+compare. Record all four in `petition-frame.md`, dated, before Stage II·b: every document repeats the
 field label VERBATIM, the evidence checklist depends on the petitioner
 structure, and post-filing changes to petitioner, role, or terms are
 material changes requiring an amended petition (8 CFR 214.2(o)(2)(iv)(D)).
@@ -124,8 +130,8 @@ A written advisory opinion is mandatory initial evidence (8 CFR
 ## Record in petition-frame.md
 
 ```markdown
-# Petition Frame (FROZEN 2026-08-02 — changes require re-freeze + impact check)
-## Petitioner: [structure A/B/C] — [legal name], signatory [name, title]
+# Petition Frame (confirmed 2026-08-02 — changes require re-confirmation + impact check)
+## Petitioner (user-and-petitioner-confirmed structure): [A/B/C] — [legal name], signatory [name, title]
    evidence needed: [...]                    status: [...]
 ## Field of extraordinary ability: "[frozen label]"
 ## Role & event: [title] at [org], [start]–[end] — [event description]
@@ -135,7 +141,11 @@ A written advisory opinion is mandatory initial evidence (8 CFR
    conflict check: [clean/issue]             status: [requested/received]
 ```
 
-Once the user confirms, mark FROZEN with the date and log it in STATE.md.
+Record only what the user AND the actual petitioner have both confirmed —
+the structure field is headed `user-and-petitioner-confirmed`, never
+`recommended` or `agent-selected`. Date it and log it in STATE.md. After
+confirmation the frame is fixed; post-filing changes to petitioner, role or
+terms are material changes requiring an amended petition.
 
 Sources: 8 CFR 214.2(o)(2), (o)(5) (eCFR); USCIS Policy Manual Vol. 2
 Part M Ch. 3, 7, 9 (uscis.gov/policy-manual); policy alert 2025-01-08

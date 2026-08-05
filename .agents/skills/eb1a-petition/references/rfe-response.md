@@ -65,10 +65,11 @@ response DEADLINE, response ADDRESS, receipt number, RFE or NOID, and whether a 
 is enclosed; ask whether the case is in premium; copy the notice (all pages) to `rfe/letter.pdf` —
 the original leaves with the package.
 - **Three legal options exist** (8 CFR 103.2(b)(11)): a complete response · a partial response,
-  which is an irrevocable request for a decision on the record · WITHDRAW the petition. Advise a
-  complete response — unless the work or the field genuinely changed AFTER filing, which no
-  response cures (eligibility is judged as of the filing date and the frozen field definition may
-  never be reworded): that is withdraw-and-refile territory, with a licensed attorney.
+  which is an irrevocable request for a decision on the record · WITHDRAW the petition. Lay out
+  what each involves and what it forecloses, then let the user choose. Note plainly that no
+  response cures work or a field that genuinely changed AFTER filing (eligibility is judged as of
+  the filing date and the frozen field definition may never be reworded): that situation is
+  withdraw-and-refile territory and belongs with a licensed attorney.
 - The printed deadline ALWAYS controls; never substitute a computed default. Defaults only if none
   is printed (8 CFR 103.2(b)(8)(iv); PM Vol. 1 Pt. E Ch. 6, as of 2026-08): I-140 RFE = notice
   date + 84 + 3 mail = **87 days**; NOID = +30 +3 = **33 days**; +14 instead of +3 if the
@@ -100,7 +101,26 @@ risk. Build case.json + profile.md from the filed record (venues, years, authors
 counts + as-of dates, exhibit numbers); anything unsourceable becomes `[TODO]`, never a guess, and
 you say plainly what could not be reconstructed. Mark claim-frame.md "FROZEN AT FILING (as filed)".
 
-## R2 Diagnose → `rfe/response-plan.md`
+## R2 Diagnose → rfe/response-plan.md
+
+**Framing.** You are mapping what USCIS said against what the record holds —
+not deciding who is right. Separate the officer's FACTUAL concerns (a document
+absent, a number unsupported) from LEGAL or POLICY ones (a standard applied,
+a test chosen). The factual side is yours to organise; the legal side you
+surface, with the counter-authority if there is one, and leave to the user and
+their attorney. Never write that the officer is legally wrong, that a rebuttal
+wins, or that a response cures the notice.
+
+Per challenged point, produce:
+
+    ### Issue identified by USCIS
+    USCIS's stated concern: [verbatim quote + notice page]
+    Relevant portions of the existing record: ...
+    Potential factual responses: ...
+    Potential documentary responses: ...
+    Unresolved legal or strategic questions: ...
+    Draft response language for user review: ...
+
 **Field check first.** The notice's intro names the field USCIS is adjudicating; if it differs
 from the frozen definition, correct it with objective taxonomy (venue categories, society
 sections, grant panels) and name the comparison population — never adopt a new field definition.
@@ -132,6 +152,20 @@ Church*, 549 F.3d 749, 758 — no requirements "beyond those set forth at 8 CFR 
 respectfully, then satisfy the demand anyway. Do NOT build on *Mukherji v. Miller* (D. Neb. 2026)
 — the AAO still applies the two-step framework; that fight belongs in federal court, with counsel.
 Pre-flight the plan against rfe.md's twelve prevention rules.
+
+**Attorney-review triggers — stop and say so plainly.** If the notice or the
+user's account touches fraud or misrepresentation findings, criminal history,
+fabricated or altered evidence, status violations, unauthorized employment,
+removal history, revocation, or a material change since filing, say that this
+is beyond what self-help software should organise unaided and recommend a
+licensed immigration attorney before the response is assembled. Keep helping
+with the parts that do not depend on it.
+
+**Response posture is the user's choice, never yours.** Complete response ·
+partial response (an irrevocable request for a decision on the record as it
+stands) · withdrawal · re-filing · a motion: lay out what each involves, what
+it costs, and what it forecloses — including the priority-date consequences —
+then ask the user to decide. Do not recommend one.
 
 ## R3 Evidence → `rfe/evidence-matrix.md` + the supply loop
 Matrix, one row per challenged criterion × deficiency plus a step-2 row: finding | what the
@@ -175,6 +209,8 @@ and does not replace or materially alter the petition as filed. (2) **Totality n
 step-2 answer R6 expands: the arc across ≥2–3 distinct career periods, independent validators well
 beyond the circle of personal and professional acquaintances, comparison against the TOP of the
 frozen field. File it as an exhibit; it refreshes, never contradicts, the original.
+
+**Draft header.** The response letter and the supplemental statement each open with the `SELF-HELP DRAFT — NOT ATTORNEY-REVIEWED` header (drafting.md), deleted by the user before filing. Once, at the top — not through the body.
 
 ## R6 Assemble → `rfe/response-letter.md` · `exhibit-index.md` · `package/`
 Response letter, in the NOTICE's own order and headings. **Front matter**: a paragraph identifying

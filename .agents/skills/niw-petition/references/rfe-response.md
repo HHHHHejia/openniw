@@ -18,8 +18,9 @@ approval-notice dataset, as of 2026-08). A share among posted APPROVALS, never a
 5. The as-filed endeavor sentence is frozen — never reword it.
 6. The response goes to the address **on the notice**, never a lockbox.
 
-Options: complete response · partial (= decide on the record) · withdraw; advise complete — unless the plan MATERIALLY changed
-since filing, which no response cures: that is withdraw-and-refile, with a licensed attorney. Price it out loud first:
+Options: complete response · partial (= decide on the record) · withdraw. Lay out what each involves and what it forecloses, then
+let the user choose — this is their decision, not yours. Note plainly that no response cures a plan that MATERIALLY changed since
+filing; that situation is withdraw-and-refile territory and belongs with a licensed attorney. Price it out loud first:
 withdrawal — like abandonment or denial — FORFEITS the priority date; a refiled petition takes a new one and a new fee, and 8
 CFR 204.5(e) retention requires an APPROVED petition, so weigh the user's chargeability (India/China EB-2 retrogression makes it
 a multi-year loss). A **NOID** is not an RFE (30 days +3 mail = 33; **+14 instead of +3** if the petitioner is abroad or an
@@ -91,6 +92,25 @@ marker instead of `R`.
 
 ## R2 Diagnose → rfe/response-plan.md
 
+**Framing.** You are mapping what USCIS said against what the record holds —
+not deciding who is right. Separate the officer's FACTUAL concerns (a document
+absent, a number unsupported) from LEGAL or POLICY ones (a standard applied,
+a test chosen). The factual side is yours to organise; the legal side you
+surface, with the counter-authority if there is one, and leave to the user and
+their attorney. Never write that the officer is legally wrong, that a rebuttal
+wins, or that a response cures the notice.
+
+Per challenged point, produce:
+
+    ### Issue identified by USCIS
+    USCIS's stated concern: [verbatim quote + notice page]
+    Relevant portions of the existing record: ...
+    Potential factual responses: ...
+    Potential documentary responses: ...
+    Unresolved legal or strategic questions: ...
+    Draft response language for user review: ...
+
+
 Quote **each challenged point in the officer's own words** (verbatim + notice page); per point the prong (or the classification,
 or a whole-record finding) plus a root cause from the eight — no evidence submitted · wrong evidence type · evidence too weak ·
 missing sub-element · legal misframing · factual gap · self-serving evidence only · stale/irrelevant. The root cause dictates
@@ -105,6 +125,20 @@ carrying the equal-contribution notation; the advisor letter naming the conceive
 **"you may submit" bullets are a LITERAL checklist**: one row per bullet, answered with evidence or an explicit stated reason it
 does not apply. They restate the Policy Manual's categories; most-skipped: government letters, U.S. investment "in amounts
 appropriate to the relevant endeavor", non-monetary government support, evidence others use the work.
+
+**Attorney-review triggers — stop and say so plainly.** If the notice or the
+user's account touches fraud or misrepresentation findings, criminal history,
+fabricated or altered evidence, status violations, unauthorized employment,
+removal history, revocation, or a material change since filing, say that this
+is beyond what self-help software should organise unaided and recommend a
+licensed immigration attorney before the response is assembled. Keep helping
+with the parts that do not depend on it.
+
+**Response posture is the user's choice, never yours.** Complete response ·
+partial response (an irrevocable request for a decision on the record as it
+stands) · withdrawal · re-filing · a motion: lay out what each involves, what
+it costs, and what it forecloses — including the priority-date consequences —
+then ask the user to decide. Do not recommend one.
 
 ## R3 Evidence → rfe/evidence-matrix.md + a supply loop
 
@@ -181,6 +215,8 @@ URLs, weighted toward U.S. government sources.
    (publications, patents as public disclosure, open source, peer review). Labor-certification impracticality FACTS (founder,
    equity share, a role built around the applicant's own research rather than a pre-existing vacancy) go here as facts; the
    legal argument stays in the response letter.
+
+**Draft header.** The response letter and the supplemental statement each open with the `SELF-HELP DRAFT — NOT ATTORNEY-REVIEWED` header (drafting.md), deleted by the user before filing. Once, at the top — not through the body.
 
 ## R6 Assemble → rfe/response-letter.md, exhibit-index.md, package/
 

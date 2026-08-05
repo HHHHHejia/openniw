@@ -123,19 +123,37 @@ athletic evidence where citations may be irrelevant entirely.
 ## Output format (evaluation.md)
 
 1. **Summary** — 2-3 sentences, direct.
-2. **Tier** — strong / promising / borderline / not-yet, one-line reason.
-3. **Criterion-by-criterion table** — all 8 (regulatory numbering):
-   met / arguable / no, the profile's actual numbers, and what evidence
-   would fix each gap. Note the major-award path only if plausibly real.
-4. **Totality read** — the plus-factors present and missing.
-5. **Petitioner-path preview** — which of employer / agent / own-entity
-   looks viable and what each would require (decided in Stage II·a).
+2. **Record-development level** — one of `well-developed` / `developing` /
+   `substantial gaps` / `insufficient information`, one-line reason,
+   followed verbatim by: *"This is a software-generated record-development
+   indicator, not a legal eligibility determination or approval
+   prediction."*
+3. **Criterion-by-criterion map** — all 8 (regulatory numbering), each with:
+   *Facts potentially supporting it* · *Facts potentially weakening it or
+   leaving it unresolved* · *Unresolved issues* · *Evidence-development
+   considerations*, citing the profile's actual numbers. Note the
+   major-award path only if plausibly real. Never write that a criterion is
+   met or satisfied.
+4. **Totality read** — which plus-factors the record documents and which it
+   does not.
+5. **Petitioner-path preview** — what employer / agent / own-entity would
+   each require, and which look factually available on what is known so far.
+   The choice itself is made by the user and the actual petitioner in
+   Stage II·a; do not pre-select one here.
 6. **Calibration** — the percentile sentences with caveats, as above.
-7. **Evidence to gather now** — prioritized.
-8. **Bottom line** — file now vs strengthen first, honestly; if the user
-   also asks about green cards, place them on the O-1A → EB-1A/NIW ladder.
+7. **Evidence to gather** — prioritized.
+8. **Filing-readiness considerations** — never a verdict. What the record
+   already documents · what remains incomplete or unresolved · risks of
+   filing as it stands · what further development could include. If the user
+   also asks about green cards, lay out the O-1A → EB-1A/NIW ladder as
+   context, not as a recommended sequence. Close with: *"OpenNIW does not
+   decide whether or when a petition should be filed. That decision belongs
+   to you and your petitioner, and is worth taking to a licensed
+   immigration attorney first."*
 
-Never invent facts. End with: "This is informational analysis, not legal advice."
+Never invent facts. End with: "This is software-generated self-help analysis
+for your independent review, not legal advice and not an eligibility
+determination."
 
 Sources: 8 CFR 214.2(o) (eCFR); USCIS Policy Manual Vol. 2 Part M Ch. 4
 (uscis.gov/policy-manual/volume-2-part-m-chapter-4); calibration from an

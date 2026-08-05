@@ -123,23 +123,52 @@ bare number.
 - AAO appeals are near-futile: FY2021–FY2025, 64 sustained vs 2,831
   dismissed, ~2.2% (published tally) — the initial filing must be right.
 - Premium processing accelerates outcomes, not odds.
-Consequence for the Tier verdict: in this climate "borderline" means
-strengthen-first is the DEFAULT recommendation; "file now" needs an explicit
-articulated reason. These are population rates among adjudicated petitions —
-never present any of them as this applicant's approval probability.
+What this climate means for the write-up: it raises the value of naming gaps
+plainly and early. It does not license a verdict. These are population rates
+among adjudicated petitions — never present any of them as this applicant's
+approval probability, and never convert them into advice about whether or when
+to file.
 
 ## Output format (evaluation.md)
 
 1. **Summary** — 2-3 sentences, direct.
-2. **Tier** — strong / promising / borderline / not-yet, one-line reason.
-3. **Prong-by-prong analysis** — strengths (cite the profile's actual numbers),
-   gaps, and what evidence would fix each gap. Score each prong 1-5.
-4. **Suggested endeavor angles** — 2-3 concrete framings tied to named U.S.
-   priorities for their field.
-5. **Evidence to gather now** — prioritized.
-6. **Bottom line** — file now vs strengthen first, honestly.
+2. **Record-development level** — one of `well-developed` / `developing` /
+   `substantial gaps` / `insufficient information`, one-line reason. Print
+   beneath it, verbatim: *"This is a software-generated record-development
+   indicator, not a legal eligibility determination or approval prediction."*
+   It describes how far the RECORD has been built, never whether the applicant
+   qualifies.
+3. **Prong-by-prong analysis** — for each prong, four headed lists:
+   - *Potentially supportive facts* — cite the profile's actual numbers
+   - *Potential weaknesses or limiting facts*
+   - *Unresolved questions* — what is not yet knowable from the record
+   - *Possible evidence categories for the user's consideration*
+   - *Drafting implications* — what this means for how the argument is built
 
-Never invent facts. End with: "This is informational analysis, not legal advice."
+   Score each prong 1-5 if it helps you organise the work; the score is a
+   record-maturity marker for drafting, not a finding that a prong is met.
+   Never write that a prong is satisfied, met, or established.
+4. **Suggested endeavor angles** — 2-3 concrete framings tied to named U.S.
+   priorities for their field, presented as options for the user to weigh.
+5. **Evidence to gather** — prioritized.
+6. **Filing-readiness considerations** — replaces any verdict. Use this shape:
+
+   > The current record appears to contain the following developed components:
+   > …
+   > The following components remain incomplete, weakly documented, or
+   > dependent on unresolved facts: …
+   > Submitting with the current record may involve the following risks: …
+   > Further record development could include: …
+   >
+   > OpenNIW does not decide whether or when you should file. That decision is
+   > yours, and is worth taking to a licensed immigration attorney first.
+
+   Be concrete about gaps and risks — vagueness here is its own disservice.
+   What changes is only that the conclusion stays with the user.
+
+Never invent facts. End with: "This is software-generated self-help analysis
+for your independent review, not legal advice and not an eligibility
+determination."
 
 Sources: USCIS Policy Manual Vol. 6 Pt. F Ch. 5 (incl. Jan 15, 2025 update)
 · visafranchise.com/blog/eb2-niw-approval-rate · manifestlaw.com/blog/
