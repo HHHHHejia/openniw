@@ -417,8 +417,6 @@ The skills' legal and procedural content is distilled from these sources
   self-petitions studied for structure (no text reused)
 
 **Data & practitioner knowledge**
-- [public-approval-source](https://www.public-approval-source) public approval notices
-  (2012–2026) — the de-identified benchmark dataset
 - Structure of real, professionally prepared NIW filings and a real RFE
   cycle (fully de-identified, see [docs/analysis/](docs/analysis/)), plus
   published analyses by immigration practitioners and university
