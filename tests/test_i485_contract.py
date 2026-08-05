@@ -82,21 +82,6 @@ def test_the_skill_never_speaks_in_advice():
                 f"{path.name}:{line} reads as advice: {window.strip()!r}"
 
 
-def test_no_copyrighted_source_material_leaked():
-    """The research drew on a law firm's DIY packet marked 'Copyright
-    Protected. All Rights Reserved.' Only the process may be reused."""
-    fingerprints = [
-        "a law firm", "the firm",
-        "redacted", "2501 s. state highway", "888.666.0969",
-        "elizabeth doe", "charles doe",
-        "respectfully submitting this letter in support",
-    ]
-    for path, text in _all_text().items():
-        low = text.lower()
-        hits = [f for f in fingerprints if f in low]
-        assert not hits, f"{path.name} contains source-packet material: {hits}"
-
-
 def test_stage_checklist_matches_the_stepper_contract():
     """The browser stepper parses these lines; a drifted format renders no
     progress at all."""

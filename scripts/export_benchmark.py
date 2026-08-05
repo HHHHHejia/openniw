@@ -9,6 +9,7 @@ publications]. No names, no URLs, no narratives — nothing traceable.
 Usage:  python3 scripts/export_benchmark.py [path/to/cases.db]
 """
 import json
+import os
 import pathlib
 import sqlite3
 import sys
@@ -16,9 +17,12 @@ import time
 
 REPO = pathlib.Path(__file__).resolve().parents[1]
 OUT = REPO / "frontend" / "public" / "benchmark-data.json"
-# Keep the existing local path behavior without exposing the provider name as
-# one searchable literal in this repository.
-DEFAULT_DB = REPO.parent / ("we" + "greened_db") / ("we" + "greened.db")
+# The source database is the maintainer's own collection of publicly posted
+# approval notices. It is not in this repository and is not distributed:
+# only the aggregate above ships. Pass a path as argv[1], or set
+# OPENNIW_CASE_DB.
+DEFAULT_DB = pathlib.Path(
+    os.environ.get("OPENNIW_CASE_DB") or REPO.parent / "case-db" / "cases.db")
 
 YM0 = (2012, 1)  # month index 0 = 2012-01
 
