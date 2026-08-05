@@ -20,16 +20,17 @@ const mono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://openniw.com"),
-  title: "OpenNIW — organize your NIW · EB-1A · O-1 petition with your own AI",
+  title: "OpenNIW — organize your NIW · EB-1A · O-1 · I-485 with your own AI",
   description:
     "Free, open-source skills that help you organize and speed up your own "
-    + "EB-2 NIW or EB-1A self-petition and O-1A petition kit, using the coding "
+    + "EB-2 NIW or EB-1A self-petition, O-1A petition kit, or employment-based "
+    + "I-485, using the coding "
     + "agent you already have. Free statistical evaluation against 7,458 approved "
     + "cases. No accounts, no fees. Not a law firm; not legal advice.",
   openGraph: {
-    title: "OpenNIW — organize your NIW · EB-1A · O-1 petition with your own AI",
+    title: "OpenNIW — organize your NIW · EB-1A · O-1 · I-485 with your own AI",
     description:
-      "Free, open-source NIW / EB-1A / O-1 paperwork tooling driven by your own "
+      "Free, open-source NIW / EB-1A / O-1 / I-485 paperwork tooling driven by your own "
       + "AI subscription. Free statistical evaluation against 7,458 approved cases. Not a "
       + "law firm; not legal advice.",
     url: "https://openniw.com",

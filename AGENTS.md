@@ -1,10 +1,11 @@
 # OpenNIW — agent instructions
 
 Open-source AI-assisted U.S. immigration petition preparation. The product
-is three sibling Agent Skills plus a pip companion:
+is four sibling Agent Skills plus a pip companion:
 `.agents/skills/niw-petition/` (EB-2 NIW — the flagship) ·
 `.agents/skills/eb1a-petition/` (EB-1A, beta) ·
 `.agents/skills/o1-petition/` (O-1A, beta) ·
+`.agents/skills/i485-adjustment/` (employment-based I-485, beta) ·
 `src/openniw/` (the `openniw` pip package: localhost browser UI +
 deterministic compute over a case folder) · `frontend/` UI source (Next.js
 14, maintainers only) · `forms/` vendored official USCIS/DOL fillable PDFs +
@@ -16,10 +17,21 @@ Codex, Cursor and other Agent-Skills tools discover the skills under
 `.agents/skills/` automatically; `.claude/skills` symlinks to the same
 folder for Claude Code. NIW/EB-2 requests → `niw-petition`; EB-1A /
 extraordinary-ability green card → `eb1a-petition`; O-1/O-1A visa →
-`o1-petition`. Each runs its whole workflow in a local case folder with no
-server, no database, and no API keys. The browser wizard + PDF fill
+`o1-petition`; adjustment of status on an employment-based I-140 →
+`i485-adjustment`. Each runs its whole workflow in a local case folder with
+no server, no database, and no API keys. The browser wizard + PDF fill
 (`openniw fill` / `ui forms` / `package`) are NIW-only; the sibling skills
 use guided chat + field guides for their forms stages.
+
+`i485-adjustment` is deliberately shaped differently from the petition
+skills: it is an **assembly and completeness tool, not an eligibility
+tool**. A 2026 I-485 denial for someone without other status can lead to a
+Notice to Appear, so the skill hard-stops on inadmissibility (Form I-485
+Part 9), criminal history, overstay/unauthorized work, 245(k)/245(c)
+day-counts, CSPA, 204(j), and the decision to *use* an EAD or advance
+parole. Those refusals are the product — `tests/test_i485_contract.py`
+pins them, along with the Part 9 numbering and a copyright scan over the
+source material the research drew on. Family-based I-485 is out of scope.
 
 ## Working on the code
 

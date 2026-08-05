@@ -6,7 +6,7 @@ export function SiteNav({ active }: { active: "home" | "eval" }) {
       <a href="/" className="hover:opacity-80">
         <span className="docket-line text-[--docket]">OpenNIW</span>
         <span className="text-xs text-[#4f5a55] ml-2">
-          NIW · EB-1A · O-1 skills · free · your AI does the work
+          NIW · EB-1A · O-1 · I-485 skills · free · your AI does the work
         </span>
       </a>
       <nav className="flex gap-1">

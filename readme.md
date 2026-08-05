@@ -1,10 +1,10 @@
-# OpenNIW — NIW · EB-1A · O-1
+# OpenNIW — NIW · EB-1A · O-1 · I-485
 
 **Free, open-source agent skills that help you organize and speed up your
-own U.S. immigration petition — the EB-2 NIW and EB-1A self-petitions, and
-the O-1A petition kit. Your coding agent does the organizing, a local
-folder is the case file, and a browser wizard appears exactly when a GUI
-beats chat.**
+own U.S. immigration paperwork — the EB-2 NIW and EB-1A self-petitions, the
+O-1A petition kit, and the employment-based I-485 that follows. Your coding
+agent does the organizing, a local folder is the case file, and a browser
+wizard appears exactly when a GUI beats chat.**
 
 ## Star History
 
@@ -20,8 +20,9 @@ Website: **[openniw.com](https://openniw.com)** — project intro, install
 guide, and a free no-signup statistical evaluation against 7,458 approved cases
 (fully static; source in [webpage/](webpage/)).
 
-OpenNIW ships three [Agent Skills](https://agentskills.io) —
-`niw-petition`, `eb1a-petition`, and `o1-petition`. Install them into
+OpenNIW ships four [Agent Skills](https://agentskills.io) —
+`niw-petition`, `eb1a-petition`, `o1-petition`, and `i485-adjustment`.
+Install them into
 Claude Code, Codex, Cursor, or any Agent-Skills tool, and your existing AI
 subscription runs the entire preparation workflow — evaluation, evidence,
 drafting, official forms, filing package — with **zero configuration**:
@@ -41,10 +42,10 @@ drafting, official forms, filing package — with **zero configuration**:
 
 ```bash
 # cross-agent installer (Claude Code, Codex, Cursor, 70+ agents) —
-# offers all three skills; install what you need:
+# offers all four skills; install what you need:
 npx skills add HHHHHejia/openniw
 
-# or manually — Claude Code (swap in eb1a-petition / o1-petition as needed):
+# or manually — Claude Code (swap in any of the four skill folders):
 git clone https://github.com/HHHHHejia/openniw
 mkdir -p ~/.claude/skills && cp -r openniw/.agents/skills/niw-petition ~/.claude/skills/
 
@@ -53,30 +54,62 @@ mkdir -p ~/.agents/skills && cp -r openniw/.agents/skills/niw-petition ~/.agents
 ```
 
 Then say **"帮我准备 NIW 申请"** or **"evaluate my NIW case"** in your
-agent — or "evaluate my EB-1A case" / "prepare my O-1 petition" for the
-sibling skills.
+agent — or "evaluate my EB-1A case" / "prepare my O-1 petition" /
+"help me file my I-485" for the sibling skills.
 
-## The three skills
+## The four skills
 
 | Skill | Category | Status | What differs |
 |---|---|---|---|
 | `niw-petition` | EB-2 NIW self-petition (I-140 + ETA-9089 App. A) | shipped | Full flow incl. browser forms wizard, deterministic PDF fill, filing-package ZIP |
 | `eb1a-petition` | EB-1A extraordinary ability self-petition (I-140, E11) | beta | All ten 8 CFR 204.5(h)(3) criteria, Kazarian two-step petition letter with Final Merits section, benchmark vs ~2,300 approved EB-1A cases; I-140 by field guide (wizard = roadmap) |
 | `o1-petition` | O-1A petition kit (I-129; employer / agent / founder-owned entity) | beta | Petitioner-structure decision tree, consultation/advisory opinion, itinerary, signature-ready hand-off package for the petitioner; I-129 by field guide |
+| `i485-adjustment` | Employment-based adjustment of status (I-485 on an approved or pending EB I-140) | beta | The step *after* the petition. Eligibility gating, status-history assembly, personalized document checklist, I-485 part-by-part guidance, package and post-filing timeline — **assembly only, see below** |
 
 The beta skills were built from primary sources (USCIS Policy Manual, 8 CFR,
 current fee schedules — all cited inline with as-of dates), open-source MIT
 materials, and our 7,458-case approved-case dataset. They follow the same
 frozen-frame doctrine, exhibit-bound drafting, and RFE red-team pass as the
-NIW flagship. **If you have been through an EB-1A or O-1 filing —
+NIW flagship. **If you have been through an EB-1A, O-1 or I-485 filing —
 applicant or practitioner — we would love your review.**
+
+### `i485-adjustment` is deliberately narrower — and here is why
+
+The petition skills argue a case. The I-485 skill does not, because the
+downside is different in kind: in 2026, USCIS is adjudicating adjustment as
+a discretionary benefit, interviews are back for a meaningful share of
+employment-based cases, vetting has expanded — and a denial for someone
+with no other status can end in a Notice to Appear and removal proceedings.
+
+So it is an **assembly and completeness tool**. It does the enormous
+clerical burden: eligibility *gating* against published answers (I-140
+basis, the Visa Bulletin chart USCIS designated this month, 212(e)),
+reconstructing a continuous status/address/employment/travel history from
+your first entry, the document checklist personalized by what actually
+drives each requirement (including the birth-certificate substitute ladder
+and country-specific documents), part-by-part form guidance for every
+applicant in the family, package assembly, and the post-filing timeline.
+
+And it **stops**, naming the fact that stopped it, on anything where being
+wrong can hurt you: any answer in Form I-485 **Part 9** (the
+inadmissibility block — renumbered from Part 8 in the 01/20/25 edition),
+any criminal history at all, any overstay or unauthorized work, any
+245(k)/245(c) day-count, misrepresentation, prior removal, unresolved
+212(e), CSPA calculations, INA 204(j) "same or similar" determinations, and
+the decision to actually *use* an EAD or advance parole (holding one is
+harmless; using it ends your underlying nonimmigrant status). It will not
+help you phrase around an adverse fact. Those refusals are the product, and
+they are enforced by tests.
+
+**Family-based I-485 is out of scope** (it needs Form I-864 and
+sponsor-income analysis that is not implemented).
 
 ## How it works
 
 ```
         ┌──────────────────────────────────────┐
-        │   Your agent + a petition skill      │   the BRAIN — conversation,
-        │   (niw / eb1a / o1 · any agent)      │   judgment, drafting, prefill
+        │   Your agent + an OpenNIW skill      │   the BRAIN — conversation,
+        │   (niw / eb1a / o1 / i485 · any agent)│   judgment, drafting, prefill
         └──────┬─────────────────────┬─────────┘
    reads/writes│                     │ launches at interaction-heavy steps
                ▼                     ▼
@@ -118,7 +151,7 @@ applicant or practitioner — we would love your review.**
 
 ## The workflow, stage by stage
 
-All three skills follow the same shape — six stages to filing, plus the
+The three petition skills follow the same shape — six stages to filing, plus the
 RFE-response stage if USCIS pushes back; each adapts to its law:
 
 | Stage | NIW | EB-1A | O-1A |
@@ -314,7 +347,7 @@ openniw/
   edits a user's file. Same rule for every service: the agent decides, the
   companion computes.
 - Skill fallback scripts mirror package services between
-  `# --- BEGIN/END SYNC ---` markers across all three skills;
+  `# --- BEGIN/END SYNC ---` markers across the three petition skills;
   `scripts/sync_skill.py` regenerates them and `make check` fails on drift.
 - Versions in the storage layer are **opaque strings**, never JSON numbers:
   `st_mtime_ns` exceeds `Number.MAX_SAFE_INTEGER`, so a browser silently
@@ -327,7 +360,7 @@ OpenNIW is a fully open-source, free, public-interest project (开源利益众�
 It gets better through three kinds of contribution:
 
 1. **Code** — issues and PRs welcome. High-value directions: more form
-   mappings (I-907, I-485 family), more browser pages (evidence ledger,
+   mappings (I-907, an I-485 wizard), more browser pages (evidence ledger,
    document review), consular-processing variants, UI translations.
 2. **Data points** — file the
    [anonymous data-point form](https://github.com/HHHHHejia/openniw/issues/new?template=data-point.yml)

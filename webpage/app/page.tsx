@@ -23,15 +23,15 @@ export default function Landing() {
         </div>
         <h1 className="text-4xl leading-tight mb-4"
             style={{ fontFamily: "var(--font-serif), serif" }}>
-          Open-source <em>skills</em> for your NIW · EB-1A · O-1
+          Open-source <em>skills</em> for your NIW · EB-1A · O-1 · I-485
           application.
         </h1>
         <div className="grid gap-2 text-lg text-[#333] leading-relaxed mb-6 max-w-2xl">
           <p>
             Install them into <b>Claude Code, Codex, or Cursor</b> — the AI
             you already have — and they organize your <b>EB-2 NIW or
-            EB-1A self-petition</b>, or your <b>O-1A petition kit</b>,
-            end to end.
+            EB-1A self-petition</b>, your <b>O-1A petition kit</b>, or the
+            <b>employment-based I-485</b> that follows, end to end.
           </p>
           <p>
             <b>Everything stays in a folder on your computer.</b> No
@@ -56,8 +56,8 @@ export default function Landing() {
         <div className="border border-[--rule] bg-white px-6 py-5 mb-4">
           <pre className="text-xs leading-relaxed overflow-x-auto font-mono text-[#333]">{`
   ┌──────────────────────────────────────┐
-  │  your agent + a petition skill       │   the BRAIN — judgment,
-  │  (niw / eb1a / o1 · any major agent) │   drafting, conversation
+  │  your agent + an OpenNIW skill       │   the BRAIN — judgment,
+  │  (niw/eb1a/o1/i485 · any major agent)│   drafting, conversation
   └──────┬─────────────────────┬─────────┘
  reads/   │                    │ opens at structured steps
  writes   ▼                    ▼
@@ -113,6 +113,17 @@ export default function Landing() {
             </div>
           ))}
         </div>
+        <p className="text-sm text-[#4f5a55] mt-3 leading-relaxed">
+          <b>After the petition is approved:</b> the separate{" "}
+          <span className="font-mono">i485-adjustment</span> skill handles the
+          employment-based I-485 — eligibility gating, status-history
+          assembly, the document checklist, and part-by-part form guidance for
+          everyone in the family. It is deliberately an <b>assembly tool, not
+          an eligibility tool</b>: it stops and sends you to a licensed
+          attorney on inadmissibility questions, any criminal history, any
+          overstay or unauthorized work, and the decision to actually use an
+          EAD or advance parole.
+        </p>
       </section>
 
       {/* install */}
@@ -128,9 +139,10 @@ export default function Landing() {
           <p className="text-xs text-[#4f5a55]">
             Works with Claude Code, Codex, Cursor and 70+ agents (when the
             installer asks, tick your agent — e.g. &quot;Claude Code&quot;). One
-            command offers all three skills: <span className="font-mono">niw-petition</span>,{" "}
+            command offers all four skills: <span className="font-mono">niw-petition</span>,{" "}
             <span className="font-mono">eb1a-petition</span> (beta),{" "}
-            <span className="font-mono">o1-petition</span> (beta). Manual
+            <span className="font-mono">o1-petition</span>,{" "}
+            <span className="font-mono">i485-adjustment</span> (beta). Manual
             install: copy <span className="font-mono">.agents/skills/niw-petition</span>{" "}
             from the repo into <span className="font-mono">~/.claude/skills/</span>.
           </p>
@@ -141,7 +153,7 @@ export default function Landing() {
           </div>
           <CopyBlock copyText={"mkdir my-case && cd my-case\nclaude"}
                      className="bg-[--field] border border-[--rule]">
-            {"mkdir my-case && cd my-case\nclaude        # or your agent of choice\n> 帮我准备 NIW 申请 / evaluate my EB-1A case / prepare my O-1 petition"}
+            {"mkdir my-case && cd my-case\nclaude        # or your agent of choice\n> 帮我准备 NIW 申请 / evaluate my EB-1A case / help me file my I-485"}
           </CopyBlock>
           <p className="text-xs text-[#4f5a55]">
             The skill opens a browser intake page for your links and files,
