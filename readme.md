@@ -437,8 +437,7 @@ anyone, at any price. For your actual case you need a licensed immigration
 attorney or a DOJ-accredited representative.
 
 - GitHub issues: the preferred channel for anything public
-- WeChat: `LittleGeng`
-- X: [x.com/hejia0530](https://x.com/hejia0530)
+- Email: genghejia0530@gmail.com
 
 **EB-1A and O-1A are now here (beta)** — built from USCIS primary sources,
 MIT-licensed open materials, and our approved-case dataset, not from

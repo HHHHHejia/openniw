@@ -288,10 +288,9 @@ export default function Landing() {
           attorney or a DOJ-accredited representative.
         </p>
         <p className="docket-line text-[#4f5a55]">
-          Contact — WeChat: <span className="text-[--ink]">LittleGeng</span>
-          {" · "}X:{" "}
-          <a className="text-[--docket] underline" target="_blank" rel="noreferrer"
-             href="https://x.com/hejia0530">x.com/hejia0530</a>
+          Contact —{" "}
+          <a className="text-[--docket] underline"
+             href="mailto:genghejia0530@gmail.com">genghejia0530@gmail.com</a>
           {" · "}or{" "}
           <a className="text-[--docket] underline" target="_blank" rel="noreferrer"
              href="https://github.com/HHHHHejia/openniw/issues">GitHub issues</a>
