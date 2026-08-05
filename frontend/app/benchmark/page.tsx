@@ -174,16 +174,15 @@ export default function BenchmarkPage() {
     return c[0] >= maxYm - 59;
   };
 
-  // pool for a category with the doc's widening rule: field n<30 → all fields
+  // Keep the selected field even when the sample is small. Quietly widening
+  // to all fields makes the displayed sample size look field-specific.
   const poolFor = (cat: string) => {
     if (!data) return { rows: [] as Data["cases"], widened: false };
     const ci = data.categories.indexOf(cat);
     const fi = field === "All fields" ? -1 : data.fields.indexOf(field);
     const base = data.cases.filter((c) => c[1] === ci && inRange(c));
     const fielded = fi === -1 ? base : base.filter((c) => c[2] === fi);
-    if (fielded.length >= 30 || fi === -1)
-      return { rows: fielded, widened: false };
-    return { rows: base, widened: true };
+    return { rows: fielded, widened: false };
   };
 
   const pool = useMemo(() => poolFor(category), [data, category, field, range]);
@@ -370,7 +369,7 @@ export default function BenchmarkPage() {
               `${fmt(stats.medianCites)} · ${stats.medianPubs == null ? "—" : Math.round(stats.medianPubs)}`,
               "citations · papers")}
         {tile("Approved sample", stats.n.toLocaleString(),
-              pool.widened ? "widened to all fields" : stats.n < 30 ? "small — interpret loosely" : undefined)}
+              stats.n < 30 ? "small — interpret loosely" : undefined)}
       </div>
       {stats.n > 0 && stats.n < 200 && (
         <p className="text-sm border border-[--docket] bg-[--field] px-4 py-2.5 mb-3">
