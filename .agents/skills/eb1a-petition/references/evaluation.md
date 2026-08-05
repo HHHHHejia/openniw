@@ -156,5 +156,5 @@ Never invent facts. End with: "This is informational analysis, not legal advice.
 Sources: 8 CFR 204.5(h) (ecfr.gov); INA 203(b)(1)(A); USCIS Policy Manual
 Vol. 6 Part F Ch. 2 (uscis.gov/policy-manual/volume-6-part-f-chapter-2);
 Kazarian v. USCIS, 596 F.3d 1115 (9th Cir. 2010); Aug 2026 visa bulletin
-via Fragomen/Ogletree summaries (primary blocked); calibration from
-public-approval-source public approval notices (local snapshot, 2026-08).
+via Fragomen/Ogletree summaries (primary blocked); calibration from a local
+snapshot of public approval notices (2026-08).

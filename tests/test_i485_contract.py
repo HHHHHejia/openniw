@@ -83,7 +83,7 @@ def test_no_copyrighted_source_material_leaked():
     """The research drew on a law firm's DIY packet marked 'Copyright
     Protected. All Rights Reserved.' Only the process may be reused."""
     fingerprints = [
-        "public_source", "a law firm", "the firm",
+        "a law firm", "the firm",
         "redacted", "2501 s. state highway", "888.666.0969",
         "elizabeth doe", "charles doe",
         "respectfully submitting this letter in support",

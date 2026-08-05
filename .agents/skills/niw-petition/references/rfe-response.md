@@ -1,8 +1,8 @@
 # RFE Response — R1–R7 (read this whole file when a notice arrives)
 
 Normalize once, then work: 458 of the 1,218 publicly posted APPROVED NIW cases that clearly disclose RFE status either way — out
-of 4,855 posted approvals, nearly three-quarters of which say nothing either way — came through an overcome RFE (public_source
-published-approval scrape, as of 2026-08). A share among posted APPROVALS, never a probability for this one.
+of 4,855 posted approvals, nearly three-quarters of which say nothing either way — came through an overcome RFE (public
+approval-notice dataset, as of 2026-08). A share among posted APPROVALS, never a probability for this one.
 
 ## Standing rules (state the first three in your first reply)
 
@@ -211,6 +211,6 @@ in, ticks the anonymization box and submits it; (3) else print the ready-to-past
 Sources: 8 CFR 103.2(a)(7), (b)(8), (b)(11)–(b)(16), 103.5, 106.4, 204.5(e), 205.2 (eCFR) · USCIS Policy Manual Vol. 1 Pt. E Ch.
 6 §F (84+3/87, 30+3/33, +14 abroad, received-by) and Vol. 6 Pt. F Ch. 5 (NIW, Jan 2025 update) · uscis.gov premium, i-290b
 (06/01/2026) and file-online pages · G-1055 (ed. 05/29/26); verified 2026-08-03 — re-verify fees and addresses before filing.
-Overcome-RFE share from the public_source published-approval scrape (2026-08). Response architecture, government-letters doctrine
+Overcome-RFE share from a public approval-notice dataset (2026-08). Response architecture, government-letters doctrine
 and statement template distilled from a de-identified real NIW RFE cycle; control-file patterns adapted from
 juntoku9/claude_immigration_attorney (MIT).

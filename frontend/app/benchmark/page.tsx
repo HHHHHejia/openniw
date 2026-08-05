@@ -571,7 +571,7 @@ export default function BenchmarkPage() {
 
       <div className="flex items-center justify-between mt-5">
         <p className="text-xs text-[#4f5a55] max-w-md leading-relaxed">
-          Data: publicly posted approvals on public-approval-source (2012–2026),
+          Data: publicly posted approvals (2012–2026),
           self-reported by the law firm, successful cases only. This page
           shows distributions of approved profiles; it does not predict any
           individual outcome and is not legal advice. Generated {data.generated}.

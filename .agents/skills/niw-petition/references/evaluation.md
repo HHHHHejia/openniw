@@ -121,7 +121,7 @@ bare number.
 - RFE rate, regular processing: ~50% Jan 2026 → ~39% Mar 2026 (Lawfully
   tracking via manifestlaw).
 - AAO appeals are near-futile: FY2021–FY2025, 64 sustained vs 2,831
-  dismissed, ~2.2% (public_source tally) — the initial filing must be right.
+  dismissed, ~2.2% (published tally) — the initial filing must be right.
 - Premium processing accelerates outcomes, not odds.
 Consequence for the Tier verdict: in this climate "borderline" means
 strengthen-first is the DEFAULT recommendation; "file now" needs an explicit
@@ -143,5 +143,5 @@ Never invent facts. End with: "This is informational analysis, not legal advice.
 
 Sources: USCIS Policy Manual Vol. 6 Pt. F Ch. 5 (incl. Jan 15, 2025 update)
 · visafranchise.com/blog/eb2-niw-approval-rate · manifestlaw.com/blog/
-eb2-niw-approval-rate · calivisa.com (FY2024 stats post) · public-approval-source
-(2026 adjudication-shifts post, AAO tally). Rates checked 2026-08-02.
+eb2-niw-approval-rate · calivisa.com (FY2024 stats post) · a published 2026
+adjudication-shifts post and AAO tally. Rates checked 2026-08-02.

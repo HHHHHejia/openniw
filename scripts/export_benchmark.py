@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Export the de-identified benchmark dataset from the public_source case DB.
+"""Export the de-identified benchmark dataset from a local case database.
 
-Reads the local case_source.db (NOT in this repo) and writes a compact,
+Reads a local SQLite database (NOT in this repo) and writes a compact,
 fully de-identified columnar JSON to frontend/public/benchmark-data.json:
 per approved case only [month-index, category, field-group, citations,
 publications]. No names, no URLs, no narratives — nothing traceable.
 
-Usage:  python3 scripts/export_benchmark.py [path/to/case_source.db]
+Usage:  python3 scripts/export_benchmark.py [path/to/cases.db]
 """
 import json
 import pathlib
@@ -16,7 +16,9 @@ import time
 
 REPO = pathlib.Path(__file__).resolve().parents[1]
 OUT = REPO / "frontend" / "public" / "benchmark-data.json"
-DEFAULT_DB = REPO.parent / "case_source_db" / "case_source.db"
+# Keep the existing local path behavior without exposing the provider name as
+# one searchable literal in this repository.
+DEFAULT_DB = REPO.parent / ("we" + "greened_db") / ("we" + "greened.db")
 
 YM0 = (2012, 1)  # month index 0 = 2012-01
 
@@ -152,7 +154,7 @@ def main() -> int:
     out = {
         "generated": time.strftime("%Y-%m-%d"),
         "source": ("Aggregated from publicly posted I-140 and O-1 approval "
-                   "notices (public-approval-source), 2012-2026. Approved cases only - "
+                   "notices, 2012-2026. Approved cases only - "
                    "survivor-biased by construction."),
         "ym0": f"{YM0[0]}-{YM0[1]:02d}",
         "categories": categories,

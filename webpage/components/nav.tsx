@@ -52,7 +52,7 @@ export function SiteFooter() {
         that could receive it. This site is fully static: no accounts, no
         cookies, no tracking; nothing you type here leaves your browser.
         Benchmark data is aggregated from publicly posted approval notices
-        (public-approval-source, 2012–2026), self-reported and successful cases only
+        (2012–2026), self-reported and successful cases only
         — it shows distributions of approved profiles, never an
         individual&apos;s approval probability.
       </p>

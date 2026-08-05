@@ -138,6 +138,6 @@ athletic evidence where citations may be irrelevant entirely.
 Never invent facts. End with: "This is informational analysis, not legal advice."
 
 Sources: 8 CFR 214.2(o) (eCFR); USCIS Policy Manual Vol. 2 Part M Ch. 4
-(uscis.gov/policy-manual/volume-2-part-m-chapter-4); calibration from
-public-approval-source public approval notices (independent database, 2026-08);
+(uscis.gov/policy-manual/volume-2-part-m-chapter-4); calibration from an
+independent database of public approval notices (2026-08);
 practitioner benchmarks: gojumpstart.com, manifestlaw.com.
